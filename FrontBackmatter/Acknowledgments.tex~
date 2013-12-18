@@ -1,0 +1,40 @@
+%*******************************************************
+% Acknowledgments
+%*******************************************************
+
+%\let\cleardoublepage\relax
+\chapter*{Acknowledgments}
+%    Thanks to everyone, especially you!
+
+    Of course, this work was not possible without the help of many others. Besides all of the giants of fusion and plasma physics whose shoulders I stand on today, I must thank and acknowledge the following for their contributions to this thesis:
+	\begin{description}
+        \item[Alcator \CMod{}] \hfill \\
+            Thanks to all of the scientists, engineers, students, technicians, and support staff. Without your hard work, there would have been no plasma at which to poke my probes. I am grateful to have you all for colleagues and wish you the best wherever the wind takes you from here.
+		\item[Heat flux diagnostics] \hfill \\
+            Brian LaBombard, along with some help from Josh Payne, designed the divertor module containing the heat flux diagnostics before I came to MIT. Although I was in charge of analysis and maintenance of the system, Brian deserves the credit for creating it. Additionally, I must express my gratitude to Ron Rosati, his demonstrated excellent skill in preparing the thermocouple cabling as well as turning the slow thermocouples into unsheathed, fast-response thermocouples.
+		\item[Langmuir probes] \hfill \\
+            Brian LaBombard is {\em the} Langmuir probe guru. Having 30 years of experience with them, it was a privilege to work with Brian. All of the Langmuir probe data and analysis in this thesis were due to his work.
+		\item[CXRS data] \hfill \\
+            Michael Churchill, Christian Theiler, and Bruce Lipchultz are in charge of the CXRS system on \CMod{}. The data from it was originally only supposed to be the tie breaker between my ISP and RFA probes. But, when \CMod{}'s life got cut short, the ISP turned out the be space charge limited, and the RFA didn't have nearly enough data, I had to rely on the CXRS data for an important part of this thesis.
+		\item[Thomson data] \hfill \\
+            Jerry Hughes and John Walk were kind enough to keep the Thomson system up and running as well as bless the data; providing a complement to the probe data where no probe dare to go.
+		\item[Gird Bias boards] \hfill \\
+            The micro-Amp currents measured with the RFA would not have been possible without the Grid Bias boards. Brian's experience with electrical circuits and instrumentation shined through in their design and Bruce Wood's diligence made them a reality.
+		\item[QFLUX$\_$1D] \hfill \\
+            Brian and Josh Payne wrote the 1D finite element software used for much of the heat analysis in this thesis.
+		\item[UEDGE] \hfill \\
+            Tom Rognlien and the other architects of UEDGE have created an impressive piece of code and I must acknowledge their efforts. Maxim Umansky, with the guidance of Tom, did the "death-ray" simulations.
+	\end{description}
+
+    I am grateful to have had Brian for an advisor. His enthusiasm is endless and he was always there to help. Brian's ability to do things the right way is uncanny. Now and forever, when I run into a problem I will always think "what would Brian do?".
+    
+    I thank Dennis Whyte for his careful reading of this theses and for keeping me honest. Thanks also to Ian Hutchinson for sharing his seemingly endless expertise on plasma and taking the time to read over my work. Finally I am gracious for Anne White rounding out my thesis committee. I am honored for having all four of you on my committee.
+
+    In addition to those who gave their scientific support to this thesis. I must thank everyone I have encountered around Boston; I hope that our paths may cross again. Thanks to all of the friends that I made at the Plasma Science and Fusion Center. Thanks to the crazy group of roommates I had at 47 Mecham the first two years here. Thanks to Koroush for being the perfect roommate for the final three years: almost never around, clean, and always paying the rent on time. Thanks to Nora, I don't know how I would have made it through quals without you. Thanks to Michelle, I appreciate your guidance and support. Thanks to my family--Mom, Dad, Angie, Becki, Beth, and Sarah--for their love and ability to always keep things interesting. I'm blessed to have had wonderful grandparents; they were very proud to see me get into MIT, I wish they were still around to see me get out.
+
+    Finally, thanks to Bob, Geoff, and Mike. Five years locked in the same room. You three are the closest to brothers I have ever had.
+
+%\endgroup
+
+
+

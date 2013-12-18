@@ -1,0 +1,129 @@
+% **************************************************************************************************************
+% A Classic Thesis Style
+% An Homage to The Elements of Typographic Style
+%
+% Copyright (C) 2012 Andr\'e Miede http://www.miede.de
+%
+% If you like the style then I would appreciate a postcard. My address
+% can be found in the file ClassicThesis.pdf. A collection of the
+% postcards I received so far is available online at
+% http://postcards.miede.de
+%
+% License:
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; see the file COPYING.  If not, write to
+% the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+% Boston, MA 02111-1307, USA.
+%
+% **************************************************************************************************************
+% Note:
+%    * You must not use "u etc. in strings/commands that will be spaced out (use \"u or real umlauts instead)
+%    * New enumeration (small caps): \begin{aenumerate} \end{aenumerate}
+%    * For margin notes: \marginpar or \graffito{}
+%    * Do not use bold fonts in this style, it is designed around them
+%    * Use tables as in the examples
+%    * See classicthesis-preamble.sty for useful commands
+% **************************************************************************************************************
+% To Do:
+%		 * [high] Check this out: http://www.golatex.de/koma-script-warnung-in-verbindung-mit-listings-package-t2058.html
+%    * [medium] mathbb in section-titles/chapter-titles => disappears somehow in headlines!!!
+% **************************************************************************************************************
+%To compile: % DB
+%
+% pdflatex ClassicThesis.tex
+% bibtex FrontBackmatter/Publication
+% bibtex Chapters/Introduction
+% bibtex Chapters/plasma_probe_physics
+% bibtex Chapters/hardware
+% bibtex Chapters/electronics_data_processing
+% bibtex Chapters/compare_measurements
+% bibtex Chapters/death_ray
+% bibtex Chapters/ISP_space_charge
+% bibtex Chapters/Ti_Te_SOL
+% bibtex FrontBackmatter/sheath_heat_flux_derivation
+% bibtex FrontBackmatter/flux_limit_scaling
+% bibtex FrontBackmatter/misc_physics
+% makeindex -s nomenlev.ist -o ClassicThesis.nls ClassicThesis.nlo
+% pdflatex ClassicThesis.tex
+% pdflatex ClassicThesis.tex
+%
+% **************************************************************************************************************
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,%
+                footinclude=true,cleardoublepage=empty,abstractoff,%
+                BCOR=5mm,paper=letter,fontsize=11pt,%
+                ngerman,american,%
+                ]{scrreprt}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\input{classicthesis-config}
+
+\usepackage{nomenlev}\makenomen
+
+%\newglossary[slg]{symbols}{sym}{sbl}{List of Symbols}
+%\makeglossaries
+%\input{FrontBackmatter/Glossary}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+%*******************************************************
+\begin{document}
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+%\pagenumbering{roman}
+\pagestyle{plain}
+%********************************************************************
+% Frontmatter
+%*******************************************************
+\include{FrontBackmatter/cover}
+\frenchspacing
+%\doublespacing%DB
+\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\pagestyle{scrheadings}
+\cleardoublepage\include{FrontBackmatter/Contents}
+%********************************************************************
+% Mainmatter
+%%\pagenumbering{arabic}
+% use \cleardoublepage here to avoid problems with pdfbookmark
+%*******************************************************
+\cleardoublepage
+%\include{Chapters/Introduction}
+%\include{Chapters/plasma_probe_physics}
+%\include{Chapters/hardware}
+%\include{Chapters/electronics_data_processing}
+%\include{Chapters/compare_measurements}
+%\include{Chapters/death_ray}
+%\include{Chapters/ISP_space_charge}
+%\include{Chapters/Ti_Te_SOL}
+%\include{Chapters/conclusions}
+\cleardoublepage
+% ********************************************************************
+% Backmatter
+%*******************************************************
+\appendix
+\cleardoublepage
+%%\part{Appendix}
+%\cleardoublepage\include{FrontBackmatter/sheath_heat_flux_derivation}
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************\bigwedge
+%\cleardoublepage\include{FrontBackmatter/Colophon}
+% ********************************************************************
+\end{document}
+% ********************************************************************

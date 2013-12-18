@@ -1,0 +1,13 @@
+%*******************************************************
+% Dedication
+%*******************************************************
+\thispagestyle{empty}
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{Dedication}{Dedication}
+
+\vspace*{3cm}
+
+\begin{center}
+    Dedicated to the all of the teachers in my life. \\ From my formal education in Rossman Elementary School, \\ Central Middle School, Hartford Union High School, Rose-Hulman Institute of Technology, and Massachusetts Institute of Technology \\ to everyone who taught me something out in the real world. \\ I am who I am today thanks to you. \\ For that, I am forever grateful.
+\end{center} 

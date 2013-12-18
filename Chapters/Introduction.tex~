@@ -1,0 +1,88 @@
+\chapter{Introduction}\label{ch:Introduction}
+
+    \section{World Energy Use and Quality of Life}
+
+        \begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{65 mm}
+            \includegraphics[width=65 mm]{gfx/energy_quality_life.pdf}
+            \caption{Quality of life (HDI) and power use go hand-in-hand.}\label{energy_quality_life}
+        \end{wrapfigure}
+        The world is ever changing. As technology and society develop, billions of people are rising out of agrarian and nomadic ways of life into a more "first-world" way of life. High standards of quality of life, as measured by the Human Development Index~\cite{HDI2011}, are correlated with high power use: \cref{energy_quality_life}. As the people in low-HDI countries rise in HDI, so will their energy consumption.
+
+        \begin{figure}
+            \pushtooutside
+            \begin{floatrow}
+                \ffigbox[\FBwidth]
+                {\includegraphics[height=60 mm]{gfx/world_population}}{\caption[High, medium, and low projections of world population, spread is largely due to uncertainty in future fertility rates.]{High, medium, and low projections of world population, spread is largely due to uncertainty in future fertility rates~\cite{World2010}.}\label{world_population}}
+                \ffigbox[\FBwidth]
+                {\includegraphics[height=60 mm]{gfx/world_power}}{\caption[BP projects that world power consumption will double in the next 20 years.]{BP projects that world power consumption will double in the next 20 years~\cite{BP2009,EIA2011}.}\label{world_power}}
+            \end{floatrow}
+        \end{figure}
+        Additionally, all but the most pessimistic studies indicate that the world population will grow for the coming century, \cref{world_population}. Depending on the situation, it may increase by \SIrange{50}{100}{\percent}. Great increases in energy demand will come with the increases in population and with people rising out of the third-world. BP, one of the world's largest energy suppliers, predicts that the world energy consumption will double in the next 20 years.
+
+        Energy production will need to increase to meet up with these growing demands. Although renewables such as solar and wind are appealing to the wider public, they are unlikely to be the base power of the future. Renewables are typically intermittent (requiring some sort of not-yet-existing storage mechanism to provide steady power) and their sources are far away from the demand (requiring long-distance transmission). Fossil fuels (coal, oil, gas...) are reliable for supplying base-load power on demand and there is enough fuel (especially coal) to last through the next century. Yet there is the concern of the health consequences (to both humans as well as the climate) of releasing combustion products into the atmosphere (CO\sub{2}, NO\sub{x}, particulates...).
+
+        Nuclear fission reactors also provide solid, base-load power. Conventional fuel strategies could last through the next century and more exotic strategies could extend fission's production capabilities to thousands of years. Fission's largest barrier is public perception: they are afraid of nuclear, despite it historically being the safest power source per Joule generated~\cite{Forbes2012}. No one wants a power plant near them for fear of a meltdown. The US cannot even put a waste depository in one of its most remote areas. Despite the aging reactors at Fukashima doing amazingly well through one of the worst earthquakes and tsunamis in recorded history, the accident hurt fission's near-term future. Countries are scaling back, with Germany even proposing to close all of its facilities by the early 2020's.
+
+        Only if there were a power source that could supply base-load power with no atmospheric emission, no long-lived radioactive waste, no chance of meltdown, and a nearly inexhaustible fuel supply\ldots\nicesectionending
+
+    \section{Fusion Energy}
+
+        Fusion, like fission, is the transmutation (alchemy!) of nuclei into new ones. Generally, heavy elements may be fissioned, turning mass into energy; light elements may be joined or fused, also turning mass into energy. Iron is the most energetically stable element. Fission has the distinct advantage over fusion of occurring at thermal temperatures. Some of the heavier elements fission on their own, releasing neutrons. These neutrons will thermalize to near room temperature and will go on to cause other atoms to fission, releasing energy and more neutrons. And on goes the chain reaction.
+
+        Fusion, on the other hand, requires two nuclei to get close enough together such that the strong nuclear force overcomes the Coulomb repulsion of the positively charge nuclei. This needs nuclei that are so energetic (a thermal populations of $\sim\SI{10}{\kilo\electronvolt}$ for D-T) that any light element used to release energy from fusion is fully ionized: a plasma. This fact provides a difficulty but also an opportunity: a plasma this hot is not compatible with a material container, but the charge particles can be contained by a magnetic field.
+
+        Since the 1950's there has been a plethora of configurations of magnetic fields to confine plasmas. Confining a plasma with magnetic fields has been compared to holding onto Jello with rubber bands (a statement often attributed to Richard Feynman, but more likely due to Edward Teller~\cite{Teller1960}). Jeffrey Freidberg, a leader in magnetohydrodynamics (the study of an electrically charged fluid) applied to fusion plasmas, on magnetic configurations: ``Cleverness is mandatory, not an option''~\cite{Freidberg2007}.
+
+        Advantages of fusion over fission include:
+        \begin{itemize}
+            \item Fuel supply is light elements (D and Li) which are so abundant as to be effectively unlimited
+            \item No chance of meltdown due to the requirement for stellar temperatures and the lack of a chain reaction
+            \item Relatively benign waste since the fuel cycle, as in stars, produces non-radioactive helium ash
+        \end{itemize}
+        The main disadvantage of fusion over fission is that its feasibility as an economical energy source is still uncertain. Even if it proves possible to build a fusion power plant that produces net energy, there remains the risk that it cannot compete with less expensive forms of energy.\nicesectionending
+
+    \section{Magnetic Fusion and the Tokamak}
+
+        \begin{figure}
+            \pushtooutside
+            \ffigbox[\FBwidth]{\caption{A tokamak is simply a toroidal plasma isolated from the atmosphere with a vacuum chamber and held in place with the magnetic field from coils. Figure modified from~\cite{Olynyk2012}.}\label{Vulcan_equation}}{\includegraphics[width=150 mm]{gfx/Vulcan_equation}}
+        \end{figure}
+        \begin{figure}
+                \pushtooutside
+                \fcapside[40 mm]{\caption[Thermal conductivity of magnetically confined plasma along with some common materials.]{Thermal conductivity along ($\kappa\sub{\parallel}$) and across ($\kappa\sub{\perp}$) the magnetic field typical of a fusion boundary plasma~\cite{Stangeby} along with that of common materials (graphite, tungsten, and polystyrene data from Ref.~\cite{Incropera}, aerogel data from Ref.~\cite{Aerogel}). The fusion boundary plasma is one of the most anisotropic man made materials.}\label{conductivities}}{\includegraphics[width=75 mm]{gfx/conductivities}}
+            \end{figure}
+        To date, the most successful magnetic confinement device has been the tokamak: a toroidal magnetic configuration with a vertical field and current in the plasma for stability and confinement, \cref{Vulcan_equation}. The toroidal configuration is necessary because the end losses of a linear system are too large. In a purely toroidal configuration \gradB drifts will cause charge separation, a vertical electric field, and outward motion of the plasma from \EcrossB drift. The rotational transform of the magnetic field cancels the \gradB drift: while in the top half of the torus a given particle will drift in one direction (up or down) and while in the bottom half it will drift in the other direction.
+
+        Decades of research have gone to understanding and improving core plasma confinement and reducing cross field transport. The cross field transport from the core to the boundary are intimately linked; the excellent cross field confinement extends to the boundary. Yet the plasma is an excellent conductor along field lines due to the absence of Lorentz force parallel to the magnetic field. In fact, a hot, magnetically confined plasma may be one of the most anisotropic materials ever created, \cref{conductivities}. This presents a challenging situation for the boundary plasma control. As plasma transports energy out of the core and into the boundary it prefers to exit to the material boundaries along the magnetic field, with little spreading across it. There is no consensus on how to predict what the parallel heat flux in a reactor will be (there are many opinions\ldots), let alone first-principles calculations. From current measurements, our best estimates put it on order \SI{1}{\giga\watt\per\square\meter}! One of the greatest challenges to getting a working reactor will be understanding and controlling heat transport in the boundary.\nicesectionending
+
+    \section{Future of Fusion Research}
+
+        The future of fusion research is to push to steady-state operation. To date all experiments operating at or near reactor-level plasma parameters have been pulsed. This is due to the easy operation of a transformer to drive current and the difficulties of driving current with RF waves at reactor-level parameters. Pulse lengths were near steady-state on core plasma time scales and thus many of the reactor-relevant core processes could be studied. The remaining big question for core plasmas on the path to a reactor is what happens when the plasma is self-heated by its own fusion products, \ie alpha-heated; which ITER hopes to answer by attempting to achieve \SI{500}{\mega\watt} of fusion power with only \SI{50}{\mega\watt} of external heating~\cite{Mukhovatov2003}.
+
+        Steady-state operation will push the focus to the boundary, where the plasma meets the wall. Not only will the unabated heat flux be beyond the limits of power exhaust engineering, but transient events may exceed it even more. With the current understanding of boundary physics a reactor will have gross erosion of tons of material per year. It is critical to understand the boundary plasma and how it self-organizes with the wall. There also remains questions on what effects RF waves have on the boundary plasma and vice-versa. Experiments on \CMod{} consistently show that the state of the boundary plasma is intimately linked to the operation of both RF plasma heating and current drive~\cite{Baek2013,Ochoukov2013}.\nicesectionending
+
+    \section{Goals and Outline of Thesis}
+
+        A full description of the fundamental physics controlling the transport of particles and energy in the boundary of a tokamak remains unknown. Current projections of heat flux and erosion to a reactor-scale machine are highly uncertain. This is unacceptable, for either of these two parameters could limit the viability of fusion energy. Although explicitly solving these issues is beyond the scope of this thesis, there remains many areas to build towards solutions which are ripe to explore. The main goal of this thesis is understanding of two basic physics issues:
+        \begin{enumerate}
+            \item {\bf Sheath Heat Flux}---The theory describing the heat flux out of the plasma through the electrostatic sheath to the first wall is relatively simple. Yet measurements confirming the theory have been elusive in tokamaks. There has been an order of magnitude variation in the sheath heat flux transmission coefficient~\cite{Marki2007}. Such a large degree of uncertainty in this key parameter is unacceptable.
+            \item {\bf Ion Heat Transport}---The physics of ion heat transport in the boundary plasma remains largely unexplored. Probes able to measure the ion temperature can be challenging both to make and interpret. Thus measurements of edge ion temperature are rare. In addition, there has been no systematic comparison of edge ion temperature with simulations.
+        \end{enumerate}
+        To explore these issues requires development and verification of new diagnostics capable of surviving the extreme heat flux in the boundary of Alcator \CMod{}.
+
+        This thesis continues in \cref{physics chapter} with an overview of edge physics, including kinetic and fluid descriptions of edge transport. Then the physics of the plasma sheath, including the sheath heat flux transmission coefficient. Histories and descriptions of measurement techniques are then given, including the Langmuir probe, ion sensitive probe, retarding field analyzer, charge exchange recombination spectroscopy, and thermocouples.
+
+        An extensive system of thermal diagnostics---including Langmuir probes, surface thermocouples, and calorimeters---was installed in the \CMod{} divertor for the 2010 DOE Joint Research Target to characterize the heat flux footprint~\cite{Labombard2011}. Although that system was developed by LaBombard et al. before the inception of this thesis, a significant portion of this thesis focused on implementation and improvement of the diagnostics, see \cref{hardware chapter,data chapter} as well as the papers~\cite{Brunner2010a,Brunner2012}. The surface thermocouples proved to be extremely useful both confirming sheath heat flux theory and connecting a curious divertor over-pressure to the unphysically low values of the sheath heat flux transmission coefficient (\cref{death ray}). A new theory implicating the divertor Langmuir probe causing the over-pressure is presented, see \cref{death ray theory} or \cite{Brunner2013b}. The theory is confirmed by our collaborators using a 2D plasma-neutral fluid code, UEDGE.
+
+        Two new probes were developed to explore ion heat transport, a Retarding Field Analyzer (RFA)~\cite{Brunner2013a} and an Ion Sensitive Probe (ISP)~\cite{Brunner2013}, see \cref{hardware chapter}. Their geometry was optimized using 3D finite element simulations of the probes scanning through the boundary plasma. The RFA in particular is a large improvement over previous designs. The entrance slit an order of magnitude closer to the probe tip (\SI{1.7}{\milli\meter} versus \SI{20}{\milli\meter}), maximizing measurement depth into the plasma.
+
+        The early closure of Alcator \CMod{} forced a time constraint on development of the ion probes. Focus was given to the ISP due to its superior heat flux handling. However, it was found that the \CMod{} ISP in its present configuration was space charge limited and thus unable to measure the ion temperature. This prompted an in depth investigation of space charge and ISPs, see \cref{ISP space charge} and~\cite{Brunner2013c}, which is also informative to other fusion experiments attempting to interpret ISP data ion sensitive probe data with respect to ion temperature. Through detailed study of ISP literature numerous other probes were found to collect current in excess of the 1D space charge limit. A 1D kinetic model was built to explore the \IV{} response to varying degrees of space charge and guide development of a probe which can operate in high density plasma.
+
+        The RFA operated exceptionally well and was able to measure electron and ion temperatures up to the last closed flux surface, \ie over the extent of the boundary plasma (\cref{comparison chapter}). Although data is much more limited than the ISP. Electron temperature profiles overlaid that from Langmuir probes and, most importantly, CXRS B\sup{5+} and RFA D\sup{+} $T\sub{i}$ profiles matched in a low collisionality plasma, where they are least likely to be coupled. This allows the CXRS impurity ion temperature data to be used as a proxy for the main ion temperature in heat transport studies.
+
+        A simple 1D model of coupled electron-ion heat conduction in the boundary was created, see \cref{assessment ion transport} and~\cite{Brunner2013d}. It was used to compare to experimental measurements of the upstream ion to electron temperature ratio. The 1D simulation was successfully benchmarked against the 2D plasma-neutral fluid code UEDGE. At the highest core density and edge collisionality the simulations matched the upstream temperature ratio ($T\sub{i}/T\sub{e}\sim1.8$). However the lowest core density and edge collisionality, where the fluid assumption of Spitzer-Harm heat conduction is invalid, showed the limits of the fluid model. It was unable to reproduce the high ($\sim4$) ion to electron temperature ratio. The addition of heat flux limiters, an approximate kinetic correction, allows the simulation to reproduce the temperature ratio at low collisionality. The value which best matches the data ($\sim0.2$) is close to that given by comparison of kinetic and fluid simulations.\nicechapterending
+
+%        Whoop!
+
+\bibliographystyle{plainurl}
+\bibliography{main} 
