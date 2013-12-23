@@ -23,8 +23,6 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
 \gnote{reaction cross-section graphic}
 Pure deuterium fuel (reactions shown in eqs. \ref{eq:dd1}-\ref{eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety on the fuel system, and is naturally occurring in relative abundance (approximately $1/6000$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction \note{ref cross-section graphic} and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options, setting high performance requirements for a putative DD-burning reactor.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Magnetic Confinement}\label{sec:intro_magnetic}
