@@ -25,7 +25,7 @@ As the plasma is comprised of free charged particles, it responds strongly to el
 \noindent In a multiple-ion species plasma, we may also define an effective ion charge
 
 \begin{equation}\label{eq:Zeff}
- Z_{eff} = \sum_j{n_j Z_j^2}
+ Z_{eff} = \frac{1}{n_e} \sum_j{n_j Z_j^2}
 \end{equation}
 
 The electrostatic force driving this charge redistribution induces a ``ringing'' oscillation in the plasma, at the characteristic plasma frequency $\omega_p$:
@@ -50,7 +50,7 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
 
 \subsection{Fusion Fuels}\label{subsec:intro_fuels}
 
-Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
+Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, as they form nuclei with greater binding energy per nucleon (see Figure~\ref{fig:bindingenergy}), the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
 
 \begin{align}
  {}^2\si{D} + {}^2\si{D} &\rightarrow {}^3\si{T} + \si{p} + 4.03 \;\si{\mega\electronvolt}\label{eq:dd1}\\
@@ -59,21 +59,46 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
   {}^2\si{D} + {}^3\si{T} &\rightarrow {}^4\si{He} + \si{n} + 17.6 \;\si{\mega\electronvolt}\label{eq:dt}
 \end{align}
 
-\noindent Here $\si{D}$ and $\si{T}$ indicate nuclei of deuterium and tritium, two heavy isotopes of hydrogen (one proton plus one and two neutrons, respectively).
+\noindent Here $\si{D}$ and $\si{T}$ indicate nuclei of deuterium and tritium, two heavy isotopes of hydrogen (one proton plus one and two neutrons, respectively).  The fusion reaction rate $R_f$ is given by
 
-\begin{figure}[h]
+\begin{equation}\label{eq:rate}
+ R_f = n_1 n_2 \langle \sigma v \rangle_{1,2}
+\end{equation}
+
+\noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian fuel distribution (eqn.~\ref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in Figure~\ref{fig:xsection}.
+
+% \begin{figure}[h]
+%  \pushtooutside
+%  \fcapside[70mm]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy per nucleon are exothermic -- thus, fusion of elements lighter than $\si{Fe}^{56}$ or fission of elements heavier than $\si{Fe}^{56}$ releases energy.}\label{fig:bindingenergy}}{\includegraphics[width=95mm]{graphics/Introduction/bindingenergy.png}}
+% \end{figure}
+% 
+% \begin{figure}[h]
+%  \pushtooutside
+%  \fcapside[70mm]{\caption{Reaction rate normalized to fuel density for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=95mm]{graphics/Introduction/reaction_xsections.pdf}}
+% \end{figure}
+
+\begin{figure}
  \pushtooutside
- \fcapside[\FBwidth]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.}\label{fig:bindingenergy}}{\includegraphics[width=95mm]{graphics/Introduction/bindingenergy.png}}
+ \ffigbox[\FBwidth]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy per nucleon are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy.}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
  \pushtooutside
- \fcapside[\FBwidth]{\caption{Reaction rate coefficients for fusion fuels.}\label{fig:xsection}}{\includegraphics[width=95mm]{graphics/Introduction/reaction_xsections.pdf}}
+ \ffigbox[\FBwidth]{\caption{Reaction rate normalized to fuel density for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=150mm]{graphics/Introduction/reaction_xsections.pdf}}
 \end{figure}
 
-Pure deuterium fuel (reactions shown in eqns. \ref{eq:dd1} and \ref{eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety on the fuel system, and is naturally occurring in relative abundance (approximately $1/6000$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction (see Figure~\ref{fig:xsection}) and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options, setting high performance requirements for a putative DD-burning reactor.
+Pure deuterium fuel (reactions shown in eqns. \ref{eq:dd1} and \ref{eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety in the fuel system, and is naturally occurring in relative abundance (approximately $1/6000$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options (see Figure~\ref{fig:xsection}), setting high performance requirements for a putative DD-burning reactor.
 
+The $\si{D}-\si{He}^3$ reaction (eqn.~\ref{eq:dhe3}) exhibits several desirable properties, namely an impressive energy yield per reaction, and the fact that the reaction produces only charged particles rather than the high-energy neutrons found in $\si{D}-\si{D}$ and $\si{D}-\si{T}$ reactions, which can cause significant damage to reactor materials.  However, as with $\si{D}-\si{D}$ fuel, the $\si{D}-\si{He}^3$ reaction suffers from a lower reaction rate at attainable conditions, as well as the fact that Helium-3 does not occur in economically usable quantities on Earth.  While off-planet sources of Helium-3 exist (for example, a useful quantity is present in the lunar regolith \note{cite}), this fuel remains the subject of speculation.
 
+The deuterium-tritium reaction (eqn.~\ref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying roughly 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor components.  The heat generated in the blanket from neutron absorption will also be drawn off in a steam cycle to drive turbines, generating electricity from the reactor.  Finally, seeding the blanket with lithium allows the following reactions with fusion neutrons:
+
+\begin{align}
+ {}^6\si{Li} + \si{n}_{slow} &\rightarrow {}^4\si{He} + \si{T} + 4.8 \;\si{MeV}\label{eq:Li6}\\
+ {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - 8.7 \;\si{MeV}\label{eq:Li7}
+\end{align}
+
+\noindent the Lithium-6 reaction (eqn.~\ref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (eqn.~\ref{eq:Li7}) is more likely to capture fast neutrons to produce tritium in an endothermic reaction; however, the reaction also acts as a neutron multiplier, as a free neutron is maintained through the reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
