@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=936
 NormalPos.bottom=718
 Class=LaTeXView
-Document=thesis.tex
+Document=Chapters\Introduction.tex
 
 [Frame0_View0,0]
-TopLine=36
-Cursor=2400
+TopLine=201
+Cursor=15236
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=936
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\Introduction.tex
+Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=21
-Cursor=3104
+TopLine=72
+Cursor=4789
 
 [SessionInfo]
 FrameCount=2

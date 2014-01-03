@@ -118,18 +118,16 @@ components.  The heat generated in the blanket from neutron absorption will also
 
 \subsection{Basic Principles}\label{subsec:intro_basic}
 
-The temperatures in excess of 100 million Kelvin necessary for fusion in a plasma are inconsistent with any contact between solid reactor materials and the hot core of the plasma.  Magnetic confinement relies on the strong response of the charged particles comprising the plasma to magnetic fields, rather than a material wall, to retain the thermal pressure ($\sim 10 \;\si{atm}$ for a reactor) from the plasma.  The response of a charged particle to electric and magnetic fields is governed by the Lorentz force,
+The temperatures in excess of 100 million Kelvin necessary for fusion in a plasma are inconsistent with any contact between solid reactor materials and the hot core of the plasma.  Magnetic confinement relies on the strong response of the charged particles comprising the plasma to magnetic fields, rather than a material wall, to retain the thermal pressure ($\sim 10 \;\si{atm}$ for a reactor) from the plasma.  The response of a charged particle to electric and magnetic fields is governed by the Lorentz force, \cite{Freidberg2007}
 
 \begin{equation}\label{eq:lorentz}
  \vec{F} = q\left(\vec{E} + \vec{v} \times \vec{B}\right)
 \end{equation}
 
-\begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
- \includegraphics[width=70mm]{graphics/Introduction/gyro.pdf}
- \caption{Electron and ion gyro orbits in an applied magnetic field.}\label{fig:intro_gyro}
-\end{wrapfigure}
-
-\noindent 
+\begin{figure}
+ \pushtooutside
+ \fcapside[50mm]{\caption{Electron and ion gyro orbits in an applied magnetic field.}\label{fig:intro_gyro}}{\includegraphics[width=85mm]{graphics/Introduction/gyro.pdf}}
+\end{figure}
 
 \subsection{Toroidal Configurations}\label{subsec:intro_toroidal}
 
@@ -163,5 +161,5 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % do per-chapter bibliographies, or one big one?
-%\bibliographystyle{plainurl}
-%\bibliography{main} 
+\bibliographystyle{plainurl}
+\bibliography{../references} 
