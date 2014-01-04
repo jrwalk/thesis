@@ -1,15 +1,14 @@
 \chapter{Introduction}\label{ch:Introduction}
 
-\gnote{pull energy, population references from Brunner thesis, point to Chen's fusion energy book, Wesson?}
-The population of the earth is projected to increase substantially over the next half-century, potentially reaching as high as 10 billion globally by 2050.  At the same time, any attempt to increase the quality of life of the existing population will necessarily involve increased energy consumption per capita, with a greater fraction of the earth approaching ``first-world'' consumption levels \note{find refs for both}.  As such, worldwide energy consumption will likely continue to increase in the next few decades \note{BP refs for projections from Brunner?}
+The population of the earth is projected to increase substantially over the next half-century, potentially reaching as high as 10 billion globally by 2050 \cite{World2010}.  At the same time, any attempt to increase the quality of life of the existing population will necessarily involve increased energy consumption per capita, with a greater fraction of the earth approaching ``first-world'' consumption levels \cite{HDI2011}.  As such, worldwide energy consumption will likely continue to increase in the next few decades \cite{EIA2011,BP2010}
 
-This increase in energy demand occurs in parallel with increased pressure on traditional energy sources.  Fossil fuels (oil, coal, and natural gas), while reliable sources of base-load power, nevertheless face issues.  Oil faces increasing cost and technical difficulty in capturing dwindling available reserves, as well as the potential for serious ecological damage from accidents (\eg the Deepwater Horizon offshore rig accident in 2010).  Coal, while more readily available \note{cite for estimates of coal stores in the US}, releases particulate matter into the atmosphere, with serious consequences both to the environment and to human health, as well as the greenhouse gases tied to deleterious climate change.  
+This increase in energy demand occurs in parallel with increased pressure on traditional energy sources.  Fossil fuels (oil, coal, and natural gas), while reliable sources of base-load power, nevertheless face issues.  Oil faces increasing cost and technical difficulty in capturing dwindling available reserves, as well as the potential for serious ecological damage from accidents (\eg the Deepwater Horizon offshore rig accident in 2010).  Coal, while more readily available (an estimated 257 billion tons of recoverable reserves in the US, lasting roughly 240 years at current consumption \cite{BP2010,EIA2013}), releases particulate matter into the atmosphere, with serious consequences both to the environment and to human health, as well as the greenhouse gases tied to deleterious climate change.  
 
-Renewable energy sources have a certain ``green'' appeal, but each is subject to strict limitations on their implementation.  Solar and wind power suffer from a large degree of variability in their output, necessitating a combination of expensive energy storage methods or (often fossil-fuel based) backup production to handle shortfalls.  Hydroelectric and geothermal power are suitable for base-load power production, but are strictly restricted in their implementation by geographic concerns -- bluntly, there are relatively few locations where hydro or geothermal power generation is possible, and many of these have already been developed \note{cite for this?}.
+Renewable energy sources have a certain ``green'' appeal, but each is subject to strict limitations on their implementation.  Solar and wind power suffer from a large degree of variability in their output, necessitating a combination of expensive energy storage methods or (often fossil-fuel based) backup production to handle shortfalls.  Hydroelectric and geothermal power are suitable for base-load power production, but are strictly restricted in their implementation by geographic concerns -- bluntly, there are relatively few locations where hydro or geothermal power generation is possible, and many of these have already been developed \gnote{cite for this?}.
 
 Conventional -- that is, fission-based -- nuclear power can also supply carbon-free base-load power, with fuel reserves lasting through the next century.  While nuclear power does  suffer from the potential for extremely serious accidents (Fukushima, Chernobyl) it is, in general, highly safe.  However, public perception of nuclear power hinges on these safety concerns, limiting the expansion of nuclear power to meet increasing demand and the safe long-term handling of existing nuclear waste, as well as, ironically, preventing the replacement of an aging reactor fleet with newer, safer designs.
 
-\emph{Fusion}, the nuclear process driving stellar cores, is a potentially highly attractive option for satisfying the world's growing energy needs in an efficient, environmentally-sound manner.  A fusion reactor would supply base-load power using only a small amount of an effectively inexhaustible fuel (readily available for harvesting from seawater), with no greenhouse gas emissions or meaningfully radioactive waste, and the physical impossibility of a major ``meltdown'' accident.  However, fusion remains in the experimental stage, with significant technical hurdles remaining before the development of a prototype fusion power plant.  This thesis will attempt to contribute to the understanding of one of these hurdles, regarding the requirement for efficient plasma behavior in a reactor scenario \note{reword this!}  Further reading on the development of fusion energy is available to the interested reader in several excellent references. \note{cite Freidberg, Chen, Wesson} \nicesectionending
+\emph{Fusion}, the nuclear process driving stellar cores, is a potentially highly attractive option for satisfying the world's growing energy needs in an efficient, environmentally-sound manner.  A fusion reactor would supply base-load power using only a small amount of an effectively inexhaustible fuel (readily available for harvesting from seawater), with no greenhouse gas emissions or meaningfully radioactive waste, and the physical impossibility of a major ``meltdown'' accident.  However, fusion remains in the experimental stage, with significant technical hurdles remaining before the development of a prototype fusion power plant.  This thesis will attempt to contribute to the understanding of one of these hurdles, regarding the requirement for efficient plasma behavior in a reactor scenario \note{reword this!}  Further reading on the development of fusion energy is available to the interested reader in several excellent references. \cite{Freidberg2007,Wesson2011,Chen1984} \nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -57,11 +56,11 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
  P_{Brems} = \left( 5.35 \times 10^{-37} \right) n_e^2 Z_{eff} \sqrt{T}
 \end{equation}
 
-\noindent representing a consistent source of heat loss from the plasma. \nicesectionending
+\noindent representing a consistent source of heat loss from the plasma.
 
 \subsection{Fusion Fuels}\label{subsec:intro_fuels}
 
-Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, as they form nuclei with greater binding energy per nucleon (see Figure~\ref{fig:bindingenergy}), the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
+Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, as they form nuclei with greater binding energy per nucleon (see \cref{fig:bindingenergy}), the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
 
 \begin{align}
  {}^2\si{D} + {}^2\si{D} &\rightarrow {}^3\si{T} + \si{p} + 4.03 \;\si{\mega\electronvolt}\label{eq:dd1}\\
@@ -76,21 +75,11 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
  R_f = n_1 n_2 \langle \sigma v \rangle_{1,2}
 \end{equation}
 
-\noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian fuel distribution (eqn.~\ref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in Figure~\ref{fig:xsection}.
-
-% \begin{figure}[h]
-%  \pushtooutside
-%  \fcapside[70mm]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy per nucleon are exothermic -- thus, fusion of elements lighter than $\si{Fe}^{56}$ or fission of elements heavier than $\si{Fe}^{56}$ releases energy.}\label{fig:bindingenergy}}{\includegraphics[width=95mm]{graphics/Introduction/bindingenergy.png}}
-% \end{figure}
-% 
-% \begin{figure}[h]
-%  \pushtooutside
-%  \fcapside[70mm]{\caption{Reaction rate normalized to fuel density for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=95mm]{graphics/Introduction/reaction_xsections.pdf}}
-% \end{figure}
+\noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian fuel distribution (\cref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in \cref{fig:xsection}.
 
 \begin{figure}
  \pushtooutside
- \ffigbox[\FBwidth]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy per nucleon are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy.}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
+ \ffigbox[\FBwidth]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy per nucleon are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy. \note{citation for this?}}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
 \end{figure}
 
 \begin{figure}
@@ -98,11 +87,11 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
  \ffigbox[\FBwidth]{\caption{Reaction rate normalized to fuel density, expressed as the rate coefficient $\langle \sigma v \rangle$, for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=150mm]{graphics/Introduction/reaction_xsections.pdf}}
 \end{figure}
 
-Pure deuterium fuel (reactions shown in eqns. \ref{eq:dd1} and \ref{eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety in the fuel system, and is naturally occurring in relative abundance (approximately $1/6000$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options (see Figure~\ref{fig:xsection}), setting high performance requirements for a putative DD-burning reactor.
+Pure deuterium fuel (reactions shown in \cref{eq:dd1,eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety in the fuel system, and is naturally occurring in relative abundance (approximately $1/6420$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options (see \cref{fig:xsection}), setting high performance requirements for a putative DD-burning reactor.
 
-The $\si{D}-\si{He}^3$ reaction (eqn.~\ref{eq:dhe3}) exhibits several desirable properties, namely an impressive energy yield per reaction, and the fact that the reaction produces only charged particles rather than the high-energy neutrons found in $\si{D}-\si{D}$ and $\si{D}-\si{T}$ reactions, which can cause significant damage to reactor materials.  However, as with $\si{D}-\si{D}$ fuel, the $\si{D}-\si{He}^3$ reaction suffers from a lower reaction rate at attainable conditions, as well as the fact that Helium-3 does not occur in economically usable quantities on Earth.  While off-planet sources of Helium-3 exist (for example, a useful quantity is present in the lunar regolith \note{cite}), this fuel remains the subject of speculation.
+The $\si{D}-\si{He}^3$ reaction (\cref{eq:dhe3}) exhibits several desirable properties, namely an impressive energy yield per reaction, and the fact that the reaction produces only charged particles rather than the high-energy neutrons found in $\si{D}-\si{D}$ and $\si{D}-\si{T}$ reactions, which can cause significant damage to reactor materials.  However, as with $\si{D}-\si{D}$ fuel, the $\si{D}-\si{He}^3$ reaction suffers from a lower reaction rate at attainable conditions, as well as the fact that Helium-3 does not occur in economically usable quantities on Earth.  While off-planet sources of Helium-3 exist (for example, a useful quantity is present in the lunar regolith \note{cite}), this fuel remains the subject of speculation.
 
-The deuterium-tritium reaction (eqn.~\ref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying roughly 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor 
+The deuterium-tritium reaction (\cref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying roughly 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor 
 components.  The heat generated in the blanket from neutron absorption will also be drawn off in a steam cycle to drive turbines, generating electricity from the reactor.  Finally, seeding the blanket with lithium allows the following reactions with fusion neutrons:
 
 \begin{align}
@@ -110,7 +99,7 @@ components.  The heat generated in the blanket from neutron absorption will also
  {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - 8.7 \;\si{MeV}\label{eq:Li7}
 \end{align}
 
-\noindent the Lithium-6 reaction (eqn.~\ref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (eqn.~\ref{eq:Li7}) is more likely to capture fast neutrons to produce tritium in an endothermic reaction; however, the reaction also acts as a neutron multiplier, as a free neutron is maintained through the reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
+\noindent the Lithium-6 reaction (\cref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (\cref{eq:Li7}) is more likely to capture fast neutrons to produce tritium in an endothermic reaction; however, the reaction also acts as a neutron multiplier, as a free neutron is maintained through the reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -118,7 +107,7 @@ components.  The heat generated in the blanket from neutron absorption will also
 
 \subsection{Basic Principles}\label{subsec:intro_basic}
 
-The temperatures in excess of 100 million Kelvin necessary for fusion in a plasma are inconsistent with any contact between solid reactor materials and the hot core of the plasma.  Magnetic confinement relies on the strong response of the charged particles comprising the plasma to magnetic fields, rather than a material wall, to retain the thermal pressure ($\sim 10 \;\si{atm}$ for a reactor) from the plasma.  The response of a charged particle to electric and magnetic fields is governed by the Lorentz force, \cite{Freidberg2007}
+The temperatures in excess of 100 million Kelvin necessary for fusion in a plasma are inconsistent with any contact between solid reactor materials and the hot core of the plasma.  Magnetic confinement relies on the strong response of the charged particles comprising the plasma to magnetic fields, rather than a material wall, to retain the thermal pressure ($\sim 10 \;\si{atm}$ for a reactor) from the plasma.  The response of a charged particle to electric and magnetic fields is governed by the Lorentz force,
 
 \begin{equation}\label{eq:lorentz}
  \vec{F} = q\left(\vec{E} + \vec{v} \times \vec{B}\right)
@@ -126,8 +115,43 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 
 \begin{figure}
  \pushtooutside
- \fcapside[50mm]{\caption{Electron and ion gyro orbits in an applied magnetic field.}\label{fig:intro_gyro}}{\includegraphics[width=85mm]{graphics/Introduction/gyro.pdf}}
+ \fcapside[50mm]{\caption{Electron and ion gyro orbits in an applied magnetic field.  Note that, due to the charge dependence in the Lorentz Force (\cref{eq:lorentz}), electrons and ions orbit in opposite directions relative to the magnetic field.}\label{fig:intro_gyro}}{\includegraphics[width=85mm]{graphics/Introduction/gyro.pdf}}
 \end{figure}
+
+\noindent In a strong background magnetic field, the particle will move on a helical path along the magnetic field.  The $\vec{v} \times \vec{B}$ factor in the Lorentz Force causes the particle to experience no magnetic force parallel to the field, while velocity perpendicular to the field generates a force proportional to the velocity times the magnetic field, directed perpendicular to both -- thus the particle freely streams parallel to the field, but is trapped in a circular orbit perpendicular to it, termed ``gyro motion'', as depicted in \cref{fig:intro_gyro}.  The particle will orbit at the cyclotron frequency,
+
+\begin{equation}\label{eq:omegac}
+ \omega_c = \frac{qB}{m} \quad\Rightarrow\quad \omega_{ce} = \frac{eB}{m_e}, \quad \omega_{ci} = \frac{ZeB}{m_i}
+\end{equation}
+
+\noindent for electrons and ions of charge $Z$, respectively (note that for brevity we indicate the magnitude of vectors as scalar variables, \eg $B = \left|\vec{B}\right|$).  A particle with velocity perpendicular to the magnetic field $v_\perp$ (formally, $v_\perp = \left|\vec{v} \times \vec{B}\right|/B$) orbits at its gyroradius,
+
+\begin{equation}\label{eq:gyroradius}
+ \rho = \frac{v_\perp}{\omega_c} = \frac{mv_\perp}{qB}
+\end{equation}
+
+\noindent For a thermalized plasma, the perpendicular velocity will, on average, be the thermal velocity $v_t = \sqrt{2T/m}$, thus
+
+\begin{equation}\label{eq:gyroradius2}
+ \rho = \frac{\sqrt{2mT}}{qB}
+\end{equation}
+
+\noindent The introduction of a nonzero electric field drives additional motion for the particle in the form of a drift velocity -- the guiding center (that is, the average point about which the orbital motion of the particle gyrates) will shift with a bulk velocity (see \note{citation for this, +section} for derivation)
+
+\begin{equation}\label{eq:exb}
+ \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
+\end{equation}
+
+\noindent independent of particle charge, mass, or energy.
+
+\gnote{check gyroradius sizes for C-Mod}
+This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the premise of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite{Freidberg1987} for detailed derivation \note{find section}) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
+
+\begin{equation}\label{eq:MHDeq}
+ \nabla p = \vec{J} \times \vec{B}
+\end{equation}
+
+\noindent in which the outward force due to the plasma pressure gradient is balanced by an inward force from the interplay between magnetic fields and electric currents (expressed by the current density $\vec{J}$).  This interplay is readily illustrated in the simple one-dimensional case of an infinite straight cylinder of plasma -- in this case, the radially-outward $\nabla p$ force may be balanced by an axial current in the $\hat{z}$ direction with an azimuthal $\hat{\phi}$ magnetic field ($z$-pinch), an axial current and azimuthal field ($\theta$-pinch), or a superposition of the two (screw pinch).  However, all three of these options suffer from a lack of parallel confinement -- as the magnetic field does not restrict the free-streaming parallel motion of the plasma, these linear concepts (when reduced to a physical, non-infinite size!) suffer from plasma losses at the ends of the cylinder.  Despite efforts to restrict the parallel motion in a linear device (\eg the ``magnetic mirror,'' which pinches the magnetic field at the cylinder ends in order to reflect the parallel motion of particles with a force due to the field gradient \note{cite for tara tandem?}), end losses in linear devices proved incompatible with steady-state fusion conditions.  The clear solution, then, was to close the magnetic geometry such that the magnetic field lines have no ends: a \emph{torus.}
 
 \subsection{Toroidal Configurations}\label{subsec:intro_toroidal}
 

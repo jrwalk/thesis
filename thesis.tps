@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=936
+NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
 Document=Chapters\Introduction.tex
 
 [Frame0_View0,0]
-TopLine=201
-Cursor=15236
+TopLine=261
+Cursor=9723
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=936
+NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=72
-Cursor=4789
+TopLine=84
+Cursor=4488
 
 [SessionInfo]
 FrameCount=2
