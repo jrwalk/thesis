@@ -53,7 +53,7 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
 \noindent These collisions also cause the plasma to emit a continuous spectrum of Bremsstrahlung radiation.  For a plasma in thermal equilibrium, integration over the full spectrum gives for the total radiated power
 
 \begin{equation}\label{eq:brems}
- P_{Brems} = \left( 5.35 \times 10^{-37} \right) n_e^2 Z_{eff} \sqrt{T}
+ P_{Brems} = \left( \num{5.35e-37} \right) n_e^2 Z_{eff} \sqrt{T}
 \end{equation}
 
 \noindent representing a consistent source of heat loss from the plasma.
@@ -63,10 +63,10 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
 Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, as they form nuclei with greater binding energy per nucleon (see \cref{fig:bindingenergy}), the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
 
 \begin{align}
- {}^2\si{D} + {}^2\si{D} &\rightarrow {}^3\si{T} + \si{p} + 4.03 \;\si{\mega\electronvolt}\label{eq:dd1}\\
- {}^2\si{D} + {}^2\si{D} &\rightarrow {}^{3}\si{He} + \si{n} + 3.27 \;\si{\mega\electronvolt}\label{eq:dd2}\\
- {}^2\si{D} + {}^3\si{He} &\rightarrow {}^4\si{He} + \si{p} + 18.3 \;\si{\mega\electronvolt}\label{eq:dhe3}\\
-  {}^2\si{D} + {}^3\si{T} &\rightarrow {}^4\si{He} + \si{n} + 17.6 \;\si{\mega\electronvolt}\label{eq:dt}
+ {}^2\si{D} + {}^2\si{D} &\rightarrow {}^3\si{T} + \si{p} + \SI{4.03}{\mega\electronvolt}\label{eq:dd1}\\
+ {}^2\si{D} + {}^2\si{D} &\rightarrow {}^{3}\si{He} + \si{n} + \SI{3.27}{\mega\electronvolt}\label{eq:dd2}\\
+ {}^2\si{D} + {}^3\si{He} &\rightarrow {}^4\si{He} + \si{p} + \SI{18.3}{\mega\electronvolt}\label{eq:dhe3}\\
+  {}^2\si{D} + {}^3\si{T} &\rightarrow {}^4\si{He} + \si{n} + \SI{17.6}{\mega\electronvolt}\label{eq:dt}
 \end{align}
 
 \noindent Here $\si{D}$ and $\si{T}$ indicate nuclei of deuterium and tritium, two heavy isotopes of hydrogen (one proton plus one and two neutrons, respectively).  The fusion reaction rate $R_f$ is given by
@@ -95,8 +95,8 @@ The deuterium-tritium reaction (\cref{eq:dt}) is considered the most promising f
 components.  The heat generated in the blanket from neutron absorption will also be drawn off in a steam cycle to drive turbines, generating electricity from the reactor.  Finally, seeding the blanket with lithium allows the following reactions with fusion neutrons:
 
 \begin{align}
- {}^6\si{Li} + \si{n}_{slow} &\rightarrow {}^4\si{He} + \si{T} + 4.8 \;\si{MeV}\label{eq:Li6}\\
- {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - 8.7 \;\si{MeV}\label{eq:Li7}
+ {}^6\si{Li} + \si{n}_{slow} &\rightarrow {}^4\si{He} + \si{T} + \SI{4.8}{MeV}\label{eq:Li6}\\
+ {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - \SI{8.7}{MeV}\label{eq:Li7}
 \end{align}
 
 \noindent the Lithium-6 reaction (\cref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (\cref{eq:Li7}) is more likely to capture fast neutrons to produce tritium in an endothermic reaction; however, the reaction also acts as a neutron multiplier, as a free neutron is maintained through the reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
@@ -136,7 +136,7 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
  \rho = \frac{\sqrt{2mT}}{qB}
 \end{equation}
 
-\noindent The introduction of a nonzero electric field drives additional motion for the particle in the form of a drift velocity -- the guiding center (that is, the average point about which the orbital motion of the particle gyrates) will shift with a bulk velocity (see \note{citation for this, +section} for derivation)
+\noindent The introduction of a nonzero electric field drives additional motion for the particle in the form of a drift velocity -- the guiding center (that is, the average point about which the orbital motion of the particle gyrates) will shift with a bulk velocity (see \cite[\S 8.4]{Freidberg2007} for derivation)
 
 \begin{equation}\label{eq:exb}
  \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
@@ -144,20 +144,48 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 
 \noindent independent of particle charge, mass, or energy.
 
-\gnote{check gyroradius sizes for C-Mod}
-This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the premise of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite{Freidberg1987} for detailed derivation \note{find section}) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
+This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the premise of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite[\S 2.3]{Freidberg1987} for detailed derivation) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
 
 \begin{equation}\label{eq:MHDeq}
  \nabla p = \vec{J} \times \vec{B}
 \end{equation}
 
-\noindent in which the outward force due to the plasma pressure gradient is balanced by an inward force from the interplay between magnetic fields and electric currents (expressed by the current density $\vec{J}$).  This interplay is readily illustrated in the simple one-dimensional case of an infinite straight cylinder of plasma -- in this case, the radially-outward $\nabla p$ force may be balanced by an axial current in the $\hat{z}$ direction with an azimuthal $\hat{\phi}$ magnetic field ($z$-pinch), an axial current and azimuthal field ($\theta$-pinch), or a superposition of the two (screw pinch).  However, all three of these options suffer from a lack of parallel confinement -- as the magnetic field does not restrict the free-streaming parallel motion of the plasma, these linear concepts (when reduced to a physical, non-infinite size!) suffer from plasma losses at the ends of the cylinder.  Despite efforts to restrict the parallel motion in a linear device (\eg the ``magnetic mirror,'' which pinches the magnetic field at the cylinder ends in order to reflect the parallel motion of particles with a force due to the field gradient \note{cite for tara tandem?}), end losses in linear devices proved incompatible with steady-state fusion conditions.  The clear solution, then, was to close the magnetic geometry such that the magnetic field lines have no ends: a \emph{torus.}
+\noindent in which the outward force due to the plasma pressure gradient is balanced by an inward force from the interplay between magnetic fields and electric currents (expressed by the current density $\vec{J}$).  This interplay is readily illustrated in the simple one-dimensional case of an infinite straight cylinder of plasma -- in this case, the radially-outward $\nabla p$ force may be balanced by an axial current in the $\hat{z}$ direction with an azimuthal $\hat{\phi}$ magnetic field ($z$-pinch), an axial current and azimuthal field ($\theta$-pinch), or a superposition of the two (screw pinch).  However, all three of these options suffer from a lack of parallel confinement -- as the magnetic field does not restrict the free-streaming parallel motion of the plasma, these linear concepts (when reduced to a physical, non-infinite size!) suffer from plasma losses at the ends of the cylinder.  Despite efforts to restrict the parallel motion in a linear device (\eg the ``magnetic mirror,'' which pinches the 
+magnetic field at the cylinder ends in order to reflect the parallel motion of particles with a force due to the field gradient \cite{Kesner1982}), end losses in linear devices proved incompatible with steady-state fusion conditions.  The clear solution, then, was to close the magnetic geometry such that the magnetic field lines have no ends: a \emph{torus.}
 
 \subsection{Toroidal Configurations}\label{subsec:intro_toroidal}
+
+\note{do this!!!}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Alcator C-Mod}\label{sec:intro_cmod}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\caption{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures.}\label{fig:alcator}}{\includegraphics[width=0.9\fullwidth]{graphics/Introduction/alcator.jpg}}
+\end{figure}
+
+\begin{wraptable}{O}{0 pt}
+ \ttabbox{\caption{Summary of Alcator C-Mod typical operating parameters.}\label{tab:cmod}}
+  {\begin{tabular}{lc}
+    \toprule
+    \emph{parameter} & \emph{range}\\
+    \midrule
+    major radius & $\SI{0.67}{\meter}$ \\
+    minor radius & $\SI{0.22}{\meter}$ \\
+    toroidal field & $3 - \SI{8.1}{\tesla}$ \\
+    plasma current & $\le \SI{2}{\mega\ampere}$ \\
+    plasma density & $\le \SI{5e20}{m^{-3}}$ \\
+    central temperature & $\le \SI{8}{\kilo\electronvolt}$ \\
+    plasma pressure & $\le \SI{2}{\atmosphere}$ \\
+    ICRF power & $\SI{6}{\mega\watt}$ \\
+    LHRF power & $\SI{1}{\mega\watt}$ \\
+    \bottomrule
+   \end{tabular}}
+\end{wraptable}
+
+The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator series of tokamak experiments were designed as compact, high-field tokamaks.  Despite its physical size ($\SI{67}{\centi\meter}$ major radius, $\SI{22}{\centi\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of reaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$) due to their relatively high toroidal magnetic field, reaching as high as $\SI{8.1}{\tesla}$ on C-Mod.  C-Mod plasmas are primarily heated by ion-cyclotron (ICRF) heating \note{find cite!}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of lower-hybrid resonance (LHRF) power used for heating and DC current drive \note{find cite!}.  The toroidal magnetic field is driven by liquid-Nitrogen-cooled copper coils.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -185,5 +213,5 @@ This restriction of particle motion perpendicular to field lines to short length
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % do per-chapter bibliographies, or one big one?
-\bibliographystyle{plainurl}
+\bibliographystyle{../plainurl}
 \bibliography{../references} 
