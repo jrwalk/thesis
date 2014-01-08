@@ -271,16 +271,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  2 n_e T_e \tau_E = p \tau_E = \frac{24 T_e^2}{\langle \sigma v \rangle E_\alpha}
 \end{equation}
 
-\noindent an important figure of merit for a reactor that is optimized at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor.
-
-\gnote{cite Freidberg for beta limit?}
-However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of the normalized pressure
-
-\begin{equation}\label{eq:beta}
- \beta = \frac{2 \mu_0 p}{B^2}
-\end{equation}
-
-\noindent which encodes the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Although the maximum stable pressure may be increased with higher plasma current and toroidal field (motivating high-field design for tokamaks), reactor-scale operation requires increased energy confinement (\ie higher values for $\tau_E$) to reach the triple-product target.
+\noindent an important figure of merit for a reactor that is optimized at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere.\second}$
 
 \subsection{Transport Barriers}\label{subsec:intro_barriers}
 
