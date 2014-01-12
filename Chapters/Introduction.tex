@@ -9,6 +9,7 @@ Renewable energy sources have a certain ``green'' appeal, but each is subject to
 Conventional -- that is, fission-based -- nuclear power can also supply carbon-free base-load power, with fuel reserves lasting through the next century.  While nuclear power does  suffer from the potential for extremely serious accidents (Fukushima, Chernobyl) it is, in general, highly safe.  However, public perception of nuclear power hinges on these safety concerns, limiting the expansion of nuclear power to meet increasing demand and the safe long-term handling of existing nuclear waste, as well as, ironically, preventing the replacement of an aging reactor fleet with newer, safer designs.
 
 \emph{Fusion}, the nuclear process driving stellar cores, is a potentially highly attractive option for satisfying the world's growing energy needs in an efficient, environmentally-sound manner.  A fusion reactor would supply base-load power using only a small amount of an effectively inexhaustible fuel (readily available for harvesting from seawater), with no greenhouse gas emissions or meaningfully radioactive waste, and the physical impossibility of a major ``meltdown'' accident.  However, fusion remains in the experimental stage, with significant technical hurdles remaining before the development of a prototype fusion power plant.  This thesis will attempt to contribute to the understanding of one of these hurdles, regarding the requirement for efficient plasma behavior in a reactor scenario \note{reword this!}  Further reading on the development of fusion energy is available to the interested reader in several excellent references. \cite{Freidberg2007,Wesson2011,Chen1984} \nicesectionending
+\gnote{reword last sentence...}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -87,8 +88,10 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
  \ffigbox[\FBwidth]{\caption{Reaction rate normalized to fuel density, expressed as the rate coefficient $\langle \sigma v \rangle$, for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=150mm]{graphics/Introduction/reaction_xsections.pdf}}
 \end{figure}
 
+\gnote{pull cite for deuterium prevalence?}
 Pure deuterium fuel (reactions shown in \cref{eq:dd1,eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety in the fuel system, and is naturally occurring in relative abundance (approximately $1/6420$ of hydrogen nuclei on earth are deuterium \note{cite}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options (see \cref{fig:xsection}), setting high performance requirements for a putative DD-burning reactor.
 
+\gnote{citation for He-3 in lunar regolith?}
 The $\si{D}-\si{He}^3$ reaction (\cref{eq:dhe3}) exhibits several desirable properties, namely an impressive energy yield per reaction, and the fact that the reaction produces only charged particles rather than the high-energy neutrons found in $\si{D}-\si{D}$ and $\si{D}-\si{T}$ reactions, which can cause significant damage to reactor materials.  However, as with $\si{D}-\si{D}$ fuel, the $\si{D}-\si{He}^3$ reaction suffers from a lower reaction rate at attainable conditions, as well as the fact that Helium-3 does not occur in economically usable quantities on Earth.  While off-planet sources of Helium-3 exist (for example, a useful quantity is present in the lunar regolith \note{cite}), this fuel remains the subject of speculation.
 
 The deuterium-tritium reaction (\cref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying roughly 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor 
@@ -175,7 +178,15 @@ However, introducing toroidal effects into the magnetic geometry gives rise to a
  \vec{v}_\kappa = \frac{v_\parallel^2}{\omega_c} \frac{\vec{R}_c \times \vec{B}}{R_c^2 B}
 \end{equation}
 
-\noindent where $v_\parallel$ is the particle velocity parallel to the magnetic field, $\omega_c$ is the species cyclotron frequency (\cref{eq:omegac}), and $\vec{R}_c$ is the radius of curvature of the field.  In the case of an applied toroidal magnetic field (toroidal $\theta$-pinch) these drifts are directed vertically in the $\hat{Z}$ direction, and are directed oppositely for electrons and ions due to the charge dependence in $\omega_c$.  The electric field resulting from this charge separation drives an outward $\vec{E} \times \vec{B}$ drift (see \cref{eq:exb}), breaking the confinement of the $\theta$-pinch.  This effect is countered by the addition of a poloidal field, which adds a helical twist to the guiding-center path to average out the separation due to particle drifts.  Concepts aiming for steady-state magnetic confinement of a plasma typically rely on generating this twist, termed the ``rotational transform,'' to maintain stable confinement.
+\noindent where $v_\parallel$ is the particle velocity parallel to the magnetic field, $\omega_c$ is the species cyclotron frequency (\cref{eq:omegac}), and $\vec{R}_c$ is the radius of curvature of the field.  In the case of an applied toroidal magnetic field, these drifts are directed vertically in the $\hat{Z}$ direction, and are directed oppositely for electrons and ions due to the charge dependence in $\omega_c$.  The electric field resulting from this charge separation drives an outward $\vec{E} \times \vec{B}$ drift (see \cref{eq:exb}), breaking confinement.  This effect is countered by the addition of a poloidal field, which adds a helical twist to the guiding-center path to average out the separation due to particle drifts.  Concepts aiming for steady-state magnetic confinement of a plasma typically rely on generating this twist, termed the ``rotational transform,'' to maintain stable confinement.
+
+One of the most successful implementations of this configuration is the \emph{tokamak} (from the Russian \emph{toroidalnaya kamera s magnetnymi katushkami}, ``toroidal chamber with magnetic coils''). \gnote{general cite for tokamaks?}  
+
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Introduction/tokamak.pdf}}{\caption{Schematic of a tokamak configuration, showing the plasma and magnetic coils.  The applied toroidal magnetic field is generated by the toroidal field coils (shown in blue).  A toroidal plasma current is generated by the center transformer, in turn generating a poloidal magnetic field (shown in green).  These combine to form the helical magnetic field.  The plasma shape and equilibrium is adjusted with the outer poloidal field coils (gray).}\label{fig:intro_tokamak}}
+\end{figure}
+
 
 \nicesectionending
 
@@ -282,7 +293,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  \frac{3n_e T_e}{\tau_E} = \frac{1}{4} n_e^2 \langle \sigma v \rangle E_\alpha
 \end{equation}
 
-\noindent thus simplifying to the Lawson Criterion \note{cite this!}
+\noindent thus simplifying to the Lawson Criterion \note{cite this!}\gnote{citation for Lawson criterion}
 
 \begin{equation}\label{eq:lawson}
  n_e \tau_E = \frac{12 T_e}{\langle \sigma v \rangle E_\alpha}
