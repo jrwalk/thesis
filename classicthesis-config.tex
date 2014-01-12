@@ -81,10 +81,10 @@
 % \PassOptionsToPackage{utf8}{inputenc}	% latin9 (ISO-8859-9) = latin1+"Euro sign"
 %  \usepackage{inputenc}				
 
-\PassOptionsToPackage{russian,american}{babel}   % change this to your language(s)
-% Spanish languages need extra options in order to work with this template
-%\PassOptionsToPackage{spanish,es-lcroman}{babel}
- \usepackage{babel}					
+% \PassOptionsToPackage{russian,american}{babel}   % change this to your language(s)
+% % Spanish languages need extra options in order to work with this template
+% %\PassOptionsToPackage{spanish,es-lcroman}{babel}
+%  \usepackage{babel}					
 
 \PassOptionsToPackage{square,numbers,sort}{natbib}
  \usepackage{natbib}				
@@ -95,9 +95,9 @@
 % ********************************************************************
 % General useful packages
 % ********************************************************************
-\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+\PassOptionsToPackage{T2A,T1}{fontenc} % T2A for cyrillics
 	\usepackage{fontenc}
-\PassOptionsToPackage{latin9}{inputenc}	% latin9 (ISO-8859-9) = latin1+"Euro sign"
+\PassOptionsToPackage{utf8}{inputenc}	% latin9 (ISO-8859-9) = latin1+"Euro sign"
 	\usepackage{inputenc}	
 \usepackage{textcomp} % fix warning with missing font shapes
 \usepackage{scrhack} % fix warnings when using KOMA with listings package
@@ -114,6 +114,11 @@
 %\renewcommand*{\acsfont}[1]{\textssc{#1}} % for MinionPro
 \renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
 \usepackage{xcolor}
+
+\PassOptionsToPackage{russian,american}{babel}   % change this to your language(s)
+% Spanish languages need extra options in order to work with this template
+%\PassOptionsToPackage{spanish,es-lcroman}{babel}
+ \usepackage{babel}
 % ****************************************************************************************************
 %
 % Some new commands that I like, DB
