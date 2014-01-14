@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Chapters\Introduction.tex
 
 [Frame0_View0,0]
-TopLine=248
-Cursor=20193
+TopLine=329
+Cursor=25813
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=80
+TopLine=69
 Cursor=4657
 
 [SessionInfo]
