@@ -270,7 +270,7 @@ The rate at which a fusion plasma bleeds off heat is described by a characterist
  \frac{dW_p}{dt} = P_{in} - P_{out} = P_{in} - P_{rad} - \frac{W_p}{\tau_E}
 \end{equation}
 
-\noindent where $P_{in}$ is input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost into the blanket, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  $P_{rad}$ denotes the power loss due to radiative (\eg Bremsstrahlung) effects, which are considered separately from the transport-driven heat losses encoded by $W_p/\tau_E$.  It is common to encapsulate these heat source and sink terms into a single net power,
+\noindent where $P_{in}$ is input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost into the blanket, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  $P_{rad}$ denotes the power loss due to radiative (primarily, Bremsstrahlung) effects, which are considered separately from the transport-driven heat losses encoded by $W_p/\tau_E$.  It is common to encapsulate these heat source and sink terms into a single net power,
 
 \begin{equation}\label{eq:pnet}
  P_{net} = P_{Ohm} + P_{aux} + P_{fusion} - P_{rad} - \frac{dW_p}{dt}
@@ -282,7 +282,7 @@ The rate at which a fusion plasma bleeds off heat is described by a characterist
  P_{loss} = P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} \Rightarrow P_{net} = P_{loss} - P_{rad}
 \end{equation}
 
-\noindent These definitions allow a simple relation for experimental energy confinement time,
+\noindent These definitions allow a simple relation for the experimental energy confinement time,
 
 \begin{equation}\label{eq:tauE}
  \tau_E = \frac{W_p}{P_{net}}
@@ -297,7 +297,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  \frac{W_p}{\tau_E} = P_{\alpha}
 \end{equation}
 
-\noindent The alpha heating power is simply the fusion reaction rate $R_f = n_D n_T \langle \sigma v \rangle_{DT}$ times the energy carried by charged particles from a single reaction, $E_\alpha = 1/5 \times E_{fusion} = \SI{3.5}{\mega\electronvolt}$.  Quasineutrality (\cref{eq:quasineutral}) requires $n_e \approx n_D + n_T$.  As the reaction rate is optimized for a 50-50 fuel mix, the alpha heating power is thus given by
+\noindent The alpha heating power is simply the fusion reaction rate $R_f = n_D n_T \langle \sigma v \rangle_{DT}$ times the energy carried by charged particles from a single reaction, $E_\alpha = 1/5 \times E_{fusion} = \SI{3.5}{\mega\electronvolt}$.  Quasineutrality (\cref{eq:quasineutral}) requires $n_e \approx n_D + n_T$.  As the reaction rate is optimized for a 50-50 fuel mix, the alpha heating power is given by
 
 \begin{equation}\label{eq:palpha}
  P_{\alpha} = \frac{1}{4} n_e^2 \langle \sigma v \rangle E_\alpha
@@ -312,7 +312,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
 \noindent with the thermal pressure in the plasma given by
 
 \begin{equation}\label{eq:pthermal}
- P_{thermal} = n_e T_e + n_D T_D + n_T T_T = 2 n_e T_e
+ p_{thermal} = n_e T_e + n_D T_D + n_T T_T = 2 n_e T_e
 \end{equation}
 
 \noindent assuming the condition above on the electron and ion densities, and assuming temperature equilibration $T_e \approx T_D \approx T_T$.  This, then, implies $W_p = 3 n_e T_e$ (a convenient expression, as electron quantities are typically more readily measured in plasma experiments).  Power balance at ignition then requires
@@ -354,27 +354,21 @@ The effect on the transport is clearly evident from a diffusive transport model,
  \frac{\partial Q}{\partial t} = \nabla \cdot \left( D_Q \nabla Q \right) + R_Q
 \end{equation}
 
-\noindent for a general parameter $Q(\vec{x},t)$ with accompanying diffusion coefficient $D_Q$ and net source/sink term $R_Q$.  We may consider a one-dimensional ``toy model'' of diffusion with a simple constant source term, given in steady state by
+\noindent for a general parameter $Q(\vec{x},t)$ with accompanying diffusion coefficient $D_Q(Q,\vec{x},t)$ and net source/sink term $R_Q(Q,\vec{x},t)$.  We may consider a one-dimensional ``toy model'' of diffusion with a simple constant source term, given in steady state by
 
 \begin{equation}\label{eq:diffusion2}
  \frac{d}{dx} \left( D_Q \frac{dQ}{dx} \right) + R_Q = 0
 \end{equation}
 
-\noindent The solution to this model for two sample diffusion coefficients is given in \cref{fig:intro_transport}.  A simple constant diffusion coefficient $D_Q$ produces a profile with weak slope, whereas an order-of-magnitude drop in $D_Q$ near the edge (consistent with experimentally-observed values of diffusion coefficients in transport barriers) produces a region with a steep gradient in $Q$
+ \begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
+  \includegraphics[width=70mm]{graphics/Introduction/transport.pdf}
+  \caption{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.}
+  \label{fig:intro_transport}
+ \end{wrapfigure}
 
-% \begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
-%  \includegraphics[width=70mm]{graphics/Introduction/transport.pdf}
-%  \caption{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.  An order-of-magnitude drop in $D_Q$ (of consistent magnitude with experimentally observed edge transport barrier behavior) produces a steep-gradient region in the edge compared to a constant $D_Q$.}
-%  \label{fig:intro_transport}
-% \end{wrapfigure}
+\noindent The solution to this model for two sample diffusion coefficients is given in \cref{fig:intro_transport}.  A simple constant diffusion coefficient $D_Q$ produces a profile with weak slope, whereas an order-of-magnitude drop in $D_Q$ near the edge (consistent with experimentally-observed values of diffusion coefficients in transport barriers) produces a region with a steep gradient in $Q$.  Experimentally, reductions in the particle transport coefficient $D_n$ or the heat transport coefficient $\chi$ due to sheared flows correspond to steep-gradient regions in density or temperature characteristic of the transport barrier.
 
-%check this for caption on other side?
-\begin{figure}[h]
- \pushtooutside
- \fcapside[50mm]{\includegraphics[width=85mm]{graphics/Introduction/transport.pdf}}{\caption{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation, \cref{eq:diffusion2}, with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.  An order-of-magnitude drop in $D_Q$ (of consistent magnitude with experimentally observed edge transport barrier behavior), shown in red, produces a steep-gradient region in the edge compared to a constant $D_Q$, shown in blue.}\label{fig:intro_transport}}
-\end{figure}
-
-
+Of particular interest is the \emph{edge transport barrier}, also termed the \emph{pedestal} \note{cites here}.
 
 \nicesectionending
 
