@@ -139,7 +139,7 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
  \rho = \frac{\sqrt{2mT}}{qB}
 \end{equation}
 
-\noindent The introduction of a nonzero electric field drives additional motion for the particle in the form of a drift velocity -- the guiding center (that is, the average point about which the orbital motion of the particle gyrates) will shift with a bulk velocity (see \cite[\S 8.4]{Freidberg2007} for derivation)
+\noindent The introduction of a nonzero electric field drives additional motion for the particle in the form of a drift velocity -- the guiding center (that is, the average point about which the orbital motion of the particle gyrates) will shift with a bulk velocity (see \cite[\S~8.4]{Freidberg2007} for derivation)
 
 \begin{equation}\label{eq:exb}
  \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
@@ -147,7 +147,7 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 
 \noindent independent of particle charge, mass, or energy.
 
-This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the premise of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite[\S 2.3]{Freidberg1987} for detailed derivation) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
+This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the premise of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite[\S~2.3]{Freidberg1987} for detailed derivation) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
 
 \begin{equation}\label{eq:MHDeq}
  \nabla p = \vec{J} \times \vec{B}
@@ -166,7 +166,7 @@ magnetic field at the cylinder ends in order to reflect the parallel motion of p
 
 An example toroidal geometry is shown above in \cref{fig:intro_geometry}.  In comparison to the previous straight cylindrical geometry, the radial coordinate is replaced by a \emph{minor radius} $r$, measured from the center of the plasma column to its edge ($r=a$), while the \emph{major radius} $R_0$ denotes the radius of the torus itself measured from its center axis ($Z$ in \cref{fig:intro_geometry}) to the plasma axis.  The azimuthal cylindrical coordinate is replaced by the poloidal coordinate $\theta$, wrapping immediately about the plasma column.  The axial coordinate in the cylindrical system is replaced by the toroidal angle $\Phi$ wrapping around the center axis of the torus and describing a circuit along the plasma column.  As with the straight cylindrical case, the magnetic geometry may be described with toroidal and poloidal currents and magnetic fields balancing radially-outward thermal pressure.
 
-However, introducing toroidal effects into the magnetic geometry gives rise to additional drift velocities, causing the guiding centers of particle gyro-orbits to shift (see \cite[\S 8.5-7]{Freidberg2007}).  Spation variation in the magnetic field strength causes the $\nabla B$ drift, given by
+However, introducing toroidal effects into the magnetic geometry gives rise to additional drift velocities, causing the guiding centers of particle gyro-orbits to shift (see \cite[\S~8.5-7]{Freidberg2007}).  Spation variation in the magnetic field strength causes the $\nabla B$ drift, given by
 
 \begin{equation}\label{eq:gradbdrift}
  \vec{v}_{\nabla B} = \frac{v_\perp^2}{2\omega_c} \frac{\vec{B} \times \nabla B}{B^2}
@@ -179,10 +179,8 @@ However, introducing toroidal effects into the magnetic geometry gives rise to a
 \end{equation}
 
 \noindent where $v_\parallel$ is the particle velocity parallel to the magnetic field, $\omega_c$ is the species cyclotron frequency (\cref{eq:omegac}), and $\vec{R}_c$ is the radius of curvature of the field.  In the case of an applied toroidal magnetic field, these drifts are directed vertically in the $\hat{Z}$ direction, and are directed oppositely for electrons and ions due to the charge dependence in $\omega_c$.  The electric field resulting from this charge separation drives an outward $\vec{E} \times \vec{B}$ drift (see \cref{eq:exb}), breaking confinement.  This effect is countered by the addition of a poloidal field, which adds a helical twist to the guiding-center path to average out the separation due to particle drifts.  Concepts aiming for steady-state magnetic confinement of a plasma typically rely on generating this twist, termed the ``rotational transform,'' to maintain stable confinement.
-
-\gnote{general cite for tokamaks, stellarators?}  
-One of the most successful implementations of this concept for Magnetic Fusion Energy (MFE) is the \emph{tokamak} (a Russian acronym from \foreignlanguage{russian}{тороидальная камера с магнитными катушками}, \emph{toroidalnaya kamera s magnetnymi katushkami}, ``toroidal chamber with magnetic coils'').  The tokamak design is characterized by a strong toroidal magnetic field (variously denoted $B_T$ or $B_\Phi$) applied by external coils, with a poloidal field ($B_p$ or $B_\theta$) primarily generated by a current (termed the \emph{plasma current} $I_p$).  A schematic of the plasma and coil arrangement for a tokamak is shown in \cref{fig:intro_tokamak}.  By generating the rotational transform to the magnetic field using the plasma current, the tokamak design utilizes relatively simple planar magnetic coils, avoiding the significantly more complex three-dimensional coils used to generate the helical field in a \emph{stellarator} (the major competing design concept).\gnote{cite?}  However, the necessity for 
-large ($>\SI{1}{\mega\ampere}$) plasma currents presents a significant engineering and physics challenge.  It is straightforward to generate the plasma current through a simple transformer action from a central solenoid in the torus (depicted in \cref{fig:intro_tokamak}) -- however, this AC-current-driven transformer action necessarily limits tokamaks to pulsed operation.  Generation of DC plasma current (via RF or neutral-beam-driven methods) is an active area of research in tokamak physics and engineering, but is outside the scope of this thesis.\gnote{point to refs in Wesson, maybe?}
+ 
+One of the most successful implementations of this concept for Magnetic Fusion Energy (MFE) is the \emph{tokamak} \cite{Wesson2011} (a Russian acronym from \foreignlanguage{russian}{тороидальная камера с магнитными катушками}, \emph{toroidalnaya kamera s magnetnymi katushkami}, ``toroidal chamber with magnetic coils'').  The tokamak design is characterized by a strong toroidal magnetic field (variously denoted $B_T$ or $B_\Phi$) applied by external coils, with a poloidal field ($B_p$ or $B_\theta$) primarily generated by a current (termed the \emph{plasma current} $I_p$).  A schematic of the plasma and coil arrangement for a tokamak is shown in \cref{fig:intro_tokamak}.  By generating the rotational transform to the magnetic field using the plasma current, the tokamak design utilizes relatively simple planar magnetic coils, avoiding the significantly more complex three-dimensional coils used to generate the helical field in a \emph{stellarator} (the major competing design concept \cite{Meade2010}).  However, the necessity for large ($>\SI{1}{\mega\ampere}$) plasma currents presents a significant engineering and physics challenge.  It is straightforward to generate the plasma current through a simple transformer action from a central solenoid in the torus (depicted in \cref{fig:intro_tokamak}) -- however, this AC-current-driven transformer action necessarily limits tokamaks to pulsed operation.  Generation of DC plasma current (via RF or neutral-beam-driven methods) is an active area of research in tokamak physics and engineering, but is outside the scope of this thesis.
 
 \begin{figure}[t]
  \pushtooutside
@@ -257,7 +255,7 @@ lower-hybrid resonance (LHRF) power used for heating and DC current drive \cite{
 
 Due to their high plasma pressure and power density, C-Mod plasmas must exhaust a large heat flux, reaching levels comparable to that anticipated for ITER \cite{Loarte2007,Terry2007,LaBombard2011}.  To handle this heat flux, C-Mod operates entirely with high-$Z$ metal materials (primarily Molybdenum and Tungsten) for all plasma-facing surfaces.  In addition to its high heat tolerance and low erosion rates due to plasma contact, metal walls provide low retention of fuel gas at the edge -- metal walls are thus the leading candidate for ITER- and reactor-scale plasma-facing components.
 
-The presence of a full high-$Z$ lower divertor and upper strike plate, as well as metal limiter walls, gives C-Mod great flexibility in attainable plasma shapes -- plasmas may be run in a lower-single null (LSN) shape with the plasma exhaust \gnote{elaborate on X-point nulls here, or in previous section?} striking the lower divertor (shown in \cref{fig:alcator2}, upper-single null (USN) exhausting into the upper strike plate, or in a limited shape where the scrape-off layer directly impinges on the plasma-facing wall.\nicesectionending
+The presence of a full high-$Z$ lower divertor and upper strike plate, as well as metal limiter walls, gives C-Mod great flexibility in attainable plasma shapes -- plasmas may be run in a lower-single null (LSN) shape with the plasma exhaust striking the lower divertor (shown in \cref{fig:alcator2}, upper-single null (USN) exhausting into the upper strike plate, or in a limited shape where the scrape-off layer directly impinges on the plasma-facing wall.\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -289,7 +287,6 @@ The rate at which a fusion plasma bleeds off heat is described by a characterist
  \tau_E = \frac{W_p}{P_{net}}
 \end{equation}
 
-\gnote{$\tau_{98}$ here, or in later section?}
 \noindent In practice, the physics determining energy confinement are extremely complex; as such, working models for calculating $\tau_E$ from bulk parameters typically require an empirical power-law scaling.
 
 A closer examination of the power balance equation, \cref{eq:powerbalance}, reveals an important figure of merit.  For a DT-burning fusion reactor, steady-state operation with plasma temperatures sustained by fusion self-heating (termed ``ignition'') is highly desirable.  At these conditions, Bremsstrahlung losses are small, so \cref{eq:powerbalance} reduces to simply
@@ -322,7 +319,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  \frac{3n_e T_e}{\tau_E} = \frac{1}{4} n_e^2 \langle \sigma v \rangle E_\alpha
 \end{equation}
 
-\noindent thus simplifying to the Lawson Criterion \note{cite this!}\gnote{citation for Lawson criterion}
+\noindent thus simplifying to the Lawson Criterion \cite{Lawson1957}
 
 \begin{equation}\label{eq:lawson}
  n_e \tau_E = \frac{12 T_e}{\langle \sigma v \rangle E_\alpha}
@@ -334,20 +331,19 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  2 n_e T_e \tau_E = p \tau_E = \frac{24 T_e^2}{\langle \sigma v \rangle E_\alpha}
 \end{equation}
 
-\noindent an important figure of merit for a reactor that is optimized at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor.
+\noindent an important figure of merit for a reactor that is optimized at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor \cite{Meade2010}.
 
-\gnote{cite Freidberg for beta limit?}
-However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of the normalized pressure
+However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of the normalized pressure \cite[\S~6.16]{Wesson2011}
 
 \begin{equation}\label{eq:beta}
  \beta = \frac{2 \mu_0 p}{B^2}
 \end{equation}
 
-\noindent which encodes the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Although the maximum stable pressure may be increased with higher plasma current and toroidal field (motivating high-field design for tokamaks), reactor-scale operation requires increased energy confinement (\ie higher values for $\tau_E$) to reach the triple-product target.
+\noindent which encodes the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Although the maximum stable pressure may be increased with higher plasma current and toroidal field (motivating high-field design for tokamaks), reactor-scale operation requires increased energy confinement -- that is, higher values for $\tau_E$ -- to reach the triple-product target.
 
 \subsection{Transport Barriers}\label{subsec:intro_barriers}
 
-\gnote{mention $\tau_E$ earlier, give a sense of how to globally improve confinement?}Global improvement to energy confinement may be achieved through local modification of the transport of energy or particles out of the plasma, achieved via structures termed \emph{transport barriers}.  While the physics driving the formation of transport barriers is not entirely understood\note{how deep to go with this?}, the effect is evidently caused by sheared flows in the plasma -- these break up the turbulent ``eddies'' driving much of the energy or particle transport through the plasma, locally reducing transport drive in the sheared region.  
+Global improvement to energy confinement may be achieved through local modification of the transport of energy or particles out of the plasma, achieved via structures termed \emph{transport barriers}.  While the physics driving the formation of transport barriers is not entirely understood\gnote{how deep to go with this?}, the effect is evidently caused by sheared flows in the plasma -- these break up the turbulent ``eddies'' driving much of the energy or particle transport through the plasma, locally reducing transport drive in the sheared region.  
 
 The effect on the transport is clearly evident from a diffusive transport model, given by
 
@@ -367,9 +363,9 @@ The effect on the transport is clearly evident from a diffusive transport model,
   \label{fig:intro_transport}
  \end{wrapfigure}
 
-\noindent The solution to this model for two sample diffusion coefficients is given in \cref{fig:intro_transport}.  A simple constant diffusion coefficient $D_Q$ produces a profile with weak slope, whereas an order-of-magnitude drop in $D_Q$ near the edge (consistent with experimentally-observed values of diffusion coefficients in transport barriers) produces a region with a steep gradient in $Q$.  Experimentally, reductions in the particle transport coefficient $D_n$ or the heat transport coefficient $\chi$ due to sheared flows correspond to steep-gradient regions in density or temperature characteristic of the transport barrier.
+\noindent The solution to this model for two sample diffusion coefficients is given in \cref{fig:intro_transport}.  A simple constant diffusion coefficient $D_Q$ produces a profile with weak slope, whereas an order-of-magnitude drop in $D_Q$ near the edge (consistent with experimentally-observed values of diffusion coefficients in transport barriers) produces a region with a steep gradient in $Q$ compared to the flat-$D_Q$ solution, despite identical source terms $R_Q$.  Experimentally, reductions in the particle transport coefficient $D_n$ or the heat transport coefficient $\chi$ due to sheared flows correspond to steep-gradient regions in density or temperature, characteristic of the transport barrier.
 
-Of particular interest is the \emph{edge transport barrier}, also termed the \emph{pedestal} \note{cites here}.
+Of particular interest is the \emph{edge transport barrier}, also termed the \emph{pedestal} \cite{Wagner1982,Greenwald1997}.
 
 \nicesectionending
 
