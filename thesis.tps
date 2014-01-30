@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=FrontBackmatter\Diagnostics.tex
 
 [Frame0_View0,0]
-TopLine=161
+TopLine=372
 Cursor=10318
 
 [Frame1]
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=74
+TopLine=63
 Cursor=4780
 
 [SessionInfo]
