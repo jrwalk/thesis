@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=FrontBackmatter\Diagnostics.tex
+Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame0_View0,0]
-TopLine=372
-Cursor=10318
+TopLine=0
+Cursor=1415
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=63
+TopLine=52
 Cursor=4780
 
 [SessionInfo]
