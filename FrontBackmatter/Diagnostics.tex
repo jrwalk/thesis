@@ -13,7 +13,8 @@ The dedicated pedestal experiments, both in I-mode and ELMy H-mode, presented he
 
 \section{Thomson Scattering}\label{sec:app_ts}
 
-Due to the steep gradients in density, temperature, and pressure found in the pedestal, accurate characterization of plasma profiles in this region requires diagnostics capable of very fine spatial resolution.  Measurements based on the Thomson scattering \cite{Sheffield} of laser light off of electrons in the plasma provides the high-resolution pedestal profiles used in this thesis: Thomson scattering is a near-direct measurement of electron temperature and density, independent of bulk plasma parameters (\ie it is unaffected by the cutoffs or reflections found in other diagnostics, and produces no significant perturbation to the plasma).  Measurement via Thomson scattering produces an effective ``snapshot'' of the plasma parameters at each measurement point, with spatial resolution limited only by collection optics geometry, and time resolution limited by repetition rate on the lasers.  Despite significant technical difficulties -- for example, the high-powered lasers and sensitive collection optics needed to capture the weak scattered light and the necessity for careful calibration of density measurements -- Thomson scattering diagnostics remain a versatile and powerful tool for plasma pedestal measurement, and provided the bulk of the profile data used in this thesis.
+Due to the steep gradients in density, temperature, and pressure found in the pedestal, accurate characterization of plasma profiles in this region requires diagnostics capable of very fine spatial resolution.  Measurements based on the Thomson scattering \cite{Sheffield} of laser light off of electrons in the plasma provides the high-resolution pedestal profiles used in this thesis: Thomson scattering is a near-direct measurement of electron temperature and density, independent of bulk plasma parameters (\ie it is unaffected by the cutoffs or reflections found in other diagnostics, and produces no significant perturbation to the plasma).  Measurement via Thomson scattering produces an effective ``snapshot'' of the plasma parameters at each measurement point, with spatial resolution limited only by collection optics geometry, and time resolution limited by repetition rate on the lasers.  Despite significant technical difficulties -- for example, the high-powered lasers and sensitive collection optics needed 
+to capture the weak scattered light and the necessity for careful calibration of density measurements -- Thomson scattering diagnostics remain a versatile and powerful tool for plasma pedestal measurement, and provided the bulk of the profile data used in this thesis.
 
 \subsection{Principles of Thomson Scattering}\label{subsec:app_background}
 
@@ -84,7 +85,12 @@ The scattered electric field from a generally-accelerated electron moving at $\v
  \frac{dP_s}{d\Omega} = r_e^2 c \varepsilon_0 E_{i0}^2 \left\llbracket \hat{s} \times \left( \hat{s} \times \hat{E}_i \right) \right\rrbracket^2 \cos^2 \left( \vec{k}_i \cdot \vec{r}' - \omega_i t' \right)
 \end{equation}
 
-\noindent separating the magnitude, direction, and phase (evaluated at $t'$) of the incident field.  
+\noindent separating the magnitude, direction, and phase (evaluated at $t'$) of the incident field.
+
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Diagnostics/ts_geometry2.pdf}}{\caption{Definitions of the angular dependences in the Thomson scattering geometry: namely, the angle $\theta$ between the incident wave direction $\hat{i}$ and scattering direction $\hat{s}$, and the polarization angle $\phi$ of the incident electric field $\hat{E}_i$ with respect to the projection of $\hat{s}$ into the polarization plane.}\label{fig:app_ts_geometry2}}
+\end{figure}
 
 We may first consider the scattering direction dependence,
 
@@ -92,10 +98,10 @@ We may first consider the scattering direction dependence,
  \left\llbracket \hat{s} \times \left( \hat{s} \times \hat{E}_i \right) \right\rrbracket^2_{t'}
 \end{equation}
 
-\noindent Defining an angle $\phi$ between the scattering direction $\hat{s}$ and the incident polarization $\hat{E}_i$, this reduces to\gnote{graphic for this, check definitions for angles against Sheffield, Hutchinson}
+\noindent Defining the angular geometry as in \cref{fig:app_ts_geometry2} for the scattering angle $\theta$ between the incident wave direction $\hat{i}$ and scattering direction $\hat{s}$, and the polarization angle $\phi$ (defined between $\hat{E}_i$ and the projection of $\hat{s}$ into the polarization plane), this reduces to (cf. \cite[\S 1.7]{Sheffield})
 
 \begin{equation}
- \frac{dP_s}{d\Omega} = r_e^2 c \varepsilon_0 E_{i0}^2 \sin^2 \phi \cos^2 \left( \vec{k}_i \cdot \vec{r}' - \omega_i t' \right)
+ \left\llbracket \hat{s} \times \left( \hat{s} \times \hat{E}_i \right) \right\rrbracket^2 = 1 - \sin^2 \theta \cos^2 \phi
 \end{equation}
 
 \noindent Since the incident power flux is given by
@@ -107,10 +113,10 @@ We may first consider the scattering direction dependence,
 \noindent We may separate the incident flux and scattering by
 
 \begin{equation}\label{eq:ts_crosssection}
- \frac{dP}{d\Omega} = S_i \frac{d\sigma_t}{d\Omega} \Rightarrow \frac{d\sigma_t}{d\Omega} = r_e^2 \sin^2 \phi
+ \frac{dP}{d\Omega} = S_i \frac{d\sigma_t}{d\Omega} \Rightarrow \frac{d\sigma_t}{d\Omega} = r_e^2 [1 - \sin^2 \theta \cos^2 \phi]
 \end{equation}
 
-\noindent defining a scattering cross-section $\sigma_t$.  Integration over $\phi$ in the above yields
+\noindent defining a scattering cross-section $\sigma_t$.  Integrating over $d\Omega$,
 
 \begin{equation}\label{eq:sigmat}
  \sigma_t = \frac{8\pi}{3} r_e^2 = \SI{6.65e-29}{\square\meter}
@@ -285,14 +291,14 @@ This analysis breaks down for relativistic electron populations.  However, relat
  S_{rel}(T_e,\theta,\lambda_s) = S(T_e,\theta,\lambda_s) \left[ 1 - \frac{3.5(\lambda_s - \lambda_i)}{\lambda_i} + \frac{c^2 (\lambda_s - \lambda_i)^3}{4v_t^2 \lambda_i^2 \sin^2 (\theta/2)}\right]
 \end{equation}
 
-\noindent The relativistic correction breaks the symmetry of the Maxwellian spectrum, introducing a net blue shift to the spectrum.  Physically, this is due to ``relativistic headlighting,'' in which the radiation from an accelerating relativistic particle is biased forward of its motion -- The radiated power is stronger from particles moving toward the observer (thus with a blue Doppler shift to their emissions).  The spectral form factor $S(T_e,\theta,\lambda_s)$ is shown in figure \cref{fig:app_ts_spectrum}, illustrating the width dependence of the spectrum on the electron temperature and the blue shifting evident in the spectrum even at relatively low plasma temperatures.
-
 \begin{figure}[t]
  \pushtooutside
  \fcapside[70mm]{\caption{Spectral functions normalized to density and laser power, evaluated at $\theta = \phi = \pi/2$.  The spectrum spreads farther from the laser line at higher temperature, as well as blue-shifting due to relativistic effects.}\label{fig:app_ts_spectrum}}{\includegraphics[width=110mm]{graphics/Diagnostics/ts_spectrum.pdf}}
 \end{figure}
 
-Examination of \cref{eq:ts_spectrum_nonrel,eq:ts_spectrum_rel} readily illustrates the method for extracting $n_e$ and $T_e$ measurements from the Thomson scattering spectrum -- the spread of the spectrum of scattered radiation is directly tied to the electron temperature, while the integrated amplitude gives electron density (as the total scattered power is linearly proportional to $n_e$).
+\noindent The relativistic correction breaks the symmetry of the Maxwellian spectrum, introducing a net blue shift to the spectrum.  Physically, this is due to ``relativistic headlighting,'' in which the radiation from an accelerating relativistic particle is biased forward of its motion -- The radiated power is stronger from particles moving toward the observer (thus with a blue Doppler shift to their emissions).  The spectral form factor $S(T_e,\theta,\lambda_s)$ is shown in figure \cref{fig:app_ts_spectrum}, illustrating the width dependence of the spectrum on the electron temperature and the blue shifting evident in the spectrum even at relatively low plasma temperatures.
+
+Examination of \cref{eq:ts_spectrum_nonrel,eq:ts_spectrum_rel} readily illustrates the method for extracting $n_e$ and $T_e$ measurements from the Thomson scattering spectrum -- the spread of the spectrum of scattered radiation is directly tied to the electron temperature, while the integrated amplitude gives electron density (as the total scattered power is linearly proportional to $n_e$).  Assumptions regarding the Maxwellian distribution of the electrons allows accurate measurement of the electron profile with relatively simple hardware, detailed in the next section.
 
 \subsection{Edge Thomson Scattering on C-Mod}\label{subsec:app_ts_cmod}
 
