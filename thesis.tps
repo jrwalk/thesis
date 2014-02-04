@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\HighPerformanceRegimes.tex
+Document=thesis.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=1415
+TopLine=36
+Cursor=487
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=thesis.tex
+Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame1_View0,0]
-TopLine=52
-Cursor=4780
+TopLine=0
+Cursor=1415
 
 [SessionInfo]
 FrameCount=2
