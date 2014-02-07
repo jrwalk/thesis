@@ -2,13 +2,45 @@
 
 The development of magnetic-confinement fusion into an economical form of power generation is characterized by two seemingly contrary requirements: first, a high level of energy confinement is necessary to reach the desired level of self-heating of the plasma by fusion products, satisfying triple-product requirements (\cref{eq:tripleproduct}).  At the same time, particle transport must be sufficient to avoid the deleterious effects of accumulated helium ``fusion ash'' and other impurities (particularly high-$Z$ metal wall materials)\gnote{ref why metal walls are necessary?} on fusion performance.
 
-\section{Edge Rotation and H-Mode Transitions}\label{sec:hcr_rotation}
+\gnote{introduce pedestal formation, edge rotation}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{Typical operating parameters of tokamaks noted in this thesis.}\label{tab:tokamaks}}
+ {\begin{tabular}{lcccccccc}
+  \toprule
+  Device &
+  $R$ &
+  $a$ &
+  $I_p$ &
+  $B_T$ &
+  $\overline{n}_e$ &
+  $T_{e,0}$ &
+  heating &
+  refs
+  \\
+  \midrule
+  Alcator C-Mod (USA) &
+  $\SI{0.67}{\meter}$ &
+  $\SI{0.22}{\meter}$ &
+  $\le \SI{2}{\mega\ampere}$ &
+  $3-\SI{8.1}{\tesla}$ &
+  $\le \SI{5e20}{\per\meter\cubed}$ &
+  $\le \SI{8}{\kilo\electronvolt}$ &
+  ICRF,LHRF &
+  \cite{Hutchinson1994}
+  \\
+  \bottomrule
+ \end{tabular}}
+\end{table*}
+
+\section{ELM-Free H-Mode}\label{sec:hcr_elmfree}
 
 \nicesectionending
 
 \section{ELMy H-Mode}\label{sec:hcr_elmy}
 
-\subsection{Pedestal Parameters}\label{subsec:hcr_elmy_ped}
+\subsection{Global Parameters}\label{subsec:hcr_elmy_ped}
 
 \subsection{Fluctuations and ELMs}\label{subsec:hcr_elmy_fluct}
 
@@ -16,11 +48,11 @@ The development of magnetic-confinement fusion into an economical form of power 
 
 \nicesectionending
 
-\section{QH-Mode}\label{sec:hcr_qh}
+\section{ELM-Suppressed H-Modes}\label{sec:hcr_elmsuppressed}
 
-\nicesectionending
+\subsection{QH-Mode}\label{subsec:hcr_qh}
 
-\section{EDA H-Mode}\label{sec:hcr_eda}
+\subsection{EDA H-Mode}\label{subsec:hcr_eda}
 
 \nicesectionending
 
@@ -28,7 +60,7 @@ The development of magnetic-confinement fusion into an economical form of power 
 
 \subsection{Access and Operation}\label{subsec:hcr_imode_access}
 
-\subsection{Performance}\label{subsec:hcr_imode_performance}
+\subsection{Global Performance}\label{subsec:hcr_imode_performance}
 
 \subsection{Edge Fluctuations -- the Weakly-Coherent Mode}\label{subsec:hcr_imode_wcm}
 
