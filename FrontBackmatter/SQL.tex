@@ -1,5 +1,200 @@
 \chapter{SQL Database}\label{app:sql}
 
+We describe the SQL table.
 
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{Parameters for the SQL database of high-resolution pedestal data used in this thesis.}\label{tab:sql}}
+ {\begin{tabular}{lccc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
+   \\
+   \midrule
+   \multicolumn{4}{l}{\emph{keys:}}
+   \\
+   \midrule
+   SHOT &
+   long &
+   &
+   C-Mod shot number
+   \\
+   TA &
+   long &
+   $\si{\milli\second}$ &
+   start time of phase
+   \\
+   TB &
+   long &
+   $\si{\milli\second}$ &
+   end time of phase
+   \\
+   \midrule
+   \multicolumn{4}{l}{\emph{flags:}}
+   \\
+   \midrule
+   MODE &
+   string &
+   &
+   type, \eg `IMODE', `ELMY', `EDA', `LMODE'
+   \\
+   ELMS &
+   int &
+   &
+   binary flag, $=1$ for ELMs in phase
+   \\
+   LH &
+   int &
+   &
+   binary flag, $=1$ for LHCD in phase
+   \\
+   WCM &
+   int &
+   &
+   binary flag, $=1$ for WCM fluctuation in phase
+   \\
+   \midrule
+   \multicolumn{4}{l}{\emph{MDS tree:}}
+   \\
+   \midrule
+   TREE\_PATH &
+   string &
+   &
+   path for MDS tree `PEDESTALS' storing 
+   \\
+   &
+   &
+   &
+   profile data for phase
+   \\
+   TREE\_SHOT &
+   long &
+   &
+   shot number flagged in MDS tree `PEDESTALS',
+   \\
+   &
+   &
+   &
+   allowing multiple phases for a single shot
+   \\
+   \midrule
+   \multicolumn{4}{l}{\emph{plasma parameters:}}
+   \\
+   \midrule
+   IP &
+   float &
+   $\si{\mega\ampere}$ &
+   plasma current
+   \\
+   IP\_ERR &
+   float &
+   $\si{\mega\ampere}$ &
+   error in $I_p$ measurement
+   \\
+   DIDT &
+   float &
+   $\si{\mega\ampere\per\second}$ &
+   change in current, $dI_p/dt$
+   \\
+   DIDT\_ERR &
+   float &
+   $\si{\mega\ampere\per\second}$ &
+   error in $dI_p/dt$ measurement
+   \\
+   BT &
+   float &
+   $\si{\tesla}$ &
+   axial toroidal field
+   \\
+   BT\_ERR &
+   float &
+   $\si{\tesla}$ &
+   error in $B_T$
+   \\
+   BP &
+   float &
+   $\si{\tesla}$ &
+   flux-surface average edge poloidal field
+   \\
+   BP\_ERR &
+   float &
+   $\si{\tesla}$ &
+   error in $B_p$
+   \\
+   R &
+   float &
+   $\si{\centi\meter}$ &
+   major radius
+   \\
+   A &
+   float &
+   $\si{\centi\meter}$ &
+   outboard-midplane minor radius
+   \\
+   SSEP &
+   float &
+   \note{?} &
+   separatrix separation\note{?}
+   \\
+   KAPPA &
+   float &
+   &
+   elongation $\kappa$
+   \\
+   KAPPA\_ERR &
+   float &
+   &
+   error in $\kappa$
+   \\
+   DELTA\_U &
+   float &
+   &
+   upper trianglularity $\delta_u$
+   \\
+   DELTA\_U\_ERR &
+   float &
+   &
+   error in $\delta_u$
+   \\
+   DELTA\_L &
+   float &
+   &
+   lower triangularity $\delta_l$
+   \\
+   DELTA\_L\_ERR &
+   float &
+   &
+   error in $\delta_l$
+   \\
+   Q0 &
+   float &
+   &
+   axial safety factor, $q_0$
+   \\
+   Q0\_ERR &
+   float &
+   &
+   error in $q_0$
+   \\
+   Q95 &
+   float &
+   &
+   95\% flux safety factor, $q_{95}$
+   \\
+   Q95\_ERR &
+   float &
+   &
+   error in $q_{95}$
+   \\
+   ZEFF &
+   float &
+   &
+   effective charge $Z_{eff}$ (see \cref{eq:Zeff})
+   \\
+   \bottomrule
+  \end{tabular}}
+\end{table*}
 
 \nicechapterending
