@@ -80,7 +80,7 @@ We describe the SQL table.
    allowing multiple phases for a single shot
    \\
    \midrule
-   \multicolumn{4}{l}{\emph{plasma parameters:}}
+   \multicolumn{4}{l}{\emph{EFIT parameters:}}
    \\
    \midrule
    IP &
@@ -188,11 +188,25 @@ We describe the SQL table.
    &
    error in $q_{95}$
    \\
-   ZEFF &
+   BETAN &
    float &
    &
-   effective charge $Z_{eff}$ (see \cref{eq:Zeff})
+   global $\beta_{N}$
    \\
+   BETAT &
+   float &
+   &
+   global toroidal $\beta$
+   \\
+   BETAP &
+   float &
+   &
+   global poloidal $\beta$
+   \\
+   \midrule
+   \multicolumn{4}{l}{\emph{Power Balance and Confinement:}}
+   \\
+   \midrule
    \bottomrule
   \end{tabular}}
 \end{table*}
