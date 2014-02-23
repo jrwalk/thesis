@@ -1,14 +1,14 @@
-\chapter{SQL Database}\label{app:sql}
+\chapter{High-Resolution Pedestal Database}\label{app:sql}
 
-We describe the SQL table.
+For the work presented in this thesis, a subset of recent I-mode experiments on Alcator C-mod was prepared with high-resolution pedestal data.  These data are stored in an SQL database under the C-Mod ``logbook'' system.  Use of an SQL table enables efficient cross-platform access to pedestal data in a format ideal for data mining, and allows for easy extensibility of stored parameters for additional experiments.  The database stores windows of data in which plasma parameters (\eg temperature, stored energy, density, heating power) are steady -- usable phases last at least $\sim \SI{100}{\milli\second}$ ($\sim 10$ Thomson scattering frames), over which frames of TS pedestal data are averaged.  For each phase, the SQL database stores a variety of physics and engineering parameters, and scalar fitting parameters\gnote{point to mtanh fitting function} for the pedestal.  For direct comparison, the table also stores analogous data from L- and H-mode phases.
 
-\newcolumntype{a}{>{\hsize=0.23\hsize\raggedright\arraybackslash}X}
-\newcolumntype{b}{>{\hsize=0.11\hsize\centering\arraybackslash}X}
-\newcolumntype{c}{>{\hsize=0.55\hsize\centering\arraybackslash}X}
+\newcolumntype{a}{>{\hsize=0.27\hsize\raggedright\arraybackslash}X}
+\newcolumntype{b}{>{\hsize=0.115\hsize\centering\arraybackslash}X}
+\newcolumntype{c}{>{\hsize=0.5\hsize\centering\arraybackslash}X}
 \begin{table*}[h]
  \pushtooutside
- \ttabbox{\caption{SQL database parameters used as keys -- (SHOT,TA,TB) is sufficient to uniquely identify entries in the database.}\label{tab:sql_keys}}
- {\begin{tabularx}{141mm}{abbc}
+ \ttabbox{\caption{SQL database parameters used as keys -- (SHOT, TA, TB) is sufficient to uniquely identify entries in the database.}\label{tab:sql_keys}}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -38,7 +38,7 @@ We describe the SQL table.
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters used as flags for time windows.}\label{tab:sql_flags}}
- {\begin{tabularx}{141mm}{abbc}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -83,7 +83,7 @@ We describe the SQL table.
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for useful measured parameters.}\label{tab:sql_plasma}}
- {\begin{tabularx}{141mm}{abbc}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -159,7 +159,7 @@ We describe the SQL table.
    ZEFF\_ERR &
    float &
    &
-   error in ZEFF
+   error in ZEFF measurement
    \\
    \bottomrule
   \end{tabularx}}
@@ -168,7 +168,7 @@ We describe the SQL table.
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for EFIT values.}\label{tab:sql_efit}}
- {\begin{tabularx}{141mm}{abbc}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -313,7 +313,7 @@ We describe the SQL table.
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for heating power, stored energy, and confinement.}\label{tab:sql_power}}
- {\begin{tabularx}{141mm}{abbc}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -428,7 +428,7 @@ We describe the SQL table.
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for high-resolution pedestal profiles.}\label{tab:sql_ped}}
- {\begin{tabularx}{141mm}{abbc}
+ {\begin{tabularx}{143mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -515,6 +515,221 @@ We describe the SQL table.
    float &
    $\si{\per\meter\cubed}$ &
    error in NEPED\_95
+   \\
+   TEPED\_H &
+   float &
+   $\si{\electronvolt}$ &
+   temperature pedestal height
+   \\
+   TEPED\_H\_ERR &
+   float &
+   $\si{\electronvolt}$ &
+   error in TEPED\_H
+   \\
+   TEPED\_B &
+   float &
+   $\si{\electronvolt}$ &
+   temperature pedestal baseline
+   \\
+   TEPED\_B\_ERR &
+   float &
+   $\si{\electronvolt}$ &
+   error in TEPED\_B
+   \\
+   TEPED\_D &
+   float &
+   &
+   temperature pedestal half-width
+   \\
+   TEPED\_D\_ERR &
+   float &
+   &
+   error in TEPED\_D
+   \\
+   TEPED\_R0 &
+   float &
+   &
+   temperature pedestal midpoint
+   \\
+   TEPED\_R0\_ERR &
+   float &
+   &
+   error in TEPED\_R0
+   \\
+   TEPED\_ALPHA &
+   float &
+   &
+   temperature pedestal inboard-slope parameter
+   \\
+   TEPED\_ALPHA\_ERR &
+   float &
+   &
+   error in TEPED\_ALPHA
+   \\
+   TEPED\_GRAD &
+   float &
+   $\si{\electronvolt}$ &
+   peak temperature pedestal gradient (pedestal midpoint)
+   \\
+   TEPED\_GRAD\_ERR &
+   float &
+   $\si{\electronvolt}$ &
+   error in TEPED\_GRAD
+   \\
+   TEPED\_LGRAD &
+   float &
+   &
+   peak temperature pedestal gradient scale length
+   \\
+   TEPED\_LGRAD\_ERR &
+   float &
+   &
+   error in TEPED\_LGRAD
+   \\
+   TEPED\_95 &
+   float &
+   $\si{\electronvolt}$ &
+   temperature at 95\% flux surface
+   \\
+   TEPED\_95\_ERR &
+   float &
+   $\si{\electronvolt}$ &
+   error in TEPED\_95
+   \\
+   PEPED\_H &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   pressure pedestal height
+   \\
+   PEPED\_H\_ERR &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   error in PEPED\_H
+   \\
+   PEPED\_B &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   pressure pedestal baseline
+   \\
+   PEPED\_B\_ERR &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   error in PEPED\_B
+   \\
+   PEPED\_D &
+   float &
+   &
+   pressure pedestal half-width
+   \\
+   PEPED\_D\_ERR &
+   float &
+   &
+   error in PEPED\_D
+   \\
+   PEPED\_R0 &
+   float &
+   &
+   pressure pedestal midpoint
+   \\
+   PEPED\_R0\_ERR &
+   float &
+   &
+   error in PEPED\_R0
+   \\
+   PEPED\_ALPHA &
+   float &
+   &
+   pressure pedestal inboard-slope parameter
+   \\
+   PEPED\_ALPHA\_ERR &
+   float &
+   &
+   error in PEPED\_ALPHA
+   \\
+   PEPED\_GRAD &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   peak pressure pedestal gradient (pedestal midpoint)
+   \\
+   PEPED\_GRAD\_ERR &
+   float &
+   &
+   error in PEPED\_GRAD
+   \\
+   PEPED\_LGRAD &
+   float &
+   &
+   peak pressure pedestal gradient scale length
+   \\
+   PEPED\_LGRAD\_ERR &
+   float &
+   &
+   error in PEPED\_LGRAD
+   \\
+   PEPED\_95 &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   pressure at 95\% flux surface
+   \\
+   PEPED\_95\_ERR &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   error in PEPED\_95
+   \\
+   ALPHA &
+   float &
+   &
+   peak normalized pressure gradient $\alpha_{MHD}$
+   \\
+   ALPHA\_ERR &
+   float &
+   &
+   error in ALPHA
+   \\
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters for WCM fluctuation measurements.}\label{tab:sql_fluct}}
+ {\begin{tabularx}{143mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
+   \\
+   \midrule
+   WCM\_AMP &
+   float &
+   &
+   normalized peak amplitude of WCM from reflectometry
+   \\
+   WCM\_FREQ &
+   float &
+   $\si{\kilo\hertz}$ &
+   centroid frequency of WCM from reflectometry
+   \\
+   WCM\_WID &
+   float &
+   $\si{\kilo\hertz}$ &
+   spectral width of WCM determined by $\pm\sigma$ of Gaussian fit on reflectometry
+   \\
+   WCM\_AMP\_PCI &
+   float &
+   &
+   normalized peak amplitude of WCM from PCI
+   \\
+   WCM\_FREQ\_PCI &
+   float &
+   $\si{\kilo\hertz}$ &
+   centroid frequency of WCM from PCI
+   \\
+   WCM\_WID\_PCI &
+   float &
+   $\si{\kilo\hertz}$ &
+   spectral width of WCM determined by $\pm\sigma$ of Gaussian fit on PCI
    \\
    \bottomrule
   \end{tabularx}}

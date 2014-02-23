@@ -277,7 +277,10 @@ The rate at which a fusion plasma bleeds off heat is described by a characterist
 \noindent The radiative power loss is occasionally difficult to consistently determine experimentally, is in any case largely independent of operator control (as in the case of auxiliary heating power, or Ohmic power determined by the choice of plasma current) or bulk plasma performance (as in the suppression of turbulent heat losses in high-performance operation), and is relatively negligible at fusion conditions due to its weak scaling with temperature.  As such, it is alternately common to express the power as
 
 \begin{equation}\label{eq:ploss}
- P_{loss} = P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} \Rightarrow P_{net} = P_{loss} - P_{rad}
+ \begin{aligned}
+ P_{loss} &= P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} \\
+ P_{net} &= P_{loss} - P_{rad}
+ \end{aligned}
 \end{equation}
 
 \noindent These definitions allow a simple relation for the experimental energy confinement time,
