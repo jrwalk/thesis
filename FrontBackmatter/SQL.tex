@@ -2,18 +2,18 @@
 
 We describe the SQL table.
 
+\newcolumntype{a}{>{\hsize=0.23\hsize\raggedright\arraybackslash}X}
+\newcolumntype{b}{>{\hsize=0.11\hsize\centering\arraybackslash}X}
+\newcolumntype{c}{>{\hsize=0.55\hsize\centering\arraybackslash}X}
 \begin{table*}[h]
  \pushtooutside
- \ttabbox{\caption{Parameters for the SQL database of high-resolution pedestal data used in this thesis.}\label{tab:sql}}
- {\begin{tabular}{lccc}
+ \ttabbox{\caption{SQL database parameters used as keys -- (SHOT,TA,TB) is sufficient to uniquely identify entries in the database.}\label{tab:sql_keys}}
+ {\begin{tabularx}{141mm}{abbc}
    \toprule
    \emph{column} &
    \emph{data type} &
    \emph{units} &
    \emph{description}
-   \\
-   \midrule
-   \multicolumn{4}{l}{\emph{keys:}}
    \\
    \midrule
    SHOT &
@@ -31,14 +31,25 @@ We describe the SQL table.
    $\si{\milli\second}$ &
    end time of phase
    \\
-   \midrule
-   \multicolumn{4}{l}{\emph{flags:}}
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters used as flags for time windows.}\label{tab:sql_flags}}
+ {\begin{tabularx}{141mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
    \\
    \midrule
    MODE &
    string &
    &
-   type, \eg `IMODE', `ELMY', `EDA', `LMODE'
+   type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE'
    \\
    ELMS &
    int &
@@ -53,36 +64,148 @@ We describe the SQL table.
    WCM &
    int &
    &
-   binary flag, $=1$ for WCM fluctuation in phase
+   binary flag, $=1$ for WCM fluctuation in phase (I-mode only)
    \\
-   \midrule
-   \multicolumn{4}{l}{\emph{MDS tree:}}
-   \\
-   \midrule
    TREE\_PATH &
    string &
    &
-   path for MDS tree `PEDESTALS' storing 
-   \\
-   &
-   &
-   &
-   profile data for phase
+   path to branch in pedestal-profile MDS tree
    \\
    TREE\_SHOT &
    long &
    &
-   shot number flagged in MDS tree `PEDESTALS',
+   shot number flagged in pedestal-profile MDS tree, used to differentiate sub-branches of a single shot
    \\
-   &
-   &
-   &
-   allowing multiple phases for a single shot
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters for useful measured parameters.}\label{tab:sql_plasma}}
+ {\begin{tabularx}{141mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
    \\
    \midrule
-   \multicolumn{4}{l}{\emph{EFIT parameters:}}
+   NL04 &
+   float &
+   $\si{\per\meter\squared}$ &
+   line-integrated density from TCI
+   \\
+   NL04\_ERR &
+   float &
+   $\si{\per\meter\squared}$ &
+   error in NL04
+   \\
+   NEBAR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   line-averaged density from TCI
+   \\
+   NEBAR\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NEBAR
+   \\
+   ECE\_T0 &
+   float &
+   $\si{\electronvolt}$ &
+   core electron temperature from ECE
+   \\
+   ECE\_TPED &
+   float &
+   $\si{\electronvolt}$ &
+   pedestal electron temperature from ECE (channel nearest 95\% flux surface)
+   \\
+   NE0 &
+   float &
+   $\si{\per\meter\cubed}$ &
+   core density from TS
+   \\
+   NE0\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NE0
+   \\
+   TE0 &
+   float &
+   $\si{\electronvolt}$ &
+   core temperature from TS
+   \\
+   TE0\_ERR &
+   float &
+   $\si{\electronvolt}$ &
+   error in TE0
+   \\
+   NUSTAR &
+   float &
+   &
+   pedestal collisionality at 95\% flux surface
+   \\
+   RHOSTAR &
+   float &
+   &
+   pedestal normalized gyroradius at 95\% flux surface
+   \\
+   ZEFF &
+   float &
+   &
+   average effective charge
+   \\
+   ZEFF\_ERR &
+   float &
+   &
+   error in ZEFF
+   \\
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters for EFIT values.}\label{tab:sql_efit}}
+ {\begin{tabularx}{141mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
    \\
    \midrule
+   KAPPA &
+   float &
+   &
+   plasma elongation $\kappa$ (see \cref{fig:intro_shaping})
+   \\
+   KAPPA\_ERR &
+   float &
+   &
+   error in KAPPA
+   \\
+   DELTA\_U &
+   float &
+   &
+   plasma upper triangularity (see \cref{fig:intro_shaping})
+   \\
+   DELTA\_U\_ERR &
+   float &
+   &
+   error in DELTA\_U
+   \\
+   DELTA\_L &
+   float &
+   &
+   plasma lower triangularity (see \cref{fig:intro_shaping})
+   \\
+   DELTA\_L\_ERR &
+   float &
+   &
+   error in DELTA\_L
+   \\
    IP &
    float &
    $\si{\mega\ampere}$ &
@@ -91,17 +214,17 @@ We describe the SQL table.
    IP\_ERR &
    float &
    $\si{\mega\ampere}$ &
-   error in $I_p$ measurement
+   error in IP
    \\
    DIDT &
    float &
    $\si{\mega\ampere\per\second}$ &
-   change in current, $dI_p/dt$
+   change in plasma current $dI_p/dt$
    \\
    DIDT\_ERR &
    float &
    $\si{\mega\ampere\per\second}$ &
-   error in $dI_p/dt$ measurement
+   error in DIDT
    \\
    BT &
    float &
@@ -111,17 +234,37 @@ We describe the SQL table.
    BT\_ERR &
    float &
    $\si{\tesla}$ &
-   error in $B_T$
+   error in BT
    \\
    BP &
    float &
    $\si{\tesla}$ &
-   flux-surface average edge poloidal field
+   flux-surface averaged edge poloidal field
    \\
    BP\_ERR &
    float &
    $\si{\tesla}$ &
-   error in $B_p$
+   error in BP
+   \\
+   Q0 &
+   float &
+   &
+   axial safety factor $q_0$
+   \\
+   Q0\_ERR &
+   float &
+   &
+   error in Q0
+   \\
+   Q95 &
+   float &
+   &
+   edge safety factor $q_{95}$
+   \\
+   Q95\_ERR &
+   float &
+   &
+   error in Q95
    \\
    R &
    float &
@@ -138,83 +281,244 @@ We describe the SQL table.
    \note{?} &
    separatrix separation\note{?}
    \\
-   \end{tabular}}
- \end{table*}
- \begin{table*}[h]
-  \ContinuedFloat
-  \pushtooutside
-  \begin{tabular}{lccc}
-   KAPPA &
-   float &
-   &
-   elongation $\kappa$
-   \\
-   KAPPA\_ERR &
-   float &
-   &
-   error in $\kappa$
-   \\
-   DELTA\_U &
-   float &
-   &
-   upper trianglularity $\delta_u$
-   \\
-   DELTA\_U\_ERR &
-   float &
-   &
-   error in $\delta_u$
-   \\
-   DELTA\_L &
-   float &
-   &
-   lower triangularity $\delta_l$
-   \\
-   DELTA\_L\_ERR &
-   float &
-   &
-   error in $\delta_l$
-   \\
-   Q0 &
-   float &
-   &
-   axial safety factor, $q_0$
-   \\
-   Q0\_ERR &
-   float &
-   &
-   error in $q_0$
-   \\
-   Q95 &
-   float &
-   &
-   95\% flux safety factor, $q_{95}$
-   \\
-   Q95\_ERR &
-   float &
-   &
-   error in $q_{95}$
-   \\
-   BETAN &
-   float &
-   &
-   global $\beta_{N}$
-   \\
    BETAT &
    float &
    &
-   global toroidal $\beta$
+   global toroidal beta, $\langle \beta_t \rangle$
    \\
    BETAP &
    float &
    &
-   global poloidal $\beta$
+   global poloidal beta, $\langle \beta_p \rangle$
    \\
-   \midrule
-   \multicolumn{4}{l}{\emph{Power Balance and Confinement:}}
+   BETAN &
+   float &
+   $\si{\meter\tesla\per\mega\ampere}$ &
+   global normalized beta, $\beta_N = \langle\beta\rangle / \left(I_p / aB_t \right)$
    \\
-   \midrule
+   TAU\_MHD &
+   float &
+   $\si{\second}$ &
+   MHD energy confinement time, $\tau_E$
+   \\
+   TAU\_MHD\_ERR &
+   float &
+   $\si{\second}$ &
+   error in TAU\_MHD
+   \\
    \bottomrule
-  \end{tabular}
- \end{table*}
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters for heating power, stored energy, and confinement.}\label{tab:sql_power}}
+ {\begin{tabularx}{141mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
+   \\
+   \midrule
+   PLASMA\_W &
+   float &
+   $\si{\joule}$ &
+   plasma stored energy
+   \\
+   PLASMA\_W\_ERR &
+   float &
+   $\si{\joule}$ &
+   error in PLASMA\_W
+   \\
+   DWDT &
+   float &
+   $\si{\watt}$ &
+   change in stored energy, $dW_{plasma}/dt$
+   \\
+   DWDT\_ERR &
+   float &
+   $\si{\watt}$ &
+   error in DWDT
+   \\
+   P\_ICRF &
+   float &
+   $\si{\mega\watt}$ &
+   absorbed ICRF heating power
+   \\
+   P\_ICRF\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_ICRF
+   \\
+   P\_OHM &
+   float &
+   $\si{\mega\watt}$ &
+   Ohmic heating power
+   \\
+   P\_OHM\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_OHM
+   \\
+   P\_LH &
+   float &
+   $\si{\mega\watt}$ &
+   absorbed lower-hybrid heating power
+   \\
+   P\_LH\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_LH
+   \\
+   P\_RAD &
+   float &
+   $\si{\mega\watt}$ &
+   radiated power from bolometry
+   \\
+   P\_RAD\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_RAD
+   \\
+   P\_SOL &
+   float &
+   $\si{\mega\watt}$ &
+   power through SOL \note{check this!!!}
+   \\
+   P\_SOL\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_SOL
+   \\
+   P\_THRES &
+   float &
+   $\si{\mega\watt}$ &
+   H-mode threshold power \note{citation?}
+   \\
+   P\_THRES\_ERR &
+   float &
+   $\si{\mega\watt}$ &
+   error in P\_THRES
+   \\
+   H &
+   float &
+   &
+   ITER98y2 H-mode confinement scaling, $H_{98} = \tau_E / \tau_{98y2}$
+   \\
+   H\_ERR &
+   float &
+   &
+   error in H
+   \\
+   H89 &
+   float &
+   &
+   ITER89 L-mode confinement scaling, $H_{89} = \tau_E / \tau_{89}$
+   \\
+   H89\_ERR &
+   float &
+   &
+   error in H89
+   \\
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
+\begin{table*}[h]
+ \pushtooutside
+ \ttabbox{\caption{SQL database parameters for high-resolution pedestal profiles.}\label{tab:sql_ped}}
+ {\begin{tabularx}{141mm}{abbc}
+   \toprule
+   \emph{column} &
+   \emph{data type} &
+   \emph{units} &
+   \emph{description}
+   \\
+   \midrule
+   NEPED\_H &
+   float &
+   $\si{\per\meter\cubed}$ &
+   density pedestal height
+   \\
+   NEPED\_H\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NEPED\_H
+   \\
+   NEPED\_B &
+   float &
+   $\si{\per\meter\cubed}$ &
+   density pedestal baseline
+   \\
+   NEPED\_B\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NEPED\_B
+   \\
+   NEPED\_D &
+   float &
+   &
+   density pedestal half-width
+   \\
+   NEPED\_D\_ERR &
+   float &
+   &
+   error in NEPED\_D
+   \\
+   NEPED\_R0 &
+   float &
+   &
+   density pedestal midpoint
+   \\
+   NEPED\_R0\_ERR &
+   float &
+   &
+   error in NEPED\_R0
+   \\
+   NEPED\_ALPHA &
+   float &
+   &
+   density pedestal inboard-slope parameter
+   \\
+   NEPED\_ALPHA\_ERR &
+   float &
+   &
+   error in NEPED\_ALPHA
+   \\
+   NEPED\_GRAD &
+   float &
+   $\si{\per\meter\cubed}$ &
+   peak density pedestal gradient (pedestal midpoint)
+   \\
+   NEPED\_GRAD\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NEPED\_GRAD
+   \\
+   NEPED\_LGRAD &
+   float &
+   &
+   peak density pedestal gradient scale length
+   \\
+   NEPED\_LGRAD\_ERR &
+   float &
+   &
+   error in NEPED\_LGRAD
+   \\
+   NEPED\_95 &
+   float &
+   $\si{\per\meter\cubed}$ &
+   density at 95\% flux surface
+   \\
+   NEPED\_95\_ERR &
+   float &
+   $\si{\per\meter\cubed}$ &
+   error in NEPED\_95
+   \\
+   \bottomrule
+  \end{tabularx}}
+\end{table*}
+
 
 \nicechapterending
