@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=FrontBackmatter\SQL.tex
+Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=3352
+TopLine=123
+Cursor=5729
 
 [Frame1]
 Flags=0
@@ -32,32 +32,14 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=classicthesis-config.tex
-
-[Frame1_View0,0]
-TopLine=183
-Cursor=0
-
-[Frame2]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=939
-NormalPos.bottom=718
-Class=LaTeXView
 Document=thesis.tex
 
-[Frame2_View0,0]
+[Frame1_View0,0]
 TopLine=36
-Cursor=487
+Cursor=3390
 
 [SessionInfo]
-FrameCount=3
+FrameCount=2
 ActiveFrame=0
 
 [Bookmarks]

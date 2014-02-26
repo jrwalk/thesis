@@ -2,7 +2,7 @@
 
 The development of magnetic-confinement fusion into an economical form of power generation is characterized by two seemingly contrary requirements: first, a high level of energy confinement is necessary to reach the desired level of self-heating of the plasma by fusion products, satisfying triple-product requirements (\cref{eq:tripleproduct}).  At the same time, particle transport must be sufficient to avoid the deleterious effects of accumulated helium ``fusion ash'' and other impurities on fusion performance -- particularly important in the case of the high-$Z$ impurities from the metal plasma-facing walls necessary for reactor-scale devices \cite{Loarte2007}\gnote{more cites?}.
 
-A number of operating scenarios, collectively termed ``high confinement'' or H-modes\cite{Wagner1982}, satisfying these requirements have been developed.  The ``low confinement'' or L-mode operating baseline of energy confinement, characterized through an extensive multi-machine scaling study \cite{Yushmanov1990} by the ITER-89 scaling,
+A number of operating scenarios, collectively termed ``high confinement'' or H-modes\cite{Wagner1982}, satisfying these requirements have been developed.  The ``low confinement'' or L-mode operating baseline of energy confinement is characterized through an extensive multi-machine scaling study \cite{Yushmanov1990} by the ITER-89 scaling,
 
 \begin{equation}\label{eq:tau89}
  \tau_{E,ITER89} = 0.048 \times \overline{n}_e^{0.1} M^{0.5} I_p^{0.85} R^{1.2} a^{0.3} \kappa^{0.5} B_T^{0.2} P_{aux}^{-0.5}
@@ -14,11 +14,15 @@ A number of operating scenarios, collectively termed ``high confinement'' or H-m
  H_{89} = \frac{\tau_E}{\tau_{E,ITER89}}
 \end{equation}
 
-\noindent by at least a factor of two.\gnote{more specific, cites?}
+\noindent improved by roughly a factor of two compared to L-mode.\gnote{more specific, cites?}
+
+This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  This reduction in transport is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.
+
+This chapter provides an overview and comparison of different classes of established H-mode operation, particularly regarding their behaviors in the high energy confinement and low particle confinement required for a reactor.  Additionally, observations of Edge-Localized Modes (ELMs) \cite{Zohm1996} are addressed.  We then introduce the access conditions, operation, and global characteristics of \emph{I-mode} -- an alternate high-performance regime with a number of favorable characteristics for reactor operation, and the subject of the balance of this thesis.
 
 \begin{table*}[h]
  \pushtooutside
- \ttabbox{\caption{Typical operating parameters of tokamaks noted in this thesis, with reference to overviews.  \emph{Note:} all ITER values are projected.\note{check all values here}}\label{tab:tokamaks}}
+ \ttabbox{\caption{Typical operating parameters of tokamaks noted in this thesis, along with references to overviews of each machine.  \emph{Note:} all ITER values are projected.\note{check all values here}}\label{tab:tokamaks}}
  {\begin{tabular}{lcccccc}
   \toprule
   \emph{Device} &
@@ -119,6 +123,15 @@ A number of operating scenarios, collectively termed ``high confinement'' or H-m
 \section{ELM-Suppressed H-Modes}\label{sec:hcr_elmsuppressed}
 
 \subsection{QH-Mode}\label{subsec:hcr_qh}
+
+build references 
+\begin{itemize}
+ \item first observations: DIII-D \cite{Burrell2001,Greenfield2002}, QDB \cite{Burrell2002,Doyle2001}, JET \cite{Suttrop2005}, AUG \cite{Suttrop2003a}, JT60 \cite{Sakamoto2004}
+ \item EHO modeling \cite{Snyder2007,Osborne2008}
+ \item co-current \cite{Burrell2009}
+ \item NRMF \cite{Garofalo2011,Burrell2013}
+ \item other \cite{Oyama2006,Groebner2001}
+\end{itemize}
 
 \subsection{EDA H-Mode}\label{subsec:hcr_eda}
 
