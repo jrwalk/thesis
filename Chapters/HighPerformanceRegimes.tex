@@ -16,7 +16,7 @@ A number of operating scenarios, collectively termed ``high confinement'' or H-m
 
 \noindent improved by roughly a factor of two compared to L-mode.\gnote{more specific, cites?}
 
-This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  This reduction in transport is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.
+This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  Pedestal formation is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.  As the pedestal structure is known to set a strong constraint on the overall performance in high-confinement regimes \cite{Kinsey2011}, as well as determining the edge stability and heat exhaust properties of the regime, a firm understanding of the pedestal is essential for extrapolation of a high-performance regime to ITER and beyond.
 
 This chapter provides an overview and comparison of different classes of established H-mode operation, particularly regarding their behaviors in the high energy confinement and low particle confinement required for a reactor.  Additionally, observations of Edge-Localized Modes (ELMs) \cite{Zohm1996} are addressed.  We then introduce the access conditions, operation, and global characteristics of \emph{I-mode} -- an alternate high-performance regime with a number of favorable characteristics for reactor operation, and the subject of the balance of this thesis.
 
@@ -122,11 +122,19 @@ This chapter provides an overview and comparison of different classes of establi
 
 \section{ELM-Suppressed H-Modes}\label{sec:hcr_elmsuppressed}
 
+In addition to H-modes exhibiting ELMs, classes of H-mode have been established capable of stationary operation with acceptable levels of particle transport (avoiding the radiative collapse and subsequent transient nature found in classical ELM-free H-modes) without exhibiting the bursty heat and particle transport driven by ELMs.  Rather, the pedestal is regulated by a continuous fluctuation localized in the pedestal.  Due to this attractive property, these regimes have been extensively researched\gnote{reword}.  The characteristics of two major types, the Quiescent H-mode (QH-mode) and Enhanced $D_\alpha$ (EDA) H-mode are presented here.
+
 \subsection{QH-Mode}\label{subsec:hcr_qh}
 
-build references 
+The \emph{Quiescent H-mode} (QH-mode) was first observed on DIII-D \cite{Burrell2002,Groebner2001}, and subsequently achieved on ASDEX Upgrade \cite{Suttrop2003a}, JT-60U \cite{Sakamoto2004}, and JET \cite{Suttrop2005}.  In QH-mode operation, following a brief ELM-free or ELMing phase after the L-H transition, the plasma enters a state with steady averaged density and radiated power, indicating a lack of serious impurity accumulation, despite lacking ELM transport (evident from divertor $D_\alpha$ light, which is ``quiescent'' compared to the characteristic spikes driven by ELMs).  Although QH-mode requires lower densities (average density reduced by roughly a factor of two from comparable ELMy H-modes) with cryopumping for density control, access is otherwise robust, with successful operation across a broad range of shaping, safety factor, current and field \cite{Burrell2002}.  The regime is capable of stationary operation, with the mode sustained for most of the current flat-top on DIII-D ($\sim 25 \tau_E$) with very good confinement -- in cases with an internal transport barrier in addition to the pedestal (termed the ``Quiescent Double Barrier'' or QDB regime \cite{Burrell2001,Doyle2001,Greenfield2002}) a confinement metric of $\beta_N H_{89} \sim 7$ was reached (albeit for a brief period, $\sim 5 \tau_E$), compared to $\beta_N H_{89} \sim 4$ found in ELMy H-modes on DIII-D \cite{Doyle2001}.  Here we use for a normalized pressure metric\gnote{cite for this?}
+
+\begin{equation}\label{eq:betan}
+ \beta_N = \beta \frac{aB_T}{I_p}
+\end{equation}
+
+\noindent in $\si{\meter.\tesla\per\mega\ampere}$.
+
 \begin{itemize}
- \item first observations: DIII-D \cite{Burrell2001,Greenfield2002}, QDB \cite{Burrell2002,Doyle2001}, JET \cite{Suttrop2005}, AUG \cite{Suttrop2003a}, JT60 \cite{Sakamoto2004}
  \item EHO modeling \cite{Snyder2007,Osborne2008}
  \item co-current \cite{Burrell2009}
  \item NRMF \cite{Garofalo2011,Burrell2013}
