@@ -16,7 +16,8 @@ A number of operating scenarios, collectively termed ``high confinement'' or H-m
 
 \noindent improved by roughly a factor of two compared to L-mode.\gnote{more specific, cites?}
 
-This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  Pedestal formation is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.  As the pedestal structure is known to set a strong constraint on the overall performance in high-confinement regimes \cite{Kinsey2011}, as well as determining the edge stability and heat exhaust properties of the regime, a firm understanding of the pedestal is essential for extrapolation of a high-performance regime to ITER and beyond.
+This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  Pedestal formation is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.  As the pedestal 
+structure is known to set a strong constraint on the overall performance in high-confinement regimes \cite{Kinsey2011}, as well as determining the edge stability and heat exhaust properties of the regime, a firm understanding of the pedestal is essential for extrapolation of a high-performance regime to ITER and beyond.
 
 This chapter provides an overview and comparison of different classes of established H-mode operation, particularly regarding their behaviors in the high energy confinement and low particle confinement required for a reactor.  Additionally, observations of Edge-Localized Modes (ELMs) \cite{Zohm1996} are addressed.  We then introduce the access conditions, operation, and global characteristics of \emph{I-mode} -- an alternate high-performance regime with a number of favorable characteristics for reactor operation, and the subject of the balance of this thesis.
 
@@ -33,7 +34,7 @@ This chapter provides an overview and comparison of different classes of establi
   $\overline{n}_e \;[\si{\per\meter\cubed}]$ &
   $T_{e0} \;[\si{\kilo\electronvolt}]$ &
 %   heating &
-  \emph{refs}
+  \emph{refs.}
   \\
   \midrule
   C-Mod (USA) &
@@ -104,6 +105,87 @@ This chapter provides an overview and comparison of different classes of establi
   \\
   \bottomrule
  \end{tabular}}
+%  {\begin{tabular}{lcccccc}
+%   \toprule
+%   \emph{Device} &
+%   $R/a \;[\si{\meter}]$ &
+%   %$a \;[\si{\meter}]$ &
+%   $I_p\;[\si{\mega\ampere}]$ &
+%   $B_T \;[\si{\tesla}]$ &
+%   $\overline{n}_e \;[\SI{e19}{\per\meter\cubed}]$ &
+%   $T_{e0} \;[\si{\kilo\electronvolt}]$ &
+% %   heating &
+%   \emph{refs.}
+%   \\
+%   \midrule
+%   C-Mod &
+%   $\num{0.67/0.22}$ &
+%   %$\num{0.22}$ &
+%   $\le \num{2}$ &
+%   $3-8.1$ &
+%   $\le \num{50}$ &
+%   $\le \num{8}$ &
+% %   ICRF, LHRF &
+%   \cite{Hutchinson1994,Greenwald2007,Greenwald2013}
+%   \\
+%   DIII-D &
+%   $\num{1.67/0.67}$ &
+%   %$\num{0.67}$ &
+%   $1-3$ &
+%   $2.2$ &
+%   $\num{6}$ &
+%   $5-10$ &
+% %   ECRF, NBI &
+%   \cite{Luxon2002,Luxon2005a,Luxon2005}
+%   \\
+%   ASDEX-U &
+%   $\num{1.65/0.5}$ &
+%   %$\num{0.5}$ &
+%   $\sim 1$ &
+%   $3.9$ &
+%   $\num{7.5}$ &
+%   $2-3$ &
+% %   &
+%   \cite{Herrmann2003,Ryter2003,Stroth2013}
+%   \\
+%   JET &
+%   $\num{3.4/0.9}$ &
+%   $3-4$ &
+%   $3.8$ &
+%   $\num{5}$ &
+%   $10-20$ &
+% %   &
+%   \cite{McDonald2008,Romanelli2013}
+%   \\
+%   JT-60U &
+%   $\num{3.4/0.9}$ &
+%   $3-4$ &
+%   $4.8$ &
+%   $\num{5}$ &
+%   $10-20$ &
+% %   &
+%   \cite{Kamada2002,Kitsunezaki2002}
+%   \\
+%   JFT-2M &
+%   $\num{1.3/0.35}$ &
+%   $0.5$ &
+%   $2.2$ &
+%   $\num{5}$ &
+%   $1-2$ &
+% %   &
+%   \cite{Kusama2006,Miura2006}
+%   \\
+%   ITER* &
+%   $\num{6.2/2.0}$ &
+%   $15$ &
+%   $5.3$ &
+%   $\num{10}$ &
+%   $10$ &
+% %   &
+%   \cite{Shimada2007,ITER1999}
+%   \\
+%   \bottomrule
+%  \end{tabular}}
 \end{table*}
 
 \section{ELM-Free H-Mode}\label{sec:hcr_elmfree}
@@ -126,7 +208,8 @@ In addition to H-modes exhibiting ELMs, classes of H-mode have been established 
 
 \subsection{QH-Mode}\label{subsec:hcr_qh}
 
-The \emph{Quiescent H-mode} (QH-mode) was first observed on DIII-D \cite{Burrell2002,Groebner2001}, and subsequently achieved on ASDEX Upgrade \cite{Suttrop2003a}, JT-60U \cite{Sakamoto2004}, and JET \cite{Suttrop2005}.  In QH-mode operation, following a brief ELM-free or ELMing phase after the L-H transition, the plasma enters a state with steady averaged density and radiated power, indicating a lack of serious impurity accumulation, despite lacking ELM transport (evident from divertor $D_\alpha$ light, which is ``quiescent'' compared to the characteristic spikes driven by ELMs).  Although QH-mode requires lower densities (average density reduced by roughly a factor of two from comparable ELMy H-modes) with cryopumping for density control, access is otherwise robust, with successful operation across a broad range of shaping, safety factor, current and field \cite{Burrell2002}.  The regime is capable of stationary operation, with the mode sustained for most of the current flat-top on DIII-D ($\sim 25 \tau_E$) with very good confinement -- in cases with an internal transport barrier in addition to the pedestal (termed the ``Quiescent Double Barrier'' or QDB regime \cite{Burrell2001,Doyle2001,Greenfield2002}) a confinement metric of $\beta_N H_{89} \sim 7$ was reached (albeit for a briefer period, $\sim 5 \tau_E$), compared to $\beta_N H_{89} \sim 4$ found in ELMy H-modes on DIII-D \cite{Doyle2001}.  Here we use for a normalized pressure metric.\gnote{cite for this?}
+The \emph{Quiescent H-mode} (QH-mode) was first observed on DIII-D \cite{Burrell2002,Groebner2001}, and subsequently achieved on ASDEX Upgrade \cite{Suttrop2003a}, JT-60U \cite{Sakamoto2004}, and JET \cite{Suttrop2005}.  In QH-mode operation, following a brief ELM-free or ELMing phase after the L-H transition, the plasma enters a state with steady averaged density and radiated power, indicating a lack of serious impurity accumulation, despite lacking ELM transport (evident from divertor $D_\alpha$ light, which is ``quiescent'' compared to the characteristic spikes driven by ELMs).  Although QH-mode requires lower densities (average density reduced by roughly a factor of two from comparable ELMy H-modes) with cryopumping for density control, access is otherwise robust, with successful operation across a broad range of shaping, safety factor, current and field \cite{Burrell2002}.  The regime is capable of stationary operation, with the mode sustained for most of the current flat-top on DIII-D ($\sim 25 \tau_E$)
+ with very good confinement -- in cases with an internal transport barrier in addition to the pedestal (termed the ``Quiescent Double Barrier'' or QDB regime \cite{Burrell2001,Doyle2001,Greenfield2002}) a confinement metric of $\beta_N H_{89} \sim 7$ was reached (albeit for a briefer period, $\sim 5 \tau_E$), compared to $\beta_N H_{89} \sim 4$ found in ELMy H-modes on DIII-D \cite{Doyle2001}.  Here we use for a normalized pressure metric.\gnote{cite for this?}
 
 \begin{equation}\label{eq:betan}
  \beta_N = \beta \frac{aB_T}{I_p}
@@ -134,9 +217,11 @@ The \emph{Quiescent H-mode} (QH-mode) was first observed on DIII-D \cite{Burrell
 
 \noindent in $\si{\meter.\tesla\per\mega\ampere}$.  Similarly competitive confinement between QH-mode and ELMy H-mode is seen on ASDEX Upgrade and JET, although the mode on JT-60U is out-performed by ELMy H-mode \cite{Oyama2006}.  The pedestal density is reduced (comparable to the reduction in globally-averaged density) in QH-mode compared to ELMy H-mode, and excess fueling to the edge by gas puffing, pellet fueling, or wall outgassing destroys the QH-mode.  However, pedestal temperatures are typically somewhat higher \cite{Doyle2001}, thus the mode is found at ITER-relevant low collisionalities.  Pedestal pressure gradients are comparable to those found in ELMy H-mode, implying stabilization of the peeling-ballooning MHD modes typically associated with the ELM trigger \cite{Burrell2002}.\gnote{elaborate?}  A particularly strong $E_r$ well ($2-3$ times deeper than in comparable ELMy H-modes) is also observed in the QH-mode pedestal \cite{Greenfield2002}.
 
-In place of bursty ELM transport, the pedestal in QH-mode is continuously regulated by the Edge Harmonic Oscillation (EHO) an MHD mode observed in density, temperature, and magnetic fluctuations \cite{Burrell2002}.  The EHO is made up of distinct harmonics with toroidal mode numbers $n \sim 1-10$; these harmonics are directly observed in the particle flux at the divertor, indicating that the EHO is responsible for density regulation in QH-mode \cite{Doyle2001}.  MHD modeling approaches similar to that described in \cref{ch:Modeling} indicate that the EHO is a saturated peeling mode \cite{Snyder2007,Osborne2008}.  This is consistent with the low pedestal collisionality in the QH-mode pedestal (lower collisionalities and higher bootstrap currents tends to drive the pedestal towards the peeling side of the peeling-ballooning MHD boundary, as described in \cref{ch:Modeling}), and with the observed localization of the EHO in the region of strongest $E_r$ and rotation shear \cite{Burrell2001}.  the saturated mode is driven by the strong rotation shear in the edge -- while this typically destabilizes low-$n$ MHD modes\gnote{pull ref 9 from Burrell2009?}, in the case of the EHO the magnetic component of the mode couples to the vacuum-vessel wall as the rotation spins up, providing the drag force necessary to saturate the mode at finite amplitude \cite{Burrell2009}.  This maintains the pedestal below the current-driven peeling boundary associated with the ELM trigger, providing the ELM suppression in QH-mode\gnote{recent ref from Phil for this?}.
+In place of bursty ELM transport, the pedestal in QH-mode is continuously regulated by the Edge Harmonic Oscillation (EHO) an MHD mode observed in density, temperature, and magnetic fluctuations \cite{Burrell2002}.  The EHO is made up of distinct harmonics with toroidal mode numbers $n \sim 1-10$; these harmonics are directly observed in the particle flux at the divertor, indicating that the EHO is responsible for density regulation in QH-mode \cite{Doyle2001}.  MHD modeling approaches similar to that described in \cref{ch:Modeling} indicate that the EHO is a saturated peeling mode \cite{Snyder2007,Osborne2008}.  This is consistent with the low pedestal collisionality in the QH-mode pedestal (lower collisionalities and higher bootstrap currents tends to drive the pedestal towards the peeling side of the peeling-ballooning MHD boundary, as described in \cref{ch:Modeling}), and with the observed localization of the EHO in the region of strongest $E_r$ and rotation shear \cite{Burrell2001}.  the saturated mode 
+is driven by the strong rotation shear in the edge -- while this typically destabilizes low-$n$ MHD modes\gnote{pull ref 9 from Burrell2009?}, in the case of the EHO the magnetic component of the mode couples to the vacuum-vessel wall as the rotation spins up, providing the drag force necessary to saturate the mode at finite amplitude \cite{Burrell2009}.  This maintains the pedestal below the current-driven peeling boundary associated with the ELM trigger, providing the ELM suppression in QH-mode\gnote{recent ref from Phil for this?}.
 
-Historically, QH-mode operation has required significant neutral-beam inputs directed counter the plasma current direction, providing the necessary rotation \cite{Burrell2002}.  However, counter-current beam operation drives significant fast-ion losses into the outer wall, necessitating operation with a large outer gap to avoid wall outgassing.  More recent experiments have successfully generated QH-modes with co-current beam injection \cite{Burrell2009} and with torque from non-axisymmetric magnetic fields \cite{Garofalo2011,Burrell2013}.  The latter is of particular importance, as it is not expected that the NBI systems on ITER will drive sufficient torque to produce QH-mode \cite{Garofalo2011}.  In addition to the requirement for externally-supplied torque to maintain the mode, QH-mode suffers from accumulation of high-$Z$ impurities -- while lower-$Z$ ions are flushed from the plasma by the EHO, high-$Z$ impurities tend to accumulate in the core \cite{Doyle2001,Suttrop2005}, which may present difficulties attaining QH-mode on metal-walled machines where high-$Z$ impurities dominate.  Nevertheless QH-mode is an attractive option for a reactor regime.
+Historically, QH-mode operation has required significant neutral-beam inputs directed counter the plasma current direction, providing the necessary rotation \cite{Burrell2002}.  However, counter-current beam operation drives significant fast-ion losses into the outer wall, necessitating operation with a large outer gap to avoid wall outgassing.  More recent experiments have successfully generated QH-modes with co-current beam injection \cite{Burrell2009} and with torque from non-axisymmetric magnetic fields \cite{Garofalo2011,Burrell2013}.  The latter is of particular importance, as it is not expected that the NBI systems on ITER will drive sufficient torque to produce QH-mode \cite{Garofalo2011}.  In addition to the requirement for externally-supplied torque to maintain the mode, QH-mode suffers from accumulation of high-$Z$ impurities -- while lower-$Z$ ions are flushed from the plasma by the EHO, high-$Z$ impurities tend to accumulate in the core \cite{Doyle2001,Suttrop2005}, which may present 
+difficulties attaining QH-mode on metal-walled machines where high-$Z$ impurities dominate.  Nevertheless QH-mode is an attractive option for a reactor regime.
 
 \subsection{EDA H-Mode}\label{subsec:hcr_eda}
 
