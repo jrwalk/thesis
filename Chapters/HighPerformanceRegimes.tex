@@ -190,11 +190,21 @@ This chapter provides an overview and comparison of different classes of establi
 
 \section{ELM-Free H-Mode}\label{sec:hcr_elmfree}
 
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[65mm]{\caption{Characteristic traces of transient ELM-free H-modes, highlighted on the traces (\cref{sec:hcr_elmfree}).  After the L-H transition, density and thermal pressure (and therefore fusion reaction rate and stored energy) rise, while turbulent particle transport is reduced, as seen by the drop in edge $D_\alpha$ light and suppression of turbulence.  However, radiated power rises due to impurity accumulation -- when radiated power reaches a level comparable to total heating power, the plasma drops back into L-mode.}\label{fig:hcr_elmfree}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1110114003.pdf}}
+\end{figure}
+
 \nicesectionending
 
 \section{ELMy H-Mode}\label{sec:hcr_elmy}
 
 \subsection{Global Parameters}\label{subsec:hcr_elmy_ped}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[65mm]{\caption{Characteristic traces of a steady ELMy H-mode (\cref{sec:hcr_elmy}).  Density and radiated power rise after the L-H transition, but stabilize as the periodic relaxation of the pedestal regulates and flushes impurities from the plasma.  ELM bursts are visible as spikes on the edge $D_\alpha$ signal.}\label{fig:hcr_elmy}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1101214029.pdf}}
+\end{figure}
 
 \subsection{Fluctuations and ELMs}\label{subsec:hcr_elmy_fluct}
 
@@ -223,6 +233,11 @@ Historically, QH-mode operation has required significant neutral-beam inputs dir
 difficulties attaining QH-mode on metal-walled machines where high-$Z$ impurities dominate.  Nevertheless QH-mode is an attractive option for a reactor regime.
 
 \subsection{EDA H-Mode}\label{subsec:hcr_eda}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[65mm]{\caption{Characteristic traces of an EDA H-mode on C-Mod (\cref{subsec:hcr_eda}).  Following a brief ELM-free phase, the plasma density and radiated power stabilizes at a sustainable level.  The edge transport barrier is regulated by the continuous QCM fluctuation rather than bursty ELM transport.}\label{fig:hcr_eda}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1110201018.pdf}}
+\end{figure}
 
 The \emph{Enhanced $D_\alpha$ H-mode} (EDA H-mode) is a high-performance regime explored on the Alcator C-Mod tokamak \cite{Greenwald1999,Hubbard2001,Hughes2005}\gnote{time trace, fluctuations, profile comparison between EDA, ELMy}.  Along with transient ELM-free H-modes, the EDA regime is the customary approach to H-mode operation on C-Mod, unlike other major tokamak experiments; the Type-I ELMy H-mode typical on other devices requires an abnormal shaping to more easily reach the stability boundary associated with the ELM trigger on C-Mod \cite{Hughes2013}\gnote{make sure to elaborate on this in ELMy section or reference later}.  In EDA operation, the L-H transition is followed by a rise in radiated power and density similar to an ELM-free H-mode.  However, shortly thereafter the H-mode stabilizes at steady density \cite{Greenwald1999}, with the radiated power held at $P_{rad}/P_{in} \sim 30\%$ \cite{Hubbard1998}, allowing steady operation (maintained for most of the steady current phase, $\sim 10\tau_E$) and good performance, with $H_{89} \sim 1.9$, $H_{98} \sim 1$ \cite{Hubbard2001}.  Notably, modeling of the pedestal in EDA H-mode indicates energy confinement with potentially weaker degradation of $\tau_E$ with input heating power \cite{Hughes2002,Hughes2006}\gnote{move this elsewhere?}.  Rather than bursty ELM transport, the EDA pedestal is regulated by a continuous density pumpout, with divertor $D_\alpha$ signals (indicative of the density exhaust from the plasma) recovering to near L-mode levels after an initial drop at the L-H transition\gnote{check this, reword?}.  Access to EDA H-mode is fairly robust, although it is strongly favored by higher collisionality ($\nu^* > 1$) and edge safety factor \cite{Hughes2002,Mossessian2002} and by strong shaping \cite{Mossessian2002}\gnote{define $\nu^*$ here, or earlier?}.  Although a higher collisionality is observed to be required at lower values of $q_{95}$, a collisionality threshold alone is insufficient to explain EDA access \cite{Hughes2002}.  Instead, EDA and ELM-free H-modes are separated in a phase space of collisionality and normalized pressure gradient ($\nu^*$-$\alpha_{MHD}$)\gnote{define $\alpha_{MHD}$ before here} -- however, the transition between the two regimes is soft, with the EDA smoothly appearing at higher pressure gradients and collisionalities rather than exhibiting a sharp transition \cite{Hughes2007a}.
 
