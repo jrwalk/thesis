@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame0_View0,0]
-TopLine=293
-Cursor=14931
+TopLine=465
+Cursor=31438
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=thesis.tex
+Document=Chapters\Introduction.tex
 
 [Frame1_View0,0]
-TopLine=0
-Cursor=875
+TopLine=305
+Cursor=23701
 
 [Frame2]
 Flags=0
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\Introduction.tex
+Document=thesis.tex
 
 [Frame2_View0,0]
-TopLine=277
-Cursor=18946
+TopLine=0
+Cursor=940
 
 [SessionInfo]
 FrameCount=3
