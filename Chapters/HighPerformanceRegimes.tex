@@ -196,25 +196,57 @@ This chapter provides an overview and comparison of different classes of establi
  \fcapside[65mm]{\caption{Characteristic traces of transient ELM-free H-modes, highlighted on the traces (\cref{sec:hcr_elmfree}).  After the L-H transition, density and thermal pressure (and therefore fusion reaction rate and stored energy) rise, while turbulent particle transport is reduced, as seen by the drop in edge $D_\alpha$ light and suppression of turbulence.  However, radiated power rises due to impurity accumulation -- when radiated power reaches a level comparable to total heating power, the plasma drops back into L-mode.}\label{fig:hcr_elmfree}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1110114003.pdf}}
 \end{figure}
 
-At moderate levels of heating power above the L-H threshold\gnote{cite for $P_{thres}$ here, reword?}, the plasma enters a transient \emph{ELM-free H-mode}, in which an H-mode forms without exhibiting large edge-localized modes (ELMs) \cite{Zohm1996,Suttrop2000a}.  ELM-free H-modes exhibit high levels of both energy and particle confinement ($H_{89} \sim 2$), resulting in strong density and temperature pedestals \cite{Hubbard2000,Hatae1998}.  The plasma stored energy, global pressure, and density rise monotonically after the L-H transition (shown in \cref{fig:hcr_elmfree}), as does the edge pressure gradient \cite{Breger1998}.  This, however, is unsustainable -- the increased particle confinement causes impurities to accumulate in the plasma, increasing the power lost to radiative effects.  Above $P_{rad}/P_{in} \sim 0.5$ confinement degrades due to cooling at the edge, and the H-mode terminates as the radiated power approaches the total heating power, an event termed the ``radiative collapse'' \cite{Greenwald1997}.
+At moderate levels of heating power above the L-H threshold \cite{Martin2008},
+
+\begin{equation}\label{eq:Pthres}
+ \begin{aligned}
+  P_{thres} &= 0.0488 \times \overline{n}_e^{0.717} B_T^{0.803} S^{0.941} \quad [\si{\mega\watt}]\\
+  S &= (2\pi)^2 aR \sqrt{\kappa}
+ \end{aligned}
+\end{equation}
+
+\noindent ($\overline{n}_e$ is the line-averaged density in $\SI{e20}{\per\meter\cubed}$, $B_T$ in $\si{\tesla}$, and $S$ is the plasma surface area in $\si{\meter\squared}$) the plasma enters a transient \emph{ELM-free H-mode}, in which an H-mode forms without exhibiting large edge-localized modes (ELMs) \cite{Zohm1996,Suttrop2000a}.  ELM-free H-modes exhibit high levels of both energy and particle confinement ($H_{89} \sim 2$), resulting in strong density and temperature pedestals \cite{Hubbard2000,Hatae1998}.  The plasma stored energy, global pressure, and density rise monotonically after the L-H transition (shown in \cref{fig:hcr_elmfree}), as does the edge pressure gradient \cite{Breger1998}.  This, however, is unsustainable -- the increased particle confinement causes impurities to accumulate in the plasma, increasing the power lost to radiative effects.  Above $P_{rad}/P_{in} \sim 0.5$ confinement degrades due to cooling at the edge, and the H-mode terminates as the radiated power approaches the total heating power, an event termed the ``radiative collapse'' \cite{Greenwald1997}.
 
 As a result, the conventional ELM-free H-mode is an inherently transient state for the plasma -- the excessive particle confinement and resulting radiative losses tend to drop the plasma back into L-mode, although under certain conditions the edge pressure gradient may grow sufficiently to instead transition into an ELMy H-mode \cite{Breger1998}.  This demonstrates the necessity of some form of density regulation in high-performance regimes to control and flush impurities from the plasma, allowing stationary operation.\nicesectionending
 
 \section{ELMy H-Mode}\label{sec:hcr_elmy}
 
-\subsection{Global Parameters}\label{subsec:hcr_elmy_ped}
+\subsection{ELMy H-Mode Operation}\label{subsec:hcr_elmy_ped}
 
-\begin{figure}
+The first H-modes, observed in high-power experiments on ASDEX \cite{Wagner1982,Keilhacker1984}, exhibited a prompt decrease by roughly a factor of two in both particle and energy transport \cite{Wagner1982}.  The H-mode transition is marked by high edge temperatures and strong gradients -- the first H-modes were observed in divertor experiments on ASDEX, as the diverted configuration allows higher edge temperatures than are attainable in limited plasmas \cite{Keilhacker1984}.  Unlike ELM-free H-modes, however, the confinement is periodically degraded by \emph{Edge-Localized Modes} (ELMs), intermittent ``crashes'' in the pedestal expelling particles and energy into the SOL, with repetition rates ranging from a few ELM cycles per second to over $\SI{100}{\hertz}$, which drives sufficient particle transport to flush impurities from the plasma and allow stationary operation \cite{Keilhacker1984,Zohm1996}.  The ELMy H-mode forms a strong pedestal in both density and temperature, although at lower electron-ion coupling rates the ion pedestal may be wider \cite{Groebner1998a} -- due to profile stiffness in the core, this supports high temperatures and pressures and good global performance \cite{Greenwald1997,Suttrop2000,Schneider2013}.  Moreover, the ELMy H-mode is readily attainable on all major tokamak experiments, although ELMy H-modes on C-Mod require an atypical shape \cite{Hughes2012,Hughes2013}, as well as at a broad range of collisionalities and operating densities.  Here we define the collisionality (normalized collision frequency) by \cite{Sauter1999},
+
+\begin{equation}\label{eq:nustar}
+ \nu^* = \frac{\nu_{eff}}{\nu_{bounce}} = \left(\num{6.921e-18}\right) \frac{Rqn_e Z_{eff} \ln \Lambda_e}{\varepsilon^{3/2} T_e^2}
+\end{equation}
+
+\noindent with electron density $n_e$ in $\si{\per\meter\cubed}$ and temperature in $\si{\electronvolt}$, major radius $R$ in $\si{\meter}$, and with the Coulomb logarithm defined by $\ln \Lambda_e = 24 - \ln\left(\sqrt{n_e}/T_e\right)$.  Typically the pedestal collisionality is calculated by evaluating $n_e$, $T_e$, and $q$ at the 95\% flux surface.  The operating density range is expressed in terms of the Greenwald density limit \cite{Greenwald1988},
+
+\begin{equation}\label{eq:GDL}
+  n_{Gr} = \frac{I_p}{\pi a^2} \qquad f_{Gr} = \frac{\overline{n}_e}{n_{Gr}}
+\end{equation}
+
+\noindent with $I_p$ in $\si{\mega\ampere}$ and $a$ in $\si{\meter}$ yielding density in $\SI{e20}{\per\meter\cubed}$.  ELMy H-mode operation is possible with Greenwald fractions ranging from $f_{Gr} \sim 0.3-1.0$, although confinement degrades severely as $f_{Gr}$ approaches unity \cite{Saibene1999}.
+
+  As such, the ELMy H-mode is considered the baseline for ITER operation \cite{ITER1999,Shimada2007}.  Analysis of a multi-machine database \cite{Christiansen1992} led to the development of the ITER98y2 H-mode confinement scaling \cite{ITER1999}\gnote{check $P_{net}$ vs $P_{loss}$},
+
+\begin{align}
+ \tau_{ITER98y2} &= 0.0562 \times \overline{n}_e^{0.41} M^{0.19} I_p^{0.93} R^{1.39} a^{0.58} \kappa^{0.78} B_T^{0.15} P_{net}^{-0.69}\label{eq:tau98}\\
+ H_{98} &= \frac{\tau_E}{\tau_{E,ITER98y2}}\label{eq:H98}
+\end{align}
+
+\noindent in which $\overline{n}_e$ is the line-averaged density ($\SI{e19}{\per\meter\cubed}$), $M$ is the atomic mass ($\si{amu}$), $I_p$ is the plasma current ($\si{\mega\ampere}$), $B_T$ is the toroidal field ($\si{T}$), $R$ and $a$ are the major and minor radii in $\si{\meter}$ (see \cref{fig:intro_geometry}), $\kappa$ is the elongation (see \cref{fig:intro_shaping}), and $P_{net}$ is the net heating power defined in \cref{eq:pnet} ($\si{\mega\watt}$).
+
+\begin{figure}[p]
  \pushtooutside
  \fcapside[65mm]{\caption{Characteristic traces of a steady ELMy H-mode (\cref{sec:hcr_elmy}).  Density and radiated power rise after the L-H transition, but stabilize as the periodic relaxation of the pedestal regulates and flushes impurities from the plasma.  ELM bursts are visible as spikes on the edge $D_\alpha$ signal.}\label{fig:hcr_elmy}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1101214029.pdf}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
  \pushtooutside
  \fcapside[65mm]{\caption{ELMy H-mode pedestals from experiments on Alcator C-Mod and DIII-D, with matched dimensionless parameters between the two machines \note{elaborate on matching?}.  Pedestal densities and temperatures are shown normalized to poloidal field (which accounts for differences in plasma current) such that hyperbolae in the parameter space are curves of constant poloidal beta.  In the dimensionless match, ELMy H-mode pedestals are, to lowest order, constrained to a curve of fixed $\beta_{p,ped}$.}\label{fig:hcr_elmybetas}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/elmy_betas.pdf}}
 \end{figure}
 
-\subsection{Fluctuations and ELMs}\label{subsec:hcr_elmy_fluct}
+\subsection{Edge-Localized Modes \& Pedestal Limits}\label{subsec:hcr_elmy_fluct}
 
 \subsection{Active ELM Control}\label{subsec:hcr_elmy_control}
 
@@ -227,7 +259,7 @@ In addition to H-modes exhibiting ELMs, classes of H-mode have been established 
 \subsection{QH-Mode}\label{subsec:hcr_qh}
 
 The \emph{Quiescent H-mode} (QH-mode) was first observed on DIII-D \cite{Burrell2002,Groebner2001}, and subsequently achieved on ASDEX Upgrade \cite{Suttrop2003a}, JT-60U \cite{Sakamoto2004}, and JET \cite{Suttrop2005}.  In QH-mode operation, following a brief ELM-free or ELMing phase after the L-H transition, the plasma enters a state with steady averaged density and radiated power, indicating a lack of serious impurity accumulation, despite lacking ELM transport (evident from divertor $D_\alpha$ light, which is ``quiescent'' compared to the characteristic spikes driven by ELMs).  Although QH-mode requires lower densities (average density reduced by roughly a factor of two from comparable ELMy H-modes) with cryopumping for density control, access is otherwise robust, with successful operation across a broad range of shaping, safety factor, current and field \cite{Burrell2002}.  The regime is capable of stationary operation, with the mode sustained for most of the current flat-top on DIII-D ($\sim 25 \tau_E$)
- with very good confinement -- in cases with an internal transport barrier in addition to the pedestal (termed the ``Quiescent Double Barrier'' or QDB regime \cite{Burrell2001,Doyle2001,Greenfield2002}) a confinement metric of $\beta_N H_{89} \sim 7$ was reached (albeit for a briefer period, $\sim 5 \tau_E$), compared to $\beta_N H_{89} \sim 4$ found in ELMy H-modes on DIII-D \cite{Doyle2001}.  Here we use for a normalized pressure metric.\gnote{cite for this?}
+ with very good confinement -- in cases with an internal transport barrier in addition to the pedestal (termed the ``Quiescent Double Barrier'' or QDB regime \cite{Burrell2001,Doyle2001,Greenfield2002}) a confinement metric of $\beta_N H_{89} \sim 7$ was reached (albeit for a briefer period, $\sim 5 \tau_E$), compared to $\beta_N H_{89} \sim 4$ found in ELMy H-modes on DIII-D \cite{Doyle2001}.  Here we use the normalized pressure metric \cite{Troyon1984}
 
 \begin{equation}\label{eq:betan}
  \beta_N = \beta \frac{aB_T}{I_p}

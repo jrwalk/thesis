@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\Elmy.tex
+Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=3362
+TopLine=263
+Cursor=11688
 
 [Frame1]
 Flags=0
