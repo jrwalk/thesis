@@ -211,6 +211,16 @@ As a result, the conventional ELM-free H-mode is an inherently transient state f
 
 \subsection{ELMy H-Mode Operation}\label{subsec:hcr_elmy_ped}
 
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[65mm]{\caption{Characteristic traces of a steady ELMy H-mode (\cref{sec:hcr_elmy}).  Density and radiated power rise after the L-H transition, but stabilize as the periodic relaxation of the pedestal regulates and flushes impurities from the plasma.  ELM bursts are visible as spikes on the edge $D_\alpha$ signal.}\label{fig:hcr_elmy}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1101214029.pdf}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[65mm]{\caption{ELMy H-mode pedestals from experiments on Alcator C-Mod and DIII-D, with matched dimensionless parameters between the two machines \note{elaborate on matching?}.  Pedestal densities and temperatures are shown normalized to poloidal field (which accounts for differences in plasma current) such that hyperbolae in the parameter space are curves of constant poloidal beta.  In the dimensionless match, ELMy H-mode pedestals are, to lowest order, constrained to a curve of fixed $\beta_{p,ped}$.}\label{fig:hcr_elmybetas}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/elmy_betas.pdf}}
+\end{figure}
+
 The first H-modes, observed in high-power experiments on ASDEX \cite{Wagner1982,Keilhacker1984}, exhibited a prompt decrease by roughly a factor of two in both particle and energy transport \cite{Wagner1982}.  The H-mode transition is marked by high edge temperatures and strong gradients -- the first H-modes were observed in divertor experiments on ASDEX, as the diverted configuration allows higher edge temperatures than are attainable in limited plasmas \cite{Keilhacker1984}.  Unlike ELM-free H-modes, however, the confinement is periodically degraded by \emph{Edge-Localized Modes} (ELMs), intermittent ``crashes'' in the pedestal expelling particles and energy into the SOL, with repetition rates ranging from a few ELM cycles per second to over $\SI{100}{\hertz}$, which drives sufficient particle transport to flush impurities from the plasma and allow stationary operation \cite{Keilhacker1984,Zohm1996}.  The ELMy H-mode forms a strong pedestal in both density and temperature, although at lower electron-ion 
 coupling rates the ion pedestal may be wider \cite{Groebner1998a} -- due to profile stiffness in the core, this supports high temperatures and pressures and good global performance \cite{Greenwald1997,Suttrop2000,Schneider2013}.  Moreover, the ELMy H-mode is readily attainable on all major tokamak experiments, although ELMy H-modes on C-Mod require an atypical shape \cite{Hughes2012,Hughes2013}, as well as at a broad range of collisionalities and operating densities.  Here we define the collisionality (normalized collision frequency) by \cite{Sauter1999},
 
@@ -236,16 +246,6 @@ coupling rates the ion pedestal may be wider \cite{Groebner1998a} -- due to prof
 \end{align}
 
 \noindent in which $\overline{n}_e$ is the line-averaged density ($\SI{e19}{\per\meter\cubed}$), $M$ is the atomic mass ($\si{amu}$), $I_p$ is the plasma current ($\si{\mega\ampere}$), $B_T$ is the toroidal field ($\si{T}$), $R$ and $a$ are the major and minor radii in $\si{\meter}$ (see \cref{fig:intro_geometry}), $\kappa$ is the elongation (see \cref{fig:intro_shaping}), and $P_{net}$ is the net heating power defined in \cref{eq:pnet} ($\si{\mega\watt}$).
-
-\begin{figure}[p]
- \pushtooutside
- \fcapside[65mm]{\caption{Characteristic traces of a steady ELMy H-mode (\cref{sec:hcr_elmy}).  Density and radiated power rise after the L-H transition, but stabilize as the periodic relaxation of the pedestal regulates and flushes impurities from the plasma.  ELM bursts are visible as spikes on the edge $D_\alpha$ signal.}\label{fig:hcr_elmy}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/trace_1101214029.pdf}}
-\end{figure}
-
-\begin{figure}[p]
- \pushtooutside
- \fcapside[65mm]{\caption{ELMy H-mode pedestals from experiments on Alcator C-Mod and DIII-D, with matched dimensionless parameters between the two machines \note{elaborate on matching?}.  Pedestal densities and temperatures are shown normalized to poloidal field (which accounts for differences in plasma current) such that hyperbolae in the parameter space are curves of constant poloidal beta.  In the dimensionless match, ELMy H-mode pedestals are, to lowest order, constrained to a curve of fixed $\beta_{p,ped}$.}\label{fig:hcr_elmybetas}}{\includegraphics[width=100mm]{graphics/HighPerformanceRegimes/elmy_betas.pdf}}
-\end{figure}
 
 Due to the importance of pedestal structure on overall performance \cite{Kinsey2011}, a number of models for the pedestal width and height in ELMy H-mode have been proposed.  The ELMy H-mode pedestal has been observed to be limited in pressure gradient \cite{Connor1998,Urano2003} -- as the pedestal width on a given machine typically varies only over a small range \cite{Maggi2010,Schneider2013}, this constitutes (to lowest order approximation) a limit on the attainable pedestal height.  Models based on gyroradius limits, and their expected effects on the growth rates of turbulent modes compared to the $\vec{E}\times\vec{B}$ shearing rate, have been proposed \cite{Groebner1998a,Beurskens2011}.  However, this has been discounted in favor of a model based on poloidal beta limits, $\beta_p = 2\mu_0 p/B_p^2$, both by experiments varying density and temperature at fixed $p_{ped}$ \cite{Osborne1998} and by isotope-mass-difference experiments \cite{Urano2008} (both of which vary the gyroradius without varying $\beta_{p,ped}$).  These models are described in more detail in \cref{sec:mod_empirical}.
 
@@ -294,7 +294,9 @@ In lights of the potential deleterious effects of large ELMs on ITER-scale devic
 
 Rather than attempting to eliminate the ELM instability, it is also possible to ``smooth out'' the ELM heat pulse using pellet pacing \cite{Baylor2013}.  Generally, the transient ELM power $P_{ELM} \sim f_{ELM} \Delta W_{ELM}$ is roughly fixed - thus smaller, faster ELMs expel the less energy per ELM for the same average power.  By triggering smaller, faster ELMs the heat load can be smoothed to a level closer to steady-state heat loads tolerable to divertor materials, rather than large transient heat pulses.  In pellet pacing, the sharp density increase locally introduced in the pedestal by the pellet triggers a high-$n$ ballooning mode, resulting in a small ELM.  In ITER-match experiments on DIII-D \cite{Baylor2013}, cryogenic Deuterium pellets fired at twelve times the expected ELM frequency (roughly $\SI{5}{\hertz}$) reduced the per-ELM energy loss from $8\%$ of total stored energy, $\SI{55}{\kilo\joule}$, to less than $0.5\%$ ($\SI{3}{\kilo\joule}$).  However, the question of feasibility of pellet pacing for ITER, as well as the potential for non-axisymmetric heat loading in the divertor due to the localized nature of the pellet perturbation, remain open for the applicability of the concept to ITER.
 
-\nicesectionending
+\subsection{Prospects for ELMy H-Mode}\label{subsec:hcr_elmy_prospects}
+
+Though ELMy H-mode represents the most readily attainable high-performance regime, its applicability to ITER-scale devices hinges on the limitation, mitigation, or elimination of large ELMs and the associated heat loads on wall and divertor surfaces.  ELM losses from type-I ELMs tend to be smaller for a given $\beta_{p,ped}$ at higher density and lowe temperature, ultimately transitioning to type-III ELMs \cite{Urano2003}, however these plasmas tend to exhibit lower global confinement \cite{Saibene1999}.  Type-II ELMs may provide the necessary near-continuous heat exhaust, but access to the regime is narrow and highly sensitive to shaping \cite{Suttrop2003}.  Alternately, ELM heat loading in type-I regimes may be controlled or suppressed via engineering solutions (\ie RMP or pellet pacing) -- but these are similarly limited in availability, and are of uncertain extrapolation to ITER-scale devices.  Thus, recent efforts have also placed great emphasis on high-performance regimes that are naturally free of large ELMs.\nicesectionending
 
 \section{ELM-Suppressed H-Modes}\label{sec:hcr_elmsuppressed}
 
