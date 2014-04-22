@@ -25,7 +25,8 @@ High-confinement operation on Alcator C-Mod differs is unique among major tokama
 \end{figure}
 
 
-Pedestal profiles are taken with the edge Thomson scattering system, detailed in \cref{subsec:app_ts_cmod}.  The pedestal data is taken over steady ELMing phases to minimize the effects of random scatter in the data -- an example of such a window, with line-averaged density $\overline{n}_e$, core and edge $T_e$, and divertor $D_\alpha$ signal (indicative of the ELM crash), is shown in \cref{fig:elmy_timewindow}, with a comparison of the individual-frame fits to the ensemble shown in \cref{fig:elmy_ensemble}.  Strictly, models of the pedestal structure in ELMy H-mode predict the pedestal immediately preceding the ELM crash, when the pedestal is most unstable to the ELM trigger.  However, ELMs on C-Mod typically cycle at $60-100 \;\si{\hertz}$, comparable to the repetition rate of the Thomson scattering system (as shown in \cref{fig:elmy_timewindow,fig:elmy_ensemble}).  This presents difficulties in resolving the pedestal with multiple frames per ELM and binning the data to the peaks of the ELM cycle.  In most cases, pedestals are prepared in a single ``ensemble average'' utilizing all TS data in the window; in certain cases, a statistical set is also constructed using the last 20\% of the ELM cycle as is typical for other machines.  The results from this correction are discussed in \cref{sec:elmy_sync}.
+Pedestal profiles are taken with the edge Thomson scattering system, detailed in \cref{subsec:app_ts_cmod}.  The pedestal data is taken over steady ELMing phases to minimize the effects of random scatter in the data -- an example of such a window, with line-averaged density $\overline{n}_e$, core and edge $T_e$, and divertor $D_\alpha$ signal (indicative of the ELM crash), is shown in \cref{fig:elmy_timewindow}, with a comparison of the individual-frame fits to the ensemble shown in \cref{fig:elmy_ensemble}.  Strictly, models of the pedestal structure in ELMy H-mode predict the pedestal immediately preceding the ELM crash, when the pedestal is most unstable to the ELM trigger.  However, ELMs on C-Mod typically cycle at $60-100 \;\si{\hertz}$, comparable to the repetition rate of the Thomson scattering system (as shown in \cref{fig:elmy_timewindow,fig:elmy_ensemble}).  This presents difficulties in resolving the pedestal with multiple frames per ELM and binning the data to the peaks of the ELM cycle.  In most 
+cases, pedestals are prepared in a single ``ensemble average'' utilizing all TS data in the window; in certain cases, a statistical set is also constructed using the last 20\% of the ELM cycle as is typical for other machines.  The results from this correction are discussed in \cref{sec:elmy_sync}.
 
 \begin{figure}
  \pushtooutside
@@ -82,6 +83,21 @@ A comparison between the ensemble-averaged and ELM-synchronized pressure pedesta
 The EPED model, described in \cref{sec:mod_eped}, combines pedestal limits based on coupled peeling-ballooning MHD instabilities \cite{Snyder2004,Wilson2002,Wilson2006} and kinetic-ballooning mode turbulence \cite{Snyder2001}.  These models set two distinct constraints on the pedestal width and height, with peeling-ballooning MHD predicting $p_{ped} \sim \Delta^{3/4}$ and kinetic-ballooning turbulence predicting $p_{ped} \sim \Delta^2$\gnote{figure?}.  The unique intersection of these two constraints provides a predictive value for the pedestal width and height.  The most recent version of the model, EPED1.63, utilizes gyrokinetic calculations to more accurately constrain the KBM limit, and includes a modified term accounting for the strong diamagnetic stabilization of high-$n$ modes in the pedestal on C-Mod.  A comparison between the observed and predicted pedestal parameters is presented here.
 
 \subsection{Pedestal Height}\label{subsec:elmy_eped_height}
+
+A comparison between the pressure pedestal height predicted by EPED1.63 and the observed height is shown in \cref{fig:elmy_pped_EPED_meas}.  While most measured pedestals lie within the $\pm 20\%$ expected error in the EPED prediction (indicated by the grey band in \cref{fig:elmy_pped_EPED_meas}), the EPED model systematically over-predicts the pedestal pressure, corresponding on average ratio of measured to predicted pedestal heights of $0.84$\gnote{get number!!!}, indicated by the red dashed line.
+
+\begin{figure}[ht]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Pressure pedestal height predicted by EPED1.63 versus the measured (ensemble-averaged) pedestal height, color-coded by magnetic field set.  The grey band indicates perfect agreement, $\pm 20\%$ typical prediction accuracy for EPED.  The EPED model systematically over-predicts the pedestal pressure, with an average match of \note{find number} (indicated by the red line).}\label{fig:elmy_pped_EPED_meas}}{\includegraphics[width=100mm]{graphics/ELMy/pped_EPED_meas.pdf}}
+\end{figure}
+
+The discrepancy between the predicted and measured pedestal heights may be attributed (at least in part) to the use of pedestal measurements averaged across the entire ELM cycle (``ensemble-averaged'').  As discussed in \cref{sec:elmy_sync}, models of the pedestal structure (including EPED) most closely correspond to the pedestal structure immediately preceding the ELM crash, where the pedestal is most unstable to the ELM trigger.  A subset of ELMy H-modes are prepared with ELM-synchronized data, shown in \cref{fig:elmy_pped_EPED_sync}.
+
+\begin{figure}[ht]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Pressure pedestal height predicted by EPED1.63 versus measured, ELM-synchronized pedestal height (red, with corresponding ensemble-average points shown in black).  The grey band indicates perfect agreement, $\pm 20\%$ typical prediction accuracy for EPED.  ELM synchronization brings the measured pedestal height into better agreement with EPED predictions, with a correspondence of \note{number} (indicated by the red dash).}\label{fig:elmy_pped_EPED_sync}}{\includegraphics[width=100mm]{graphics/ELMy/pped_EPED_elmsync.pdf}}
+\end{figure}
+
 
 \subsection{Pedestal Width}\label{subsec:elmy_eped_width}
 
