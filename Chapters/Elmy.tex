@@ -2,7 +2,8 @@
 
 The ELMy H-mode \cite{Wagner1982,Keilhacker1984}, described in \cref{sec:hcr_elmy}, is the most commonly-accessed high-performance regime on major tokamak experiments.  The bursty transport driven by ELMs provides sufficient relaxation of the particle confinement in H-mode to allow stationary operation without excessive impurity accumulation; as such, the ELMy H-mode is considered the baseline operating regime for ITER \cite{ITER1999,Shimada2007}.  However, on ITER-scale devices the pulsed heat loading associated with ELMs drives unacceptable levels of erosion and damage to plasma-facing wall and divertor materials \cite{Loarte2003,Federici2003}.
 
-In light of the impact of large, deleterious ELMs on the ITER wall, and the profound impact of pedestal height on overall plasma performance \cite{Kinsey2011,Doyle2007}, a firm understanding of the physics governing the pedestal in high-performance regimes and their extrapolation to reactor-scale devices is of paramount importance to fusion research leading up to ITER operation.  To that end, a Joint Research Target combining theory, experiment, and modeling efforts in the ELMy H-mode pedestal was undertaken \cite{Groebner2013}\gnote{cite tech report too?}.  Notably, this effort saw the development of the EPED model \cite{Snyder2009,Snyder2011,Snyder2009a}, described in \cref{sec:mod_eped}, which predicts the pressure pedestal width and height preceding the ELM crash through a combination of constraints based on peeling-ballooning MHD instability \cite{Snyder2004,Wilson2002,Wilson2006} (\cref{sec:mod_pb}) and kinetic-ballooning turbulence \cite{Snyder2001} (\cref{sec:mod_turbulence}).  In this chapter, we detail the contributions from Alcator C-Mod to this joint effort \cite{Walk2012}\gnote{how to emphasize my own contribution?} both in empirical studies of the ELMy H-mode pedestal, and in the implementation of the EPED model.  C-Mod ELMy H-modes greatly expand the parameter space in which the EPED model is tested, reaching within a factor of two of the target pedestal pressure for ITER.  The techniques developed in this analysis will subsequently be applied to I-mode pedestals\gnote{reword}.\nicesectionending
+In light of the impact of large, deleterious ELMs on the ITER wall, and the profound impact of pedestal height on overall plasma performance \cite{Kinsey2011,Doyle2007}, a firm understanding of the physics governing the pedestal in high-performance regimes and their extrapolation to reactor-scale devices is of paramount importance to fusion research leading up to ITER operation.  To that end, a Joint Research Target combining theory, experiment, and modeling efforts in the ELMy H-mode pedestal was undertaken \cite{Groebner2013}\gnote{cite tech report too?}.  Notably, this effort saw the development of the EPED model \cite{Snyder2009,Snyder2011,Snyder2009a}, described in \cref{sec:mod_eped}, which predicts the pressure pedestal width and height preceding the ELM crash through a combination of constraints based on peeling-ballooning MHD instability \cite{Snyder2004,Wilson2002,Wilson2006} (\cref{sec:mod_pb}) and kinetic-ballooning turbulence \cite{Snyder2001} (\cref{sec:mod_turbulence}).  In this chapter, we 
+detail the contributions from Alcator C-Mod to this joint effort \cite{Walk2012}\gnote{how to emphasize my own contribution?} both in empirical studies of the ELMy H-mode pedestal, and in the implementation of the EPED model.  C-Mod ELMy H-modes greatly expand the parameter space in which the EPED model is tested, reaching within a factor of two of the target pedestal pressure for ITER.  The techniques developed in this analysis will subsequently be applied to I-mode pedestals\gnote{reword}.\nicesectionending
 
 \section{ELMy H-Mode Access \& Experimental Arrangement}\label{sec:elmy_access}
 
@@ -18,11 +19,17 @@ High-confinement operation on Alcator C-Mod differs is unique among major tokama
  \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/time_window.pdf}}{\caption{Example ELMy H-mode window (highlighted).  Phases for study are selected for steady density ($\overline{n}_e$ shown in the top trace), temperature (ECE $T_e$ signals shown for the core and pedestal), and ELM cycles ($D_\alpha$ signal shown).  The same modeling window is shown zoomed-in at the right.  Note the strong perturbation to the edge temperature due to the sawtooth crash.  Thomson scattering frames are indicated by the black ticks on the axes -- the ELM cycle is at a comparable frequency, $\sim \SI{60}{\hertz}$, to the TS system frame rate.  This presents a difficulty for selecting data masked to the ``peak'' of the ELM cycle, necessitating long, steady ELMing phases for study.}\label{fig:elmy_timewindow}}
 \end{figure}
 
-Pedestal profiles are taken with the edge Thomson scattering system, detailed in \cref{subsec:app_ts_cmod}.  The pedestal data is taken over steady ELMing phases to minimize the effects of random scatter in the data -- an example of such a window, with line-averaged density $\overline{n}_e$, core and edge $T_e$, and divertor $D_\alpha$ signal (indicative of the ELM crash), is shown in \cref{fig:elmy_timewindow}.  Strictly, models of the pedestal structure in ELMy H-mode predict the pedestal immediately preceding the ELM crash, when the pedestal is most unstable to the ELM trigger.  However, ELMs on C-Mod typically cycle at $60-100 \;\si{\hertz}$, comparable to the repetition rate of the Thomson scattering system (as shown in \cref{fig:elmy_timewindow}).  This presents difficulties in resolving the pedestal with multiple frames per ELM and binning the data to the peaks of the ELM cycle.  In most cases, pedestals are prepared in a single ``ensemble average'' utilizing all TS data in the window; in certain cases, a statistical set is also constructed using the last 20\% of the ELM cycle as is typical for other machines.  The results from this correction are discussed in \cref{sec:elmy_sync}.
+\begin{figure}
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/ensemble.pdf}}{\caption{Comparison of fits for the $n_e$, $T_e$, and $p_e$ pedestal width and height from Thomson scattering.  Individual frames of data are shown as black points, with their average shown by the black line (errorbars indicated by the dashes).  The ensemble-averaged fit is shown in red.  The ensemble fit captures the average behavior in a steady ELMing phase well, while suppressing the random scatter found in indivual frames of TS data.  For comparison, ELM crash times in the window are indicated by vertical dashed lines.}\label{fig:elmy_ensemble}}
+\end{figure}
+
+
+Pedestal profiles are taken with the edge Thomson scattering system, detailed in \cref{subsec:app_ts_cmod}.  The pedestal data is taken over steady ELMing phases to minimize the effects of random scatter in the data -- an example of such a window, with line-averaged density $\overline{n}_e$, core and edge $T_e$, and divertor $D_\alpha$ signal (indicative of the ELM crash), is shown in \cref{fig:elmy_timewindow}, with a comparison of the individual-frame fits to the ensemble shown in \cref{fig:elmy_ensemble}.  Strictly, models of the pedestal structure in ELMy H-mode predict the pedestal immediately preceding the ELM crash, when the pedestal is most unstable to the ELM trigger.  However, ELMs on C-Mod typically cycle at $60-100 \;\si{\hertz}$, comparable to the repetition rate of the Thomson scattering system (as shown in \cref{fig:elmy_timewindow,fig:elmy_ensemble}).  This presents difficulties in resolving the pedestal with multiple frames per ELM and binning the data to the peaks of the ELM cycle.  In most cases, pedestals are prepared in a single ``ensemble average'' utilizing all TS data in the window; in certain cases, a statistical set is also constructed using the last 20\% of the ELM cycle as is typical for other machines.  The results from this correction are discussed in \cref{sec:elmy_sync}.
 
 \begin{figure}
  \pushtooutside
- \fcapside[65mm]{\caption{Example pedestal illustrating the $mtanh$ function used for pedestal fitting, defining the parameters: height $h$, baseline $b$, midpoint $x_0$, half-width $\delta$/full width $\Delta$.  The inboard slope is characterized by the parameter $\alpha$.}\label{fig:mtanh}}{\includegraphics[width=100mm]{graphics/ELMy/mtanh.pdf}}
+ \fcapside[65mm]{\caption{Example pedestal illustrating the $mtanh$ function used for pedestal fitting (\cref{eq:mtanh}), defining the parameters: height $h$, baseline $b$, midpoint $x_0$, half-width $\delta$/full width $\Delta$.  The inboard slope is characterized by the parameter $\alpha$.}\label{fig:mtanh}}{\includegraphics[width=100mm]{graphics/ELMy/mtanh.pdf}}
 \end{figure}
 
 The electron density, temperature, and pressure profiles are fitted using a modified hyperbolic-tangent fit developed in \cite{Groebner2001}.  In a general $x,y$ space, the fitting function is expressed by
@@ -35,23 +42,60 @@ The electron density, temperature, and pressure profiles are fitted using a modi
  \end{aligned}
 \end{equation}
 
-\noindent where $x_0$ is the pedestal midpoint, $h$ and $b$ are the height and baseline, and $\delta$ is the half-width (we use $\Delta = 2\delta$ as the ``pedestal width'').  The inboard slope is encoded by the parameter $\alpha$, with the multiplicative factor $1 + \alpha z$ providing a roughly linear profile far from the pedestal.  This definition provides a smooth, continuous definition for the pedestal gradient throughout the profile, with the peak gradient found analytically at $x_0$.\gnote{note similar $n_e$, $T_e$ pedestal widths, EPED width definition}
+\noindent where $x_0$ is the pedestal midpoint, $h$ and $b$ are the height and baseline, and $\delta$ is the half-width (we use $\Delta = 2\delta$ as the ``pedestal width'').  The inboard slope is encoded by the parameter $\alpha$, with the multiplicative factor $1 + \alpha z$ providing an approximately linear profile inboard from the steep-gradient region.  This definition provides a smooth, continuous definition for the pedestal gradient throughout the profile, with the peak gradient found analytically at $x_0$.  Recent H-mode studies use the fitting parameter $h$ as the figure-of-merit for the pedestal height; however, it is also common to express the pedestal height in terms of the evaluated value of the fit at the 95\% poloidal flux surface.  For the purposes of this document we denote the height taken from the fitting parameter $h$ by the subscript $ped$, and values taken at the 95\% flux surface by the subscript $95$. 
 
-\nicesectionending
+Due to the ready availability of high-resolution electron density and temperature diagnostics, for the purposes of this section we assume equal ion and electron pressures, $p = 2n_e T_e$ (a viable approximation on C-Mod due to the relatively low impurity content found in ELMy H-modes, $Z_{eff} \sim 2$, and rapid ion-electron equilibration in H-mode pedestals on C-Mod\gnote{cites for this, elaborate}).  All profiles are prepared using normalized poloidal flux for the abscissa, facilitating comparison to results from other machines and to the EPED model.  For the purposes of the EPED model we also prepare an averaged width, defined by
+
+\begin{equation}
+  \delta_\psi = \frac{\delta_{n_e} + \delta_{T_e}}{2}\qquad
+  \Delta_\psi = 2\delta_\psi
+\end{equation}
+
+\noindent a practice necessitated by the distinct measurements of $n_e$ and $T_e$ on certain machines\gnote{reword}.  As the density and temperature widths are quite close (although the density pedestal is, on average, slightly wider, as shown in \cref{fig:elmy_deltan_deltaT}\gnote{get value for this}), the difference between $\Delta_\psi$ and the directly-measured $\Delta_{p_e}$ is minimal -- as shown in \cref{fig:elmy_deltap_deltapsi}, the two widths are well-correlated, with $\Delta_\psi$ systematically somewhat wider.\nicesectionending
+
+\begin{figure}
+ \pushtooutside
+ \begin{floatrow}
+  \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/ELMy/deltan_deltaT.pdf}}{\caption{Comparison of the measured pedestal widths for the $n_e$ and $T_e$ pedestals, differentiated for the low-, standard-, and high-field H-mode cases.  Pedestal widths are similar for density and temperature, although on average the density pedestal is somewhat wider \note{measure!}}\label{fig:elmy_deltan_deltaT}}
+  \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/ELMy/deltap_deltapsi.pdf}}{\caption{Comparison of the directly-measured pressure pedestal width and the EPED width $\Delta_\psi$ defined as the average of $\Delta_{n_e}$ and $\Delta_{T_e}$.  The widths trend quite closely to one another, although $\Delta_\psi$ is systematically somewhat wider.}\label{fig:elmy_deltap_deltapsi}}
+ \end{floatrow}
+\end{figure}
 
 \section{ELM Cycle Synchronization}\label{sec:elmy_sync}
 
-\nicesectionending
+The common practice for modeling the ELMy H-mode pedestal is to take profile data immediately preceding the ELM crash (commonly, data from the last 20\% of the ELM cycle), as this most closely corresponds to the pedestal profile at the stability limit associated with the ELM trigger.  However, as the ELM cycle in H-mode on C-Mod is typically at a comparable repetition rate to the Thomson Scattering system ($\SI{60}{\hertz}$), this practice is only possible on a subset of discharges, with sufficiently long, steady H-mode phases, such that a sufficient number of frames in the desired time wondow can be found.
+
+\begin{figure}[h]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Comparison of the pressure pedestal height $p_{ped}$ between the ensemble-averaged and ELM-synchronized profiles.  On average, ELM synchronization results in a 10.8\% increase in measured pedestal pressure, consistent with ELM losses observed on other machines.  At lower pressures, ELMs are typically small enough that the perturbation is minimal; however, the distinction becomes important for the highest-pressure ELMy H-modes on C-Mod.}\label{fig:elmy_pped_ens_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/pped_ensemble_elmsync.pdf}}
+\end{figure}
+
+\begin{figure}[h]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Comparison of the pressure at the 95\% flux surface, $p_{95}$, between the ensemble-averaged and ELM-synchronized profiles.  On average, ELM synchronization results in a 7.6\% increase in the measured pressure.  This is consistent with the ELM perturbation to the pedestal being largely restricted to the pedestal just within the steep-gradient region, with decreasing perturbation further into the plasma from the pedestal.}\label{fig:elmy_p95_ens_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/p95_ensemble_elmsync.pdf}}
+\end{figure}
+
+A comparison between the ensemble-averaged and ELM-synchronized pressure pedestals (pedestal height $p_{ped}$ and the pressure at the 95\% flux surface $p_{95}$) are shown in \cref{fig:elmy_pped_ens_elmsync,fig:elmy_p95_ens_elmsync}.  ELM synchronization finds an average 10.8\% increase in the measured pressure $p_{ped}$, with a slightly lesser increase of 7.6\% in $p_{95}$.  This is consistent with the perturbation to the pressure pedestal by the ELM observed on other machines\gnote{cite?}.  The weaker perturbation due to the ELM crash observed at the 95\% flux surface is also consistent with previous ELM observations -- the ELM crash typically alters the pressure profile only in a region just inside the steep-gradient region, with minimal perturbation to profiles in the plasma interior.\nicesectionending
 
 \section{EPED Model Predictions}\label{sec:elmy_eped}
 
+The EPED model, described in \cref{sec:mod_eped}, combines pedestal limits based on coupled peeling-ballooning MHD instabilities \cite{Snyder2004,Wilson2002,Wilson2006} and kinetic-ballooning mode turbulence \cite{Snyder2001}.  These models set two distinct constraints on the pedestal width and height, with peeling-ballooning MHD predicting $p_{ped} \sim \Delta^{3/4}$ and kinetic-ballooning turbulence predicting $p_{ped} \sim \Delta^2$\gnote{figure?}.  The unique intersection of these two constraints provides a predictive value for the pedestal width and height.  The most recent version of the model, EPED1.63, utilizes gyrokinetic calculations to more accurately constrain the KBM limit, and includes a modified term accounting for the strong diamagnetic stabilization of high-$n$ modes in the pedestal on C-Mod.  A comparison between the observed and predicted pedestal parameters is presented here.
+
+\subsection{Pedestal Height}\label{subsec:elmy_eped_height}
+
+\subsection{Pedestal Width}\label{subsec:elmy_eped_width}
+
 \nicesectionending
 
-\section{$I_p$ Scan}\label{sec:elmy_ip}
+\section{Engineering Parameter Scan}\label{sec:elmy_engineer}
+
+\subsection{$I_p$ Scan}\label{subsec:elmy_ip}
+
+\subsection{Power Scan}\label{subsec:elmy_power}
 
 \nicesectionending
 
-\section{Pedestal Width Scalings}\label{sec:elmy_width}
+\section{Pedestal Width Response}\label{sec:elmy_width}
 
 \nicechapterending
 
