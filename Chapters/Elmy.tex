@@ -45,7 +45,7 @@ The electron density, temperature, and pressure profiles are fitted using a modi
 
 Due to the ready availability of high-resolution electron density and temperature diagnostics, for the purposes of this section we assume equal ion and electron pressures, $p = 2n_e T_e$ (a viable approximation on C-Mod due to the relatively low impurity content found in ELMy H-modes, $Z_{eff} \sim 2$, and rapid ion-electron equilibration in H-mode pedestals on C-Mod\gnote{cites for this, elaborate}).  All profiles are prepared using normalized poloidal flux for the abscissa, facilitating comparison to results from other machines and to the EPED model.  For the purposes of the EPED model we also prepare an averaged width, defined by
 
-\begin{equation}
+\begin{equation}\label{eq:wid_eped}
   \delta_\psi = \frac{\delta_{n_e} + \delta_{T_e}}{2}\qquad
   \Delta_\psi = 2\delta_\psi
 \end{equation}
@@ -100,7 +100,39 @@ The EPED model still systematically slightly over-predicts the pedestal pressure
 
 \subsection{Pedestal Width}\label{subsec:elmy_eped_width}
 
-While historically a number of models for the pedestal width (see \cref{sec:mod_empirical}) have been examined, the most uniformly successful has been an expected scaling of $\Delta \sim \beta_{p,ped}^{1/2}$ derived from a critical-gradient limit driven by kinetic-ballooning mode (KBM) instabilities\gnote{cites!!}.
+While historically a number of models for the pedestal width (see \cref{sec:mod_empirical}) have been examined, the most uniformly successful has been an expected scaling of pedestal width with poloidal beta at the pedestal top ($\beta_{p,ped}$), observed on several machines \note{cites}, and shown to follow from a critical-gradient limit in the edge pressure profile established by kinetic-ballooning mode (KBM) turbulence \note{cites}.  Including magnetic shear stabilization\gnote{check}, this takes the form $\Delta = c \beta_{p,ped}^{1/2}$, where $c$ is, strictly, a weakly-varying function of a number of plasma parameters.  This constraint on the pedestal width and height is utilized in the EPED model, coupled with peeling-ballooning MHD stability limits to set a unique constraint on the pedestal structure at the ELM crash.
+
+An evaluation of this scaling with ensemble-averaged data is shown in \cref{fig:elmy_betap_deltapsi_all}, with a fitted scale factor of $\langle c \rangle = 0.0857 \pm$\gnote{find errorbar!}, consistent with previously-observed scalings\gnote{cite!}.  The earliest versions of the EPED model used this simple constraint as the second condition on the pedestal width and height, using an experimentally-determined fixed scale factor.  The newest version of the model self-consistently calculates the scale factor from gyrokinetic considerations of the KBM turbulence; however, the results is quantitatively similar.  A comparison of the experimental versus the EPED1.63-predicted pedestals in $\Delta_\psi - \beta_{p,ped}$ space is shown in \cref{fig:elmy_betap_deltapsi_EPED}.
+
+\begin{figure}[ht]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Ensemble-averaged EPED width $\Delta_\psi$ (\cref{eq:wid_eped}) versus $\beta_{p,ped}$, color-coded by field set.  The expected scaling from the KBM limit, $\Delta_\psi = c \beta_{p,ped}^{1/2}$, is shown with a scale factor of $0.0857$, consistent with observations in previous experiments.}\label{fig:elmy_betap_deltapsi_all}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_all.pdf}}
+\end{figure}
+
+\begin{figure}[ht]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Comparison of EPED1.63-predicted pedestal width $\Delta_\psi$ and height $\beta_{p,ped}$ with the corresponding ensemble-averaged experimental points, with the KBM scaling $\Delta_\psi = c \beta_{p,ped}^{1/2}$.  Though the EPED predictions were calculated with a self-consistent treatment of the scale factor $c$ as a weakly-varying function of plasma parameters, the result is quantitatively similar to the simple fixed scale factor.}\label{fig:elmy_betap_deltapsi_EPED}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_EPED.pdf}}
+\end{figure}
+
+Application of the ELM synchronization technique does not significantly alter this result, although the pedestal pressure (\ie $\beta_{p,ped}$) is significantly increased in the last 20\% of the ELM cycle.  Recent research in the inter-ELM development of the pedestal \cite{Diallo2014} has shown that the KBM saturates early in the ELM cycle, limiting the pedestal gradient; the pedestal width and height then both increase until the peeling-ballooning MHD boundary is also reached, triggering the ELM.  Consistent with this, ELM-synchronized pedestals exhibit wider, taller pedestals on average, with a similar constraint imposed by the KBM compared to the ensemble-averaged result\gnote{check reasoning!}.  A comparison of the ensemble-averaged and ELM-synced pedestals in $\Delta_\psi - \beta_{p,ped}$ space is shown in \cref{fig:elmy_betap_deltapsi_elmsync}, with the ELM-synced pedestals fitted to a scale factor $\langle c \rangle = 0.0896 \pm $\gnote{get errorbar!}.  The data may be clarified significantly by taking an error-weighted average within fixed bins in $\beta_{p,ped}$ as well, shown in \cref{fig:elmy_betap_deltapsi_betabin}, which tends to reduce the influence of strongly-outlying points on the fit.  Again, the fit is quantitatively very similar -- the data fit well to $\Delta_psi = c \beta_{p,ped}^{1/2}$ with $\langle c \rangle = 0.0851 \pm 0.003$.  Alternately, we may use a more general power-law fit $\Delta_\psi = c_1 \beta_{p,ped}^{c_2}$, with which we find $\langle c_1 \rangle = 0.0824 \pm 0.015$ and $\langle c_2 \rangle = 0.49 \pm 0.11$, closely reproducing the $\beta_{p,ped}^{1/2}$ model.  The fitting results are quite consistent across these methods, demonstrating the robustness of the KBM model for the pedestal width and its insensitivity to the details of data preparation.
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{Comparison of ensemble-averaged (black) and ELM-synchronized (Red) pedestal width and height, compared to the KBM constraint.  The $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ scaling found in the ensemble-averaged case is shown in black, while the minor modification of $\Delta_\psi = 0.0896 \beta_{p,ped}^{1/2}$ for the ELM-synced cases is shown in red.}\label{fig:elmy_betap_deltapsi_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync.pdf}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{ELM-synchronized pedestals, with data binned by $\beta_{p,ped}$ for clarity.  The data are fitted by $\Delta_\psi = (0.0851 \pm 0.003) \beta_{p,ped}^{1/2}$ (black), or by $\Delta_\psi = (0.0824 \pm 0.015) \beta_{p,ped}^{0.49 \pm 0.11}$ using a more general power law.}\label{fig:elmy_betap_deltapsi_betabin}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync_betabin.pdf}}
+\end{figure}
+
+Prediction of the pedestal width is difficult, given the robust width of the pressure pedestal (typically 3-5\% of poloidal flux space, corresponding to $\sim \SI{5}{\milli\meter}$ on C-Mod).  The EPED model correctly recovers this robustness (within the expected $\pm 20\%$ prediction error), as shown in \cref{fig:elmy_deltapsi_eped}.
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{}\label{fig:elmy_deltapsi_eped}}{\includegraphics[width=100mm]{graphics/ELMy/deltapsi_EPED_meas.pdf}}
+\end{figure}
+
 
 \nicesectionending
 
