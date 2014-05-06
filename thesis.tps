@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\Elmy.tex
+Document=FrontBackmatter\SQL.tex
 
 [Frame0_View0,0]
-TopLine=54
-Cursor=7745
+TopLine=683
+Cursor=13621
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=0
+TopLine=84
 Cursor=940
 
 [SessionInfo]

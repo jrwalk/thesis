@@ -31,6 +31,11 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    $\si{\milli\second}$ &
    end time of phase
    \\
+   MODE &
+   string &
+   &
+   type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE'
+   \\
    \bottomrule
   \end{tabularx}}
 \end{table*}
@@ -46,11 +51,6 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    \emph{description}
    \\
    \midrule
-   MODE &
-   string &
-   &
-   type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE'
-   \\
    ELMS &
    int &
    &
@@ -75,6 +75,11 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    long &
    &
    shot number flagged in pedestal-profile MDS tree, used to differentiate sub-branches of a single shot
+   \\
+   SEED\_SPC &
+   string &
+   &
+   gas seeding species (Ne, N, Ar) - None for no gas seeding
    \\
    \bottomrule
   \end{tabularx}}
@@ -685,6 +690,21 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    float &
    &
    error in ALPHA
+   \\
+   PROF\_SHIFT &
+   float &
+   &
+   radial shift (in norm. poloidal flux) in TS profiles to satisfy power balance through SOL
+   \\
+   EPED\_WID &
+   float &
+   &
+   EPED-predicted pedestal width in normalized poloidal flux
+   \\
+   EPED\_P &
+   float &
+   $\si{\kilo\pascal}$ &
+   EPED-predicted pressure pedestal height
    \\
    \bottomrule
   \end{tabularx}}
