@@ -2,13 +2,10 @@
 
 For the work presented in this thesis, a subset of recent I-mode experiments on Alcator C-mod was prepared with high-resolution pedestal data.  These data are stored in an SQL database under the C-Mod ``logbook'' system.  Use of an SQL table enables efficient cross-platform access to pedestal data in a format ideal for data mining, and allows for easy extensibility of stored parameters for additional experiments.  The database stores windows of data in which plasma parameters (\eg temperature, stored energy, density, heating power) are steady -- usable phases last at least $\sim \SI{100}{\milli\second}$ ($\sim 10$ Thomson scattering frames), over which frames of TS pedestal data are averaged.  For each phase, the SQL database stores a variety of physics and engineering parameters, and scalar fitting parameters\gnote{point to mtanh fitting function} for the pedestal.  For direct comparison, the table also stores analogous data from L- and H-mode phases.
 
-\newcolumntype{a}{>{\hsize=0.27\hsize\raggedright\arraybackslash}X}
-\newcolumntype{b}{>{\hsize=0.115\hsize\centering\arraybackslash}X}
-\newcolumntype{c}{>{\hsize=0.5\hsize\centering\arraybackslash}X}
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters used as keys -- (SHOT, TA, TB) is sufficient to uniquely identify entries in the database.}\label{tab:sql_keys}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -37,13 +34,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE'
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
-
+ 
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters used as flags for time windows.}\label{tab:sql_flags}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -82,13 +79,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    gas seeding species (Ne, N, Ar) - None for no gas seeding
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for useful measured parameters.}\label{tab:sql_plasma}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -167,13 +164,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    error in ZEFF measurement
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for EFIT values.}\label{tab:sql_efit}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -312,13 +309,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    error in TAU\_MHD
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for heating power, stored energy, and confinement.}\label{tab:sql_power}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -427,13 +424,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    error in H89
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 \begin{table*}[h]
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for high-resolution pedestal profiles.}\label{tab:sql_ped}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -707,13 +704,13 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    EPED-predicted pressure pedestal height
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 \begin{table*}
  \pushtooutside
  \ttabbox{\caption{SQL database parameters for WCM fluctuation measurements.}\label{tab:sql_fluct}}
- {\begin{tabularx}{143mm}{abbc}
+ {\begin{tabu} to 143mm {X[2.348,l]X[1,c]X[1,c]X[4.348,c]}
    \toprule
    \emph{column} &
    \emph{data type} &
@@ -752,7 +749,7 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    spectral width of WCM determined by $\pm\sigma$ of Gaussian fit on PCI
    \\
    \bottomrule
-  \end{tabularx}}
+  \end{tabu}}
 \end{table*}
 
 
