@@ -157,7 +157,13 @@ Trends of the density, temperature, and pressure pedestal widths and heights wit
 
 \note{check heating behavior at low field, high field compared to regular!!!}
 
-\note{make fig of $n_e$, $T_e$ points on $\beta_{p,ped}$ line!}
+\note{ref to fixed-$\beta_p$ plot in ch 2, explain \cref{fig:elmy_neBp_TeBp}}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{Pedestal density vs. temperature normalized to poloidal field (accounting for variation in plasma current) such that hyperbolae in the parameter space are curves of fixed $\beta_{p,ped}$.  At a given shaping, ELMy H-mode pedestals are to lowest order constrained to fixed $\beta_{p,ped}$, with stronger shaping allowing greater attainable $\beta_p$.}\label{fig:elmy_neBp_TeBp}}{\includegraphics[width=100mm]{graphics/ELMy/neBp_TeBp_deltaave.pdf}}
+\end{figure}
+
 
 \subsection{Power Scan}\label{subsec:elmy_power}
 
@@ -173,9 +179,12 @@ Trends of the density, temperature, and pressure pedestal widths and heights wit
 
 The response of the pedestal to heating power is consistent with previous observations in MHD-limited pedestals\gnote{cites, elaboration?}.  Examined against net heating power $P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$ normalized to the pedestal density (effectively, heat flux through the pedestal), the temperature pedestal height (shown in \cref{fig:elmy_Pneped_Tped}) shows minimal response within a given target plasma current.  \note{arguments based on profile stiffness...}
 
-Similarly, the pressure pedestal shows a weak response to net heating power (\cref{fig:elmy_Pnet_pped}), with the attainable pressure instead predominantly set by current and shaping.\gnote{check pedestal pressure vs. $\kappa$, $\delta_u$?}  Previous observations in ELMy H-mode\gnote{cites or ref lit review} observed a dependence of the ELM repetition frequency with heating power in type-I ELMs, such that for relatively fixed energy loss per ELM (typically 2-6\% of pedestal stored energy\gnote{check}) increased heating power increases the average ELM power loss ($\langle P_{ELM} \rangle \sim f_{ELM} \cdot \delta W_{ELM}$) to maintain $P_{ELM}$ at a fixed fraction of total heating power.  This increased heat transport due to ELM instabilities is reflected in the ITER98 scaling (\cref{eq:tau98}), $\tau_E \sim P_{net}^{-0.69}$.  As the total stored energy scales linearly with the pedestal pressure \cite{Kinsey2011}, $W \sim p_{ped}$, and in a stationary plasma ($dW/dt \approx 0$) $W \sim P_{net} \tau_E$, we expect $p_{ped} \sim P_{net}^{0.3}$ based on global scalings alone.\nicesectionending
+Similarly, the pressure pedestal shows a weak response to net heating power (\cref{fig:elmy_Pnet_pped}), with the attainable pressure instead predominantly set by current and shaping.\gnote{check pedestal pressure vs. $\kappa$, $\delta_u$?}  Previous observations in ELMy H-mode\gnote{cites or ref lit review} observed a dependence of the ELM repetition frequency with heating power in type-I ELMs, such that for relatively fixed energy loss per ELM (typically 2-6\% of pedestal stored energy\gnote{check}) increased heating power increases the average ELM power loss ($\langle P_{ELM} \rangle \sim f_{ELM} \cdot \delta W_{ELM}$) to maintain $P_{ELM}$ at a fixed fraction of total heating power.  This increased heat transport due to ELM instabilities is reflected in the ITER98 scaling (\cref{eq:tau98}), $\tau_E \sim P_{net}^{-0.69}$.  As the total stored energy scales linearly with the pedestal pressure \cite{Kinsey2011}, $W \sim p_{ped}$, and in a stationary plasma ($dW/dt \approx 0$) $W \sim P_{net} \tau_E$, we 
+expect $p_{ped} \sim P_{net}^{0.3}$ based on global scalings alone.\nicesectionending
 
 \section{Pedestal Width Response}\label{sec:elmy_width}
+
+\note{width vs rhostar scaling in here somewhere?}
 
 As detailed in \cref{subsec:elmy_eped_width}, the scale factor in the dominant width scaling in ELMy H-mode, $\Delta \sim \beta_{p,ped}^{1/2}$, is most properly a weakly varying function of plasma shaping, collisionality, and other engineering parameters\gnote{cite?}.  These secondary dependencies may be examined by normalizing the pedestal width (here we use the EPED width, $\Delta_\psi$, from \cref{eq:wid_eped}) to the fitted scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ (see \cref{fig:elmy_betap_deltapsi_all}).  
 
@@ -187,6 +196,16 @@ Normalized pedestal widths are shown against the range in toroidal fields in \cr
 \end{figure}
 
 Conversely, no systematic variation of the normalized pedestal width is seen with plasma elongation (\cref{fig:elmy_kappa_deltanorm}).  Plasma shaping, particularly elongation and upper triangularity\gnote{check and produce figs for this!!}, has a stabilizing effect on ballooning MHD instabilities, resulting in greater attainable values of $\alpha_{MHD}$ before the instability is triggered\gnote{check!!!}.  \note{conjure on this.}
+
+\begin{figure}
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/deltas_deltanorm.pdf}}{\caption{Scalings of the normalized pedestal width $\Delta_\psi / 0.0857 \beta_{p,ped}^{1/2}$ with the upper and lower triangularity $\delta_u$, $\delta_l$.  Low, standard, and high-field sets are indicated in blue, black, and red respectively.  No systematic dependence on the $\delta_l$ is seen.  The trend with $\delta_u$ is unclear, with wider pedestals at both the low and high ends of the range.}\label{fig:elmy_deltas_deltanorm}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{Combined trend of the normalized pedestal width $\Delta_\psi / 0.0857 \beta_{p,ped}^{1/2}$ with average triangularity $\delta_{ave} = (\delta_u + \delta_l)/2$.  Low, standard, and high-field sets are indicated in blue, black, and red respectively.  No systematic trend not contained in the $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ scaling is seen.}\label{fig:deltaave_deltanorm}}{\includegraphics[width=100mm]{graphics/ELMy/deltaave_deltanorm.pdf}}
+\end{figure}
 
 \begin{figure}
  \pushtooutside
