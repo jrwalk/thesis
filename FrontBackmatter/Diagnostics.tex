@@ -279,7 +279,7 @@ Thus, the incoherent scattered spectrum is simply the sum of contributions from 
  \end{aligned}
 \end{equation}
 
-\noindent This expression is a Maxwellian centered at $\lambda = \lambda_i$ with a spread determined by the electron temperature $T_e$ (manifesting in the thermal velocity $v_t$) and the scattering angle $\theta$.  Recalling the angle $\phi$ defined between the incident polarization $\hat{E}_i$ and the scattering direction $\hat{s}$\gnote{ref to figure}, $\left|\hat{s} \times \left( \hat{s} \times \hat{E}_i \right) \right|^2 = \sin^2 \phi$ is maximized for scattering perpendicular to the incident laser polarization.
+\noindent This expression is a Maxwellian centered at $\lambda = \lambda_i$ with a spread determined by the electron temperature $T_e$ (manifesting in the thermal velocity $v_t$) and the scattering angle $\theta$.  Recalling the angle $\phi$ defined between the incident polarization $\hat{E}_i$ and the scattering direction $\hat{s}$ (see \cref{fig:app_ts_geometry2}), $\left|\hat{s} \times \left( \hat{s} \times \hat{E}_i \right) \right|^2 = \sin^2 \phi$ is maximized for scattering perpendicular to the incident laser polarization.
 
 This analysis breaks down for relativistic electron populations.  However, relativistic effects (see \cite[\S 9]{Sheffield}) may be expressed as a polynomial correction to \cref{eq:ts_spectrum_nonrel},
 
@@ -302,13 +302,16 @@ Examination of \cref{eq:ts_spectrum_nonrel,eq:ts_spectrum_rel} readily illustrat
 
 \subsection{Edge Thomson Scattering on C-Mod}\label{subsec:app_ts_cmod}
 
-High-resolution density and temperature measurements on C-Mod are achieved with the core \cite{Watterson1990,Mossessian1999} and edge \cite[\S 3]{Hughes2001,Hughes2003,Hughes2005} Thomson Scattering systems. 
+High-resolution density and temperature measurements on C-Mod are achieved with the core \cite{Watterson1990,Mossessian1999} and edge \cite{Hughes2001,Hughes2003,Hughes2005} Thomson Scattering systems.  While extracting density and temperature from the general Thomson-scattered spectrum (\cref{eq:ts_powerspectrumint}) for an arbitrary electron distribution $f_e(\vec{r},\vec{v})$ is intractible, the spectrum for a thermal electron distribution is well-characterized (see \cref{eq:ts_spectrum_nonrel,eq:ts_spectrum_rel}) and can be measured with a relatively simple system.
 
 \begin{figure}[p]
  \pushtooutside
  \ffigbox[\FBwidth]{\includegraphics[height=150mm,angle=-90]{graphics/Diagnostics/ts_optics.pdf}}{\caption{Layout of collection optics for the core and edge Thomson scattering diagnostics on Alcator C-Mod.  Two Nd:YAG lasers are fired vertically through the plasma near the magnetic axis, with the scattered light focused through a Cooke triplet at the outboard midplane onto an array of fiber optics.    The positions of the high-resolution edge scattering volumes are highlighted in the inset.}\label{fig:app_ts_optics}}
 \end{figure}
 
+Both the core and edge TS systems measure light scattered from a pair of neodymium-doped yttrium-aluminum garnet (Nd:YAG) lasers with $\lambda_i = \SI{1064}{\nano\meter}$ fired vertically through the plasma at $R \sim \SI{69}{\centi\meter}$ such that it passes roughly through the magnetic axis.  The lasers are each fired at $\SI{50}{\hertz}$ $\SI{180}{\degree}$ out of phase, such that the pair produce one hundred $\sim\SI{5}{\nano\second}$ pulses per second, taking effective ``snapshots'' of the plasma profile.  Each pulse provides $\sim \SI{1}{\joule}$ of laser energy, corresponding to roughly $\num{5e18}$ photons per laser pulse, ensuring sufficient collected photons even after the significant attenuation inherent in Thomson scattering.  Focusing optics mounted at the vertical entrance port constrict the beam to a $\sim\SI{2}{\milli\meter}$ width through the plasma.
+
+The scattered photons are focused through a Cooke triplet mounted at an outboard-midplane access port onto an array of fiber-optic collectors mounted on an actuated plate (see \cref{fig:app_ts_optics}).  Dedicated edge-viewing fibers are mounted in an adjustable block at the base of the plate, viewing the upper plasma at a scattering angle of $\theta \sim \SI{80}{\degree}$.  
 
 \nicesectionending
 

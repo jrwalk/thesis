@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=FrontBackmatter\SQL.tex
+Document=FrontBackmatter\Diagnostics.tex
 
 [Frame0_View0,0]
-TopLine=683
-Cursor=13621
+TopLine=409
+Cursor=24630
 
 [Frame1]
 Flags=0
