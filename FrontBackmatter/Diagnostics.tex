@@ -311,11 +311,22 @@ High-resolution density and temperature measurements on C-Mod are achieved with 
 
 Both the core and edge TS systems measure light scattered from a pair of neodymium-doped yttrium-aluminum garnet (Nd:YAG) lasers with $\lambda_i = \SI{1064}{\nano\meter}$ fired vertically through the plasma at $R \sim \SI{69}{\centi\meter}$ such that it passes roughly through the magnetic axis.  The lasers are each fired at $\SI{50}{\hertz}$ $\SI{180}{\degree}$ out of phase, such that the pair produce one hundred $\sim\SI{5}{\nano\second}$ pulses per second, taking effective ``snapshots'' of the plasma profile.  Each pulse provides $\sim \SI{1}{\joule}$ of laser energy, corresponding to roughly $\num{5e18}$ photons per laser pulse, ensuring sufficient collected photons even after the significant attenuation inherent in Thomson scattering.  Focusing optics mounted at the vertical entrance port constrict the beam to a $\sim\SI{2}{\milli\meter}$ width through the plasma.
 
-The scattered photons are focused through a Cooke triplet mounted at an outboard-midplane access port onto an array of fiber-optic collectors mounted on an actuated plate (see \cref{fig:app_ts_optics}).  Dedicated edge-viewing fibers are mounted in an adjustable block at the base of the plate, viewing the upper plasma at a scattering angle of $\theta \sim \SI{80}{\degree}$.  
+The scattered photons are focused through a Cooke triplet with 1:2 demagnification mounted at an outboard-midplane access port onto an array of fiber-optic collectors mounted on an actuated plate (see \cref{fig:app_ts_optics}).  Dedicated edge-viewing fibers are mounted in an adjustable block at the base of the plate, viewing the upper plasma at a scattering angle of $\theta \sim \SI{80}{\degree}$.  While the $\sim\SI{1}{\centi\meter}$ spot size of the core fibers is sufficient to resolve the core plasma profile, the small radial extent of the pedestal on C-Mod necessitates the millimeter resolution provided by the edge fibers.
 
-\nicesectionending
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Normalized spectral response functions of the edge TS polychromator bandpasses, compared to characteristic scattered spectra at $\SI{10}{\electronvolt}$ and $\SI{200}{\electronvolt}$.}\label{fig:ts_bandpasses}}{\includegraphics[width=100mm]{graphics/Diagnostics/ts_bandpasses.pdf}}
+\end{figure}
+
+The edge collection fibers deliver the scattered light to a filter polychromator array with 25 available spatial channels divided into four spectral bands.  The spectral bandpasses, shown in \cref{fig:ts_bandpasses}, are designed such that the laser line is excluded from the captured light (reducing noise from reflected laser light incident on the fibers) while covering the expected spread in the scattered spectrum across a range of temperatures.  Extracting $n_e$ and $T_e$ for each spatial channel is conceptually straightforward -- the total signal in all spectral channels is analogous to the integrated area under the scattered spectrum (and thus $n_e$), while the relative signal strengths between spectral channels is set by the spread in the spectrum (thus $T_e$).  For temperatures below $\sim\SI{50}{\electronvolt}$ (with the true lower bound dependent on the local density), the scattered spectrum is largely restricted to the $j=3$ channel, setting a lower bound on the temperature measurement.  Similarly, for $T_e \gtrsim \SI{800}{\electronvolt}$ the spectral response in $j=1$ and $j=3$ is flat, limiting the effectiveness of those spectral bandpasses in constraining the temperature measurement.
+
+Although the $n_e$ and $T_e$ measurements from Thomson scattering require careful calibration and sensitive IR optics, the edge TS system provides reliable high-resolution profile measurements across a range of parameters found in the C-Mod edge.  Further details on the edge TS hardware, calibration, and data analysis procedures is available in \cite[\S 3]{Hughes2005}.\nicesectionending
 
 \section{Fast Diagnostics}\label{sec:app_fast}
+
+\subsection{Electron-Cyclotron Emission}\label{subsec:app_ece}
+
+\subsection{$H_\alpha$ Emission}\label{subsec:app_halpha}
 
 \nicesectionending
 
