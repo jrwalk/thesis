@@ -9,6 +9,16 @@ While a number of high-performance regimes (described in \cref{ch:HighPerformanc
 
 \subsection{Neutral Penetration Models}\label{subsec:mod_neutral}
 
+Given the proximity of the plasma pedestal to neutral gas from fueling apparatus and wall outgassing in the edge, it is logical that the density profile should depend strongly on interaction with and ionization of neutral particles in the pedestal.  Based on a relatively simple particle transport model, the pedestal width is expected to scale with the characteristic neutral penetration length before ionization \cite{Hughes2005,Mahdavi2002}:
+
+\begin{equation}\label{eq:neutralpenetration}
+ \lambda_{neutral} = \frac{v_n}{n_e \langle \sigma v \rangle_{ion}}
+\end{equation}
+
+\noindent where $v_n$ is the velocity of neutrals entering the pedestal (set by the neutral thermal temperature in the edge) and $\langle \sigma v \rangle_{ion}$ is the velocity-averaged ionization cross-section.  Given that $v_n$ is independent of plasma conditions and that $\langle \sigma v \rangle_{ion}$ is consistent over the temperatures of interest in the edge \cite{Hughes2005}, therefore we expect the simple relation $\Delta_{n} \sim 1/n_{e,ped}$.  More complex models for the neutral penetration typically reproduce the dependence on $\lambda_{neutral}$.
+
+
+
 \subsection{Ion-Orbit Loss Models}\label{subsec:mod_ionorbitloss}
 
 Due to the importance in the edge $E_r$ well in pedestal formation, modeling efforts naturally turned to potential sources for the electric field to explain the pedestal.  One suggested source was ion orbit loss across the last closed flux surface, in which the gyro-motion of ions near the edge intersect the SOL or the plasma-facing material surfaces -- the charge imbalance induced by this particle ``leak'' results in a radial electric field \cite{Shaing1990}.  Assuming ion orbit losses drive the $E_r$ well, the $\vec{E}\times\vec{B}$ shear layer width ought to be governed by the banana orbit width, which scales as the poloidal gyroradius $\rho_{i,pol} \sim \sqrt{T_i}/B_p$.  Accounting for the squeezing effect of the radial electric field on the banana orbit width, Shaing \cite{Shaing1992} gives for the well width
@@ -36,6 +46,11 @@ However, observations on other machines contradict these results.  Depending on 
 
 \subsection{ELITE Code}\label{subsec:mod_elite}
 
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{Schematic of the stability space to coupled peeling-ballooning MHD modes, set by the edge pressure gradient and current density.  Ballooning modes are driven by pressure gradient but stabilized by magnetic shear driven by edge currents, while kink/peeling modes are current-driven but stabilized by pressure gradients.}\label{fig:mod_pbcartoon}}{\includegraphics[width=100mm]{graphics/ModelingTheory/pbcartoon.pdf}}
+\end{figure}
+
 \nicesectionending
 
 \section{Turbulent Modeling}\label{sec:mod_turbulence}
@@ -43,6 +58,12 @@ However, observations on other machines contradict these results.  Depending on 
 \nicesectionending
 
 \section{The EPED Model}\label{sec:mod_eped}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption{EPED predictions versus measured pressure pedestal heights from DIII-D and C-Mod, spanning a significant range of pedestal pressures.  Notably, C-Mod pressure pedestals reach within a factor of $\sim 2$ of the predicted ITER pedestal height.}\label{fig:mod_epedpredictions}}{\includegraphics[width=100mm]{graphics/ModelingTheory/eped.pdf}}
+\end{figure}
+
 
 \nicechapterending
 
