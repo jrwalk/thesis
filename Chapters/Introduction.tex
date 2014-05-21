@@ -80,12 +80,12 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
 
 \begin{figure}
  \pushtooutside
- \ffigbox[\FBwidth]{\caption{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy. \cite{Krane}}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
+ \ffigbox[\FBwidth]{\caption[Binding energy per nucleon versus atomic mass number.]{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy. \cite{Krane}}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
 \end{figure}
 
 \begin{figure}
  \pushtooutside
- \ffigbox[\FBwidth]{\caption{Reaction rate normalized to fuel density, expressed as the rate coefficient $\langle \sigma v \rangle$, for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=150mm]{graphics/Introduction/reaction_xsections.pdf}}
+ \ffigbox[\FBwidth]{\caption[Normalized fusion reaction rate coefficients versus plasma temperature.]{Reaction rate normalized to fuel density, expressed as the rate coefficient $\langle \sigma v \rangle$, for fusion fuels as a function of temperature.  Notably, deuterium-tritium fusion exhibits a higher peak reaction rate, as well as reaching that peak at a lower temperature, than other fuels.}\label{fig:xsection}}{\includegraphics[width=150mm]{graphics/Introduction/reaction_xsections.pdf}}
 \end{figure}
 
 Pure deuterium fuel (reactions shown in \cref{eq:dd1,eq:dd2}) is attractive from a research standpoint, due to the abundance and ease of use of deuterium.  Deuterium is a stable nucleus, obviating the need for radiation safety in the fuel system, and is naturally occurring in relative abundance (approximately $1/6420$ of hydrogen nuclei on earth are deuterium \cite{CRC}), allowing harvesting of deuterium fuel from seawater.  However, pure-deuterium reactions suffer from low energy output per reaction and a significantly lower reaction rate at feasible plasma conditions compared to other fuel options (see \cref{fig:xsection}), setting high performance requirements for a putative DD-burning reactor.
@@ -116,7 +116,7 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 
 \begin{figure}
  \pushtooutside
- \fcapside[50mm]{\caption{Electron and ion gyro orbits in an applied magnetic field.  Note that, due to the charge dependence in the Lorentz Force (\cref{eq:lorentz}), electrons and ions orbit in opposite directions relative to the magnetic field.}\label{fig:intro_gyro}}{\includegraphics[width=85mm]{graphics/Introduction/gyro.pdf}}
+ \fcapside[50mm]{\caption[Gyro orbits in an applied magnetic field.]{Electron and ion gyro orbits in an applied magnetic field.  Note that, due to the charge dependence in the Lorentz Force (\cref{eq:lorentz}), electrons and ions orbit in opposite directions relative to the magnetic field.}\label{fig:intro_gyro}}{\includegraphics[width=85mm]{graphics/Introduction/gyro.pdf}}
 \end{figure}
 
 \noindent In a strong background magnetic field, the particle will move on a helical path along the field line.  The $\vec{v} \times \vec{B}$ factor in the Lorentz Force causes the particle to experience no magnetic force parallel to the field, while velocity perpendicular to the field generates a force proportional to the velocity times the magnetic field, directed perpendicular to both -- thus the particle freely streams parallel to the field, but is trapped in a circular orbit perpendicular to it, termed ``gyro motion'', shown in \cref{fig:intro_gyro}.  The particle will orbit at the cyclotron frequency,
@@ -158,7 +158,7 @@ pinches the magnetic field at the cylinder ends in order to reflect the parallel
 
 \begin{figure}[h]
  \pushtooutside
- \fcapside[65mm]{\caption{Example geometry of a circular-cross-section tokamak plasma, describing a torus of major radius $R_0$ and minor radius $a$, with poloidal coordinate $\theta$ and toroidal coordinate $\Phi$.  Tokamak configurations are characterized by an applied toroidal field $B_T$ with a toroidal plasma current $I_p$, which in turn generates a poloidal magnetic field $B_p$.}\label{fig:intro_geometry}}{\includegraphics[width=100mm]{graphics/Introduction/geometry.pdf}}
+ \fcapside[65mm]{\caption[Geometry of a toroidal plasma.]{Example geometry of a circular-cross-section tokamak plasma, describing a torus of major radius $R_0$ and minor radius $a$, with poloidal coordinate $\theta$ and toroidal coordinate $\Phi$.  Tokamak configurations are characterized by an applied toroidal field $B_T$ with a toroidal plasma current $I_p$, which in turn generates a poloidal magnetic field $B_p$.}\label{fig:intro_geometry}}{\includegraphics[width=100mm]{graphics/Introduction/geometry.pdf}}
 \end{figure}
 
 An example toroidal geometry is shown above in \cref{fig:intro_geometry}.  In comparison to the previous straight cylindrical geometry, the radial coordinate is replaced by a \emph{minor radius} $r$, measured from the center of the plasma column to its edge ($r=a$), while the \emph{major radius} $R_0$ denotes the radius of the torus itself measured from its center axis ($Z$ in \cref{fig:intro_geometry}) to the plasma axis.  The azimuthal cylindrical coordinate is replaced by the poloidal coordinate $\theta$, wrapping immediately about the plasma column.  The axial coordinate in the cylindrical system is replaced by the toroidal angle $\Phi$ wrapping around the center axis of the torus and describing a circuit along the plasma column.  As with the straight cylindrical case, the magnetic geometry may be described with toroidal and poloidal currents and magnetic fields balancing radially-outward thermal pressure.
@@ -182,7 +182,7 @@ the necessity for large ($>\SI{1}{\mega\ampere}$) plasma currents presents a sig
 
 \begin{figure}[t]
  \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Introduction/tokamak.pdf}}{\caption{Schematic of a tokamak configuration, showing the plasma and magnetic coils.  The applied toroidal magnetic field is generated by the toroidal field coils (shown in blue).  A toroidal plasma current is generated by the center transformer, in turn generating a poloidal magnetic field (shown in green).  These combine to form the helical magnetic field.  The plasma shape and equilibrium is adjusted with the outer poloidal field coils (gray).}\label{fig:intro_tokamak}}
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Introduction/tokamak.pdf}}{\caption[Schematic of a tokamak coil configuration and plasma.]{Schematic of a tokamak configuration, showing the plasma and magnetic coils.  The applied toroidal magnetic field is generated by the toroidal field coils (shown in blue).  A toroidal plasma current is generated by the center transformer, in turn generating a poloidal magnetic field (shown in green).  These combine to form the helical magnetic field.  The plasma shape and equilibrium is adjusted with the outer poloidal field coils (gray).}\label{fig:intro_tokamak}}
 \end{figure}
 
 Due to its regular, planar magnetic coils and continuous plasma current, tokamak equilibria are characterized by rotational symmetry (to good approximation) about the center axis of the torus (\emph{axisymmetry}).  Solutions to the MHD equilibrium equation, \cref{eq:MHDeq}, thus reduce to a two-dimensional equation in $R$ and $Z$ (as $\partial/\partial \Phi \rightarrow 0$), given by the Grad-Shafranov Equation \cite{Grad1958,Shafranov1960,Freidberg1987}:
@@ -208,7 +208,7 @@ Due to its regular, planar magnetic coils and continuous plasma current, tokamak
 
 \begin{figure}
  \pushtooutside
- \fcapside[55mm]{\includegraphics[width=95mm]{graphics/Introduction/shaping.pdf}}{\caption{Cross-section of a tokamak plasma, illustrating closed magnetic flux surfaces (light blue), the last closed flux surface (red), and surfaces with open magnetic field lines (dark blue).  Definitions for plasma shaping parameters elongation $\kappa$, and upper and lower triangularity $\delta_u$, $\delta_l$ are shown at right.}\label{fig:intro_shaping}}
+ \fcapside[55mm]{\includegraphics[width=95mm]{graphics/Introduction/shaping.pdf}}{\caption[Tokamak cross-section with shaping parameter definitions.]{Cross-section of a tokamak plasma, illustrating closed magnetic flux surfaces (light blue), the last closed flux surface (red), and surfaces with open magnetic field lines (dark blue).  Definitions for plasma shaping parameters elongation $\kappa$, and upper and lower triangularity $\delta_u$, $\delta_l$ are shown at right.}\label{fig:intro_shaping}}
 \end{figure}
 
 \noindent As the plasma temperature rapidly equilibrates along field lines, the temperature is also a flux function to good approximation.  It is useful, then, to picture the confined plasma as a series of closed, nested surfaces of constant $\psi$, on which the plasma is trapped (see \cref{fig:intro_shaping}).  In practice, these contours are calculated via a numerical solution of \cref{eq:gradshafranov} in the EFIT code \cite{Lao1985}.  For flux functions (\ie constant parameters on these flux surfaces), this explicitly removes the dependence on the poloidal angle $\theta$ -- the poloidal flux $\psi$ is thus a useful one-dimensional abscissa derived directly from the magnetic geometry (thus independent of the physical scale of the tokamak and useful for cross-machine comparisons) for the profiles of most parameters of interest, and shall be used thus for the balance of this thesis.
@@ -222,7 +222,7 @@ open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then stream
 
 \begin{figure}[p]
  \pushtooutside
- \ffigbox[\FBwidth]{\caption{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
+ \ffigbox[\FBwidth]{\caption[Cutaway view of the Alcator C-Mod tokamk, cryostat and support structure.]{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
 \end{figure}
 
 \begin{wraptable}{O}{0 pt}
@@ -249,7 +249,7 @@ lower-hybrid resonance (LHRF) power used for heating and DC current drive \cite{
 
 \begin{figure}[t]
  \pushtooutside
- \ffigbox[\FBwidth]{\caption{Cross-section of the C-Mod vacuum vessel, cryostat and diagnostic access ports, with toroidal-field and equilibrium-field magnetic coils labeled.  Also shown is the plasma position in a typical LSN shape, with strike points in the lower divertor shown..}\label{fig:alcator2}}{\includegraphics[width=150mm]{graphics/Introduction/cmod_xsec.pdf}}
+ \ffigbox[\FBwidth]{\caption[Labeled cross-section of the C_Mod vacuum vessel.]{Cross-section of the C-Mod vacuum vessel, cryostat and diagnostic access ports, with toroidal-field and equilibrium-field magnetic coils labeled.  Also shown is the plasma position in a typical LSN shape, with strike points in the lower divertor shown..}\label{fig:alcator2}}{\includegraphics[width=150mm]{graphics/Introduction/cmod_xsec.pdf}}
 \end{figure}
 
 Due to their high plasma pressure and power density, C-Mod plasmas must exhaust a large heat flux, reaching levels comparable to that anticipated for ITER \cite{Loarte2007,Terry2007,LaBombard2011}.  To handle this heat flux, C-Mod operates entirely with high-$Z$ metal materials (primarily Molybdenum and Tungsten) for all plasma-facing surfaces.  In addition to its high heat tolerance and low erosion rates due to plasma contact, metal walls provide low retention of fuel gas at the edge -- metal walls are thus the leading candidate for ITER- and reactor-scale plasma-facing components.
@@ -361,7 +361,7 @@ The effect on the transport is clearly evident from a diffusive transport model,
 
  \begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
   \includegraphics[width=70mm]{graphics/Introduction/transport.pdf}
-  \caption{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.}
+  \caption[Diffusion coefficients and plasma profiles for a ``toy model'' diffusion equation.]{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.}
   \label{fig:intro_transport}
  \end{wrapfigure}
 
