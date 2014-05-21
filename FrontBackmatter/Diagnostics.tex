@@ -22,7 +22,7 @@ An intuitive picture of the Thomson scattering phenomenon may be obtained by the
 
 \begin{figure}[t]
  \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Diagnostics/TS_geometry.pdf}}{\caption{Coordinate system considered for Thomson scattering, with the incident wave of wavenumber $\vec{k}_i$ incident on a particle at $\vec{r}(t')$ for retarded time $t'$.  The scattered wave $\vec{k}_s$ is drawn to an observer at $\vec{R}(t')$.}\label{fig:app_ts_geometry}}
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Diagnostics/TS_geometry.pdf}}{\caption[Coordinate system for Thomson scattering.]{Coordinate system considered for Thomson scattering, with the incident wave of wavenumber $\vec{k}_i$ incident on a particle at $\vec{r}(t')$ for retarded time $t'$.  The scattered wave $\vec{k}_s$ is drawn to an observer at $\vec{R}(t')$.}\label{fig:app_ts_geometry}}
 \end{figure}
 
 The scattered electric field from a generally-accelerated electron moving at $\vec{\beta} = \vec{v}/c$ is given from the Lienard-Wiechert potentials \cite[\S 7]{Hutchinson},
@@ -89,7 +89,7 @@ The scattered electric field from a generally-accelerated electron moving at $\v
 
 \begin{figure}[t]
  \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Diagnostics/ts_geometry2.pdf}}{\caption{Definitions of the angular dependences in the Thomson scattering geometry: namely, the angle $\theta$ between the incident wave direction $\hat{i}$ and scattering direction $\hat{s}$, and the polarization angle $\phi$ of the incident electric field $\hat{E}_i$ with respect to the projection of $\hat{s}$ into the polarization plane.}\label{fig:app_ts_geometry2}}
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Diagnostics/ts_geometry2.pdf}}{\caption[Angular dependences in Thomson scattering geometry.]{Definitions of the angular dependences in the Thomson scattering geometry: namely, the angle $\theta$ between the incident wave direction $\hat{i}$ and scattering direction $\hat{s}$, and the polarization angle $\phi$ of the incident electric field $\hat{E}_i$ with respect to the projection of $\hat{s}$ into the polarization plane.}\label{fig:app_ts_geometry2}}
 \end{figure}
 
 We may first consider the scattering direction dependence,
@@ -293,7 +293,7 @@ This analysis breaks down for relativistic electron populations.  However, relat
 
 \begin{figure}[t]
  \pushtooutside
- \fcapside[70mm]{\caption{Spectral functions normalized to density and laser power, evaluated at $\theta = \phi = \pi/2$.  The spectrum spreads farther from the laser line at higher temperature, as well as blue-shifting due to relativistic effects.}\label{fig:app_ts_spectrum}}{\includegraphics[width=110mm]{graphics/Diagnostics/ts_spectrum.pdf}}
+ \fcapside[70mm]{\caption[Spectral functions normalized to density and laser power.]{Spectral functions normalized to density and laser power, evaluated at $\theta = \phi = \pi/2$.  The spectrum spreads farther from the laser line at higher temperature, as well as blue-shifting due to relativistic effects.}\label{fig:app_ts_spectrum}}{\includegraphics[width=110mm]{graphics/Diagnostics/ts_spectrum.pdf}}
 \end{figure}
 
 \noindent The relativistic correction breaks the symmetry of the Maxwellian spectrum, introducing a net blue shift to the spectrum.  Physically, this is due to ``relativistic headlighting,'' in which the radiation from an accelerating relativistic particle is biased forward of its motion -- The radiated power is stronger from particles moving toward the observer (thus with a blue Doppler shift to their emissions).  The spectral form factor $S(T_e,\theta,\lambda_s)$ is shown in figure \cref{fig:app_ts_spectrum}, illustrating the width dependence of the spectrum on the electron temperature and the blue shifting evident in the spectrum even at relatively low plasma temperatures.
@@ -306,7 +306,7 @@ High-resolution density and temperature measurements on C-Mod are achieved with 
 
 \begin{figure}[p]
  \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[height=150mm,angle=-90]{graphics/Diagnostics/ts_optics.pdf}}{\caption{Layout of collection optics for the core and edge Thomson scattering diagnostics on Alcator C-Mod.  Two Nd:YAG lasers are fired vertically through the plasma near the magnetic axis, with the scattered light focused through a Cooke triplet at the outboard midplane onto an array of fiber optics.    The positions of the high-resolution edge scattering volumes are highlighted in the inset.}\label{fig:app_ts_optics}}
+ \ffigbox[\FBwidth]{\includegraphics[height=150mm,angle=-90]{graphics/Diagnostics/ts_optics.pdf}}{\caption[Collection optics for core and edge Thomson scattering systems.]{Layout of collection optics for the core and edge Thomson scattering diagnostics on Alcator C-Mod.  Two Nd:YAG lasers are fired vertically through the plasma near the magnetic axis, with the scattered light focused through a Cooke triplet at the outboard midplane onto an array of fiber optics.    The positions of the high-resolution edge scattering volumes are highlighted in the inset.}\label{fig:app_ts_optics}}
 \end{figure}
 
 Both the core and edge TS systems measure light scattered from a pair of neodymium-doped yttrium-aluminum garnet (Nd:YAG) lasers with $\lambda_i = \SI{1064}{\nano\meter}$ fired vertically through the plasma at $R \sim \SI{69}{\centi\meter}$ such that it passes roughly through the magnetic axis.  The lasers are each fired at $\SI{50}{\hertz}$ $\SI{180}{\degree}$ out of phase, such that the pair produce one hundred $\sim\SI{5}{\nano\second}$ pulses per second, taking effective ``snapshots'' of the plasma profile.  Each pulse provides $\sim \SI{1}{\joule}$ of laser energy, corresponding to roughly $\num{5e18}$ photons per laser pulse, ensuring sufficient collected photons even after the significant attenuation inherent in Thomson scattering.  Focusing optics mounted at the vertical entrance port constrict the beam to a $\sim\SI{2}{\milli\meter}$ width through the plasma.
@@ -315,10 +315,11 @@ The scattered photons are focused through a Cooke triplet with 1:2 demagnificati
 
 \begin{figure}[t]
  \pushtooutside
- \fcapside[60mm]{\caption{Normalized spectral response functions of the edge TS polychromator bandpasses, compared to characteristic scattered spectra at $\SI{10}{\electronvolt}$ and $\SI{200}{\electronvolt}$.}\label{fig:ts_bandpasses}}{\includegraphics[width=100mm]{graphics/Diagnostics/ts_bandpasses.pdf}}
+ \fcapside[60mm]{\caption[Normalized spectral response functions of the edge TS polychromator.]{Normalized spectral response functions of the edge TS polychromator bandpasses, compared to characteristic scattered spectra at $\SI{10}{\electronvolt}$ and $\SI{200}{\electronvolt}$.}\label{fig:ts_bandpasses}}{\includegraphics[width=100mm]{graphics/Diagnostics/ts_bandpasses.pdf}}
 \end{figure}
 
-The edge collection fibers deliver the scattered light to a filter polychromator array with 25 available spatial channels divided into four spectral bands.  The spectral bandpasses, shown in \cref{fig:ts_bandpasses}, are designed such that the laser line is excluded from the captured light (reducing noise from reflected laser light incident on the fibers) while covering the expected spread in the scattered spectrum across a range of temperatures.  Extracting $n_e$ and $T_e$ for each spatial channel is conceptually straightforward -- the total signal in all spectral channels is analogous to the integrated area under the scattered spectrum (and thus $n_e$), while the relative signal strengths between spectral channels is set by the spread in the spectrum (thus $T_e$).  For temperatures below $\sim\SI{50}{\electronvolt}$ (with the true lower bound dependent on the local density), the scattered spectrum is largely restricted to the $j=3$ channel, setting a lower bound on the temperature measurement.  Similarly, for $T_e \gtrsim \SI{800}{\electronvolt}$ the spectral response in $j=1$ and $j=3$ is flat, limiting the effectiveness of those spectral bandpasses in constraining the temperature measurement.
+The edge collection fibers deliver the scattered light to a filter polychromator array with 25 available spatial channels divided into four spectral bands.  The spectral bandpasses, shown in \cref{fig:ts_bandpasses}, are designed such that the laser line is excluded from the captured light (reducing noise from reflected laser light incident on the fibers) while covering the expected spread in the scattered spectrum across a range of temperatures.  Extracting $n_e$ and $T_e$ for each spatial channel is conceptually straightforward -- the total signal in all spectral channels is analogous to the integrated area under the scattered spectrum (and thus $n_e$), while the relative signal strengths between spectral channels is set by the spread in the spectrum (thus $T_e$).  For temperatures below $\sim\SI{50}{\electronvolt}$ (with the true lower bound dependent on the local density), the scattered spectrum is largely restricted to the $j=3$ channel, setting a lower bound on the temperature measurement.  Similarly, 
+for $T_e \gtrsim \SI{800}{\electronvolt}$ the spectral response in $j=1$ and $j=3$ is flat, limiting the effectiveness of those spectral bandpasses in constraining the temperature measurement.
 
 Although the $n_e$ and $T_e$ measurements from Thomson scattering require careful calibration and sensitive IR optics, the edge TS system provides reliable high-resolution profile measurements across a range of parameters found in the C-Mod edge.  Further details on the edge TS hardware, calibration, and data analysis procedures is available in \cite[\S 3]{Hughes2005}.\nicesectionending
 
