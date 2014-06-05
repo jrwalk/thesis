@@ -166,8 +166,7 @@ lowest order, the ballooning limit may be approximated as a limit on $\beta_{p}$
  \fcapside[60mm]{\caption[Pedestal density versus temperature normalized to poloidal field.]{Pedestal density vs. temperature normalized to poloidal field (accounting for variation in plasma current) such that hyperbolae in the parameter space are curves of fixed $\beta_{p,ped}$.  At a given shaping, ELMy H-mode pedestals are to lowest order constrained to fixed $\beta_{p,ped}$, with stronger shaping allowing greater attainable $\beta_p$.}\label{fig:elmy_neBp_TeBp}}{\includegraphics[width=100mm]{graphics/ELMy/neBp_TeBp_deltaave.pdf}}
 \end{figure}
 
-Pre-EPED models accounting for pressure-gradient limits assumed the pressure pedestal height would be governed simply by $p_{ped} \sim \nabla p \times \Delta_p$, with $\nabla p$ limited by MHD stability and a separate constraint for the pedestal width\gnote{better wording?}.  The ballooning limit was couched by Saibene \emph{et al.} \cite{Saibene1999} as $\nabla p \sim I_p^2 f_{sh}$, where $f_{sh}$ is a function describing the edge magnetic shear.  Taking the pedestal width to be governed by poloidal gyroradius $\rho_{i,pol} \sim \sqrt{T_e}/I_p$ (as was done by Saibene \emph{et al}.), this predicts $p_{ped} \sim I_p \sqrt{T_{e,ped}}$, as shown in \cref{fig:elmy_IprootTe_p95}.  However, the putative scaling of the pedestal width on $\rho_{i,pol}$ is readily conflated with the KBM-limited trend of pedestal width with $\beta_{p,ped}^{1/2} \sim \sqrt{n_e T_e}/I_p$.  Assuming a $\beta_{p,ped}$ limit on the pedestal width, we predict $p_{ped} \sim I_p \sqrt{n_{e,ped} T_{e,ped}}$, shown in \cref{fig:elmy_IprootneTe_
-p95} to be a significantly better predictor of the pedestal height.
+Pre-EPED models accounting for pressure-gradient limits assumed the pressure pedestal height would be governed simply by $p_{ped} \sim \nabla p \times \Delta_p$, with $\nabla p$ limited by MHD stability and a separate constraint for the pedestal width\gnote{better wording?}.  The ballooning limit was couched by Saibene \emph{et al.} \cite{Saibene1999} as $\nabla p \sim I_p^2 f_{sh}$, where $f_{sh}$ is a function describing the edge magnetic shear.  Taking the pedestal width to be governed by poloidal gyroradius $\rho_{i,pol} \sim \sqrt{T_e}/I_p$ (as was done by Saibene \emph{et al}.), this predicts $p_{ped} \sim I_p \sqrt{T_{e,ped}}$, as shown in \cref{fig:elmy_IprootTe_p95}.  However, the putative scaling of the pedestal width on $\rho_{i,pol}$ is readily conflated with the KBM-limited trend of pedestal width with $\beta_{p,ped}^{1/2} \sim \sqrt{n_e T_e}/I_p$.  Assuming a $\beta_{p,ped}$ limit on the pedestal width, we predict $p_{ped} \sim I_p \sqrt{n_{e,ped} T_{e,ped}}$, shown in \cref{fig:elmy_IprootneTe_p95} to be a significantly better predictor of the pedestal height.
 
 %\begin{figure}[p]
  %\pushtooutside
@@ -187,39 +186,43 @@ p95} to be a significantly better predictor of the pedestal height.
  \end{floatrow}
 \end{figure}
 
-\subsection{Power Scan}\label{subsec:elmy_power}
-
-\begin{figure}[ht]
- \pushtooutside
- \fcapside[60mm]{\caption[Pedestal $T_e$ versus net heating power normalized to density.]{Pedestal temperature versus net heating power ($P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$) normalized to pedestal density (a surrogate for heat flux through the pedestal).  At a given value of plasma current (shown by the colorbar), there is little variation of the pedestal temperature with $P_{net}/n_{e,95}$.  Rather, heating power modulates the ELM frequency, increasing heat transport.}\label{fig:elmy_Pneped_Tped}}{\includegraphics[width=100mm]{graphics/ELMy/Pne95_Te95_Ip.pdf}}
-\end{figure}
-
-\begin{figure}[ht]
- \pushtooutside
- \fcapside[60mm]{\caption[Pedestal pressure versus net heating power.]{Pedestal pressure versus net heating power $P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$).  At a given value of the plasma current (shown by the colorbar), there is little variation of pedestal pressure with $P_{net}$.  Rather, heating power modulates the ELM frequency ($f_{ELM} \sim P_{heat}$ for type-I ELMs \note{cite}), increasing outward energy transport to maintain the pressure pedestal on a line of fixed $\beta_{p,ped}$ for a given shape.}\label{fig:elmy_Pnet_pped}}{\includegraphics[width=100mm]{graphics/ELMy/Pnet_p95_Ip.pdf}}
-\end{figure}
-
-The response of the pedestal to heating power is consistent with previous observations in MHD-limited pedestals\gnote{cites, elaboration?}.  Examined against net heating power $P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$ normalized to the pedestal density (effectively, heat flux through the pedestal), the temperature pedestal height (shown in \cref{fig:elmy_Pneped_Tped}) shows little response within a given target plasma current.  \note{arguments based on profile stiffness...}
-
-Similarly, the pressure pedestal shows a weak response to net heating power (\cref{fig:elmy_Pnet_pped}), with the attainable pressure instead predominantly set by current (see \cref{subsec:elmy_ip}) and shaping (due to the stabilizing effects of strong shaping on peeling-ballooning MHD -- see \cref{fig:elmy_neBp_TeBp} for the influence of shaping on attainable $\beta_{p,ped}$).  Previous observations in ELMy H-mode\gnote{cites or ref lit review} observed a dependence of the ELM repetition frequency with heating power in type-I ELMs, such that for relatively fixed energy loss per ELM (typically 2-6\% of pedestal stored energy\gnote{check}) increased heating power increases the average ELM power loss ($\langle P_{ELM} \rangle \sim f_{ELM} \cdot \delta W_{ELM}$) to maintain $P_{ELM}$ at a fixed fraction of total heating power.  This increased heat transport due to ELM instabilities is reflected in the ITER98 scaling (\cref{eq:tau98}), $\tau_E \sim P_{net}^{-0.69}$.  As the total stored energy scales linearly 
-with the pedestal pressure \cite{Kinsey2011}, $W \sim p_{ped}$, and in a stationary plasma ($dW/dt \approx 0$) $W \sim P_{net} \tau_E$, we 
-expect $p_{ped} \sim P_{net}^{0.3}$ based on global scalings alone.\nicesectionending
+% \subsection{Power Scan}\label{subsec:elmy_power}
+% 
+% \begin{figure}[ht]
+%  \pushtooutside
+%  \fcapside[60mm]{\caption[Pedestal $T_e$ versus net heating power normalized to density.]{Pedestal temperature versus net heating power ($P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$) normalized to pedestal density (a surrogate for heat flux through the pedestal).  At a given value of plasma current (shown by the colorbar), there is little variation of the pedestal temperature with $P_{net}/n_{e,95}$.  Rather, heating power modulates the ELM frequency, increasing heat transport.}\label{fig:elmy_Pneped_Tped}}{\includegraphics[width=100mm]{graphics/ELMy/Pne95_Te95_Ip.pdf}}
+% \end{figure}
+% 
+% \begin{figure}[ht]
+%  \pushtooutside
+%  \fcapside[60mm]{\caption[Pedestal pressure versus net heating power.]{Pedestal pressure versus net heating power $P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$).  At a given value of the plasma current (shown by the colorbar), there is little variation of pedestal pressure with $P_{net}$.  Rather, heating power modulates the ELM frequency ($f_{ELM} \sim P_{heat}$ for type-I ELMs \note{cite}), increasing outward energy transport to maintain the pressure pedestal on a line of fixed $\beta_{p,ped}$ for a given shape.}\label{fig:elmy_Pnet_pped}}{\includegraphics[width=100mm]{graphics/ELMy/Pnet_p95_Ip.pdf}}
+% \end{figure}
+% 
+% The response of the pedestal to heating power is consistent with previous observations in MHD-limited pedestals\gnote{cites, elaboration?}.  Examined against net heating power $P_{net} = P_{ICRF} + P_{Ohm} - P_{rad} - dW/dt$ normalized to the pedestal density (effectively, heat flux through the pedestal), the temperature pedestal height (shown in \cref{fig:elmy_Pneped_Tped}) shows little response within a given target plasma current.  \note{arguments based on profile stiffness...}
+% 
+% Similarly, the pressure pedestal shows a weak response to net heating power (\cref{fig:elmy_Pnet_pped}), with the attainable pressure instead predominantly set by current (see \cref{subsec:elmy_ip}) and shaping (due to the stabilizing effects of strong shaping on peeling-ballooning MHD -- see \cref{fig:elmy_neBp_TeBp} for the influence of shaping on attainable $\beta_{p,ped}$).  Previous observations in ELMy H-mode\gnote{cites or ref lit review} observed a dependence of the ELM repetition frequency with heating power in type-I ELMs, such that for relatively fixed energy loss per ELM (typically 2-6\% of pedestal stored energy\gnote{check}) increased heating power increases the average ELM power loss ($\langle P_{ELM} \rangle \sim f_{ELM} \cdot \delta W_{ELM}$) to maintain $P_{ELM}$ at a fixed fraction of total heating power.  This increased heat transport due to ELM instabilities is reflected in the ITER98 scaling (\cref{eq:tau98}), $\tau_E \sim P_{net}^{-0.69}$.  As the total stored energy scales linearly 
+% with the pedestal pressure \cite{Kinsey2011}, $W \sim p_{ped}$, and in a stationary plasma ($dW/dt \approx 0$) $W \sim P_{net} \tau_E$, we 
+% expect $p_{ped} \sim P_{net}^{0.3}$ based on global scalings alone.\nicesectionending
 
 \section{Pedestal Width Response}\label{sec:elmy_width}
 
-\begin{figure}
- \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/rhoipol_deltas.pdf}}{\caption[$\Delta_{T_e}$ and $\Delta_{p}$ versus $\rho_{i,pol}$]{Temperature and pressure pedestal widths versus poloidal gyroradius.  The temperature pedestal width shows no systematic variation with $\rho_{i,pol}$.  A weak trend is possible in the pressure pedestal width, comparable to the the trend of $\Delta_p \sim \beta_{p,ped}^{1/2}$ (due to the strong covariance between $\rho_{i,pol}$ and $\beta_{p,ped}$).  However, this trend is overruled in favor of a poloidal beta scaling by other observations.}\label{fig:elmy_rhoipol_deltas}}
-\end{figure}
+\subsection{Alternate Width Models}\label{subsec:elmy_width_oldmodels}
 
 \begin{figure}
  \pushtooutside
  \fcapside[60mm]{\caption[$\Delta_{n_e}$ versus $n_{e,ped}$]{Density pedestal width versus pedestal density.  Contrary to expectations from neutral-penetration models (see \cref{subsec:mod_neutral}), there is little systematic variation of the density pedestal width and height.}\label{fig:elmy_ne_deltan}}{\includegraphics[width=100mm]{graphics/ELMy/neped_deltan.pdf}}
 \end{figure}
 
-\noindent\note{elaborate on $\rho_{i,pol}$, $n_{e,ped}$ graphs first}
+\begin{figure}
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/rhoipol_deltas.pdf}}{\caption[$\Delta_{T_e}$ and $\Delta_{p}$ versus $\rho_{i,pol}$]{Temperature and pressure pedestal widths versus poloidal gyroradius.  The temperature pedestal width shows no systematic variation with $\rho_{i,pol}$.  A weak trend is possible in the pressure pedestal width, comparable to the the trend of $\Delta_p \sim \beta_{p,ped}^{1/2}$ (due to the strong covariance between $\rho_{i,pol}$ and $\beta_{p,ped}$).  However, this trend is overruled in favor of a poloidal beta scaling by other observations.}\label{fig:elmy_rhoipol_deltas}}
+\end{figure}
 
-As detailed in \cref{subsec:elmy_eped_width}, the scale factor in the dominant width scaling in ELMy H-mode, $\Delta \sim \beta_{p,ped}^{1/2}$, is most properly a weakly varying function of plasma shaping, collisionality, and other engineering parameters\gnote{cite?}.  These secondary dependencies may be examined by normalizing the pedestal width (here we use the EPED width, $\Delta_\psi$, from \cref{eq:wid_eped}) to the fitted scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ (see \cref{fig:elmy_betap_deltapsi_all}).  
+Initial models for the pedestal width (see \cref{sec:mod_early}) led to several easily-testable predictions -- first, neutral-penetration models (\cref{subsec:mod_neutral}) predict a scaling of the density pedestal $\Delta_{n_e} \sim 1/n_{e,ped}$, while transport-driven models predict temperature/pressure pedestal widths limited by poloidal gyroradius, or equivalently the banana orbit width (\cref{subsec:mod_ionorbitloss}).  The density pedestal width is shown against pedestal density in \cref{fig:elmy_ne_deltan} -- while there is high scatter in the data, with both the pedestal density and measured width $\Delta_{n_e}$ spanning more than a factor of two in variation, the densest region in the dataset shows a weak positive trend between density pedestal width and height.  This is directly contrary to the predictions from simple neutral-penetration models; however, it is consistent with previous observations in EDA H-mode \cite{Hughes2002}.  The measured temperature and pressure widths $\Delta_{T_e}$ and $\Delta_{p_e}$ are shown against $\rho_{i,pol}$ (the ion gyroradius evaluated with the poloidal field) in \cref{fig:elmy_rhoipol_deltas}.  In the case of the temperature pedestal width, no systematic variation with $\rho_{i,pol}$ is seen.  A possible weak trend for the pressure pedestal width is seen, with comparable spread to that seen in the pressure pedestal width versus $\beta_{p,ped}$.  However, as there is significant covariance between $\rho_{i,pol} \sim \sqrt{T_e}/I_p$ and $\beta_{p,ped} \sim \sqrt{n_e T_e}/I_p$, and the width scaling with $\beta_{p,ped}$ is seen to be a superior predictor (see \cref{fig:elmy_IprootneTe_p95}) this model should be discarded in favor of the $\Delta \sim \beta_{p,ped}^{1/2}$ scaling from KBM physics.
+
+\subsection{Normalized Pedestal Width}\label{subsec:elmy_normwidth}
+
+As detailed in \cref{subsec:elmy_eped_width}\gnote{ref to ch. 3 section?}, the scale factor in the dominant width scaling in ELMy H-mode, $\Delta \sim \beta_{p,ped}^{1/2}$, is most properly a weakly varying function of plasma shaping, collisionality, and other dimensionless parameters \cite{Snyder2011}.  These secondary dependencies may be examined by normalizing the pedestal width (here we use the EPED width, $\Delta_\psi$, from \cref{eq:wid_eped}) to the fitted scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ (see \cref{fig:elmy_betap_deltapsi_all}).  
 
 Normalized pedestal widths are shown against the range in toroidal fields in \cref{fig:elmy_Bt_deltanorm}.  The high scatter in the normalized pedestal widths at standard field ($\SI{5.4}{\tesla}$), along with the difficulty in attaining usable ELMy H-modes at low and high field, renders it difficult to conclusively establish a secondary scaling of the pedestal width with toroidal field.  While the comparatively broader pedestal at low field is consistent with some previous observations\gnote{cite Hughes... DIII-D observations too?}, the covariance between $B_T$ and $I_p$ (and therefore $\beta_p$) in the low-field phase of the experiment complicates this observation.
 
@@ -261,8 +264,6 @@ Pedestal collisionality $\nu^*_{95}$ is anticipated as a controlling term in the
  \pushtooutside
  \fcapside[60mm]{\caption[Scaling of normalized pedestal width with normalized pedestal ion gyroradius.]{Scaling of the normalized pedestal width $\Delta_\psi / 0.0857 \beta_{p,ped}^{1/2}$ with normalized pedestal gyroradius $\rho^*_{95}$.  Low, standard, and high-field sets are indicated in blue, black, and red respectively.  No systematic variation is seen.}\label{fig:elmy_rhostar_deltanorm}}{\includegraphics[width=100mm]{graphics/ELMy/rhostar_deltanorm.pdf}}
 \end{figure}
-
-\note{check for $n_{e}$ vs $\Delta_{n_e}$ scaling...}
 
 \nicesectionending
 
