@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Chapters\Elmy.tex
 
 [Frame0_View0,0]
-TopLine=504
-Cursor=42081
+TopLine=592
+Cursor=51325
 
 [Frame1]
 Flags=0
