@@ -49,7 +49,7 @@ The scattered electric field from a generally-accelerated electron moving at $\v
  \dot{\beta} = \frac{d}{dt}\left(\gamma m_e \vec{v}\right) = -e\left(\vec{E}_i + \vec{v} \times \vec{B}_i\right)
 \end{equation}
 
-\noindent thus
+\noindent where $\gamma = \left(1-\beta^2\right)^{-1/2}$ is a relativistic scale factor.  Thus
 
 \begin{equation}\label{eq:betadot2}
  m_e \gamma \dot{\beta} + \gamma^3 m_e \beta \left(\vec{\beta}\cdot\dot{\beta}\right) = -e \left(\frac{\vec{E}_i}{c} + \vec{\beta}\times\vec{B}_i\right)
@@ -325,7 +325,59 @@ Although the $n_e$ and $T_e$ measurements from Thomson scattering require carefu
 
 \section{Fast Diagnostics}\label{sec:app_fast}
 
+In addition to the high spatial resolution necessary to diagnose the pedestal profile -- provided by the edge Thomson Scattering system -- a suite of diagnostics with high time resolution is desirable to capture rapid variations in plasma parameters near the pedestal.  For our purposes, we focus on the electron-cyclotron emission (ECE) and $H_\alpha$ emission diagnostics.  ECE provides fast measurement of local electron temperature, useful to track the impact of transient events like ELM crashes or sawtooth heat pulses on the pedestal temperature.  $H_\alpha$ line emission in the plasma edge provides a measurement of density expelled into the plasma exhaust, marking both the particle transport changes during high-confinement modes and transient density bursts into the SOL during ELM crashes.
+
 \subsection{Electron-Cyclotron Emission}\label{subsec:app_ece}
+
+Electron-cyclotron emission, or ECE \cite[\S 5.2]{Hutchinson}, arises from the radiation driven by gyro motion of electrons in a magnetized plasma.  Relativistically, the electron motion is described by
+
+\begin{equation}
+ \frac{d}{dt}\left(\gamma m_e \vec{v} \right) = -e\left(\vec{v} \times \vec{B} \right)
+\end{equation}
+
+\noindent resulting in gyro-motion at the (relativistic) cyclotron frequency
+
+\begin{equation}
+ \omega_c = \frac{eB}{\gamma m_e}
+\end{equation}
+
+While it is conceptually straightforward to substitute this motion into the Lienard-Wiechert potentials, \cref{eq:LienardWiechert}, the complexity of the motion results in a rather intractible general form for the radiation even for a single electron, requiring an infinite sum of Bessel functions to characterize the harmonics of the radiation.  Fortunately, ECE systems may exploit the trait that electrons undergoing gyro-motion will also \emph{absorb} radiation at the same frequency as their emitted radiation.  Over a given path $s$ through the plasma, the absorption is governed by the absorption coefficient $\alpha(\nu)$ (fractional absorption per unit path length), with which the radiated intensity $I(\nu)$ is given by
+
+\begin{equation}
+ \frac{dI}{ds} = j(\nu) - I \alpha(\nu)
+\end{equation}
+
+\noindent where $j(\nu)$ is the frequency-dependence emissivity.  For two points $s_1$, $s_2$ along a path, this is solved by
+
+\begin{equation}
+ \begin{aligned}
+  I(s_2) &= I(s_1) e^{\tau_1 - \tau_2} + \int_{s_1}^{s_2} j(\nu) e^{\tau - \tau_2} \;ds\\
+  \tau &\equiv \int^s \alpha(\nu) \;ds
+ \end{aligned}
+\end{equation}
+
+\noindent for the optical depth $\tau$.  When the optical depth for a given path $\tau_{21} \equiv \tau_1 - \tau_2$ satisfies $\tau_{21} \gg 1$, the plasma within the path absorbs all radiation incident upon it -- it may then be treated as optically black, with the radiation given by the blackbody intensity
+\begin{equation}\label{eq:blackbody}
+ I(\nu) = \frac{\nu^2}{c^2} \frac{h\nu}{e^{h\nu/T} - 1} \approx \frac{\nu^2 T}{c^2}
+\end{equation}
+
+\noindent with the approximation holding for $h\nu \ll T$.  In a broad range of tokamak plasma conditions, the first few harmonics will be optically thick, meaning that the intensity of those harmonics is a direct, straightforward measurement of the electron temperature.
+
+This analysis must be modified somewhat to account for a spatially-varying magnetic field (for example, the $B_T \sim 1/R$ variation in a tokamak).  Fortunately, for a given frequency $\nu_0$ the emission is only strong close to the position of exact resonance.  Through this resonance layer at location $s_0$, the optical depth for a given harmonic $m$ is given by
+
+\begin{equation}
+ \tau_m = \frac{\alpha_m(s_0)}{m\left|d\omega_c/ds\right|}
+\end{equation}
+
+\noindent with the emission given by
+
+\begin{equation}
+ I(\nu_0) = \frac{\nu_0^2 T(s_0)}{c^2} \left( 1 - e^{-\tau_m} \right)
+\end{equation}
+
+\noindent Thus electron-cyclotron emission in a tokamak allows easy measurement of electron temperature.  By observing emission within a given frequency band, the measurement may be localized to a resonance layer, the location of which is calculated by the known magnetic field variation $d\omega_c/ds$.
+
+\noindent \note{dig up refs for C-Mod ECE system}
 
 \subsection{$H_\alpha$ Emission}\label{subsec:app_halpha}
 

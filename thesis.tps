@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\ModelingTheory.tex
+Document=FrontBackmatter\Diagnostics.tex
 
 [Frame0_View0,0]
-TopLine=11
-Cursor=4210
+TopLine=513
+Cursor=31474
 
 [Frame1]
 Flags=0
