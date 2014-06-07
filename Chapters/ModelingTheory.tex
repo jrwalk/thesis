@@ -4,7 +4,29 @@ While a number of high-performance regimes (described in \cref{ch:HighPerformanc
 
 \section{Early Models}\label{sec:mod_early}
 
-\gnote{needs better title...}Initial efforts in understanding the pedestal took a variety of approaches, including models built from fairly simple \emph{ans\:atze} for the physics determining the pedestal structure.  Several of these approaches are detailed here.  Overviews of these models may also be found in \cite[\S 2]{Hubbard2000,Hughes2005}.
+\gnote{needs better title...}Initial efforts in understanding the pedestal took a variety of approaches, including models built from fairly simple \emph{ans\"{a}tze} for the physics determining the pedestal structure.  Several of these approaches are detailed here.  Overviews of these models may also be found in \cite[\S 2]{Hubbard2000,Hughes2005}.
+
+\subsection{Empirical Observations}\label{subsec:mod_empirical}
+
+Absent a firm understanding of the physics underlying the pedestal structure, experimental efforts have sought to characterize the pedestal in terms of simple scalings with engineering parameters.  The pedestal width, in particular, presented significant difficulty in this regard, as it tends to be quite robust, varying only over a narrow range on a given machine \cite{Maggi2010} -- observations on JET \cite{Breger1998} and Alcator C-Mod \cite{Hughes2002,Hughes2007a} found minimal variation of the pedestal width with plasma current or magnetic field, although a somewhat broader pedestal was observed at low current and with strong shaping on C-Mod \cite{Hughes2007,Hughes2007a}.  Accordingly, the measured gradients in density, temperature, and pressure in the steepest region of the pedestal trend linearly with the corresponding value at the pedestal top \cite{Breger1998,Hughes2007a}.
+
+Multivariate dependences on engineering parameters may be explored with a reasonably general approach via power-law scalings, fitting pedestal data to scalings agnostic of any assumed underlying physics.  Suttrop \emph{et al.} \cite{Suttrop1997} found for ASDEX Upgrade pedestals
+
+\begin{equation}
+ \nabla p \sim B_T^{-0.31} \; P_{tot}^{0.16} \; \overline{n}_e^{-0.1} \; I_p^{2.1}
+\end{equation}
+
+\noindent A similar approach on C-Mod using an extensive dataset of EDA and ELM-free H-modes \cite{Hughes2002} found
+
+\begin{equation}\label{eq:pedfits}
+ \begin{aligned}
+  n_{e,ped} &\sim I_p^{0.95} \; \overline{n}_{e,L}^{0.39} \; B_T^{-0.46}\\
+  T_{e,ped} &\sim I_p^{0.95} \; \overline{n}_{e,L}^{-0.78} \; B_T^{0.80} \; P_{net}^{0.64}\\
+  p_{e,ped} &\sim I_p^{1.98} \; \overline{n}_{e,L}^{-0.56} \; P_{net}^{0.48}
+ \end{aligned}
+\end{equation}
+
+\noindent (here $\overline{n}_{e,L}$ is the L-mode target density, as pedestal density is not readily controllable in EDA H-mode).  However, later studies asserted that the magnetic-field dependence was overstated in the above \cite{Hughes2006}.  While these empirical models perform reasonably well on their respective experimental data, confident extrapolation to ITER-scale operation requires a physics-based understanding of the pedestal structure.
 
 \subsection{Neutral Penetration \& the Density Pedestal}\label{subsec:mod_neutral}
 
@@ -33,15 +55,9 @@ Due to the importance in the edge $E_r$ well in pedestal formation, modeling eff
 
 \noindent where $S$ is the squeezing factor and $\omega_{ci,p}$ is the ion cyclotron frequency evaluated with the poloidal field.  The model is further refined by Itoh \& Itoh \cite{Itoh1996} to include the broadening effects of viscosity shear.  The predicted trend is observed in ELM-free H-modes on JT-60U \cite{Hatae1998}, with $\Delta \approx 3.3 \sqrt{\varepsilon} \rho_{i,pol}$; however, as the squeezing factor $S$ is estimated to be near-unity, the pedestal width is broader by a factor of $\sim 3.3$ than the $\sim \sqrt{\varepsilon} \rho_{i,pol}$ banana width.  ELMy H-modes on JT-60U exhibit a similar scaling at weak shaping, with a broader pedestal and additional safety factor dependence $\Delta \approx 5 \rho_{i,pol} q_{95}^{-0.3}$ at higher triangularity \cite{Kamada1999}.
 
-However, observations on other machines contradict these results.  Depending on the calculation method of growth rate suppression by $\vec{E}\times\vec{B}$ sheared flow, the pedestal width may scale with the gyroradius anywhere from $\Delta \sim \left(\rho^*\right)^{1/2}$ to $\Delta \sim \rho^*$, where $\rho^*$ indicates the gyroradius normalized to the plasma minor radius \cite{Onjun2002,Beurskens2011}.  
+However, other predictions and experimental observations contradict these results.  Depending on the calculation method of growth rate suppression by $\vec{E}\times\vec{B}$ sheared flow, the pedestal width may scale with the gyroradius anywhere from $\Delta \sim \left(\rho^*\right)^{1/2}$ to $\Delta \sim \rho^*$, where $\rho^*$ indicates the gyroradius normalized to the plasma minor radius \cite{Onjun2002,Beurskens2011}.  Alternately, stabilization of drift-ballooning modes leads to a predicted dependence of $\Delta \sim \rho_{i,pol}^{2/3}$ \cite{Wilson1997}; similarly, diamagnetic stabilization in the pedestal leads to the prediction of $\Delta \sim I_p^2 \rho_{i,pol}^{2/3}$ \cite{Rogers1999}.  Observations on DIII-D \cite{Osborne1998} found a dependence of $\Delta/R \sim (\rho_{i,pol}/R)^{0.67}$, while observations on ASDEX Upgrade \cite{Beurskens2011,Suttrop2000a} found no gyroradius dependence for the pedestal width.
 
-Distinguishing between these scalings is difficult given the diagnostic complications inherent in pedestal measurements, and the narrow range over which $\rho^*$ or the pedestal and $E_r$ well width vary on a given machine \cite{Gohil1998,Maggi2010}.
-
-\noindent\note{other gyroradius models}
-
-\subsection{Empirical Observations}\label{subsec:mod_empirical}
-
-\nicesectionending
+Distinguishing between these scalings is difficult given the diagnostic complications inherent in pedestal measurements, and the narrow range over which $\rho_i$ or the pedestal and $E_r$ well width vary on a given machine \cite{Gohil1998,Maggi2010}.  Moreover, alternate models propose a scaling with poloidal beta at the pedestal top, rather than poloidal gyroradius, with trends of width of $\Delta \sim \beta_{p,ped}^{0.4}$ to $\sim \beta_{p,ped}^{0.5}$ observed on DIII-D \cite{Osborne1998,Groebner1998a}, JET \cite{Maggi2010}, JT=60U \cite{Urano2008}, and ASDEX Upgrade \cite{Beurskens2011}.  Due to the strong covariance between $\rho_{i,pol} \sim \sqrt{mT}/I_p$ and $\sqrt{\beta_{p,ped}} \sim \sqrt{nT}/I_p$ these trends are quite difficult to separate.  However, dedicated experiments to separate the two, either via pumping to vary density and temperature at fixed pressure, exploiting the density dependence in $\beta_{p,ped}$ \cite{Osborne1998}, or via isotope variation targeting the mass dependence in $\rho_{i,pol}$ \cite{Urano2008,Saibene1999}, found the $\beta_{p,ped}$ scaling to be the better predictor, with a weaker secondary gyroradius dependence $\Delta \sim \rho_{i,pol}^{0.2} \beta_{p,ped}^{0.5}$ \cite{Urano2008,Maggi2010}.  The physics underlying the $\Delta \sim \sqrt{\beta_{p,ped}}$ scaling will be discussed in detail in \cref{sec:mod_turbulence}.\nicesectionending
 
 \section{MHD Stability: Peeling-Ballooning Modes}\label{sec:mod_pb}
 
@@ -58,11 +74,16 @@ Distinguishing between these scalings is difficult given the diagnostic complica
 
 \nicesectionending
 
-\section{Turbulent Modeling}\label{sec:mod_turbulence}
+\section{Kinetic-Ballooning Turbulence Modeling}\label{sec:mod_turbulence}
 
 \nicesectionending
 
 \section{The EPED Model}\label{sec:mod_eped}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[Illustration of the peeling-ballooning MHD and KBM constraints used in the EPED model.]{Illustration of the peeling-ballooning MHD and kinetic-ballooning turbulent constraints used in the EPED model.  The peeling-ballooning constraint, calculated by ELITE, results in a trend roughly of $p_{ped} \sim \Delta_\psi^{3/4}$, while the KBM width constraint calculated via the ballooning-critical pedestal (BCP) technique sets $p_{ped} \sim \Delta_\psi^{2}$.  The unique solution to these constraints is the EPED prediction for the pedestal width and height.  The prediction is here shown compared to the measured pedestal from DIII-D shot 132003 (reproduced from \cite{Snyder2011}) \note{get permission}}}{\includegraphics[width=100mm]{graphics/ModelingTheory/epedcartoon.pdf}}
+\end{figure}
 
 \begin{figure}
  \pushtooutside

@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\Elmy.tex
+Document=Chapters\ModelingTheory.tex
 
 [Frame0_View0,0]
-TopLine=592
-Cursor=51325
+TopLine=11
+Cursor=4210
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=84
+TopLine=0
 Cursor=940
 
 [SessionInfo]
