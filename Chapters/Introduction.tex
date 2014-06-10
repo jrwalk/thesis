@@ -213,7 +213,7 @@ Due to its regular, planar magnetic coils and continuous plasma current, tokamak
 \noindent As the plasma temperature rapidly equilibrates along field lines, the temperature is also a flux function to good approximation.  It is useful, then, to picture the confined plasma as a series of closed, nested surfaces of constant $\psi$, on which the plasma is trapped (see \cref{fig:intro_shaping}).  In practice, these contours are calculated via a numerical solution of \cref{eq:gradshafranov} by an equilibrium solver such as the EFIT code \cite{Lao1985}.  For flux functions (\ie constant parameters on these flux surfaces), this explicitly removes the dependence on the poloidal angle $\theta$ -- the poloidal flux $\psi$ is thus a useful one-dimensional abscissa derived directly from the magnetic geometry (thus independent of the physical scale of the tokamak and useful for cross-machine comparisons) for the profiles of most parameters of interest, and shall be used thus for the balance of this thesis.
 
 Using outer poloidal field coils (shown in \cref{fig:intro_tokamak}), the tokamak operator may push the plasma into a non-circular shape, with beneficial effects on plasma performance and stability.  In general, flux surfaces sufficiently far from the plasma core will not close on themselves, instead intersecting the wall; the boundary between closed, nested surfaces and these open surfaces is termed the \emph{last closed flux surface} or LCFS.  With sufficient shaping, the operator may generate a null point, the \emph{X-point}, in the LCFS where the poloidal field is zero, splitting the LCFS (also called the \emph{separatrix} in such configurations) into a minimally open surface with ``legs'' contacting the wall.  This magnetic configuration is illustrated in \cref{fig:intro_shaping}, along with a diagram defining the typical plasma shaping parameters: elongation $\kappa$ and upper and lower triangularity $\delta_u$, $\delta_l$.  As the plasma diffuses outwards, it eventually crosses the LCFS and enters 
-open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then streams freely along these open magnetic field lines until it contacts the wall.  By maintaining an X-point, the operator may steer this plasma exhaust into a section of the tokamak, the \emph{divertor} \cite{Wesson2011}\gnote{find section in Wesson}, that is designed to handle this high heat flux -- a necessary feature to handle reactor-scale exhaust in a tokamak.\nicesectionending
+open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then streams freely along these open magnetic field lines until it contacts the wall.  By maintaining an X-point, the operator may steer this plasma exhaust into a section of the tokamak, the \emph{divertor} \cite{Lipschultz2007,Lipschultz2007a,Titus2009}, that is designed to handle this high heat flux -- a necessary feature to handle reactor-scale exhaust in a tokamak.\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -243,15 +243,15 @@ open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then stream
    \end{tabular}}
 \end{wraptable}
 
-The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator series of tokamak experiments were designed as compact, high-field tokamaks.  Despite its small physical size ($\SI{67}{\centi\meter}$ major radius, $\SI{22}{\centi\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of reaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$).  This compact design is enabled by a very high toroidal magnetic field driven by liquid-Nitrogen-cooled copper coils, reaching as high as $\SI{8.1}{\tesla}$, with typical operation near $\SI{5.5}{\tesla}$, allowing reactor-relevant research in a small, cost-effective machine.  C-Mod plasmas are primarily heated by ion-cyclotron (ICRF) heating \cite{Takase1996}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of 
-lower-hybrid resonance (LHRF) power used for heating and DC current drive \cite{Wilson2009}, providing exceptionally high power density in the $\sim \SI{1.1}{\meter\cubed}$ plasma.  A cutaway view of C-Mod, including support structures and the concrete ``igloo'' housing the cooling systems, is visible in \cref{fig:alcator}.  A detailed and annotated view of the C-Mod cross-section is shown in \cref{fig:alcator2}.
+The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator tokamak experiments were designed as compact, high-field tokamaks.  Despite its small physical size ($\SI{67}{\centi\meter}$ major radius, $\SI{22}{\centi\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of approaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$).  This compact design is enabled by a very high toroidal magnetic field driven by liquid-Nitrogen-cooled copper coils, reaching as high as $\SI{8.1}{\tesla}$, with typical operation near $\SI{5.5}{\tesla}$, allowing reactor-relevant research in a small, cost-effective machine.  C-Mod plasmas are primarily heated by RF heating in the ion-cyclotron range of frequencies (ICRF) \cite{Takase1996}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of 
+lower-hybrid resonance (LHRF) power used for heating and non-inductive current drive \cite{Wilson2009}, providing exceptionally high power density in the $\sim \SI{1.1}{\meter\cubed}$ plasma.  A cutaway view of C-Mod, including support structures and the concrete ``igloo'' housing the cooling systems, is visible in \cref{fig:alcator}.  A detailed and annotated view of the C-Mod cross-section is shown in \cref{fig:alcator2}.
 
 \begin{figure}[t]
  \pushtooutside
  \ffigbox[\FBwidth]{\caption[Labeled cross-section of the C-Mod vacuum vessel.]{Cross-section of the C-Mod vacuum vessel, cryostat and diagnostic access ports, with toroidal-field and equilibrium-field magnetic coils labeled.  Also shown is the plasma position in a typical LSN shape, with strike points in the lower divertor shown..}\label{fig:alcator2}}{\includegraphics[width=150mm]{graphics/Introduction/cmod_xsec.pdf}}
 \end{figure}
 
-Due to their high plasma pressure and power density, C-Mod plasmas must exhaust a large heat flux, reaching levels comparable to that anticipated for ITER \cite{Loarte2007,Terry2007,LaBombard2011}.  To handle this heat flux, C-Mod operates entirely with high-$Z$ metal materials (primarily Molybdenum and Tungsten) for all plasma-facing surfaces.  In addition to its high heat tolerance and low erosion rates due to plasma contact, metal walls provide low retention of fuel gas at the edge -- metal walls are thus the leading candidate for ITER- and reactor-scale plasma-facing components.
+Due to their high plasma pressure and power density, C-Mod plasmas must exhaust a large heat flux, reaching levels comparable to that anticipated for ITER \cite{Loarte2007,Terry2007,LaBombard2011}.  To handle this heat flux, C-Mod operates entirely with high-$Z$ metal materials (primarily Molybdenum and Tungsten) for all plasma-facing surfaces.  In addition to its high heat tolerance and low erosion rates due to plasma contact, metal walls provide relatively low retention of fuel gas at the edge -- metal walls are thus the leading candidate for ITER- and reactor-scale plasma-facing components.
 
 The presence of a full high-$Z$ lower divertor and upper strike plate, as well as metal limiter walls, gives C-Mod great flexibility in attainable plasma shapes -- plasmas may be run in a lower-single null (LSN) shape with the plasma exhaust striking the lower divertor (shown in \cref{fig:alcator2}, upper-single null (USN) exhausting into the upper strike plate, or in a limited shape where the scrape-off layer directly impinges on the plasma-facing wall.\nicesectionending
 
@@ -264,33 +264,33 @@ The presence of a full high-$Z$ lower divertor and upper strike plate, as well a
 The rate at which a fusion plasma bleeds off heat is described by a characteristic time scale, the energy confinement time $\tau_E$.  From basic power balance for the total plasma stored energy $W_p$,
 
 \begin{equation}\label{eq:powerbalance}
- \frac{dW_p}{dt} = P_{in} - P_{out} = P_{in} - P_{rad} - \frac{W_p}{\tau_E}
+ \frac{dW_p}{dt} = P_{in} - P_{out} = P_{tot} - \frac{W_p}{\tau_E}
 \end{equation}
 
-\noindent where $P_{in}$ is input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost into the blanket, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  $P_{rad}$ denotes the power loss due to radiative (primarily, Bremsstrahlung) effects, which are considered separately from the transport-driven heat losses encoded by $W_p/\tau_E$.  It is common to encapsulate these heat source and sink terms into a single net power,
-
-\begin{equation}\label{eq:pnet}
- P_{net} = P_{Ohm} + P_{aux} + P_{fusion} - P_{rad} - \frac{dW_p}{dt}
-\end{equation}
-
-\noindent The radiative power loss is occasionally difficult to consistently determine experimentally, is in any case largely independent of operator control (as in the case of auxiliary heating power, or Ohmic power determined by the choice of plasma current) or bulk plasma performance (as in the suppression of turbulent heat losses in high-performance operation), and is relatively negligible at fusion conditions due to its weak scaling with temperature.  As such, it is alternately common to express the power as
+\noindent where $P_{in} = P_{tot}$ is the total input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost into the blanket, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  It is common to encapsulate these heat source and sink terms into a single ``loss'' power,
 
 \begin{equation}\label{eq:ploss}
+ P_{loss} = P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} = P_{tot} - \frac{dW_p}{dt}
+\end{equation}
+
+\noindent While $P_{loss}$ is commonly used as a parameter of merit for confinement studies, it is also important to account for the radiated power $P_{rad}$, the heat loss due to radiative (primarily Bremsstrahlung) rather than transport-driven effects encoded by $W_p/\tau_E$.  This is expressed in the net power,
+
+\begin{equation}\label{eq:pnet}
  \begin{aligned}
- P_{loss} &= P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} \\
+ P_{net} &= P_{Ohm} + P_{aux} + P_{fusion} - P_{rad} - \frac{dW_p}{dt} \\
  P_{net} &= P_{loss} - P_{rad}
  \end{aligned}
 \end{equation}
 
-\noindent These definitions allow a simple relation for the experimental energy confinement time,
+\noindent The radiative power loss is commonly difficult to consistently determine experimentally, and is only partially subject to operator control, as the radiation is due both to intrinsic impurities from plasma-facing materials and intentionally-introduced high-$Z$ impurities for radiation control.  As such, $P_{loss}$ is typically used for a simply relation for the experimental energy confinement time,
 
 \begin{equation}\label{eq:tauE}
- \tau_E = \frac{W_p}{P_{net}}
+ \tau_E = \frac{W_p}{P_{loss}}
 \end{equation}
 
-\noindent In practice, the physics determining energy confinement are extremely complex; as such, working models for calculating $\tau_E$ from bulk parameters typically require an empirical power-law scaling.
+\noindent Nevertheless an understanding of the radiated power is necessary for reactor operation.  Radiated power from the core is deleterious to performance, driving decreased $\tau_E$ at higher radiated-power fractions $P_{rad}/P_{tot}$ \cite{Greenwald1997}.  Edge radiation, conversely, is essential for reactor operation to reduce the heat loads incident on the divertor, with edge radiated power fractions in excess of 50\% predicted to be necessary for ITER \cite{Loarte2007}.  In practice, the physics determining energy confinement are extremely complex; as such, working models for calculating $\tau_E$ from bulk parameters typically require an empirical power-law scaling.
 
-A closer examination of the power balance equation, \cref{eq:powerbalance}, reveals an important figure of merit.  For a DT-burning fusion reactor, steady-state operation with plasma temperatures sustained by fusion self-heating (termed ``ignition'') is highly desirable.  At these conditions, Bremsstrahlung losses are small, so \cref{eq:powerbalance} reduces to simply
+A closer examination of the power balance equation, \cref{eq:powerbalance}, reveals an important figure of merit.  For a DT-burning fusion reactor, steady-state operation with plasma temperatures sustained by fusion self-heating (termed ``ignition'') is highly desirable.  At these conditions, the heating power is dominated by $P_{\alpha}$; for steady-state operation ($dW_p/dt \rightarrow 0$), \cref{eq:powerbalance} reduces to
 
 \begin{equation}\label{eq:powerbalance2}
  \frac{W_p}{\tau_E} = P_{\alpha}
@@ -326,25 +326,25 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  n_e \tau_E = \frac{12 T_e}{\langle \sigma v \rangle E_\alpha}
 \end{equation}
 
-\noindent Scaling both sides by $2T_e$ gives the ``triple product,''
+\noindent Multiplying both sides by $2T_e$ gives the ``triple product,''
 
 \begin{equation}\label{eq:tripleproduct}
  2 n_e T_e \tau_E = p \tau_E = \frac{24 T_e^2}{\langle \sigma v \rangle E_\alpha}
 \end{equation}
 
-\noindent an important figure of merit for a reactor that is optimized at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor \cite{Meade2010}.
+\noindent an important figure of merit for a reactor that is optimized for $\si{D}-\si{T}$ fusion at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor \cite{Meade2010}.
 
-However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of the normalized pressure \cite[\S~6.16]{Wesson2011}
+However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of \cite[\S~6.16]{Wesson2011}
 
 \begin{equation}\label{eq:beta}
  \beta = \frac{2 \mu_0 p}{B^2}
 \end{equation}
 
-\noindent which encodes the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Although the maximum stable pressure may be increased with higher plasma current and toroidal field (motivating high-field design for tokamaks), reactor-scale operation requires increased energy confinement -- that is, higher values for $\tau_E$ -- to reach the triple-product target.
+\noindent the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Thus for a given $B_T$, set by design and operational limits, there is a maximum obtainable pressure, necessitating increased energy confinement -- that is, higher values for $\tau_E$ -- to reach the triple-product target for ignition.
 
 \subsection{Transport Barriers}\label{subsec:intro_barriers}
 
-Global improvement to energy confinement may be achieved through local modification of the transport of energy or particles out of the plasma, achieved via structures termed \emph{transport barriers}.  While the physics driving the formation of transport barriers is not entirely understood\gnote{how deep to go with this?}, the effect is evidently caused by sheared flows in the plasma -- these break up the turbulent ``eddies'' driving much of the energy or particle transport through the plasma, locally reducing transport drive in the sheared region.  
+Global improvement to energy confinement may be achieved through local modification of the transport of energy or particles out of the plasma, achieved via regions termed \emph{transport barriers}.  While the physics driving the formation of transport barriers is not entirely understood, the effect is evidently caused by sheared flows in the plasma -- these break up the turbulent ``eddies'' driving much of the energy or particle transport through the plasma, locally reducing transport drive in the sheared region.  
 
 The effect on the transport is clearly evident from a diffusive transport model, given by
 
@@ -368,17 +368,17 @@ The effect on the transport is clearly evident from a diffusive transport model,
 
 Of particular interest is the \emph{edge transport barrier}, also termed the \emph{pedestal} \cite{Wagner1982,Greenwald1997}.  A number of high-performance tokamak regimes have been established, exploiting the formation of a pedestal to suppress transport and boost global energy confinement to levels necessary to reach the triple-product target (\cref{eq:tripleproduct}) for an ignited plasma.  The understanding of these high-performance regimes, commonly referred to as ``high-confinement'' or H-modes, and their extrapolation to ITER and reactor-scale devices has been a major focus of recent tokamak research.
 
-However, the formation of the pedestal also presents challenges that must be addressed for reactor-scale operation.  Increased particle confinement causes the plasma to retain impurities -- particularly ionized wall materials -- along with fuel ions.  These impurities both dilute the fuel, slowing the fusion reaction rate\gnote{show equation for this?}, and drive elevated radiative losses due to their higher nuclear charge (note the strong charge dependence in \cref{eq:brems}).  This ultimately leads to a \emph{radiative collapse}\gnote{cite for this?}, dropping the plasma out of H-mode -- thus, stationary (\ie non-transient) operation in H-mode requires a means to regulate particle confinement and flush impurities from the plasma core.  
+However, the formation of the pedestal also presents challenges that must be addressed for reactor-scale operation.  Increased particle confinement causes the plasma to retain impurities -- particularly ionized wall materials -- along with fuel ions.  Low-$Z$ impurities, particularly the ${}^4\si{He}$ ``fusion ash'', tend to slow the fusion reaction rate due to fuel dilution, while high-$Z$ impurities drive elevated radiative losses (note the strong charge dependence for Bremsstrahlung radiation, \cref{eq:brems}).  This ultimately leads to a \emph{radiative collapse} \cite{Greenwald1997,Greenwald2007}, dropping the plasma out of H-mode -- thus, stationary (\ie non-transient) operation in H-mode requires a means to regulate particle confinement and flush impurities from the plasma core.  
 
-The steep gradient in the plasma pressure generated in the pedestal has been shown to drive \emph{Edge-Localized Modes} (ELMs) \cite{Zohm1996}\gnote{more cites?}, instabilities that cause the pedestal to periodically ``crash,'' expelling particles and energy into the scrape-off layer.  The smaller ELM bursts found in existing experiments provide the desired level of particle transport for stationary operation -- thus ITER operation is designed considering an H-mode with ELMs as the baseline for operation \cite{ITER1999,Shimada2007}.  However, on ITER-scale devices the heat pulses from ELMs drive unacceptable levels of transient thermal loading and erosion damage to wall and divertor materials \cite{Loarte2003,Federici2003}.  As such, high-performance operation on ITER- or reactor-scale devices requires mitigation or elimination of large, deleterious ELMs, either through externally-applied controls or physics-based stabilization.\nicesectionending
+The steep gradient in the plasma pressure generated in the pedestal has been shown to drive \emph{Edge-Localized Modes} (ELMs) \cite{Zohm1996}, instabilities that cause the pedestal to periodically ``crash,'' expelling particles and energy into the scrape-off layer.  The smaller ELM bursts found in existing experiments provide the desired level of particle transport for stationary operation -- thus ITER operation is designed considering an H-mode with ELMs as the baseline for operation \cite{ITER1999,Shimada2007}.  However, on ITER-scale devices the heat pulses from ELMs drive unacceptable levels of transient thermal loading and erosion damage to wall and divertor materials \cite{Loarte2003,Federici2003}.  As such, high-performance operation on ITER- or reactor-scale devices requires mitigation or elimination of large, deleterious ELMs, either through externally-applied controls or physics-based stabilization.\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Goals \& Outline}\label{sec:intro_outline}
 
-This thesis will present results in the \emph{I-mode}, a novel high-performance regime pioneered on Alcator C-Mod.  I-mode is notable for its apparent decoupling of energy and particle transport, reaching H-mode-like energy confinement while maintaining L-mode levels of particle and impurity transport, achieving the desired flushing of impurities from the plasma.  This manifests in the edge with the formation of an H-mode-like temperature pedestal without the accompanying density pedestal found in conventional H-modes.  I-mode also appears to be naturally free of large ELMs, avoiding the need for complex externally-applied controls, and to exhibit highly favorable scalings of energy confinement with heating power.
+This thesis will present results in the \emph{I-mode}, a novel high-performance regime pioneered on Alcator C-Mod.  I-mode is notable for its apparent decoupling of energy and particle transport, reaching H-mode-like energy confinement while maintaining L-mode levels of particle and impurity transport, achieving the desired flushing of impurities from the plasma.  This is manifested in the edge with the formation of an H-mode-like temperature pedestal without the accompanying density pedestal found in conventional H-modes.  I-mode also appears to be naturally free of large ELMs, avoiding the need for complex externally-applied controls, and to exhibit highly favorable scalings of energy confinement with heating power.
 
-A firm understanding of the structure and stability of the pedestal is essential to extend I-mode operation to larger devices.  This thesis will describe a combined approach to the understanding of the pedestal in I-mode, using both direct observations of pedestal structure and numerical modeling of the pedestal stability against identified triggers for large, deleterious ELMs, to better establish the operating space and reliability of I-mode for reactor operation.\gnote{reword this}  The balance of the thesis is arranged as follows:
+A firm understanding of the structure and stability of the pedestal is essential to extend I-mode operation to larger devices.  This thesis will describe a combined approach to the understanding of the pedestal in I-mode, using both direct observations of pedestal structure and numerical modeling of the pedestal stability against MHD triggers for large, deleterious ELMs.  The applicability of I-mode to reactor operation can thereby be evaluated.  The balance of this thesis is arranged as follows:
 
 \begin{description}
  \item[Chapter \ref{ch:HighPerformance}: High-Performance Regimes] \hfill \\
@@ -399,6 +399,5 @@ A firm understanding of the structure and stability of the pedestal is essential
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% do per-chapter bibliographies, or one big one?
 \bibliographystyle{../plainurl}
 \bibliography{../references} 
