@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=FrontBackmatter\Diagnostics.tex
+Document=Chapters\Introduction.tex
 
 [Frame0_View0,0]
-TopLine=513
-Cursor=31474
+TopLine=36
+Cursor=5252
 
 [Frame1]
 Flags=0
@@ -35,8 +35,8 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=0
-Cursor=940
+TopLine=93
+Cursor=5059
 
 [SessionInfo]
 FrameCount=2
