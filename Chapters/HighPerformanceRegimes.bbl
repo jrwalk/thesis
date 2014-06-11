@@ -478,12 +478,31 @@ A~Kirk, I~T Chapman, J~Harrison, Yueqiang Liu, E~Nardon et~al.
   edge-localized modes in single null {H}-mode plasmas in {MAST}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 55(1):015006, 2013.
 
+\bibitem{Chapman2012}
+I~T Chapman, A~Kirk, C~J Ham, J~R Harrison, Y~Q Liu et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.480174} {Towards
+  understanding edge localised mode mitigation by resonant magnetic
+  perturbations in {MAST}}.
+\newblock {\em Physics of Plasmas}, 57(5):294, 2012.
+
 \bibitem{Baylor2013}
 L.~R. Baylor, N.~Commaux, T.~C. Jernigan, S.~J. Meitner, S.~K. Combs et~al.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4818772}
   {Reduction of edge localized mode intensity on {DIII-D} by on-demand
   triggering with high frequency pellet injection and implications for {ITER}}.
 \newblock {\em Physics of Plasmas}, 20(8):--, 2013.
+
+\bibitem{Lang2011}
+P.T. Lang, A.~Alonso, B.~Alper, E.~Belonohy, A.~Boboc et~al.
+\newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/51/3/033010} {{ELM}
+  pacing investigations at {JET} with the new pellet launcher}.
+\newblock {\em Nuclear Fusion}, 51(3):033010, 2011.
+
+\bibitem{Lang2013}
+P.T. Lang, D.~Frigione, A.~G\'araud, T.~Alarcon, P.~Bennett et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073010} {{ELM} pacing
+  and trigger investigations at {JET} with the new {ITER}-like wall}.
+\newblock {\em Nuclear Fusion}, 53(7):073010, 2013.
 
 \bibitem{Suttrop2000a}
 W~Suttrop, O~Gruber, B~Kurzan, H~D Murmann, J~Neuhauser et~al.
