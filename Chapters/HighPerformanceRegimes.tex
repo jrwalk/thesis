@@ -1,6 +1,6 @@
 \chapter{High-Performance Regimes}\label{ch:HighPerformance}
 
-The development of magnetic-confinement fusion into an economical form of power generation is characterized by two seemingly contrary requirements: first, a high level of energy confinement is necessary to reach the desired level of self-heating of the plasma by fusion products, satisfying triple-product requirements (\cref{eq:tripleproduct}).  At the same time, particle transport must be sufficient to avoid the deleterious effects of accumulated helium ``fusion ash'' and other impurities on fusion performance -- particularly important in the case of the high-$Z$ impurities from the metal plasma-facing walls necessary for reactor-scale devices \cite{Loarte2007}\gnote{more cites?}.
+The development of magnetic-confinement fusion into an economical form of power generation is characterized by two seemingly contrary requirements: first, a high level of energy confinement is necessary to reach the desired level of self-heating of the plasma by fusion products, satisfying triple-product requirements (\cref{eq:tripleproduct}).  At the same time, particle transport must be sufficient to avoid the deleterious effects of accumulated helium ``fusion ash'' and other impurities on fusion performance -- particularly important in the case of the high-$Z$ impurities from the metal plasma-facing walls necessary for reactor-scale devices \cite{Loarte2007}.
 
 A number of operating scenarios, collectively termed ``high confinement'' or H-modes\cite{Wagner1982,Keilhacker1984}, satisfying these requirements have been developed.  The ``low confinement'' or L-mode operating baseline of energy confinement is characterized through an extensive multi-machine scaling study \cite{Yushmanov1990} by the ITER-89 scaling,
 
@@ -14,11 +14,11 @@ A number of operating scenarios, collectively termed ``high confinement'' or H-m
  H_{89} = \frac{\tau_E}{\tau_{E,ITER89}}
 \end{equation}
 
-\noindent improved by roughly a factor of two compared to L-mode.\gnote{more specific, cites?}
+\noindent improved by roughly a factor of two compared to L-mode \cite{Greenwald1997}.
 
 This improvement in confinement is due to the formation of a \emph{pedestal}, a transport barrier (see \cref{subsec:intro_barriers}) at the edge that greatly slows the transport of particles and/or energy out of the plasma, and accordingly forms a steep-gradient region in density and/or temperature at the edge.  Pedestal formation is achieved through strongly sheared flows in the plasma edge, driven in part by a radial electric field (the ``$E_r$ well'') and the resulting $\vec{E} \times \vec{B}$ flows in the pedestal.  While this flow is difficult to model due to the short scale lengths inherent to the pedestal \cite{Kagan2010,Landreman2012}, the role of edge $E_r$ and flows has been extensively studied both from an experimental \cite{Groebner1990,Burrell1999,Terry2000,McDermott2009a} and a theoretical \cite{Shaing1989,Biglari1990,Kim1991,Ware1996,Burrell1992} standpoint, as has the role of other edge fluctuations coupling into these flows in driving the transition into H-mode \cite{Schmitz2012}.  As the pedestal structure is known to set a strong constraint on the overall performance in high-confinement regimes \cite{Kinsey2011}, as well as determining the edge stability and heat exhaust properties of the regime, a firm understanding of the pedestal is essential for extrapolation of a high-performance regime to ITER and beyond.
 
-This chapter provides an overview and comparison of different classes of established H-mode operation, particularly regarding their behaviors in the high energy confinement and low particle confinement required for a reactor.  Additionally, observations of Edge-Localized Modes (ELMs) \cite{Zohm1996} are addressed.  We then introduce the access conditions, operation, and global characteristics of \emph{I-mode} -- an alternate high-performance regime with a number of favorable characteristics for reactor operation, and the subject of the balance of this thesis.
+This chapter provides an overview and comparison of different classes of established H-mode operation, particularly regarding their behaviors in the high energy confinement and low particle confinement required for a reactor.  Additionally, observations of Edge-Localized Modes (ELMs) \cite{Zohm1996} are addressed.  We then introduce the access conditions, operation, and global characteristics of \emph{I-mode} -- an alternate high-performance regime with a number of favorable characteristics for reactor operation, and the subject of the majprity of this thesis.
 
 \begin{table*}[h]
  \pushtooutside
@@ -104,87 +104,6 @@ This chapter provides an overview and comparison of different classes of establi
   \\
   \bottomrule
  \end{tabular}}
-%  {\begin{tabular}{lcccccc}
-%   \toprule
-%   \emph{Device} &
-%   $R/a \;[\si{\meter}]$ &
-%   %$a \;[\si{\meter}]$ &
-%   $I_p\;[\si{\mega\ampere}]$ &
-%   $B_T \;[\si{\tesla}]$ &
-%   $\overline{n}_e \;[\SI{e19}{\per\meter\cubed}]$ &
-%   $T_{e0} \;[\si{\kilo\electronvolt}]$ &
-% %   heating &
-%   \emph{refs.}
-%   \\
-%   \midrule
-%   C-Mod &
-%   $\num{0.67/0.22}$ &
-%   %$\num{0.22}$ &
-%   $\le \num{2}$ &
-%   $3-8.1$ &
-%   $\le \num{50}$ &
-%   $\le \num{8}$ &
-% %   ICRF, LHRF &
-%   \cite{Hutchinson1994,Greenwald2007,Greenwald2013}
-%   \\
-%   DIII-D &
-%   $\num{1.67/0.67}$ &
-%   %$\num{0.67}$ &
-%   $1-3$ &
-%   $2.2$ &
-%   $\num{6}$ &
-%   $5-10$ &
-% %   ECRF, NBI &
-%   \cite{Luxon2002,Luxon2005a,Luxon2005}
-%   \\
-%   ASDEX-U &
-%   $\num{1.65/0.5}$ &
-%   %$\num{0.5}$ &
-%   $\sim 1$ &
-%   $3.9$ &
-%   $\num{7.5}$ &
-%   $2-3$ &
-% %   &
-%   \cite{Herrmann2003,Ryter2003,Stroth2013}
-%   \\
-%   JET &
-%   $\num{3.4/0.9}$ &
-%   $3-4$ &
-%   $3.8$ &
-%   $\num{5}$ &
-%   $10-20$ &
-% %   &
-%   \cite{McDonald2008,Romanelli2013}
-%   \\
-%   JT-60U &
-%   $\num{3.4/0.9}$ &
-%   $3-4$ &
-%   $4.8$ &
-%   $\num{5}$ &
-%   $10-20$ &
-% %   &
-%   \cite{Kamada2002,Kitsunezaki2002}
-%   \\
-%   JFT-2M &
-%   $\num{1.3/0.35}$ &
-%   $0.5$ &
-%   $2.2$ &
-%   $\num{5}$ &
-%   $1-2$ &
-% %   &
-%   \cite{Kusama2006,Miura2006}
-%   \\
-%   ITER* &
-%   $\num{6.2/2.0}$ &
-%   $15$ &
-%   $5.3$ &
-%   $\num{10}$ &
-%   $10$ &
-% %   &
-%   \cite{Shimada2007,ITER1999}
-%   \\
-%   \bottomrule
-%  \end{tabular}}
 \end{table*}
 
 \section{ELM-Free H-Mode}\label{sec:hcr_elmfree}
