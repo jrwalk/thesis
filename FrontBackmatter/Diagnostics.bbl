@@ -1,0 +1,71 @@
+\begin{thebibliography}{10}
+
+\bibitem{Sheffield}
+J.~Sheffield.
+\newblock \href {http://books.google.com/books?id=0jFRAAAAMAAJ} {{\em Plasma
+  Scattering of Electromagnetic Radiation}}.
+\newblock Academic Press, 1975.
+
+\bibitem{Hutchinson}
+I.H. Hutchinson.
+\newblock \href {http://books.google.com/books?id=pUUZKLR00RIC} {{\em
+  Principles of Plasma Diagnostics}}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem{Sheffield1972}
+J~Sheffield.
+\newblock \href {http://stacks.iop.org/0032-1028/14/i=8/a=003} {The incoherent
+  scattering of radiation from a high temperature plasma}.
+\newblock {\em Plasma Physics}, 14(8):783, 1972.
+
+\bibitem{Matoba1978}
+T.~Matoba, T.~Itagaki, T.~Yamauchi and A.~Funahashi.
+\newblock \href
+  {http://jjap.jsap.jp/cgi-bin/getarticle?magazine=JJAP&volume=18&page=1127}
+  {Analytical approximations in the theory of relativistic {Thomson} scattering
+  for high temperature fusion plasma}.
+\newblock {\em Japanese Journal of Applied Physics}, 18(6):1127--1133, 1978.
+
+\bibitem{Selden1980}
+A.~C. Selden.
+\newblock \href {http://dx.doi.org/DOI: 10.1016/0375-9601(80)90276-5} {Simple
+  analytic form of the relativistic {Thomson} scattering spectrum}.
+\newblock {\em Physics Letters A}, 79(5-6):405 -- 406, 1980.
+
+\bibitem{Naito1993}
+O.~Naito, H.~Yoshida and T.~Matoba.
+\newblock \href {http://dx.doi.org/10.1063/1.860593} {Analytic formula for
+  fully relativistic {Thomson} scattering spectrum}.
+\newblock {\em Physics of Fluids B: Plasma Physics}, 5(11):4256--4258, 1993.
+
+\bibitem{Watterson1990}
+Reich Watterson and {Kuo-In} Chen.
+\newblock \href {http://dx.doi.org/10.1063/1.1141809} {Status of the {Alcator
+  C-Mod} scanning two-dimensional {Thomson} scattering diagnostic}.
+\newblock {\em Review of Scientific Instruments}, 61(10):2867--2869, 1990.
+
+\bibitem{Mossessian1999}
+D.~A. Mossessian, A.~Hubbard and J.~Irby.
+\newblock \href {http://dx.doi.org/10.1063/1.1149398} {Performance of {Alcator
+  C-Mod} core {Thomson} scattering system}.
+\newblock {\em Review of Scientific Instruments}, 70(1):759--762, 1999.
+
+\bibitem{Hughes2001}
+J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, E.~S. Marmar, D.~Johnson et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1319367} {High-resolution edge
+  {Thomson} scattering measurements on the {Alcator C-Mod} tokamak}.
+\newblock {\em Review of Scientific Instruments}, 72(1):1107--1110, 2001.
+
+\bibitem{Hughes2003}
+J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1532764} {{Thomson} scattering
+  upgrades on {Alcator C-Mod}}.
+\newblock {\em Review of Scientific Instruments}, 74(3):1667--1670, 2003.
+
+\bibitem{Hughes2005}
+Jerry~W. Hughes.
+\newblock \href {http://dspace.mit.edu/handle/1721.1/34436} {{\em Edge
+  Transport Barrier Studies On the {Alcator C-Mod} Tokamak}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2005.
+
+\end{thebibliography}
