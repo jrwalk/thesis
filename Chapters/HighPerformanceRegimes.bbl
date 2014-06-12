@@ -6,6 +6,18 @@ A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
   Power and particle control}.
 \newblock {\em Nuclear Fusion}, 47(6):S203, 2007.
 
+\bibitem{Joffrin2014}
+E.~Joffrin, M.~Baruzzo, M.~Beurskens, C.~Bourdelle, S.~Brezinsek et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/54/i=1/a=013011} {First
+  scenario development with the {JET} new {ITER}-like wall}.
+\newblock {\em Nuclear Fusion}, 54(1):013011, 2014.
+
+\bibitem{Neu2011}
+R~Neu, {ASDEX Upgrade Team}, {EU PWI Taskforce} and {JET EFDA Contributors}.
+\newblock \href {http://stacks.iop.org/0741-3335/53/i=12/a=124040} {Preparing
+  the scientific basis for an all metal {ITER}}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 53(12):124040, 2011.
+
 \bibitem{Wagner1982}
 F.~Wagner, G.~Becker, K.~Behringer, D.~Campbell, A.~Eberhagen et~al.
 \newblock \href {http://dx.doi.org/10.1103/PhysRevLett.49.1408} {Regime of
@@ -277,12 +289,6 @@ G.~Saibene, L.D. Horton, R.~Sartori, B.~Balet, S.~Clement et~al.
   of isotope mass, edge magnetic shear and input power on high density {ELMy}
   {H} modes in {JET}}.
 \newblock {\em Nuclear Fusion}, 39(9):1133, 1999.
-
-\bibitem{Joffrin2014}
-E.~Joffrin, M.~Baruzzo, M.~Beurskens, C.~Bourdelle, S.~Brezinsek et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/54/i=1/a=013011} {First
-  scenario development with the {JET} new {ITER}-like wall}.
-\newblock {\em Nuclear Fusion}, 54(1):013011, 2014.
 
 \bibitem{Christiansen1992}
 J.P. Christiansen, J.G. Cordey, K.~Thomsen, A.~Tanga, J.C. DeBoo et~al.
