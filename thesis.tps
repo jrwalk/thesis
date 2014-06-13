@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=Chapters\HighPerformanceRegimes.tex
 
 [Frame0_View0,0]
-TopLine=138
+TopLine=168
 Cursor=5708
 
 [Frame1]
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=80
+TopLine=67
 Cursor=5059
 
 [SessionInfo]
