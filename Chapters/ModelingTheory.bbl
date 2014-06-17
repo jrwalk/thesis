@@ -196,11 +196,54 @@ D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
   C-Mod}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 44(4):423, 2002.
 
+\bibitem{Snyder2009}
+P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
+\newblock \href {http://dx.doi.org/10.1063/1.3122146} {Development and
+  validation of a predictive model for the pedestal height}.
+\newblock {\em Physics of Plasmas}, 16(5):056118, 2009.
+
+\bibitem{Huysmans2005}
+G~T~A Huysmans.
+\newblock \href {http://stacks.iop.org/0741-3335/47/i=12B/a=S13} {{ELMs}: {MHD}
+  instabilities at the transport barrier}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 47(12B):B165, 2005.
+
+\bibitem{Turnbull2003}
+A~D Turnbull, L~L Lao, T~H Osborne, O~Sauter, E~J Strait et~al.
+\newblock \href {http://stacks.iop.org/0741-3335/45/i=10/a=002} {Edge localized
+  modes in {DIII-D} high performance discharges}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 45(10):1845, 2003.
+
+\bibitem{Medvedev2006}
+S~Yu Medvedev, A~A Martynov, Y~R Martin, O~Sauter and L~Villard.
+\newblock \href {http://stacks.iop.org/0741-3335/48/i=7/a=003} {Edge
+  kink/ballooning mode stability in tokamaks with separatrix}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 48(7):927, 2006.
+
+\bibitem{Kinsey2011}
+J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
+\newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
+  predictions using the {GYRO} verified and experimentally validated trapped
+  gyro-{Landau} fluid transport model}.
+\newblock {\em Nuclear Fusion}, 51(8):083001, 2011.
+
 \bibitem{Snyder2011}
 P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/51/i=10/a=103016} {A
   first-principles predictive model of the pedestal height and width:
   development, testing and {ITER} optimization with the {EPED} model}.
 \newblock {\em Nuclear Fusion}, 51(10):103016, 2011.
+
+\bibitem{Miller1998}
+R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
+\newblock \href {http://dx.doi.org/10.1063/1.872666} {Noncircular, finite
+  aspect ratio, local equilibrium model}.
+\newblock {\em Physics of Plasmas}, 5(4):973--978, 1998.
+
+\bibitem{Troyon1984}
+F~Troyon, R~Gruber, H~Saurenmann, S~Semenzato and S~Succi.
+\newblock \href {http://stacks.iop.org/0741-3335/26/i=1A/a=319} {{MHD}-limits
+  to plasma confinement}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 26(1A):209, 1984.
 
 \end{thebibliography}
