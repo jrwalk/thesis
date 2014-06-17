@@ -220,6 +220,98 @@ S~Yu Medvedev, A~A Martynov, Y~R Martin, O~Sauter and L~Villard.
   kink/ballooning mode stability in tokamaks with separatrix}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 48(7):927, 2006.
 
+\bibitem{Snyder2009a}
+P.B. Snyder, N.~Aiba, M.~Beurskens, R.J. Groebner, L.D. Horton et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/49/i=8/a=085035} {Pedestal
+  stability comparison and {ITER} pedestal prediction}.
+\newblock {\em Nuclear Fusion}, 49(8):085035, 2009.
+
+\bibitem{Wilson2006}
+H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
+\newblock \href {http://stacks.iop.org/0741-3335/48/i=5A/a=S06}
+  {Magneto-hydrodynamic stability of the {H}-mode transport barrier as a model
+  for edge localized modes: an overview}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 48(5A):A71, 2006.
+
+\bibitem{Snyder1999}
+Philip~B. Snyder.
+\newblock \href
+  {http://scholar.google.com/citations?view_op=view_citation&hl=en&user=F-VRDmoAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=F-VRDmoAAAAJ:l7t_Zn2s7bgC}
+  {{\em Gyrofluid Theory and Simulation of Electromagnetic Turbulence and
+  Transport in Tokamak Plasmas}}.
+\newblock PhD thesis, Princeton University, 1999.
+
+\bibitem{Jenko2001}
+F~Jenko and W~Dorland.
+\newblock \href {http://stacks.iop.org/0741-3335/43/i=12A/a=310} {Nonlinear
+  electromagnetic gyrokinetic simulations of tokamak plasmas}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 43(12A):A141, 2001.
+
+\bibitem{Scott2003}
+Bruce~D Scott.
+\newblock \href {http://stacks.iop.org/0741-3335/45/i=12A/a=025} {Computation
+  of electromagnetic turbulence and anomalous transport mechanisms in tokamak
+  plasmas}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 45(12A):A385, 2003.
+
+\bibitem{Candy2005}
+J.~Candy.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1954123} {Beta
+  scaling of transport in microturbulence simulations}.
+\newblock {\em Physics of Plasmas}, 12(7):--, 2005.
+
+\bibitem{Snyder2001}
+P.~B. Snyder and G.~W. Hammett.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.1342029} {Electromagnetic
+  effects on plasma microturbulence and transport}.
+\newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
+
+\bibitem{Groebner2013}
+R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
+  understanding of physics processes in pedestal structure, leading to improved
+  predictive capability for {ITER}}.
+\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
+
+\bibitem{Oyama2005}
+N.~Oyama, Y.~Sakamoto, A.~Isayama, M.~Takechi, P.~Gohil et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/45/i=8/a=014} {Energy loss for
+  grassy {ELMs} and effects of plasma rotation on the {ELM} characteristics in
+  {JT-60U}}.
+\newblock {\em Nuclear Fusion}, 45(8):871, 2005.
+
+\bibitem{Gruber1999}
+O.~Gruber, H.-S. Bosch, S.~Günter, A.~Herrmann, A.~Kallenbach et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/39/i=9Y/a=309} {Overview of
+  {ASDEX Upgrade} results}.
+\newblock {\em Nuclear Fusion}, 39(9Y):1321, 1999.
+
+\bibitem{LaBombard2008}
+B.~LaBombard, J.~W. Hughes, N.~Smick, A.~Graf, K.~Marr et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.2838246} {Critical gradients and
+  plasma flows in the edge plasma of {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 15(5):056106, 2008.
+
+\bibitem{Walk2012}
+J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
+  {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
+  comparison with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
+
+\bibitem{Hughes2013}
+J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=4/a=043016} {Pedestal
+  structure and stability in {H}-mode and {I}-mode: a comparative study on
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 53(4):043016, 2013.
+
+\bibitem{Diallo2014}
+A.~Diallo, W.~Hughes, J.\, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.112.115001} {Observation
+  of edge instability limiting the pedestal growth in tokamak plasmas}.
+\newblock {\em Physical Review Letters}, 112:115001, Mar 2014.
+
 \bibitem{Kinsey2011}
 J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
 \newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
@@ -245,5 +337,37 @@ F~Troyon, R~Gruber, H~Saurenmann, S~Semenzato and S~Succi.
 \newblock \href {http://stacks.iop.org/0741-3335/26/i=1A/a=319} {{MHD}-limits
   to plasma confinement}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 26(1A):209, 1984.
+
+\bibitem{Sauter1999}
+O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.873240}
+  {Neoclassical conductivity and bootstrap current formulas for general
+  axisymmetric equilibria and arbitrary collisionality regime}.
+\newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
+
+\bibitem{Snyder2010}
+P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
+\newblock \href
+  {http://www-pub.iaea.org/MTCD/Meetings/PDFplus/2010/cnl180/cnl180_papers/ths_1-1.pdf}
+  {A first principles predictive model of the pedestal height and width:
+  Development, testing, and {ITER} optimization with the {EPED} model}.
+\newblock In {\em IAEA FEC Proceedings, Daejon, Korea, October 2010. THS/1-1.}
+  IAEA FEC, 2010.
+\newblock THS/1-1.
+
+\bibitem{Snyder2012}
+P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
+  et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.3699623} {The
+  {EPED} pedestal model and edge localized mode-suppressed regimes: Studies of
+  quiescent {H}-mode and development of a model for edge localized mode
+  suppression via resonant magnetic perturbations}.
+\newblock {\em Physics of Plasmas}, 19(5):--, 2012.
+
+\bibitem{Han2013}
+Hyunsun Han, Ohjin Kwon and J.~Y. Kim.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4825142}
+  {Predictive modeling of pedestal structure in {KSTAR} using {EPED} model}.
+\newblock {\em Physics of Plasmas}, 20(10):--, 2013.
 
 \end{thebibliography}
