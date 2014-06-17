@@ -312,12 +312,15 @@ A.~Diallo, W.~Hughes, J.\, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
   of edge instability limiting the pedestal growth in tokamak plasmas}.
 \newblock {\em Physical Review Letters}, 112:115001, Mar 2014.
 
-\bibitem{Kinsey2011}
-J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
-\newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
-  predictions using the {GYRO} verified and experimentally validated trapped
-  gyro-{Landau} fluid transport model}.
-\newblock {\em Nuclear Fusion}, 51(8):083001, 2011.
+\bibitem{Snyder2010}
+P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
+\newblock \href
+  {http://www-pub.iaea.org/MTCD/Meetings/PDFplus/2010/cnl180/cnl180_papers/ths_1-1.pdf}
+  {A first principles predictive model of the pedestal height and width:
+  Development, testing, and {ITER} optimization with the {EPED} model}.
+\newblock In {\em IAEA FEC Proceedings, Daejon, Korea, October 2010. THS/1-1.}
+  IAEA FEC, 2010.
+\newblock THS/1-1.
 
 \bibitem{Snyder2011}
 P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
@@ -325,6 +328,26 @@ P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
   first-principles predictive model of the pedestal height and width:
   development, testing and {ITER} optimization with the {EPED} model}.
 \newblock {\em Nuclear Fusion}, 51(10):103016, 2011.
+
+\bibitem{Connor1979}
+J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
+\newblock \href {http://dx.doi.org/10.1098/rspa.1979.0001} {High mode number
+  stability of an axisymmetric toroidal plasma}.
+\newblock {\em Proceedings of the Royal Society of London. A. Mathematical and
+  Physical Sciences}, 365(1720):1--17, 1979.
+
+\bibitem{Miller1987}
+R.L. Miller and J.W.~Van Dam.
+\newblock \href {http://stacks.iop.org/0029-5515/27/i=12/a=010} {Hot particle
+  stabilization of ballooning modes in tokamaks}.
+\newblock {\em Nuclear Fusion}, 27(12):2101, 1987.
+
+\bibitem{Kinsey2011}
+J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
+\newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
+  predictions using the {GYRO} verified and experimentally validated trapped
+  gyro-{Landau} fluid transport model}.
+\newblock {\em Nuclear Fusion}, 51(8):083001, 2011.
 
 \bibitem{Miller1998}
 R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
@@ -345,15 +368,24 @@ O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
   axisymmetric equilibria and arbitrary collisionality regime}.
 \newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
 
-\bibitem{Snyder2010}
-P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
-\newblock \href
-  {http://www-pub.iaea.org/MTCD/Meetings/PDFplus/2010/cnl180/cnl180_papers/ths_1-1.pdf}
-  {A first principles predictive model of the pedestal height and width:
-  Development, testing, and {ITER} optimization with the {EPED} model}.
-\newblock In {\em IAEA FEC Proceedings, Daejon, Korea, October 2010. THS/1-1.}
-  IAEA FEC, 2010.
-\newblock THS/1-1.
+\bibitem{Xu2010}
+X.~Q. Xu, B.~Dudson, P.~B. Snyder, M.~V. Umansky and H.~Wilson.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.105.175005} {Nonlinear
+  simulations of peeling-ballooning modes with anomalous electron viscosity and
+  their role in edge localized mode crashes}.
+\newblock {\em Physical Review Letters}, 105:175005, Oct 2010.
+
+\bibitem{Xia2013}
+T.Y. Xia, X.Q. Xu and P.W. Xi.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073009} {Six-field
+  two-fluid simulations of peeling–ballooning modes using {BOUT++}}.
+\newblock {\em Nuclear Fusion}, 53(7):073009, 2013.
+
+\bibitem{Han2013}
+Hyunsun Han, Ohjin Kwon and J.~Y. Kim.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4825142}
+  {Predictive modeling of pedestal structure in {KSTAR} using {EPED} model}.
+\newblock {\em Physics of Plasmas}, 20(10):--, 2013.
 
 \bibitem{Snyder2012}
 P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
@@ -363,11 +395,5 @@ P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
   quiescent {H}-mode and development of a model for edge localized mode
   suppression via resonant magnetic perturbations}.
 \newblock {\em Physics of Plasmas}, 19(5):--, 2012.
-
-\bibitem{Han2013}
-Hyunsun Han, Ohjin Kwon and J.~Y. Kim.
-\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4825142}
-  {Predictive modeling of pedestal structure in {KSTAR} using {EPED} model}.
-\newblock {\em Physics of Plasmas}, 20(10):--, 2013.
 
 \end{thebibliography}
