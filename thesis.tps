@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\ModelingTheory.tex
+Document=Chapters\ImodeModeling.tex
 
 [Frame0_View0,0]
-TopLine=279
-Cursor=24774
+TopLine=0
+Cursor=2015
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=56
+TopLine=45
 Cursor=5059
 
 [SessionInfo]
