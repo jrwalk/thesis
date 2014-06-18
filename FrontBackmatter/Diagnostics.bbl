@@ -68,4 +68,43 @@ Jerry~W. Hughes.
   Transport Barrier Studies On the {Alcator C-Mod} Tokamak}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2005.
 
+\bibitem{Basse2007}
+N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz et~al.
+\newblock \href {epubs.ans.org/?a=1434} {Diagnostic systems on {Alcator
+  C-Mod}}.
+\newblock {\em Fusion Science and Technology}, 51(3):476--507, 2007.
+
+\bibitem{Guharay1990}
+S.~K. Guharay, D.~A. Boyd, R.~F. Ellis, F.~J. Stauffer and C.~J. Lasnier.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1141561} {A
+  19-channel fast grating polychromator for {ECE} measurements in the {MTX}
+  tokamak}.
+\newblock {\em Review of Scientific Instruments}, 61(11):3520--3523, 1990.
+
+\bibitem{Taylor1998}
+G.~Taylor, C.~K. Phillips, G.~Schilling, J.~R. Wilson, A.~E. Hubbard et~al.
+\newblock First measurements with a 19-channel {ECE} polychromator on {C-Mod}.
+\newblock In {\em Bulletin of the American Physical Society}, volume~43, 1998.
+
+\bibitem{Heard1999}
+J.~W. Heard, C.~Watts, R.~F. Gandy, P.~E. Phillips, G.~Cima et~al.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.1149368} {High resolution
+  electron cyclotron emission temperature profile and fluctuation diagnostic
+  for {Alcator C-Mod}}.
+\newblock {\em Review of Scientific Instruments}, 70(1):1011--1013, 1999.
+
+\bibitem{Chatterjee2001}
+R~Chatterjee, P.E Phillips, J~Heard, C~Watts, R~Gandy et~al.
+\newblock \href
+  {http://dx.doi.org/http://dx.doi.org/10.1016/S0920-3796(00)00484-1} {High
+  resolution {ECE} radiometer for electron temperature profile and fluctuation
+  measurements on {Alcator C-Mod}}.
+\newblock {\em Fusion Engineering and Design}, 53(1–4):113--121, 2001.
+
+\bibitem{Hubbard2001}
+A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1348329}
+  {Pedestal profiles and fluctuations in {C-Mod} enhanced {D}-alpha {H}-modes}.
+\newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
+
 \end{thebibliography}
