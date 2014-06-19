@@ -108,4 +108,14 @@ P~B Snyder and H~R Wilson.
   magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
 
+\bibitem{Snyder2013}
+Philip~B. Snyder.
+\newblock personal communication, August 2013.
+
+\bibitem{Lao1985}
+L.L. Lao, H.~St. John, R.D. Stambaugh, A.G. Kellman and W.~Pfeiffer.
+\newblock \href {http://stacks.iop.org/0029-5515/25/i=11/a=007} {Reconstruction
+  of current profile parameters and plasma shapes in tokamaks}.
+\newblock {\em Nuclear Fusion}, 25(11):1611, 1985.
+
 \end{thebibliography}
