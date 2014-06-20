@@ -8,19 +8,27 @@ The I-mode \cite{Whyte2010,Hubbard2011}, introduced in \cref{sec:hcr_imode}, is 
  \item Energy confinement in I-mode appears to exhibit little to know degradation with input heating power, in contrast to that found in ELMy H-mode ($\tau_E \sim P^{-0.7}$ from the ITER98y2 analysis \cite{ITER1999}), scaling quite favorably to reactor-scale devices.
 \end{enumerate}
 
-A firm understanding of the pedestal is essential for the extrapolation of any high-performance regime to ITER- and reactor-scale devices.  The pedestal height sets a strong constraint on core temperature and pressure -- and therefore overall fusion performance -- both by acting as a boundary condition for the plasma profiles, and by supporting steeper core temperature gradients due to profile stiffness \cite{Kinsey2011,Hubbard1998}.  Moreover, the pedestal structure, particularly the steep gradients in density, temperature, and/or pressure, determines stability of the plasma against large, deleterious ELMs (see \cref{sec:mod_pb}).  In this chapter, we review empirical observations of the pedestal in I-mode from a recent series of dedicated experiments, with a focus on high-resolution pedestal profile measurements across a range of plasma parameters.  Through this, we examine trends in I-mode pedestal behavior, and their impact on global behavior and performance in I-mode, and possible extrapolations to 
-larger devices\gnote{be more specific... maybe?}.\nicesectionending
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[L-mode and I-mode edge profiles from a single discharge.]{L-mode (black) and I-mode (red) edge profiles from a single discharge.  I-mode maintains a comparable density profile (particularly, there is no change in $\nabla n_e$ or formation of a density pedestal), while forming an H-mode-like temperature pedestal.  \note{rescale, add detail?  repeat fig. 2.6?}}
+ \label{fig:imode_pedestal}}{\includegraphics[width=100mm]{graphics/IModePedestal/1120907028_dens_temp.pdf}}
+\end{figure}
+
+A firm understanding of the pedestal is essential for the extrapolation of any high-performance regime to ITER- and reactor-scale devices.  The pedestal height sets a strong constraint on core temperature and pressure -- and therefore overall fusion performance -- both by acting as a boundary condition for the plasma profiles, and by supporting steeper core temperature gradients due to profile stiffness \cite{Kinsey2011,Hubbard1998}.  Moreover, the pedestal structure, particularly the steep gradients in density, temperature, and/or pressure, determines stability of the plasma against large, deleterious ELMs (see \cref{sec:mod_pb}).  In this chapter, we review empirical observations of the pedestal in I-mode from a recent series of dedicated experiments, with a focus on high-resolution pedestal profile measurements across a range of plasma parameters.  Through this, we examine trends in I-mode pedestal behavior, and their impact on global behavior and performance in I-mode, and possible extrapolations to larger devices\gnote{be more specific... maybe?}.\nicesectionending
 
 \section{Access and Experimental Setup}\label{sec:imode_setup}
 
-All data presented here was taken on the Alcator C-Mod tokamak, described in \cref{sec:intro_cmod}.  As described in \cref{subsec:hcr_imode_access}, I-mode access hinges primarily on operation with the ion $\nabla B$ drift (\cref{eq:gradbdrift}) directed away from the primary X-point in the plasma (the ``unfavorable $\nabla B$ drift'' configuration).  Within this requirement, though, I-mode access is fairly robust, with steady I-modes sustained in a variety of shapes -- both USN with standard field, and LSN shapes with reversed field to achieve the desired $\nabla B$ drift direction (in the latter case, the plasma current is reversed as well to preserve field helicity) -- and edge-current profiles, and at low-to-moderate collisionality.\gnote{ref to nustar definition}
+All data presented here was taken on the Alcator C-Mod tokamak, described in \cref{sec:intro_cmod}.  As described in \cref{subsec:hcr_imode_access}, I-mode access hinges primarily on operation with the ion $\nabla B$ drift (\cref{eq:gradbdrift}) directed away from the primary X-point in the plasma (the ``unfavorable $\nabla B$ drift'' configuration).  Within this requirement, though, I-mode access is fairly robust, with steady I-modes sustained in a variety of shapes -- both USN with standard field, and LSN shapes with reversed field to achieve the desired $\nabla B$ drift direction (in the latter case, the plasma current is reversed as well to preserve field helicity) -- and edge-current profiles, and at low-to-moderate collisionality (\cref{eq:nustar}).  The attainable range in $q_{95}$ and $\nu^*_{95}$ is shown in \cref{fig:imode_q_nustar}.
 
 \begin{figure}[h]
  \pushtooutside
  \fcapside[60mm]{\caption[I-mode edge safety collisionality and safety factor.]{Range in edge collisionality $\nu^*_{95}$ and $q_{95}$ over which I-modes have been accessed.  Notably, I-mode operation is naturally favored near ITER targets for these parameters.  The subset of this data prepared with high-resolution pedestal profiles, herein termed the ``pedestal database'', is also highlighted.}\label{fig:imode_q_nustar}}{\includegraphics[width=100mm]{graphics/IModePedestal/q95_vs_nustar_2012_Imodeonly.pdf}}
 \end{figure}
 
-
+\begin{figure}[h]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Density and power range for I-mode access]{Line-averaged density and loss power range for USN and LSN I-modes, illustrating $\sim 2 \times P_{L-I}$ range for $1-\SI{1.2}{\mega\ampere}$, $5-\SI{6}{\tesla}$ I-modes.  USN shapes are forward-field and LSN-shapes are reversed field, such that all I-modes shown are in the unfavorable drift configuration.  \note{swap for plot showing only high-res database, or merge?}}}{\includegraphics[width=100mm]{graphics/IModePedestal/Ploss_nebar_2013.pdf}}
+\end{figure}
 
 \nicesectionending
 
