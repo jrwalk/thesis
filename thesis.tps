@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Chapters\ImodeModeling.tex
 
 [Frame0_View0,0]
-TopLine=87
-Cursor=10053
+TopLine=245
+Cursor=25918
 
 [Frame1]
 Flags=0
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame1_View0,0]
-TopLine=38
+TopLine=33
 Cursor=5059
 
 [SessionInfo]
