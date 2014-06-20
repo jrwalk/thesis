@@ -118,4 +118,48 @@ L.L. Lao, H.~St. John, R.D. Stambaugh, A.G. Kellman and W.~Pfeiffer.
   of current profile parameters and plasma shapes in tokamaks}.
 \newblock {\em Nuclear Fusion}, 25(11):1611, 1985.
 
+\bibitem{Whyte2010}
+D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
+  an {H}-mode energy confinement regime with {L}-mode particle transport in
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 50(10):105005, 2010.
+
+\bibitem{Hubbard2011}
+A.~E. Hubbard, D.~G. Whyte, R.~M. Churchill, I.~Cziegler, A.~Dominguez et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.3582135} {Edge energy transport
+  barrier and turbulence in the {I}-mode regime on {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 18(5):056115, 2011.
+
+\bibitem{Cziegler2013}
+I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
+  {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
+
+\bibitem{Hubbard2001}
+A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1348329}
+  {Pedestal profiles and fluctuations in {C-Mod} enhanced {D}-alpha {H}-modes}.
+\newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
+
+\bibitem{Dominguez2012}
+Arturo Dominguez.
+\newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
+  Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2012.
+
+\bibitem{Connor1979}
+J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
+\newblock \href {http://dx.doi.org/10.1098/rspa.1979.0001} {High mode number
+  stability of an axisymmetric toroidal plasma}.
+\newblock {\em Proceedings of the Royal Society of London. A. Mathematical and
+  Physical Sciences}, 365(1720):1--17, 1979.
+
+\bibitem{Miller1987}
+R.L. Miller and J.W.~Van Dam.
+\newblock \href {http://stacks.iop.org/0029-5515/27/i=12/a=010} {Hot particle
+  stabilization of ballooning modes in tokamaks}.
+\newblock {\em Nuclear Fusion}, 27(12):2101, 1987.
+
 \end{thebibliography}
