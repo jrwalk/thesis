@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{Whyte2010}
 D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
@@ -40,48 +40,5 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, I.~H. Hutchinson
 \newblock \href {http://dx.doi.org/10.1063/1.872843} {Measurements of the high
   confinement mode pedestal region on {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 5(5):1744--1751, 1998.
-
-\bibitem{Suttrop2003}
-W.~Suttrop, A.~Herrmann, F.~Ryter and J.~Stober.
-\newblock \href {http://www.ans.org/pubs/journals/fst/a_404} {Chapter 6:
-  {H}-mode and pedestal physics in {ASDEX Upgrade}}.
-\newblock {\em Fusion Science and Technology}, 44(3):636--649, November 2003.
-
-\bibitem{Carlstrom1998}
-T~N Carlstrom, K~H Burrell and R~J Groebner.
-\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=020} {Comparison of a
-  {$\nabla B$} drift effect model with measured {H}-mode power thresholds}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):669, 1998.
-
-\bibitem{Groebner1998}
-R~J Groebner and T~N Carlstrom.
-\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=021} {Critical edge
-  parameters for {H}-mode transition in {DIII-D}}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):673, 1998.
-
-\bibitem{Hubbard2001}
-A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
-\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1348329}
-  {Pedestal profiles and fluctuations in {C-Mod} enhanced {D}-alpha {H}-modes}.
-\newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
-
-\bibitem{Hubbard2012}
-A.E. Hubbard, D.G. Whyte, R.M. Churchill, A.~Dominguez, J.W. Hughes et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/52/i=11/a=114009} {Threshold
-  conditions for transitions to {I}-mode and {H}-mode with unfavourable ion
-  grad {B} drift direction}.
-\newblock {\em Nuclear Fusion}, 52(11):114009, 2012.
-
-\bibitem{Dominguez2012}
-Arturo Dominguez.
-\newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
-  Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
-\newblock PhD thesis, Massachusetts Institute of Technology, 2012.
-
-\bibitem{Connor1978}
-J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
-\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.40.396} {Shear,
-  periodicity, and plasma ballooning modes}.
-\newblock {\em Physical Review Letters}, 40:396--399, Feb 1978.
 
 \end{thebibliography}

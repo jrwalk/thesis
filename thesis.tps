@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=Chapters\ImodeModeling.tex
+Document=FrontBackmatter\SQL.tex
 
 [Frame0_View0,0]
-TopLine=290
-Cursor=27214
+TopLine=293
+Cursor=8940
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=thesis.tex
+Document=classicthesis-config.tex
 
 [Frame1_View0,0]
-TopLine=29
-Cursor=5059
+TopLine=340
+Cursor=18458
 
 [SessionInfo]
 FrameCount=2

@@ -31,7 +31,7 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    MODE &
    string &
    &
-   type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE'
+   type of phase in window, \eg `IMODE', `ELMY', `EDA', `LMODE', 'ELMBIN'
    \\
    \bottomrule
   \end{tabu}}
@@ -280,8 +280,8 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    \\
    SSEP &
    float &
-   \note{?} &
-   separatrix separation\note{?}
+   $\si{\centi\meter}$ &
+   X-point position: $\sim 1$ is USN, $\sim -1$ is LSN, $40$ is limited
    \\
    BETAT &
    float &
@@ -386,7 +386,7 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    P\_SOL &
    float &
    $\si{\mega\watt}$ &
-   power through SOL \note{check this!!!}
+   net power through SOL, \cref{eq:pnet}
    \\
    P\_SOL\_ERR &
    float &
@@ -396,7 +396,7 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    P\_THRES &
    float &
    $\si{\mega\watt}$ &
-   H-mode threshold power \note{citation?}
+   H-mode threshold power, \cref{eq:pthres}
    \\
    P\_THRES\_ERR &
    float &
@@ -488,6 +488,11 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    &
    error in NEPED\_ALPHA
    \\
+   NEPED\_HEIGHT &
+   float &
+   $\si{\per\meter\cubed}$ &
+   density at NEPED\_R0 - NEPED\_D 
+   \\
    NEPED\_GRAD &
    float &
    $\si{\per\meter\cubed}$ &
@@ -568,6 +573,11 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    &
    error in TEPED\_ALPHA
    \\
+   TEPED_HEIGHT &
+   float &
+   $\si{\electronvolt}$ &
+   temperature at TEPED\_R0 - TEPED\_D
+   \\
    TEPED\_GRAD &
    float &
    $\si{\electronvolt}$ &
@@ -647,6 +657,11 @@ For the work presented in this thesis, a subset of recent I-mode experiments on 
    float &
    &
    error in PEPED\_ALPHA
+   \\
+   PEPED_HEIGHT &
+   float &
+   $\si{\per\meter\cubed.\electronvolt}$ &
+   pressure at PEPED\_R0 - PEPED\_D
    \\
    PEPED\_GRAD &
    float &
