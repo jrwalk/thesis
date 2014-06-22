@@ -13,8 +13,7 @@ The dedicated pedestal experiments, both in I-mode and ELMy H-mode, presented he
 
 \section{Thomson Scattering}\label{sec:app_ts}
 
-Due to the steep gradients in density, temperature, and pressure found in the pedestal, accurate characterization of plasma profiles in this region requires diagnostics capable of very fine spatial resolution.  Measurements based on the Thomson scattering \cite{Sheffield} of laser light off of electrons in the plasma provides the high-resolution pedestal profiles used in this thesis: Thomson scattering is a near-direct measurement of electron temperature and density, independent of bulk plasma parameters (\ie it is unaffected by the cutoffs or reflections found in other diagnostics, and produces no significant perturbation to the plasma).  Measurement via Thomson scattering produces an effective ``snapshot'' of the plasma parameters at each measurement point, with spatial resolution limited only by collection optics geometry, and time resolution limited by repetition rate on the lasers.  Despite significant technical difficulties -- for example, the high-powered lasers and sensitive collection optics needed 
-to capture the weak scattered light and the necessity for careful calibration of density measurements -- Thomson scattering diagnostics remain a versatile and powerful tool for plasma pedestal measurement, and provided the bulk of the profile data used in this thesis.
+Due to the steep gradients in density, temperature, and pressure found in the pedestal, accurate characterization of plasma profiles in this region requires diagnostics capable of very fine spatial resolution.  Measurements based on the Thomson scattering \cite{Sheffield} of laser light off of electrons in the plasma provides the high-resolution pedestal profiles used in this thesis: Thomson scattering is a near-direct measurement of electron temperature and density, independent of bulk plasma parameters (\ie it is unaffected by the cutoffs or reflections found in other diagnostics, and produces no significant perturbation to the plasma).  Measurement via Thomson scattering produces an effective ``snapshot'' of the plasma parameters at each measurement point, with spatial resolution limited only by collection optics geometry, and time resolution limited by repetition rate on the lasers.  Despite significant technical difficulties -- for example, the high-powered lasers and sensitive collection optics needed to capture the weak scattered light and the necessity for careful calibration of density measurements -- Thomson scattering diagnostics remain a versatile and powerful tool for plasma pedestal measurement, and provided the bulk of the profile data used in this thesis.
 
 \subsection{Principles of Thomson Scattering}\label{subsec:app_background}
 
@@ -386,7 +385,32 @@ The spatial resolution provided by these systems is more than sufficient to reso
 
 \section{Fluctuation Diagnostics}\label{sec:app_fluct}
 
+A firm understanding of plasma fluctuations is necessary to characterize high-performance regimes.  Turbulent fluctuations drive enhanced transport of energy and particles out of the plasma, and it is the suppression of these fluctuations, particularly in the plasma edge, that defines high-performance operation.  Conversely, beneficial fluctuations regulate the pedestal to allow stationary ELM-free operation (\eg in EDA H-mode, QH-mode, and I-mode).  Thus, an extensive suite of diagnostics to measure global and local fluctuation levels are maintained on C-Mod, a few of which are detailed here.
+
 \subsection{Reflectometry}\label{subsec:app_reflect}
+
+As plasmas are composed of freely-interacting charged particles, electromagnetic waves interact quite strongly with the plasma.  The dispersion relation for a wave of frequency $\omega$ and wavevector $\vec{k}$ (alternately, refractive index $\vec{N} = \vec{k}c/\omega$) is characterized (in the cold plasma approximation) by the Appleton-Hartree formula \cite[\S 4]{Hutchinson},
+
+\begin{equation}\label{eq:appletonhartree}
+  N^2 = 1 - \frac{X(1-X)}{1 - X - \frac{1}{2} Y^2 \sin \theta \pm \left[ \left( \frac{1}{2} Y^2 \sin^2 \theta \right)^2 + \left(1 - X\right)^2 Y^2 \cos^2 \theta \right]^{1/2}}
+\end{equation}
+
+\noindent where $X = \omega_p^2/\omega^2$, $Y = \omega_c/\omega$, and $\theta$ is the angle between $\vec{k}$ and the background magnetic field $\vec{B}_0$.  For waves propagating perpendicular to the field ($\theta = \pi/2$), this reduces to two solutions:
+
+\begin{equation}\label{eq:perpwave}
+ \begin{aligned}
+  N^2 &= 1-X\\
+  N^2 &= 1 - \frac{X(1-X)}{1-X-Y^2}
+ \end{aligned}
+\end{equation}
+
+\noindent which are called the \emph{ordinary} or \emph{O-mode}, and \emph{extraordinary} or \emph{X-mode} respectively.  We primarily consider the O-mode propagation.  Recall that the plasma frequency $\omega_p$ characterizes a natural ``ringing'' rate at which the plasma rearranges itself in response to a changing electric field -- this screens out electromagnetic waves with frequencies $\omega < \omega_p$.  As the wave propagates inward from the edge the plasma density increases, such that $X \rightarrow 1$.  Above this point, the \emph{cutoff}, the wave is evanescent with imaginary $N$ and will reflect from the cutoff layer.  The cutoff density $n_c$ is trivially obtained from the above,
+
+\begin{equation}\label{eq:n_cutoff}
+ n_c = \frac{m_e \varepsilon_0}{e^2} \omega^2 = \left(\frac{f}{89.8}\right)^2
+\end{equation}
+
+\noindent where $n_c$ is in $\SI{e20}{\per\meter\cubed}$ and $f$ is in $\si{\giga\hertz}$.  Measurement of the reflected wave yields a wealth of information about the density profile -- simple phase-delay measurements at a variety of frequencies produce a non-perturbative measurement of the density profile, as for each input frequency the density at the cutoff layer (the location of which is derived from the phase delay) must be equal to $n_c(f)$.
 
 \subsection{Gas-Puff Imaging}\label{subsec:app_gpi}
 
