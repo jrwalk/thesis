@@ -63,13 +63,60 @@ i,pol}$ \cite{Urano2008,Saibene1999}, found the $\beta_{p,ped}$ scaling to be th
 
 \section{MHD Stability: Peeling-Ballooning Modes}\label{sec:mod_pb}
 
-Early observations of the pedestal in ELMy H-mode identified ballooning MHD instabilities as a possible driver for the ELM instability.  Numerous experiments identified a pressure-gradient effect tied to the ELM trigger \cite{Kamada1996}\gnote{pull other cites!}, with the value of the pressure gradient at the ELM trigger increased with plasma current and increased shaping consistent with ballooning MHD behavior \cite{Suttrop2000a}.
+Due to the extremely rapid onset of explosive ELM instabilities, ideal MHD modes were identified early on as candidates for the ELM trigger \cite{Wagner1982,Keilhacker1984,Huysmans2005}.  In this section, we detail the development of models for the pedestal structure based on the idea that ELM instabilities represent an ultimate limit on the pedestal.
+
+The stability of a plasma may be assessed via a linear perturbation to the customary MHD equations.  We consider a first-order perturbation $\vec{\xi}$ to a plasma fluid element -- typically the perturbation is considered general in spatial variables, and is taken to be a Fourier harmonic in time, $\vec{\xi} = \vec{\xi}(\psi,\chi,\zeta) \mbox{exp}(i\omega t)$ where $\psi$ is the flux coordinate, $\chi$ is the poloidal angle, and $\zeta$ is the  toroidal angle.  Substituting into the first-order perturbation of the MHD equations\gnote{detail these in intro?} results in the simple relation (see \cite[\S 8]{Freidberg1987} for derivation)
+
+\begin{equation}\label{eq:mhd_perturb}
+ \rho \frac{d^2 \vec{xi}}{dt^2} = -\omega^2 \rho \vec{\xi} = \vec{F}(\vec{\xi})
+\end{equation}
+
+\noindent where $\omega$ is the mode frequency, $\rho$ is the mass density, and $\vec{F}$ is a forcing operator given by
+
+\begin{equation}\label{eq:forcing}
+ \begin{aligned}
+  \vec{F}(\vec{\xi}) &= \frac{1}{\mu_0} \left( \nabla \times \vec{B} \right) \times \vec{Q} + \frac{1}{\mu_0} \left( \nabla \times \vec{Q} \right) \times \vec{B} + \nabla \left( \vec{\xi} \cdot \nabla p + \gamma p \nabla \cdot \vec{\xi} \right)\\
+  \vec{Q} &= \nabla \times \left( \vec{\xi} \times \vec{B} \right)
+ \end{aligned}
+\end{equation}
+
+\noindent with $\vec{Q}$ for the perturbed magnetic field and $\gamma$ for the specific heat ratio of the plasma.  The usual treatment of this operator leverages the fact that $\vec{F}$ is self-adjoint (\ie it is its own complex conjugate) -- this permits by integration over the plasma volume $P$ in a variational formulation
+
+\begin{equation}\label{eq:energyprinciple}
+ \begin{aligned}
+  \omega^2 &= \frac{\delta W(\vec{\xi}^*,\vec{\xi})}{K(\vec{\xi}^*,\vec{\xi})}\\
+  \delta W &= -\frac{1}{2} \int_P \vec{\xi}^* \cdot \vec{F}(\vec{\xi}) \;d^3 \vec{r}\\
+  K &= \frac{1}{2} \int_P \rho \left| \vec{\xi} \right|^2 \;d^3 \vec{r}
+ \end{aligned}
+\end{equation}
+
+\noindent This formulation permits the use of the \emph{energy principle}: if the potential energy $\delta W$ is negative for any displacement (\ie the perturbation drives the plasma to a more energetically-favorable state) then the mode corresponding to that displacement is unstable, captured by the fact that $\delta W < 0$ requires an imaginary frequency $\omega$ (and thus will have an exponentially growing mode).  
+
+This permits a conceptually straightforward means to assess mode stability.  However, the formulation for $\delta W$ is highly involved (see \cite[\S 8.8]{Freidberg1987}):
+
+\begin{equation}\label{eq:deltaW}
+ \begin{aligned}
+  \delta W &= \delta W_F + \delta W_S + \delta W_V\\
+  \delta W_F &= \frac{1}{2} \int_P d^3 \vec{r} \Bigg[ \frac{|\vec{Q}|^2}{\mu_0} + \frac{B^2}{\mu_0} \left| \nabla \cdot \vec{\xi}_\perp + 2 \vec{\xi}_\perp \cdot \vec{\kappa} \right|^2 + \gamma p \left| \nabla \cdot \vec{\xi} \right|^2\\
+  &\quad- 2\left( \vec{\xi}_\perp \cdot \nabla p \right) \left(\vec{\kappa} \cdot \vec{\xi}_\perp^* \right) - j_\parallel \left(\vec{\xi}_\perp^* \times \vec{b} \right) \cdot \vec{Q}_\perp \Bigg]\\
+  \delta W_S &= \frac{1}{2} \int_S dS \left| \hat{n} \cdot \vec{\xi}_\perp \right|^2 \hat{n} \cdot \left[ \nabla \left( p + \frac{B^2}{2\mu_0} \right) \right]\\
+  \delta W_V &= \frac{1}{2} \int_V d^3 \vec{r} \frac{\left|B_1 \right|^2}{\mu_0}
+ \end{aligned}
+\end{equation}
+
+\noindent for the fluid, surface, and vacuum energy contributions integrated over the plasma volume $P$, plasma surface $S$, and vacuum volume $V$ respectively (in the above $\vec{\kappa}$ is the vectorized curvature, $\hat{n}$ is the normal vector to the plasma surface, and $B_1$ is the perturbed magnetic field in the vacuum region).  The complexity of the stability problem necessitates both a firm theoretical understanding to simplify \cref{eq:deltaW} to a tractable form, and numerical approaches to efficiently calculate the stability in experimental plasmas.
 
 \subsection{Ballooning MHD}\label{subsec:mod_balloon}
 
+Examining the fluid energy formulation $\delta W_F$ in \cref{eq:deltaW}, we see two potential sources of instability (that is, negative terms in $\delta W$) -- these identify the pressure gradient $\nabla p$ and the parallel current density $j_\parallel$ as potential sources of free energy to drive unstable modes.
+
 \begin{itemize}
+ \item early observations of pressure gradient limit at ELM trigger \cite{Kamada1996,Suttrop2000}
+ \item value of pressure gradient at limit increases with $I_p$, shaping \cite{Suttrop2000a}
+ \item measured $\alpha_{MHD}$ exceeds stable prediction by BALOO in DIII-D ELMy H-modes -- need to account for current, finite-$n$ effects \cite{Groebner1998a,Osborne1998}
  \item EDA H-mode modeled to be ideal-ballooning stable; P-B only describes ELMy H-mode \cite{Mossessian2002}
  \item increased triangularity reduces $\nabla p$, $n_{e,ped}$ in EDA; contrast with ELMy, where shape stabilizes P-B modes, seems to destabilize QCM earlier in EDA \cite{Hughes2007a}
+ \item DIII-D VH-modes terminate in giant p-b driven ELM \cite{Turnbull2003}
 \end{itemize}
 
 \subsection{Peeling MHD}\label{subsec:mod_peel}
@@ -81,6 +128,7 @@ Early observations of the pedestal in ELMy H-mode identified ballooning MHD inst
  \item collisionality $\rightarrow$ bootstrap current $\rightarrow$ magnetic shear in edge sets where in stability contour pedestal hits \cite{Snyder2009}
  \item due to interplay, nonlocal effects between shaping, collisionality, rotation, shafranov shift, safety factor, must calculate P-B stability in 2D: can't reduce to scalar parametrization \cite{Snyder2009}
  \item Snyder2009 refs Huysmans2005, Turnbull2003, Medvedev2006 \cite{Huysmans2005,Turnbull2003,Medvedev2006} for reviews of alternate MHD codes
+ \item alternate MHD codes: GATO \cite{Bernard1981}, MISHKA \cite{Huysmans2001,Mikhailovskii1997}, KINX \cite{Degtyarev1997,Medvedev2006}, MARG2D \cite{Aiba2006,Aiba2007}
  \item RMP approaches P-B boundary, EDA, type-III ELMs P-B stable, grassy/type-II ELMs near boundary, QH near low-$n$ peeling side -- P-B boundary figure of merit in general for H-mode pedestal \cite{Snyder2009}.  RMP calcs stable, goes ELMing and crosses boundary as soon as coils are turned off \cite{Snyder2009a}
  \item very low $n$ ($n < 3$) modes omitted from ELITE: low-$n$ edge modes rarely more unstable than $n \sim 5$, code cannot distinguish from core kink modes, low-$n$ modes stabilized by interaction with wall \cite{Snyder2009}
  \item ELITE omits X-point from calculation due to required extremely high RZ point density; peeling modes highly unstable there, but high collisionality at LCFS suppresses.  Calculation usually truncated at 99.8\% flux \cite{Snyder2009a}
