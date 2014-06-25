@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=939
 NormalPos.bottom=718
 Class=LaTeXView
-Document=FrontBackmatter\SQL.tex
+Document=Chapters\ModelingTheory.tex
 
 [Frame0_View0,0]
-TopLine=21
-Cursor=2941
+TopLine=159
+Cursor=15100
 
 [SessionInfo]
 FrameCount=1
