@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Chapters\ModelingTheory.tex
 
 [Frame0_View0,0]
-TopLine=254
-Cursor=20974
+TopLine=351
+Cursor=29199
 
 [SessionInfo]
 FrameCount=1

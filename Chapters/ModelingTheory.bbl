@@ -285,6 +285,25 @@ H~Zohm.
   modes ({ELMs})}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 38(2):105, 1996.
 
+\bibitem{Mercier1960}
+Claude Mercier.
+\newblock \href {http://stacks.iop.org/0029-5515/1/i=1/a=004} {A necessary
+  condition for hydromagnetic stability of plasma with axial symmetry}.
+\newblock {\em Nuclear Fusion}, 1(1):47, 1960.
+
+\bibitem{Snyder2002}
+P.~B. Snyder, H.~R. Wilson, J.~R. Ferron, L.~L. Lao, A.~W. Leonard et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1449463} {Edge localized modes and
+  the pedestal: A model based on coupled peeling--ballooning modes}.
+\newblock {\em Physics of Plasmas}, 9(5):2037--2043, 2002.
+
+\bibitem{Snyder2004}
+P.B. Snyder, H.R. Wilson, J.R. Ferron, L.L. Lao, A.W. Leonard et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/44/i=2/a=014} {{ELMs} and
+  constraints on the {H}-mode pedestal: peeling–ballooning stability
+  calculation and comparison with experiment}.
+\newblock {\em Nuclear Fusion}, 44(2):320, 2004.
+
 \bibitem{Mossessian2002}
 D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/44/i=4/a=303} {{H}-mode

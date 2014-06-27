@@ -106,7 +106,7 @@ This permits a conceptually straightforward means to assess mode stability.  How
 
 \noindent for the fluid, surface, and vacuum energy contributions integrated over the plasma volume $P$, plasma surface $S$, and vacuum volume $V$ respectively (in the above $\vec{\kappa}$ is the vectorized curvature, $\hat{n}$ is the normal vector to the plasma surface, $\vec{b}$ is the background magnetic field unit vector, and $B_1$ is the perturbed magnetic field in the vacuum region).  The complexity of the stability problem necessitates both a firm theoretical understanding to simplify \cref{eq:deltaW} to a tractable form, and numerical approaches to efficiently calculate the stability in experimental plasmas.
 
-\subsection{Ballooning MHD}\label{subsec:mod_balloon}
+\subsection{Pressure-Driven Modes}\label{subsec:mod_balloon}
 
 Examining the fluid energy formulation $\delta W_F$ in \cref{eq:deltaW}, we see two potential sources of instability (that is, negative terms in $\delta W$) -- these identify the pressure gradient $\nabla p$ and the parallel current density $j_\parallel$ as potential sources of free energy to drive unstable modes.  We first consider the pressure-gradient-driven modes, dubbed ``ballooning modes'' for their characteristic perturbation, in which the plasma tends to ``bulge'' outwards due to the pressure gradient.  The mode tends to vary along a field line (with long parallel wavelength, although the most unstable modes have short perpendicular wavelength) such that it is concentrated in regions with the least favorable magnetic curvature, such that the increased stabilizing effect from magnetic field line bending cannot compensate for the destabilizing pressure gradient \cite{Freidberg1987}.  These modes were identified early on as a possible ELM trigger: early experiments in ELMy H-mode observed a limit on the 
 pressure gradient preceding the ELM crash \cite{Kamada1996,Suttrop2000}, with the value of $\nabla p$ at the limit increasing with plasma current and shaping, consistent with ballooning theory (detailed below) \cite{Suttrop2000a}.
@@ -140,24 +140,6 @@ This is solved using the ``ballooning transform'' formalized in \cite{Connor1978
 
 \noindent where $\Omega^2$ is the eigenvalue of the system and $L,M$ are operators based on the plasma equilibrium and normalized pressure gradient $\alpha_{MHD}$ (see \cref{eq:alphaMHD,eq:alphaMHD_cyl}), with $L$ acting as a differential operator in $y$.  As with the expansion of the energy-principle formulation, these operators are expressed as an expansion in $n^{-1/2}$.  To lowest order (appropriate in the $n \rightarrow \infty$ limit) the system reduces to an eigenvalue problem for the local eigenmode characterized by $\omega^2$ \cite{Connor1979}, $(L_0 + \omega^2 M_0)f = 0$ -- in this case, the modes are perfectly localized on their corresponding rational surfaces and decoupled from modes on other surfaces, yielding an exceedingly simple calculation, given by
 
-% Later analyses \cite{Connor1979} included additional terms accounting for the effects of current and current gradient at high $n$, of the form\gnote{Not used in lowest-order approx -- move to peeling section?}
-% 
-% \begin{equation}\label{eq:dW_balloon_current}
-%   \pi \iint d\psi d\chi \left\{ - \frac{X^*}{n} JB k_\parallel \left( Z \frac{d \sigma}{d \psi} \right) + \frac{1}{n} \left[ P^* JB k_\parallel Q + PJBk_\parallel^* Q^* \right] \right\}
-% \end{equation}
-% 
-% \noindent where
-% 
-% \begin{equation}
-%  \begin{aligned}
-%   P &= \sigma X + \frac{B_p^2}{\nu B^2} \frac{F}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel \right)\\
-%   Q &= \frac{X}{B^2} \frac{dp}{d\psi} + \frac{F^2}{\nu R^2 B^2} \frac{1}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel X \right)\\
-%   \sigma &= -\frac{F}{B^2} \frac{dp}{d\psi} - \frac{dF}{d\psi} = \frac{j_\parallel}{B}
-%  \end{aligned}
-% \end{equation}
-% 
-% \noindent for parallel current $j_\parallel$.  This does not modify the solution in \cref{eq:baloo} to lowest order, rather defining additional terms in the higher orders of the operators $L$ and $M$.  The $n \rightarrow \infty$ limit is given by
-
 \begin{equation}\label{eq:baloo2}
  \begin{aligned}
   L_0 f &= \frac{\partial}{\partial y} \left\{ \frac{1}{JR^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] \frac{\partial f}{\partial y} \right\}\\
@@ -166,15 +148,15 @@ This is solved using the ``ballooning transform'' formalized in \cite{Connor1978
  \end{aligned}
 \end{equation}
 
-\noindent This form is used in the current implementation of the BALOO code \cite{Connor1979,Miller1987,Miller1997}, which efficiently calculates the infinite-$n$ ballooning stability limit.  Intuitively, the mode is destabilized above a critical pressure gradient (couched in terms of $\alpha_{MHD}$), with the attainable $\alpha_c$ increasing with increased magnetic shear $s$ due to the stabilizing effects of line bending.  There also exists a second stable regime at high $\alpha_{MHD}$ -- notably, this region can be accessed below a threshold value in $s$, below which the ballooning mode is stable for all $\alpha_{MHD}$ \cite{Miller1998,Connor1998,Wilson1999}.\gnote{better description of $s-\alpha$ formalism?}
+\noindent This form is used in the current implementation of the BALOO code \cite{Connor1979,Miller1987,Miller1997}, which efficiently calculates the infinite-$n$ ballooning stability limit.  Intuitively, the mode is destabilized above a critical pressure gradient (couched in terms of $\alpha_{MHD}$), with the attainable $\alpha_c$ increasing with increased magnetic shear $s$ due to the stabilizing effects of line bending\gnote{clarify shear effects...}.  There also exists a second stable regime at high $\alpha_{MHD}$ -- notably, this region can be accessed below a threshold value in $s$, below which the ballooning mode is stable for all $\alpha_{MHD}$ \cite{Miller1998,Connor1998,Wilson1999}.\gnote{better description of $s-\alpha$ formalism?}
 
 While the high-$n$ ballooning formalism described above has been successful for the treatment of core ballooning modes, it is insufficient to accurately model modes in the pedestal.  Experimentally, the measured pressure gradient is seen to exceed the limit predicted by infinite-$n$ ballooning calculations \cite{Groebner1998a,Osborne1998}, indicating that stabilizing effects due to edge current density (primarily from the bootstrap effect) and diamagnetism come into play.  Moreover, the assumptions used in the expansion described above break down in the edge.  In the conventional theory \cite{Connor1978,Connor1979} described above (resulting in \cref{eq:baloo,eq:baloo2}), the mode is treated in an expansion in orders of $n^{-1/2}$, in which the lowest order describes a local eigenvalue $\omega^2$ for a given flux surface, the first order $O(n^{-1/2}$ contains the mode phase, and the second order $O(n^{-1})$ describes the Gaussian envelope spanning $\sim n^{1/2}$ rational flux surfaces containing the mode 
-harmonics, as well as the correction to the ``true'' mode eigenvalue: $\Omega^2 = \omega^2 + O(n^{-1})$ \cite{Connor1998a,Wilson1999}.  However, the assumptions inherent in the expansion in $n^{-1/2}$ break down in the edge due to the possibility of a steep pressure gradient out to the separatrix, and the proximity of the mode center to the plasma edge (forbidding Gaussian wave envelopes).  A modification to the theory \cite{Connor1998a,Wilson1999} instead expands the energy-principle result in orders of $n^{-1/3}$, with the lowest order again determining a local pseudo-eigenvalue $\omega^2$ and the first order $O(n^{-1/3})$ defining the phase, but with the second-order expansion instead defining an Airy function envelope spanning $\sim n^{1/3}$ rational surfaces, consistent with the edge behavior.  This also provides a stabilizing $O(n^{-2/3})$ correction to the $n \rightarrow \infty$ theory \cite{Connor1998a}.  There also remains the question of the treatment of current-driven modes, both the ``kink'' mode 
-driven by the parallel current density and the ``peeling'' mode driven by the current gradient \cite{Wilson2006}, and their effect on the edge stability.
+harmonics, as well as the correction to the ``true'' mode eigenvalue: $\Omega^2 = \omega^2 + O(n^{-1})$ \cite{Connor1998a,Wilson1999}.  However, the assumptions inherent in the expansion in $n^{-1/2}$ break down in the edge due to the possibility of a steep pressure gradient out to the separatrix, and the proximity of the mode center to the plasma edge (forbidding Gaussian wave envelopes).  A modification to the theory \cite{Connor1998a,Wilson1999} instead expands the energy-principle result in orders of $n^{-1/3}$, with the lowest order again determining a local pseudo-eigenvalue $\omega^2$ and the first order $O(n^{-1/3})$ defining the phase, but with the second-order expansion instead defining an Airy function envelope spanning $\sim n^{1/3}$ rational surfaces, consistent with the edge behavior.  This also provides a stabilizing $O(n^{-2/3})$ correction to the $n \rightarrow \infty$ theory \cite{Connor1998a}.  There also remains the question of the treatment of current-driven modes, both the ``peeling'' mode 
+driven by the parallel current density and the ``kink'' mode driven by the current gradient \cite{Wilson2006}, and their effect on the edge stability.
 
-\subsection{Peeling MHD}\label{subsec:mod_peel}
+\subsection{Current-Driven Modes}\label{subsec:mod_peel}
 
-In addition to the ballooning instability, edge kink or peeling MHD modes were proposed early on in H-mode experiments as a driver for the ELM instability \cite{Keilhacker1984,Zohm1996}.  Whereas the ballooning modes are primarily driven by the pressure gradient, these modes are primarily driven unstable by the electric current (note the negative term in $\delta W_F$ in \cref{eq:deltaW}), in which $\vec{j} \times \vec{B}$ forces cause the plasma to kink into a helix shape \cite[\S 8.11]{Freidberg1987}.
+In addition to the ballooning instability, edge kink or peeling MHD modes were proposed early on in H-mode experiments as a driver for the ELM instability \cite{Keilhacker1984,Zohm1996}.  Whereas the ballooning modes are primarily driven by the pressure gradient, these modes are primarily driven unstable by the electric current (note the destabilizing term in $\delta W_F$ in \cref{eq:deltaW}) in the case of the peeling mode, or by the current gradient for the kink mode \cite{Wilson2006}.  These fundamentally similar instabilities -- the peeling mode is strongly localized in the edge, and is driven by the rapid change in parallel current across the separatrix \cite{Wilson2006,Connor1998a}.  The kink mode may be driven in the core or the edge, and tends to twist the plasma into a helix due to $\vec{j} \times \vec{B}$ forces; the peeling mode, on the other hand, is unique to the plasma edge, and tends to peel the plasma edge similar to a tearing mode\gnote{clarify} \cite{Wilson1999}.
 
 An extension of the analysis resulting in \cref{eq:dW_balloon} \cite{Connor1979} included additional terms in $\delta W$ accounting for the effects of current and current gradient, of the form
 
@@ -192,9 +174,28 @@ An extension of the analysis resulting in \cref{eq:dW_balloon} \cite{Connor1979}
  \end{aligned}
 \end{equation}
 
-\noindent for parallel current $j_\parallel$.
+\noindent for parallel current $j_\parallel$.  An analysis in the high-$n$ limit following similar methodology to that used in ballooning modes \cite{Connor1998a} focused on the edge ``peeling'' modes driven by the parallel current.  These modes are resonant in the vacuum on rational surfaces close to the plasma boundary -- at high $n$, these modes are highly localized on this surface, so through an expansion about this surface Connor \etal \cite{Connor1998a} found for the stability criterion
 
-\subsection{ELITE Code}\label{subsec:mod_elite}
+\begin{equation}\label{eq:peeling}
+ \sqrt{1 - 4D_M} > 1 + \frac{2}{2\pi \left(dq/d\psi\right)} \oint \frac{j_\parallel B}{R^2 B_p^3} \;dl
+\end{equation}
+
+\noindent analogous to the Mercier Criterion \cite{Mercier1960} for interchange-mode stability ($1 - 4D_M > 0$), where $D_M$ is the Mercier parameter given by
+
+\begin{equation}\label{eq:mercier}
+ \begin{aligned}
+  D_M &= -\frac{Q}{P}\\
+  Q &= \frac{p'}{2\pi} \oint \frac{\partial J}{\partial \psi} d\chi - \frac{\left(p'\right)^2}{2\pi} \oint \frac{J}{B_p^2} d\chi\\
+  &\quad + Fp' \oint \frac{J}{R^2 B_p^2} d\chi \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1} \left[ \frac{Fp'}{2\pi} \oint \frac{J}{R^2 B_p^2} d\chi - q' \right]\\
+  P &= 2\pi\left(q'\right)^2 \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1}
+ \end{aligned}
+\end{equation}
+
+\noindent It is clear from \cref{eq:peeling} that the parallel current (on the right hand side) is destabilizing; as increased pressure gradient and magnetic shear causes $D_M$ to become more negative (deepening the ``magnetic well''), stabilizing the peeling mode \cite{Snyder2002,Snyder2004}.  This causes the peeling mode to destabilize below a critical value of the magnetic shear, with this value decreasing with increased pressure gradient.\gnote{clarify $s-\alpha$ schematic above}
+
+However, high-$n$ peeling modes do not capture the entirety of current-driven physics in the edge.  Low-$n$ kink modes can also destabilize within the pedestal due to the strongly-peaked current density profile due to the bootstrap effect \cite{Snyder2002}.  Moreover, multiple harmonics of the edge kink mode may couple to each other at finite $n$ due to the broader radial extent of the mode, as well as coupling with pressure-driven ballooning modes due to the strong pressure gradient \cite{Wilson1999,Snyder2004}.  Unlike the $n \rightarrow \infty$ peeling and ballooning modes, each of which may be formulated with a simple one-dimensional calculation, treatment of the finite-$n$ coupled modes requires a more careful 2D treatment.
+
+\subsection{Coupled Modes -- the ELITE Code}\label{subsec:mod_elite}
 
 \begin{itemize}
  \item EDA H-mode modeled to be ideal-ballooning stable; P-B only describes ELMy H-mode \cite{Mossessian2002}
