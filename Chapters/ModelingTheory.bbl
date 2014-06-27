@@ -247,6 +247,44 @@ R.~L. Miller, Y.~R. Lin-Liu, A.~D. Turnbull, V.~S. Chan, L.~D. Pearlstein
 \newblock {\em Physics of Plasmas}, 4(4):1062--1068, 1997.
 \newblock BALOO code.
 
+\bibitem{Miller1998}
+R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
+\newblock \href {http://dx.doi.org/10.1063/1.872666} {Noncircular, finite
+  aspect ratio, local equilibrium model}.
+\newblock {\em Physics of Plasmas}, 5(4):973--978, 1998.
+
+\bibitem{Connor1998}
+J~W Connor.
+\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=002} {Edge-localized
+  modes - physics and theory}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):531, 1998.
+
+\bibitem{Wilson1999}
+H.~R. Wilson, J.~W. Connor, A.~R. Field, S.~J. Fielding, R.~L. Miller et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.873492} {Ideal
+  magnetohydrodynamic stability of the tokamak high-confinement-mode edge
+  region}.
+\newblock {\em Physics of Plasmas}, 6(5):1925--1934, 1999.
+
+\bibitem{Connor1998a}
+J.~W. Connor, R.~J. Hastie, H.~R. Wilson and R.~L. Miller.
+\newblock \href {http://dx.doi.org/10.1063/1.872956} {Magnetohydrodynamic
+  stability of tokamak edge plasmas}.
+\newblock {\em Physics of Plasmas}, 5(7):2687--2700, 1998.
+
+\bibitem{Wilson2006}
+H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
+\newblock \href {http://stacks.iop.org/0741-3335/48/i=5A/a=S06}
+  {Magneto-hydrodynamic stability of the {H}-mode transport barrier as a model
+  for edge localized modes: an overview}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 48(5A):A71, 2006.
+
+\bibitem{Zohm1996}
+H~Zohm.
+\newblock \href {http://stacks.iop.org/0741-3335/38/i=2/a=001} {Edge localized
+  modes ({ELMs})}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 38(2):105, 1996.
+
 \bibitem{Mossessian2002}
 D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/44/i=4/a=303} {{H}-mode
@@ -319,13 +357,6 @@ P.B. Snyder, N.~Aiba, M.~Beurskens, R.J. Groebner, L.D. Horton et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/49/i=8/a=085035} {Pedestal
   stability comparison and {ITER} pedestal prediction}.
 \newblock {\em Nuclear Fusion}, 49(8):085035, 2009.
-
-\bibitem{Wilson2006}
-H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
-\newblock \href {http://stacks.iop.org/0741-3335/48/i=5A/a=S06}
-  {Magneto-hydrodynamic stability of the {H}-mode transport barrier as a model
-  for edge localized modes: an overview}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 48(5A):A71, 2006.
 
 \bibitem{Snyder1999}
 Philip~B. Snyder.
@@ -429,12 +460,6 @@ J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
   predictions using the {GYRO} verified and experimentally validated trapped
   gyro-{Landau} fluid transport model}.
 \newblock {\em Nuclear Fusion}, 51(8):083001, 2011.
-
-\bibitem{Miller1998}
-R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
-\newblock \href {http://dx.doi.org/10.1063/1.872666} {Noncircular, finite
-  aspect ratio, local equilibrium model}.
-\newblock {\em Physics of Plasmas}, 5(4):973--978, 1998.
 
 \bibitem{Troyon1984}
 F~Troyon, R~Gruber, H~Saurenmann, S~Semenzato and S~Succi.
