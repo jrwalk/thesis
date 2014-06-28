@@ -151,7 +151,8 @@ This is solved using the ``ballooning transform'' formalized in \cite{Connor1978
 \noindent This form is used in the current implementation of the BALOO code \cite{Connor1979,Miller1987,Miller1997}, which efficiently calculates the infinite-$n$ ballooning stability limit.  Intuitively, the mode is destabilized above a critical pressure gradient (couched in terms of $\alpha_{MHD}$), with the attainable $\alpha_c$ increasing with increased magnetic shear $s$ due to the stabilizing effects of line bending\gnote{clarify shear effects...}.  There also exists a second stable regime at high $\alpha_{MHD}$ -- notably, this region can be accessed below a threshold value in $s$, below which the ballooning mode is stable for all $\alpha_{MHD}$ \cite{Miller1998,Connor1998,Wilson1999}.\gnote{better description of $s-\alpha$ formalism?}
 
 While the high-$n$ ballooning formalism described above has been successful for the treatment of core ballooning modes, it is insufficient to accurately model modes in the pedestal.  Experimentally, the measured pressure gradient is seen to exceed the limit predicted by infinite-$n$ ballooning calculations \cite{Groebner1998a,Osborne1998}, indicating that stabilizing effects due to edge current density (primarily from the bootstrap effect) and diamagnetism come into play.  Moreover, the assumptions used in the expansion described above break down in the edge.  In the conventional theory \cite{Connor1978,Connor1979} described above (resulting in \cref{eq:baloo,eq:baloo2}), the mode is treated in an expansion in orders of $n^{-1/2}$, in which the lowest order describes a local eigenvalue $\omega^2$ for a given flux surface, the first order $O(n^{-1/2}$ contains the mode phase, and the second order $O(n^{-1})$ describes the Gaussian envelope spanning $\sim n^{1/2}$ rational flux surfaces containing the mode 
-harmonics, as well as the correction to the ``true'' mode eigenvalue: $\Omega^2 = \omega^2 + O(n^{-1})$ \cite{Connor1998a,Wilson1999}.  However, the assumptions inherent in the expansion in $n^{-1/2}$ break down in the edge due to the possibility of a steep pressure gradient out to the separatrix, and the proximity of the mode center to the plasma edge (forbidding Gaussian wave envelopes).  A modification to the theory \cite{Connor1998a,Wilson1999} instead expands the energy-principle result in orders of $n^{-1/3}$, with the lowest order again determining a local pseudo-eigenvalue $\omega^2$ and the first order $O(n^{-1/3})$ defining the phase, but with the second-order expansion instead defining an Airy function envelope spanning $\sim n^{1/3}$ rational surfaces, consistent with the edge behavior.  This also provides a stabilizing $O(n^{-2/3})$ correction to the $n \rightarrow \infty$ theory \cite{Connor1998a}.  There also remains the question of the treatment of current-driven modes, both the ``peeling'' mode 
+harmonics, as well as the correction to the ``true'' mode eigenvalue: $\Omega^2 = \omega^2 + O(n^{-1})$ \cite{Connor1998a,Wilson1999}.  However, the assumptions inherent in the expansion in $n^{-1/2}$ break down in the edge due to the possibility of a steep pressure gradient out to the separatrix, and the proximity of the mode center to the plasma edge (forbidding Gaussian wave envelopes).  A modification to the theory \cite{Connor1998a,Wilson1999} instead expands the energy-principle result in orders of $n^{-1/3}$, with the lowest order again determining a local pseudo-eigenvalue $\omega^2$ and the first order $O(n^{-1/3})$ defining the phase, but with the second-order expansion instead defining an Airy function envelope spanning $\sim n^{1/3}$ rational surfaces, consistent with the edge behavior.  This also provides a stabilizing $O(n^{-2/3})$ correction to the $n \rightarrow \infty$ theory \cite{Connor1998a}.  There also remains the question of the treatment of current-driven modes, both the ``peeling'' 
+mode 
 driven by the parallel current density and the ``kink'' mode driven by the current gradient \cite{Wilson2006}, and their effect on the edge stability.
 
 \subsection{Current-Driven Modes}\label{subsec:mod_peel}
@@ -166,7 +167,7 @@ An extension of the analysis resulting in \cref{eq:dW_balloon} \cite{Connor1979}
 
 \noindent where
 
-\begin{equation}
+\begin{equation}\label{eq:dW_current_defs}
  \begin{aligned}
   P &= \sigma X + \frac{B_p^2}{\nu B^2} \frac{F}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel \right)\\
   Q &= \frac{X}{B^2} \frac{dp}{d\psi} + \frac{F^2}{\nu R^2 B^2} \frac{1}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel X \right)\\
@@ -184,10 +185,10 @@ An extension of the analysis resulting in \cref{eq:dW_balloon} \cite{Connor1979}
 
 \begin{equation}\label{eq:mercier}
  \begin{aligned}
-  D_M &= -\frac{Q}{P}\\
-  Q &= \frac{p'}{2\pi} \oint \frac{\partial J}{\partial \psi} d\chi - \frac{\left(p'\right)^2}{2\pi} \oint \frac{J}{B_p^2} d\chi\\
+  D_M &= -\frac{C_1}{C_2}\\
+  C_1 &= \frac{p'}{2\pi} \oint \frac{\partial J}{\partial \psi} d\chi - \frac{\left(p'\right)^2}{2\pi} \oint \frac{J}{B_p^2} d\chi\\
   &\quad + Fp' \oint \frac{J}{R^2 B_p^2} d\chi \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1} \left[ \frac{Fp'}{2\pi} \oint \frac{J}{R^2 B_p^2} d\chi - q' \right]\\
-  P &= 2\pi\left(q'\right)^2 \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1}
+  C_2 &= 2\pi\left(q'\right)^2 \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1}
  \end{aligned}
 \end{equation}
 
@@ -197,9 +198,23 @@ However, high-$n$ peeling modes do not capture the entirety of current-driven ph
 
 \subsection{Coupled Modes -- the ELITE Code}\label{subsec:mod_elite}
 
+The high-$n$ limits for the ballooning and peeling modes (note here that we refer to all current-driven modes in the edge as ``peeling,'' in order to distinguish them from core kink modes) yield straightforward, one-dimensional constraints on the MHD stability of the pedestal.  However, finite-larmor-radius and diamagnetic effects tend to stabilize high-$n$ modes, making this approximation relatively poor \cite{Snyder2004} -- instead, the pedestal is generally limited by finite modes with toroidal wavenumbers in the range $5 \le n \le 40$.  In this range, modes are radially broad enough that they are not cleanly localized on the corresponding rational surface, and may couple to other poloidal harmonics on nearby rational surfaces \cite{Connor1998a}.  Moreover, pressure-driven ballooning and current-driven peeling modes may couple, generating modes driven by both free-energy sources, with sufficient radial extent to affect the entire pedestal region -- driving the large, explosive crashes associated with type-I ELMs \cite{Wilson2002}.  Treatment of these modes requires a full two-dimensional approach -- we use the ``Edge-Localized Instabilities in Tokamak Equilibria'' or ELITE code \cite{Wilson1999,Wilson2002,Snyder2002} to calculate both the growth rate and eigenmode structure for these coupled modes.
+
+ELITE utilizes the expansion of the free energy in $O(n^{-1})$ found in earlier studies of peeling and ballooning modes (see \cref{eq:dW_balloon,eq:dW_balloon_current}), with an additional boundary term for the peeling drive \cite{Wilson2002,Dowsett2014}, reproduced here for completeness:
+
+\begin{equation}\label{eq:dW_ELITE}
+ \begin{aligned}
+  \delta W &= \pi \iint d\psi d\chi \Bigg\{ \frac{JB^2}{R^2 B_p^2} \left| k_\parallel X \right|^2 + \frac{R^2 B_p^2}{JB^2} \left| \frac{1}{n} \frac{\partial}{\partial \psi} \left( JB k_\parallel X \right) \right|^2\\
+  &\quad- \frac{2J}{B^2} \frac{dp}{d\psi} \left[ \left| X \right|^2 \frac{\partial}{\partial \psi} \left( p + \frac{B^2}{2} \right) - \frac{iF}{JB^2} \frac{\partial}{\partial \chi} \left( \frac{B^2}{2} \right) \frac{X^*}{n} \frac{\partial X}{\partial \psi} \right]\\
+  &\quad-\frac{X^*}{n} JBk_\parallel \left( \sigma' X \right) + \frac{1}{n} \left[ PJBk_\parallel^* Q^* + P^* JBk_\parallel Q \right]\\
+  &\quad+ \frac{\partial}{\partial \psi} \left[ \frac{\sigma}{n} X^* JBk_\parallel X \right] \Bigg\}
+ \end{aligned}
+\end{equation}
+
+\noindent with $P$, $Q$, and $\sigma$ as defined in \cref{eq:dW_current_defs}.
+
 \begin{itemize}
  \item EDA H-mode modeled to be ideal-ballooning stable; P-B only describes ELMy H-mode \cite{Mossessian2002}
- \item increased triangularity reduces $\nabla p$, $n_{e,ped}$ in EDA; contrast with ELMy, where shape stabilizes P-B modes, seems to destabilize QCM earlier in EDA \cite{Hughes2007a}
  \item DIII-D VH-modes terminate in giant p-b driven ELM \cite{Turnbull2003}
  \item strong shaping impacts stability contour in $j-\alpha_{MHD}$ space \cite{Snyder2009}
  \item collisionality $\rightarrow$ bootstrap current $\rightarrow$ magnetic shear in edge sets where in stability contour pedestal hits \cite{Snyder2009}
