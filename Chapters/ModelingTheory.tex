@@ -211,7 +211,25 @@ ELITE utilizes the expansion of the free energy in $O(n^{-1})$ found in earlier 
  \end{aligned}
 \end{equation}
 
-\noindent with $P$, $Q$, and $\sigma$ as defined in \cref{eq:dW_current_defs}.
+\noindent with $P$, $Q$, and $\sigma$ as defined in \cref{eq:dW_current_defs}.  Given this formulation, the methodology used in ELITE is straightforward.  First, poloidal variation is encoded in a ``straight field line'' angle $\omega$ c\cite{Wilson1999},
+
+\begin{equation}\label{eq:ELITE_angle}
+ \omega = \frac{1}{q} \int^\chi \nu \;d\chi
+\end{equation}
+
+\noindent (recall that the rotational transform and safety factor $q$ are encoded such that $2\pi q = \oint \nu \;d\chi$).  Using this, the perturbation $X = RB_p \xi_\psi$ is decomposed into individual poloidal harmonics,
+
+\begin{equation}\label{eq:ELITE_x}
+ X = \sum_m u_m(\psi) e^{-im\omega}
+\end{equation}
+
+\noindent where at fixed $n$ each $u_m$ describes the eigenmodes centered on rational surfaces determined by each $(m,n)$ pair.  It can be shown \cite{Wilson2002} that this yields the relation
+
+\begin{equation}\label{eq:ELITE_y}
+ JBk_\parallel X = \sum_m \left(-\frac{\nu}{q}\right) \left(m-nq\right) u_m(\psi)e^{-im\omega}
+\end{equation}
+
+\noindent motivating the introduction of the radial variable $x = m_0 - nq$, where $m_0$ is the poloidal mode number of an arbitrary reference rational surface (by convention, we use the first rational surface outside the plasma, as was used in the high-$n$ peeling mode in \cref{subsec:mod_peel} \cite{Wilson2002}).  This describes spatial variation over the expected length scale for the radial extent of $u_m$, and is a straightforward conversion from $\psi$.  It is worth noting that ELITE does not treat the separatrix in its calculations, instead truncating the calculation at an internal surface (typically $99.5-99.8\%$ of poloidal flux), which prevents a singularity in $x$; although peeling modes are highly unstable at the X-point, high local collisionality prevents the omission from significantly affecting the overall result \cite{Snyder2009a}.
 
 \begin{itemize}
  \item EDA H-mode modeled to be ideal-ballooning stable; P-B only describes ELMy H-mode \cite{Mossessian2002}
