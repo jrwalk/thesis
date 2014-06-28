@@ -194,11 +194,22 @@ An extension of the analysis resulting in \cref{eq:dW_balloon} \cite{Connor1979}
 
 \noindent It is clear from \cref{eq:peeling} that the parallel current (on the right hand side) is destabilizing; as increased pressure gradient and magnetic shear causes $D_M$ to become more negative (deepening the ``magnetic well''), stabilizing the peeling mode \cite{Snyder2002,Snyder2004}.  This causes the peeling mode to destabilize below a critical value of the magnetic shear, with this value decreasing with increased pressure gradient.\gnote{clarify $s-\alpha$ schematic above}
 
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[Schematic of the $n \rightarrow \infty$ ballooning and peeling instabilities.]{Schematic in $s-\alpha_{MHD}$ space of the infinite-$n$ peeling and ballooning instabilities.  The ballooning instability (see \cref{subsec:mod_balloon}) is destabilized by increasing pressure gradient and stabilized by magnetic shear.  A second-stable region for the ballooning mode is found at very high pressure gradient, which can be accessed by increasing the pressure gradient at low magnetic shear.  The peeling instability is driven by large edge current density (equivalently, low magnetic shear), and is stabilized by increased pressure gradient.}\label{fig:salpha}}{\includegraphics[width=100mm]{graphics/ModelingTheory/salpha.pdf}}
+\end{figure}
+
 However, high-$n$ peeling modes do not capture the entirety of current-driven physics in the edge.  Low-$n$ kink modes can also destabilize within the pedestal due to the strongly-peaked current density profile due to the bootstrap effect \cite{Snyder2002}.  Moreover, multiple harmonics of the edge kink mode may couple to each other at finite $n$ due to the broader radial extent of the mode, as well as coupling with pressure-driven ballooning modes due to the strong pressure gradient \cite{Wilson1999,Snyder2004}.  Unlike the $n \rightarrow \infty$ peeling and ballooning modes, each of which may be formulated with a simple one-dimensional calculation, treatment of the finite-$n$ coupled modes requires a more careful 2D treatment.
 
 \subsection{Coupled Modes -- the ELITE Code}\label{subsec:mod_elite}
 
-The high-$n$ limits for the ballooning and peeling modes (note here that we refer to all current-driven modes in the edge as ``peeling,'' in order to distinguish them from core kink modes) yield straightforward, one-dimensional constraints on the MHD stability of the pedestal.  However, finite-larmor-radius and diamagnetic effects tend to stabilize high-$n$ modes, making this approximation relatively poor \cite{Snyder2004} -- instead, the pedestal is generally limited by finite modes with toroidal wavenumbers in the range $5 \le n \le 40$.  In this range, modes are radially broad enough that they are not cleanly localized on the corresponding rational surface, and may couple to other poloidal harmonics on nearby rational surfaces \cite{Connor1998a}.  Moreover, pressure-driven ballooning and current-driven peeling modes may couple, generating modes driven by both free-energy sources, with sufficient radial extent to affect the entire pedestal region -- driving the large, explosive crashes associated with type-I ELMs \cite{Wilson2002}.  Treatment of these modes requires a full two-dimensional approach -- we use the ``Edge-Localized Instabilities in Tokamak Equilibria'' or ELITE code \cite{Wilson1999,Wilson2002,Snyder2002} to calculate both the growth rate and eigenmode structure for these coupled modes.
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[Schematic of finite-$n$ coupled peeling-ballooning instabilities.]{Schematic in $s-\alpha_{MHD}$ space of finite-$n$ coupled peeling-ballooning instabilities, with the infinite-$n$ decoupled results (see \cref{fig:salpha}) shown by the dashed lines.  Mode coupling tends to stabilize finite-$n$ ballooning modes.  However, the coupled modes can close off access to the second-stable regime; only in cases with very strong ``magnetic wells'' (typically achieved with extreme plasma shaping) does this access reopen.}\label{fig:salpha_coupled}}{\includegraphics[width=100mm]{graphics/ModelingTheory/salpha_coupled.pdf}}
+\end{figure}
+
+The high-$n$ limits for the ballooning and peeling modes (note here that we refer to all current-driven modes in the edge as ``peeling,'' in order to distinguish them from core kink modes) yield straightforward, one-dimensional constraints on the MHD stability of the pedestal.  However, finite-larmor-radius and diamagnetic effects tend to stabilize high-$n$ modes, making this approximation relatively poor \cite{Snyder2004} -- instead, the pedestal is generally limited by finite modes with toroidal wavenumbers in the range $5 \le n \le 40$.  In this range, modes are radially broad enough that they are not cleanly localized on the corresponding rational surface, and may couple to other poloidal harmonics on nearby rational surfaces \cite{Connor1998a}.  Moreover, pressure-driven ballooning and current-driven peeling modes may couple, generating modes driven by both free-energy sources, with sufficient radial extent to affect the entire pedestal region -- driving the large, explosive crashes associated with type-
+I ELMs \cite{Wilson2002}.  Treatment of these modes requires a full two-dimensional approach -- we use the ``Edge-Localized Instabilities in Tokamak Equilibria'' or ELITE code \cite{Wilson1999,Wilson2002,Snyder2002} to calculate both the growth rate and eigenmode structure for these coupled modes.
 
 ELITE utilizes the expansion of the free energy in $O(n^{-1})$ found in earlier studies of peeling and ballooning modes (see \cref{eq:dW_balloon,eq:dW_balloon_current}), with an additional boundary term for the peeling drive \cite{Wilson2002,Dowsett2014}, reproduced here for completeness:
 
@@ -226,10 +237,21 @@ ELITE utilizes the expansion of the free energy in $O(n^{-1})$ found in earlier 
 \noindent where at fixed $n$ each $u_m$ describes the eigenmodes centered on rational surfaces determined by each $(m,n)$ pair.  It can be shown \cite{Wilson2002} that this yields the relation
 
 \begin{equation}\label{eq:ELITE_y}
- JBk_\parallel X = \sum_m \left(-\frac{\nu}{q}\right) \left(m-nq\right) u_m(\psi)e^{-im\omega}
+ JBk_\parallel X = \sum_m \left(-\frac{\nu}{q}\right) \left(m-nq\right) u_m(x)e^{-im\omega}
 \end{equation}
 
-\noindent motivating the introduction of the radial variable $x = m_0 - nq$, where $m_0$ is the poloidal mode number of an arbitrary reference rational surface (by convention, we use the first rational surface outside the plasma, as was used in the high-$n$ peeling mode in \cref{subsec:mod_peel} \cite{Wilson2002}).  This describes spatial variation over the expected length scale for the radial extent of $u_m$, and is a straightforward conversion from $\psi$.  It is worth noting that ELITE does not treat the separatrix in its calculations, instead truncating the calculation at an internal surface (typically $99.5-99.8\%$ of poloidal flux), which prevents a singularity in $x$; although peeling modes are highly unstable at the X-point, high local collisionality prevents the omission from significantly affecting the overall result \cite{Snyder2009a}.
+\noindent motivating the introduction of the radial variable $x = m_0 - nq$, where $m_0$ is the poloidal mode number of an arbitrary reference rational surface (by convention, we use the first rational surface outside the plasma, as was used in the high-$n$ peeling mode in \cref{subsec:mod_peel} \cite{Wilson2002}).  This describes spatial variation over the expected length scale for the radial extent of $u_m$, and is a straightforward conversion from $\psi$.  It is worth noting that ELITE does not treat the separatrix in its calculations, instead truncating the calculation at an internal surface (typically $99.5-99.8\%$ of poloidal flux), which prevents a singularity in $x$; although peeling modes are highly unstable at the X-point, high local collisionality prevents the omission from significantly affecting the overall result \cite{Snyder2009a}.  The Euler-Lagrange equations minimizing the potential energy may be expressed as a set of coupled second-order ordinary differential equations of the form \cite{Dowsett2014}
+
+\begin{equation}\label{eq:ELITE_eqs}
+ A^{(2)}_{m,m'} \frac{d^2 u_m}{d\psi^2} + A^{(1)}_{m,m'} \frac{du_m}{d\psi} + A^{(0)}_{m,m'} u_m = 0
+\end{equation}
+
+\noindent where the coefficients $A$ are matrix elements describing the coupling between two modes $m$ and $m'$ (see Wilson \etal \cite{Wilson2002} for definitions).  Efficient computation of these eigenmodes is assisted by two simplifications: first, while the eigenmodes $u_m$ vary on a very short length scale $x$, comparable to the spacing between rational surfaces, the equilibrium parameters used in the calculation of the matrix elements $A$ vary more slowly, and can be calculated on a coarser mesh than that needed to evaluate \cref{eq:ELITE_eqs}.  Second, this radial localization of $u_m$ means that only harmonics on nearby rational surfaces will strongly couple -- other modes can be ignored in the computation to save time \cite{Wilson2002}.  An example of the eigenmode structure for an $n=30$ ballooning mode is shown in \cref{fig:pb_modestructure}, with the poloidal variation of the displacement amplitude (strongest at the outboard midplane, as is typical for ballooning modes) shown at left and the radial structure of the modes shown at right.
+
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ModelingTheory/pb_modestructure.pdf}}{\caption[Mode structure for $n=30$ model calculated by ELITE.]{Mode structure for an $n=30$ ballooning mode calculated by ELITE.  (left) Contour plot of radial perturbations from the mode.  The mode is edge-localized and strongest at the outboard midplane, consistent with an edge ballooning mode.  (right) Eigenmode structure of the $n=30$ mode.  Each peak is a poloidal harmonic localized around the rational flux surface determined by the corresponding poloidal mode number $m$ for $n=30$.  The mode is strongest in the steep gradient region, but extends inward due to the comparatively high mode number (eigenmode envelope encompasses $O(n^{1/3})$ flux surfaces).  Note that, as ELITE cannot treat the separatrix, the mode calculation truncates at $\psi_{norm} = 0.995$.}\label{fig:pb_modestructure}}
+\end{figure}
 
 \begin{itemize}
  \item EDA H-mode modeled to be ideal-ballooning stable; P-B only describes ELMy H-mode \cite{Mossessian2002}
@@ -247,18 +269,14 @@ ELITE utilizes the expansion of the free energy in $O(n^{-1})$ found in earlier 
 
 \begin{figure}
  \pushtooutside
- \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ModelingTheory/pb_modestructure.pdf}}{\caption[Mode structure for $n=30$ model calculated by ELITE.]{Mode structure for an $n=30$ ballooning mode calculated by ELITE.  (left) Contour plot of radial perturbations from the mode.  The mode is edge-localized and strongest at the outboard midplane, consistent with an edge ballooning mode.  (right) Eigenmode structure of the $n=30$ mode.  Each peak is a poloidal harmonic localized around the rational flux surface determined by the corresponding poloidal mode number $m$ for $n=30$.  The mode is strongest in the steep gradient region, but extends inward due to the comparatively high mode number (eigenmode envelope encompasses $O(n^{1/3})$ flux surfaces).  Note that, as ELITE cannot treat the separatrix, the mode calculation truncates at $\psi_{norm} = 0.995$.}\label{fig:pb_modestructure}}
-\end{figure}
-
-\begin{figure}
- \pushtooutside
  \fcapside[60mm]{\caption[Schematic of peeling-ballooning MHD stability space.]{Schematic of the stability space to coupled peeling-ballooning MHD modes, set by the edge pressure gradient and current density.  Ballooning modes are driven by pressure gradient but stabilized by magnetic shear driven by edge currents, while kink/peeling modes are current-driven but stabilized by pressure gradients.  \note{Ref to Snyder?}}\label{fig:mod_pbcartoon}}{\includegraphics[width=100mm]{graphics/ModelingTheory/pbcartoon.pdf}}
 \end{figure}
 
-\begin{figure}
- \pushtooutside
- \fcapside[60mm]{\caption[ELITE calculation of P-B stability in a C-Mod ELMy H-mode.]{Calculation of the peeling-ballooning MHD stability contour from ELITE for an ELMy H-mode pedestal on C-Mod.  To within error bars, the pedestal lies on the peeling-ballooning boundary.  The comparatively higher collisionality typical of C-Mod H-mode pedestals pushes the MHD behavior of the pedestal towards higher-$n$, pure-ballooning modes, although moderate-$n$ coupled modes in the ``nose'' of the stability contour are also common.}\label{fig:mod_elmy_elite}}{\includegraphics[width=100mm]{graphics/ModelingTheory/elmy_elite_nobal.pdf}}
-\end{figure}
+% move this to ch 4!
+% \begin{figure}
+%  \pushtooutside
+%  \fcapside[60mm]{\caption[ELITE calculation of P-B stability in a C-Mod ELMy H-mode.]{Calculation of the peeling-ballooning MHD stability contour from ELITE for an ELMy H-mode pedestal on C-Mod.  To within error bars, the pedestal lies on the peeling-ballooning boundary.  The comparatively higher collisionality typical of C-Mod H-mode pedestals pushes the MHD behavior of the pedestal towards higher-$n$, pure-ballooning modes, although moderate-$n$ coupled modes in the ``nose'' of the stability contour are also common.}\label{fig:mod_elmy_elite}}{\includegraphics[width=100mm]{graphics/ModelingTheory/elmy_elite_nobal.pdf}}
+% \end{figure}
 
 \nicesectionending
 
