@@ -397,8 +397,8 @@ W.M. Tang, J.W. Connor and R.J. Hastie.
 
 \bibitem{Snyder2001}
 P.~B. Snyder and G.~W. Hammett.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.1342029} {Electromagnetic
-  effects on plasma microturbulence and transport}.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/doi/10.1063/1.1342029}
+  {Electromagnetic effects on plasma microturbulence and transport}.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Snyder1999}
@@ -435,13 +435,6 @@ J.~Candy and R.E. Waltz.
   eulerian gyrokinetic-maxwell solver}.
 \newblock {\em Journal of Computational Physics}, 186(2):545--581, 2003.
 
-\bibitem{Groebner2013}
-R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
-  understanding of physics processes in pedestal structure, leading to improved
-  predictive capability for {ITER}}.
-\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
-
 \bibitem{Oyama2005}
 N.~Oyama, Y.~Sakamoto, A.~Isayama, M.~Takechi, P.~Gohil et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/45/i=8/a=014} {Energy loss for
@@ -460,13 +453,6 @@ B.~LaBombard, J.~W. Hughes, N.~Smick, A.~Graf, K.~Marr et~al.
 \newblock \href {http://dx.doi.org/10.1063/1.2838246} {Critical gradients and
   plasma flows in the edge plasma of {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 15(5):056106, 2008.
-
-\bibitem{Walk2012}
-J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
-  {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
-  comparison with the {EPED} model}.
-\newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
 
 \bibitem{Hughes2013}
 J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
@@ -530,6 +516,20 @@ T.Y. Xia, X.Q. Xu and P.W. Xi.
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073009} {Six-field
   two-fluid simulations of peeling–ballooning modes using {BOUT++}}.
 \newblock {\em Nuclear Fusion}, 53(7):073009, 2013.
+
+\bibitem{Groebner2013}
+R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
+  understanding of physics processes in pedestal structure, leading to improved
+  predictive capability for {ITER}}.
+\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
+
+\bibitem{Walk2012}
+J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
+  {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
+  comparison with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
 
 \bibitem{Han2013}
 Hyunsun Han, Ohjin Kwon and J.~Y. Kim.
