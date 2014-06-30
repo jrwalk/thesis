@@ -78,7 +78,14 @@ A comparison between the ensemble-averaged and ELM-synchronized pressure pedesta
 
 \section{EPED Model Predictions}\label{sec:elmy_eped}
 
-The EPED model, described in \cref{sec:mod_eped}, combines pedestal limits based on coupled peeling-ballooning MHD instabilities \cite{Snyder2004,Wilson2002,Wilson2006} and kinetic-ballooning mode turbulence \cite{Snyder2001}.  These models set two distinct constraints on the pedestal width and height, with peeling-ballooning MHD predicting $p_{ped} \sim \Delta^{3/4}$ and kinetic-ballooning turbulence predicting $p_{ped} \sim \Delta^2$\gnote{reference figure in chapter 3, probably}.  The unique intersection of these two constraints provides a predictive value for the pedestal width and height.  The most recent version of the model, EPED1.63, utilizes gyrokinetic calculations to more accurately constrain the KBM limit, and includes a modified term accounting for the strong diamagnetic stabilization of high-$n$ modes in the pedestal on C-Mod.  A comparison between the observed and predicted pedestal parameters is presented here.
+The EPED model, described in \cref{sec:mod_eped}, combines pedestal limits based on coupled peeling-ballooning MHD instabilities \cite{Snyder2004,Wilson2002,Wilson2006} and kinetic-ballooning mode turbulence \cite{Snyder2001}.\gnote{elaborate on P-B plot}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[ELITE calculation of P-B stability in a C-Mod ELMy H-mode.]{Calculation of the peeling-ballooning MHD stability contour from ELITE for an ELMy H-mode pedestal on C-Mod.  To within error bars, the pedestal lies on the peeling-ballooning boundary.  The comparatively higher collisionality typical of C-Mod H-mode pedestals pushes the MHD behavior of the pedestal towards higher-$n$, pure-ballooning modes, although moderate-$n$ coupled modes in the ``nose'' of the stability contour are also common.}\label{fig:mod_elmy_elite}}{\includegraphics[width=100mm]{graphics/Elmy/elmy_elite.pdf}}
+\end{figure}
+
+\noindent These models set two distinct constraints on the pedestal width and height, with peeling-ballooning MHD predicting $p_{ped} \sim \Delta^{3/4}$ and kinetic-ballooning turbulence predicting $p_{ped} \sim \Delta^2$\gnote{reference figure in chapter 3, probably}.  The unique intersection of these two constraints provides a predictive value for the pedestal width and height.  The most recent version of the model, EPED1.63, utilizes gyrokinetic calculations to more accurately constrain the KBM limit, and includes a modified term accounting for the strong diamagnetic stabilization of high-$n$ modes in the pedestal on C-Mod.  A comparison between the observed and predicted pedestal parameters is presented here.
 
 \subsection{Pedestal Height}\label{subsec:elmy_eped_height}
 

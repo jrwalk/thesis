@@ -247,17 +247,11 @@ R.~L. Miller, Y.~R. Lin-Liu, A.~D. Turnbull, V.~S. Chan, L.~D. Pearlstein
 \newblock {\em Physics of Plasmas}, 4(4):1062--1068, 1997.
 \newblock BALOO code.
 
-\bibitem{Miller1998}
-R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
-\newblock \href {http://dx.doi.org/10.1063/1.872666} {Noncircular, finite
-  aspect ratio, local equilibrium model}.
-\newblock {\em Physics of Plasmas}, 5(4):973--978, 1998.
-
-\bibitem{Connor1998}
-J~W Connor.
-\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=002} {Edge-localized
-  modes - physics and theory}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):531, 1998.
+\bibitem{Connor1998a}
+J.~W. Connor, R.~J. Hastie, H.~R. Wilson and R.~L. Miller.
+\newblock \href {http://dx.doi.org/10.1063/1.872956} {Magnetohydrodynamic
+  stability of tokamak edge plasmas}.
+\newblock {\em Physics of Plasmas}, 5(7):2687--2700, 1998.
 
 \bibitem{Wilson1999}
 H.~R. Wilson, J.~W. Connor, A.~R. Field, S.~J. Fielding, R.~L. Miller et~al.
@@ -265,12 +259,6 @@ H.~R. Wilson, J.~W. Connor, A.~R. Field, S.~J. Fielding, R.~L. Miller et~al.
   magnetohydrodynamic stability of the tokamak high-confinement-mode edge
   region}.
 \newblock {\em Physics of Plasmas}, 6(5):1925--1934, 1999.
-
-\bibitem{Connor1998a}
-J.~W. Connor, R.~J. Hastie, H.~R. Wilson and R.~L. Miller.
-\newblock \href {http://dx.doi.org/10.1063/1.872956} {Magnetohydrodynamic
-  stability of tokamak edge plasmas}.
-\newblock {\em Physics of Plasmas}, 5(7):2687--2700, 1998.
 
 \bibitem{Wilson2006}
 H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
@@ -304,6 +292,24 @@ P.B. Snyder, H.R. Wilson, J.R. Ferron, L.L. Lao, A.W. Leonard et~al.
   calculation and comparison with experiment}.
 \newblock {\em Nuclear Fusion}, 44(2):320, 2004.
 
+\bibitem{Miller1998}
+R.~L. Miller, M.~S. Chu, J.~M. Greene, Y.~R. Lin-Liu and R.~E. Waltz.
+\newblock \href {http://dx.doi.org/10.1063/1.872666} {Noncircular, finite
+  aspect ratio, local equilibrium model}.
+\newblock {\em Physics of Plasmas}, 5(4):973--978, 1998.
+
+\bibitem{Connor1998}
+J~W Connor.
+\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=002} {Edge-localized
+  modes - physics and theory}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):531, 1998.
+
+\bibitem{Greene1981}
+J.M. Greene and M.S. Chance.
+\newblock \href {http://stacks.iop.org/0029-5515/21/i=4/a=002} {The second
+  region of stability against ballooning modes}.
+\newblock {\em Nuclear Fusion}, 21(4):453, 1981.
+
 \bibitem{Wilson2002}
 H.~R. Wilson, P.~B. Snyder, G.~T.~A. Huysmans and R.~L. Miller.
 \newblock \href {http://dx.doi.org/10.1063/1.1459058} {Numerical studies of
@@ -322,30 +328,17 @@ P.B. Snyder, N.~Aiba, M.~Beurskens, R.J. Groebner, L.D. Horton et~al.
   stability comparison and {ITER} pedestal prediction}.
 \newblock {\em Nuclear Fusion}, 49(8):085035, 2009.
 
-\bibitem{Mossessian2002}
-D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
-\newblock \href {http://stacks.iop.org/0741-3335/44/i=4/a=303} {{H}-mode
-  pedestal characteristics and {MHD} stability of the edge plasma in {Alcator
-  C-Mod}}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 44(4):423, 2002.
-
-\bibitem{Turnbull2003}
-A~D Turnbull, L~L Lao, T~H Osborne, O~Sauter, E~J Strait et~al.
-\newblock \href {http://stacks.iop.org/0741-3335/45/i=10/a=002} {Edge localized
-  modes in {DIII-D} high performance discharges}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 45(10):1845, 2003.
-
 \bibitem{Snyder2009}
 P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
 \newblock \href {http://dx.doi.org/10.1063/1.3122146} {Development and
   validation of a predictive model for the pedestal height}.
 \newblock {\em Physics of Plasmas}, 16(5):056118, 2009.
 
-\bibitem{Medvedev2006}
-S~Yu Medvedev, A~A Martynov, Y~R Martin, O~Sauter and L~Villard.
-\newblock \href {http://stacks.iop.org/0741-3335/48/i=7/a=003} {Edge
-  kink/ballooning mode stability in tokamaks with separatrix}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 48(7):927, 2006.
+\bibitem{Turnbull2003}
+A~D Turnbull, L~L Lao, T~H Osborne, O~Sauter, E~J Strait et~al.
+\newblock \href {http://stacks.iop.org/0741-3335/45/i=10/a=002} {Edge localized
+  modes in {DIII-D} high performance discharges}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 45(10):1845, 2003.
 
 \bibitem{Bernard1981}
 L.C. Bernard, F.J. Helton and R.W. Moore.
@@ -354,25 +347,18 @@ L.C. Bernard, F.J. Helton and R.W. Moore.
   An {MHD} stability code for axisymmetric plasmas with internal separatrices}.
 \newblock {\em Computer Physics Communications}, 24(3–4):377 -- 380, 1981.
 
-\bibitem{Huysmans2001}
-G.~T.~A. Huysmans, S.~E. Sharapov, A.~B. Mikhailovskii and W.~Kerner.
-\newblock \href {http://dx.doi.org/10.1063/1.1398573} {Modeling of diamagnetic
-  stabilization of ideal magnetohydrodynamic instabilities associated with the
-  transport barrier}.
-\newblock {\em Physics of Plasmas}, 8(10):4292--4305, 2001.
-
 \bibitem{Mikhailovskii1997}
 A.~B. Mikhailovskii, G.~T.~A. Huysmans, W.~Kerner and S.~E. Sharapov.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1134/1.952514}
   {Optimization of computational {MHD} normal-mode analysis for tokamaks}.
 \newblock {\em Plasma Physics Reports}, 23(10):844--857, 1997.
 
-\bibitem{Degtyarev1997}
-L.~Degtyarev, A.~Martynov, S.~Medvedev, F.~Troyon, L.~Villard et~al.
-\newblock \href
-  {http://www.sciencedirect.com/science/article/pii/S0010465597000374} {The
-  {KINX} ideal {MHD} stability code for axisymmetric plasmas with separatrix}.
-\newblock {\em Computer Physics Communications}, 103(1):10--27, 1997.
+\bibitem{Huysmans2001}
+G.~T.~A. Huysmans, S.~E. Sharapov, A.~B. Mikhailovskii and W.~Kerner.
+\newblock \href {http://dx.doi.org/10.1063/1.1398573} {Modeling of diamagnetic
+  stabilization of ideal magnetohydrodynamic instabilities associated with the
+  transport barrier}.
+\newblock {\em Physics of Plasmas}, 8(10):4292--4305, 2001.
 
 \bibitem{Aiba2006}
 Nobuyuki Aiba, Shinji Tokuda, Tomoko Ishizawa and Masao Okamoto.
@@ -388,6 +374,46 @@ Nobuyuki Aiba, Shinji Tokuda, Takaaki Fujita, Takahisa Ozeki, Ming~S. Chu
   stability analysis of ideal {MHD} modes with a wide range of toroidal mode
   numbers in tokamaks}.
 \newblock {\em Plasma and Fusion Research}, 2:010, 2007.
+
+\bibitem{Degtyarev1997}
+L.~Degtyarev, A.~Martynov, S.~Medvedev, F.~Troyon, L.~Villard et~al.
+\newblock \href
+  {http://www.sciencedirect.com/science/article/pii/S0010465597000374} {The
+  {KINX} ideal {MHD} stability code for axisymmetric plasmas with separatrix}.
+\newblock {\em Computer Physics Communications}, 103(1):10--27, 1997.
+
+\bibitem{Medvedev2006}
+S~Yu Medvedev, A~A Martynov, Y~R Martin, O~Sauter and L~Villard.
+\newblock \href {http://stacks.iop.org/0741-3335/48/i=7/a=003} {Edge
+  kink/ballooning mode stability in tokamaks with separatrix}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 48(7):927, 2006.
+
+\bibitem{Snyder2005}
+P.~B. Snyder, H.~R. Wilson and X.~Q. Xu.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1873792}
+  {Progress in the peeling-ballooning model of edge localized modes: Numerical
+  studies of nonlinear dynamics}.
+\newblock {\em Physics of Plasmas}, 12(5):--, 2005.
+
+\bibitem{Mossessian2002}
+D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
+\newblock \href {http://stacks.iop.org/0741-3335/44/i=4/a=303} {{H}-mode
+  pedestal characteristics and {MHD} stability of the edge plasma in {Alcator
+  C-Mod}}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 44(4):423, 2002.
+
+\bibitem{Mossessian2003}
+D.~A. Mossessian, P.~Snyder, A.~Hubbard, J.~W. Hughes, M.~Greenwald et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1561618} {High-confinement-mode
+  edge stability of {Alcator C-mod} plasmas}.
+\newblock {\em Physics of Plasmas}, 10(5):1720--1726, 2003.
+
+\bibitem{Snyder2007}
+P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/47/i=8/a=030} {Stability and
+  dynamics of the edge pedestal in the low collisionality regime: physics
+  mechanisms for steady-state {ELM}-free operation}.
+\newblock {\em Nuclear Fusion}, 47(8):961, 2007.
 
 \bibitem{Tang1980}
 W.M. Tang, J.W. Connor and R.J. Hastie.
@@ -503,6 +529,18 @@ O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
   {Neoclassical conductivity and bootstrap current formulas for general
   axisymmetric equilibria and arbitrary collisionality regime}.
 \newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
+
+\bibitem{Snyder2003}
+P~B Snyder and H~R Wilson.
+\newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=308} {Ideal
+  magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
+
+\bibitem{Dudson2009}
+B.~D. Dudson, M.~V. Umansky, X.~Q. Xu, P.~B. Snyder and H.~R. Wilson.
+\newblock \href {http://dx.doi.org/doi:10.1016/j.cpc.2009.03.008} {{BOUT++}: a
+  framework for parallel plasma fluid simulations}.
+\newblock {\em Computer Physics Communications}, 180:1467--1480, 2009.
 
 \bibitem{Xu2010}
 X.~Q. Xu, B.~Dudson, P.~B. Snyder, M.~V. Umansky and H.~Wilson.
