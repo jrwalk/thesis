@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Greenwald2007}
+M.~Greenwald, N.~Basse, P.~Bonoli, R.~Bravenec, E.~Edlund et~al.
+\newblock \href {http://www.ans.org/pubs/journals/fst/a_1422} {Confinement and
+  transport research in {Alcator C-Mod}}.
+\newblock {\em Fusion Science and Technology}, 51(3):266--287, 2007.
+
 \bibitem{Hubbard1998}
 A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, I.~H. Hutchinson
   et~al.
@@ -90,6 +96,12 @@ M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
 \newblock \href {http://dx.doi.org/DOI:10.1063/1.3593008} {{H}-mode pedestal
   scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
 \newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
+
+\bibitem{Mossessian2003}
+D.~A. Mossessian, P.~Snyder, A.~Hubbard, J.~W. Hughes, M.~Greenwald et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1561618} {High-confinement-mode
+  edge stability of {Alcator C-mod} plasmas}.
+\newblock {\em Physics of Plasmas}, 10(5):1720--1726, 2003.
 
 \bibitem{Onjun2002}
 T.~Onjun, G.~Bateman, A.~H. Kritz and G.~Hammett.
@@ -401,12 +413,6 @@ D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
   pedestal characteristics and {MHD} stability of the edge plasma in {Alcator
   C-Mod}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 44(4):423, 2002.
-
-\bibitem{Mossessian2003}
-D.~A. Mossessian, P.~Snyder, A.~Hubbard, J.~W. Hughes, M.~Greenwald et~al.
-\newblock \href {http://dx.doi.org/10.1063/1.1561618} {High-confinement-mode
-  edge stability of {Alcator C-mod} plasmas}.
-\newblock {\em Physics of Plasmas}, 10(5):1720--1726, 2003.
 
 \bibitem{Snyder2007}
 P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
