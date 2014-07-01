@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Greenwald2007}
+M.~Greenwald, N.~Basse, P.~Bonoli, R.~Bravenec, E.~Edlund et~al.
+\newblock \href {http://www.ans.org/pubs/journals/fst/a_1422} {Confinement and
+  transport research in {Alcator C-Mod}}.
+\newblock {\em Fusion Science and Technology}, 51(3):266--287, 2007.
+
 \bibitem{Hubbard1998}
 A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, I.~H. Hutchinson
   et~al.
@@ -90,6 +96,12 @@ M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
 \newblock \href {http://dx.doi.org/DOI:10.1063/1.3593008} {{H}-mode pedestal
   scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
 \newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
+
+\bibitem{Mossessian2003}
+D.~A. Mossessian, P.~Snyder, A.~Hubbard, J.~W. Hughes, M.~Greenwald et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1561618} {High-confinement-mode
+  edge stability of {Alcator C-mod} plasmas}.
+\newblock {\em Physics of Plasmas}, 10(5):1720--1726, 2003.
 
 \bibitem{Onjun2002}
 T.~Onjun, G.~Bateman, A.~H. Kritz and G.~Hammett.
@@ -328,6 +340,19 @@ P.B. Snyder, N.~Aiba, M.~Beurskens, R.J. Groebner, L.D. Horton et~al.
   stability comparison and {ITER} pedestal prediction}.
 \newblock {\em Nuclear Fusion}, 49(8):085035, 2009.
 
+\bibitem{Huysmans2001}
+G.~T.~A. Huysmans, S.~E. Sharapov, A.~B. Mikhailovskii and W.~Kerner.
+\newblock \href {http://dx.doi.org/10.1063/1.1398573} {Modeling of diamagnetic
+  stabilization of ideal magnetohydrodynamic instabilities associated with the
+  transport barrier}.
+\newblock {\em Physics of Plasmas}, 8(10):4292--4305, 2001.
+
+\bibitem{Snyder2003}
+P~B Snyder and H~R Wilson.
+\newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=308} {Ideal
+  magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
+
 \bibitem{Snyder2009}
 P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
 \newblock \href {http://dx.doi.org/10.1063/1.3122146} {Development and
@@ -352,13 +377,6 @@ A.~B. Mikhailovskii, G.~T.~A. Huysmans, W.~Kerner and S.~E. Sharapov.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1134/1.952514}
   {Optimization of computational {MHD} normal-mode analysis for tokamaks}.
 \newblock {\em Plasma Physics Reports}, 23(10):844--857, 1997.
-
-\bibitem{Huysmans2001}
-G.~T.~A. Huysmans, S.~E. Sharapov, A.~B. Mikhailovskii and W.~Kerner.
-\newblock \href {http://dx.doi.org/10.1063/1.1398573} {Modeling of diamagnetic
-  stabilization of ideal magnetohydrodynamic instabilities associated with the
-  transport barrier}.
-\newblock {\em Physics of Plasmas}, 8(10):4292--4305, 2001.
 
 \bibitem{Aiba2006}
 Nobuyuki Aiba, Shinji Tokuda, Tomoko Ishizawa and Masao Okamoto.
@@ -401,12 +419,6 @@ D~A Mossessian, P~B Snyder, M~Greenwald, J~W Hughes, Y~Lin et~al.
   pedestal characteristics and {MHD} stability of the edge plasma in {Alcator
   C-Mod}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 44(4):423, 2002.
-
-\bibitem{Mossessian2003}
-D.~A. Mossessian, P.~Snyder, A.~Hubbard, J.~W. Hughes, M.~Greenwald et~al.
-\newblock \href {http://dx.doi.org/10.1063/1.1561618} {High-confinement-mode
-  edge stability of {Alcator C-mod} plasmas}.
-\newblock {\em Physics of Plasmas}, 10(5):1720--1726, 2003.
 
 \bibitem{Snyder2007}
 P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
@@ -529,12 +541,6 @@ O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
   {Neoclassical conductivity and bootstrap current formulas for general
   axisymmetric equilibria and arbitrary collisionality regime}.
 \newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
-
-\bibitem{Snyder2003}
-P~B Snyder and H~R Wilson.
-\newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=308} {Ideal
-  magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
 
 \bibitem{Dudson2009}
 B.~D. Dudson, M.~V. Umansky, X.~Q. Xu, P.~B. Snyder and H.~R. Wilson.
