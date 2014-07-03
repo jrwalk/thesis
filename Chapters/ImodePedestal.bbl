@@ -84,4 +84,23 @@ J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
   periodicity, and plasma ballooning modes}.
 \newblock {\em Physical Review Letters}, 40:396--399, Feb 1978.
 
+\bibitem{Yushmanov1990}
+P.N. Yushmanov, T.~Takizuka, K.S. Riedel, O.J.W.F. Kardaun, J.G. Cordey et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/30/i=10/a=001} {Scalings for
+  tokamak energy confinement}.
+\newblock {\em Nuclear Fusion}, 30(10):1999, 1990.
+
+\bibitem{Christiansen1992}
+J.P. Christiansen, J.G. Cordey, K.~Thomsen, A.~Tanga, J.C. DeBoo et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/32/i=2/a=I11} {Global energy
+  confinement {H}-mode database for {ITER}}.
+\newblock {\em Nuclear Fusion}, 32(2):291, 1992.
+
+\bibitem{Snyder2007}
+P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/47/i=8/a=030} {Stability and
+  dynamics of the edge pedestal in the low collisionality regime: physics
+  mechanisms for steady-state {ELM}-free operation}.
+\newblock {\em Nuclear Fusion}, 47(8):961, 2007.
+
 \end{thebibliography}

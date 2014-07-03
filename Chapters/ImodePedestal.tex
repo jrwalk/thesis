@@ -1,4 +1,4 @@
-\chapter{I-Mode Pedestal Scalings}\label{ch:ImodePedestal}
+\textit{•}\chapter{I-Mode Pedestal Scalings}\label{ch:ImodePedestal}
 
 The I-mode \cite{Whyte2010,Hubbard2011}, introduced in \cref{sec:hcr_imode}, is a novel high-performance regime pioneered on Alcator C-Mod.  I-mode is unique in that it appears to decouple energy and particle transport, forming a steep temperature pedestal with H-mode levels of energy confinement without the accompanying density pedestal or suppression of particle transport found in conventional H-modes.  I-mode exhibits several highly attractive properties for a putative reactor regime:
 
@@ -117,13 +117,15 @@ Trends in the pressure pedestal in I-mode are also indicative of MHD stability. 
 
 Due to the complexity inherent in modeling global energy transport from first-principles physics, it is common to establish empirical scaling laws for energy confinement using a power-law fit to large datasets.  For example, the ITER89 \cite{Yushmanov1990} and ITER98 \cite{ITER1999} scalings utilized an extensive multi-machine database \cite{Christiansen1992} for L-mode and H-mode confinement.  In particular the ITER98y2 scaling (see \cref{eq:tau98}) is a commonly-used baseline for high-performance regimes, particularly in terms of the normalized $H_{98}$ (\cref{eq:H98}).  However, as the ITER98y2 scaling was constructed predominantly with type-I ELMy H-modes (as these customarily are the highest-performance H-modes on most tokamaks), and as such implicitly includes the physics of ELM-limited pedestals.  For example, the power-law fit in ITER98y2 includes a strong degradation of confinement with heating power, $\tau_E \sim P^{-0.7}$.  This is consistent with the observed weak response of ELMing pedestals with heating power \cite{Snyder2007}, with increased power instead raising the ELM frequency to maintain consistent ELM-driven heat transport.\gnote{cite}
 
-In light of the substantially different physics of the I-mode pedestal and energy confinement compared to H-modes\gnote{clarify}, it is useful to construct a power-law confinement fit using I-mode data.  It must be noted that such a fit would be only preliminary, as fits using data from a single machine lack the range of certain parameters to fully constrain the fit.  Even so, it is illustrative to examine the results of I-mode under an analogous approach.\gnote{reword}  I-mode energy confinement times are fitted in a least-squares sense to the general form
+In light of the substantially different physics of the I-mode pedestal and energy confinement compared to H-modes\gnote{clarify}, it is useful to construct a power-law confinement fit using I-mode data.  It is strongly emphasized that such a fit would be only preliminary, as fits using data from a single machine lack the range of parameter values needed to fully constrain the fit.  Even so, it is illustrative to examine the results of I-mode under an analogous approach, indicative of the potential benefits of I-mode operation when extrapolated to larger devices.\gnote{reword}  I-mode energy confinement times are fitted in a least-squares sense to the general form
 
 \begin{equation}\label{eq:taufit}
  \tau_{I-mode} = C \; I_p^{\alpha_{I_p}} \; B_T^{\alpha_{B_T}} \; \overline{n}_e^{\alpha_{n_e}} \; R^{\alpha_R} \; \varepsilon^{\alpha_\varepsilon} \; \kappa^{\alpha_\kappa} \; P_{loss}^{\alpha_P}
 \end{equation}
 
-\noindent to find free exponents $\alpha_j$ for plasma current $I_p$ in $\si{\mega\ampere}$, toroidal field $B_T$ in $\si{\tesla}$, line-averaged density $\overline{n}_e$ in $\SI{e20}{\per\meter\cubed}$, major radius $R$ in $\si{\meter}$, inverse aspect ratio $\varepsilon$, elongation $\kappa$, and loss power $P_{loss}$ in $\si{\mega\watt}$ (see \cref{eq:ploss}).
+\noindent to find free exponents $\alpha_j$ for plasma current $I_p$ in $\si{\mega\ampere}$, toroidal field $B_T$ in $\si{\tesla}$, line-averaged density $\overline{n}_e$ in $\SI{e20}{\per\meter\cubed}$, major radius $R$ in $\si{\meter}$, inverse aspect ratio $\varepsilon$, elongation $\kappa$, and loss power $P_{loss}$ in $\si{\mega\watt}$ (see \cref{eq:ploss}).  To extend the quantity of data and range of parameters available for this assay, the high-resolution pedestal data used in the bulk of this thesis is supplemented by older I-mode datasets containing both reversed-field LSN and forward-field USN I-mode cases.  Although these data lack the high-resolution edge data necessary for pedestal structure and stability studies, they are nevertheless suitable for scalings based on global parameters.  Although the net power $P_{net}$ (see \cref{eq:pnet}) has been demonstrated to be the more accurate parameter, rather than $P_{loss}$\gnote{cite, clarify}, these older data contain inconsistent measurements of the radiated power, necessitating the use of loss power in its stead (and in any case, this is consistent with previous confinement scaling studies).
+
+Results from a number of scaling studies are shown in \cref{tab:imode_confinement}, containing the values and standard deviations for each exponent value, the scale factor $C$, and the $R^2$ coefficient of determination.  We begin with the full parameter list used in the ITER98y2 scaling, shown as fit \#1 in \cref{tab:imode_confinement}, with results shown in \cref{fig:imode_tauE_1}.  However, it is immediately obvious that the size scalings, dependent on major radius $R$ and inverse aspect ratio $\varepsilon$, are not properly captured (denoted by the extreme errorbars on these parameters).  This is to be expected -- absent meaningful variation in $R$ and $\varepsilon$ in the dataset (which requires multiple machines to produce) these parameters are not well-constrained, and result \#1 is over-fitted.  For simplicity, we reduce our consideration to an effective single-machine scaling, omitting these parameters (indicated by blank entries in \cref{tab:imode_confinement}).  
 
 \begin{table*}
  \pushtooutside
@@ -165,10 +167,6 @@ In light of the substantially different physics of the I-mode pedestal and energ
  \pushtooutside
  \fcapside[60mm]{\caption[Power-law fit to I-mode $\tau_E$ extrapolated to larger devices.]{Modeled energy confinement time $\tau_E$ with the fixed $R^2 \sqrt{\varepsilon}$ size scaling (fit \#5 in \cref{tab:imode_confinement}, extrapolated to DIII-D, ASDEX Upgrade, JET, and ITER.  Modeled energy confinement times are competitive with H-modes, both the measured $\tau_E$ for existing machines and the expected ITER98y2 prediction for ITER H-modes.}\label{fig:imode_tauE_extrap}}{\includegraphics[width=100mm]{graphics/IModePedestal/tauE_6_Ploss_extrap.pdf}}
 \end{figure}
-
-\nicesectionending
-
-\section{Fluctuation Characterization}\label{sec:imode_fluct}
 
 \nicesectionending
 
