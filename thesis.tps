@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=Chapters\Elmy.tex
 
 [Frame0_View0,0]
-TopLine=177
+TopLine=237
 Cursor=15643
 
 [Frame1]
@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=Chapters\ModelingTheory.tex
 
 [Frame1_View0,0]
-TopLine=532
+TopLine=582
 Cursor=44243
 
 [SessionInfo]
