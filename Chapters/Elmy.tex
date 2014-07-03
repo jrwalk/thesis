@@ -149,7 +149,7 @@ Pre-EPED models accounting for pressure-gradient limits assumed the pressure ped
 
 The EPED model, described in \cref{sec:mod_eped}, combines pedestal limits based on coupled peeling-ballooning MHD instabilities \cite{Snyder2004,Wilson2002,Wilson2006} and kinetic-ballooning mode turbulence \cite{Snyder2001}.  An example of MHD and KBM calculations of the type used by EPED is shown in \cref{fig:elmy_elite}.  The red-blue contour indicates the peeling-ballooning stability calculated by ELITE (described in \cref{subsec:mod_elite}), with the yellow dash indicating the stability boundary -- in this case, the pedestal is limited by intermediate-$n$ ballooning modes (see \cref{fig:mod_pbcartoon}), as is expected at the higher collisionality typically seen on C-Mod.  White contours indicate the KBM stability calculated by BALOO (see \cref{sec:mod_turbulence}).  To within error bars, the ELMy H-mode pedestal is at both the peeling-ballooning and kinetic-ballooning stability boundaries, as is expected for pedestals at the ELM threshold.  Calculations of this type are shown in more detail in \cref{ch:ImodeModeling}.
 
-\begin{figure}
+\begin{figure}[h]
  \pushtooutside
  \fcapside[60mm]{\caption[ELITE calculation of P-B stability in a C-Mod ELMy H-mode.]{Calculation of the peeling-ballooning MHD stability contour from ELITE for an ELMy H-mode pedestal on C-Mod.  To within error bars, the pedestal lies on the peeling-ballooning boundary.  The comparatively higher collisionality typical of C-Mod H-mode pedestals pushes the MHD behavior of the pedestal towards higher-$n$, pure-ballooning modes, although moderate-$n$ coupled modes in the ``nose'' of the stability contour are also common.}\label{fig:elmy_elite}}{\includegraphics[width=100mm]{graphics/ELMy/elmy_elite.pdf}}
 \end{figure}
@@ -190,42 +190,42 @@ An evaluation of this scaling with ensemble-averaged data is shown in \cref{fig:
  \fcapside[60mm]{\caption[Comparison of EPED-predicted pedestal width and height with corresponding experimental points.]{Comparison of EPED1.63-predicted pedestal width $\Delta_\psi$ and height $\beta_{p,ped}$ with the corresponding ensemble-averaged experimental points, with the KBM scaling $\Delta_\psi = c \beta_{p,ped}^{1/2}$.  Though the EPED predictions were calculated with a self-consistent treatment of the scale factor $c$ as a weakly-varying function of plasma parameters, the result is quantitatively similar to the simple fixed scale factor.}\label{fig:elmy_betap_deltapsi_EPED}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_EPED.pdf}}
 \end{figure}
 
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Comparison of ensemble-averaged and ELM-synced pedestal width and height, compared to the KBM constraint.]{Comparison of ensemble-averaged (black) and ELM-synchronized (Red) pedestal width and height, compared to the KBM constraint.  The $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ scaling found in the ensemble-averaged case is shown in black, while the minor modification of $\Delta_\psi = 0.0896 \beta_{p,ped}^{1/2}$ for the ELM-synced cases is shown in red.}\label{fig:elmy_betap_deltapsi_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync.pdf}}
+\end{figure}
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[ELM-synced pedestals with data binned by $\beta_{p,ped}$, fitted to $\Delta_\psi \sim \beta_{p,ped}^{1/2}$.]{ELM-synchronized pedestals, with data binned by $\beta_{p,ped}$ for clarity.  The data are fitted by $\Delta_\psi = (0.0851 \pm 0.003) \beta_{p,ped}^{1/2}$ (black), or by $\Delta_\psi = (0.0824 \pm 0.015) \beta_{p,ped}^{0.49 \pm 0.11}$ using a more general power law.}\label{fig:elmy_betap_deltapsi_betabin}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync_betabin.pdf}}
+\end{figure}
+
 Application of the ELM synchronization technique does not significantly alter this result, although the pedestal pressure (\ie $\beta_{p,ped}$) is significantly increased in the last 20\% of the ELM cycle.  Recent research in the inter-ELM development of the pedestal suggests that the KBM saturates early in the ELM cycle, clamping the pedestal to the $\beta_{p,ped}^{1/2}$ limit -- the pedestal is then thought to evolve along this limit until the peeling-ballooning boundary is also reached, triggering the ELM.  Observations on DIII-D \cite{Snyder2012} are consistent with this picture, and with both the pedestal width and height growing at clamped gradient prior to the ELM.  Similarly, observations on C-Mod observed a fluctuation consistent with the KBM saturating early in the ELM cycle \cite{Diallo2014}, although the pressure pedestal height appeared to saturate earlier in the ELM cycle \cite{Hughes2013}.  Consistent with this, ELM-synchronized pedestals exhibit wider, taller pedestals on average (see also \cref{fig:elmy_deltapsi_elmsync} for pedestal widths), with a similar constraint imposed by the KBM compared to the ensemble-averaged result.  
 
 A comparison of the ensemble-averaged and ELM-synced pedestals in $\Delta_\psi - \beta_{p,ped}$ space is shown in \cref{fig:elmy_betap_deltapsi_elmsync}, with the ELM-synced pedestals fitted to a scale factor $\langle c \rangle = 0.0896 \pm 0.0034$.  The data may be clarified significantly by taking an error-weighted average within fixed bins in $\beta_{p,ped}$ as well, shown in \cref{fig:elmy_betap_deltapsi_betabin}, which tends to reduce the influence of strongly-outlying points on the fit.  Again, the fit is quantitatively very similar -- the data fit well to $\Delta_\psi = c \beta_{p,ped}^{1/2}$ with $\langle c \rangle = 0.0851 \pm 0.003$.  Alternately, we may use a more general power-law fit $\Delta_\psi = c_1 \beta_{p,ped}^{c_2}$, with which we find $\langle c_1 \rangle = 0.0824 \pm 0.015$ and $\langle c_2 \rangle = 0.49 \pm 0.11$, closely reproducing the $\beta_{p,ped}^{1/2}$ model.  The fitting results are quite consistent across these methods, demonstrating the robustness of the KBM model for the pedestal width and its insensitivity to the details of data preparation.
 
 \begin{figure}[t]
  \pushtooutside
- \fcapside[60mm]{\caption[Comparison of ensemble-averaged and ELM-synced pedestal width and height, compared to the KBM constraint.]{Comparison of ensemble-averaged (black) and ELM-synchronized (Red) pedestal width and height, compared to the KBM constraint.  The $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ scaling found in the ensemble-averaged case is shown in black, while the minor modification of $\Delta_\psi = 0.0896 \beta_{p,ped}^{1/2}$ for the ELM-synced cases is shown in red.}\label{fig:elmy_betap_deltapsi_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync.pdf}}
-\end{figure}
-
-\begin{figure}[ht]
- \pushtooutside
- \fcapside[60mm]{\caption[ELM-synced pedestals with data binned by $\beta_{p,ped}$, fitted to $\Delta_\psi \sim \beta_{p,ped}^{1/2}$.]{ELM-synchronized pedestals, with data binned by $\beta_{p,ped}$ for clarity.  The data are fitted by $\Delta_\psi = (0.0851 \pm 0.003) \beta_{p,ped}^{1/2}$ (black), or by $\Delta_\psi = (0.0824 \pm 0.015) \beta_{p,ped}^{0.49 \pm 0.11}$ using a more general power law.}\label{fig:elmy_betap_deltapsi_betabin}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync_betabin.pdf}}
-\end{figure}
-
-Prediction of the pedestal width is difficult, given the robust width of the pressure pedestal (typically 3-5\% of poloidal flux space, corresponding to $\sim \SI{5}{\milli\meter}$ on C-Mod).  The EPED model correctly recovers this robustness (within the expected $\pm 20\%$ prediction error), as shown in \cref{fig:elmy_deltapsi_eped}.  As seen in \cref{fig:elmy_betap_deltapsi_elmsync}, ELM-synchronized pedestals are typically somewhat wider than their ensemble-averaged counterparts, commensurate with the increased $\beta_{p,ped}$ at the maximum of the ELM cycle while the pedestal structure is limited throughout most of the ELM cycle by KBM turbulence.  A comparison of the ELM-synced pedestal widths versus EPED1.63 prediction is shown in \cref{fig:elmy_deltapsi_elmsync}.\nicesectionending
-
-\begin{figure}
- \pushtooutside
  \fcapside[60mm]{\caption[Measured ensemble-averaged pedestal width versus EPED predictions.]{Measured EPED pedestal width $\Delta_\psi = (\Delta_{n_e} + \Delta_{T_e})/2$ in ensemble-averaged pedestals versus EPED1.63-predicted pedestal widths.  Magnetic-field groups are indicated by color.  THe dashed line indicates perfect agreement with EPED prediction.  Pedestals widths are robust on C-Mod, restricted to $\sim 2-5\%$ of poloidal flux.  The EPED model reproduces this trait within expected prediction error.}\label{fig:elmy_deltapsi_eped}}{\includegraphics[width=100mm]{graphics/ELMy/deltapsi_EPED_meas.pdf}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
  \pushtooutside
  \fcapside[60mm]{\caption[Measured ELM-synced pedestal width versus EPED predictions.]{Measured pedestal width $\Delta_\psi$ versus EPED1.63 predicted width.  Ensemble-averaged points are shown in black, while corresponding ELM-synchronized points are shown in red.  ELM-synced pedestals are typically somewhat wider, although still lie within the $\pm 20\%$ expected error for EPED.}\label{fig:elmy_deltapsi_elmsync}}{\includegraphics[width=100mm]{graphics/ELMy/deltapsi_EPED_elmsync.pdf}}
 \end{figure}
+
+Prediction of the pedestal width is difficult, given the robust width of the pressure pedestal (typically 3-5\% of poloidal flux space, corresponding to $\sim \SI{5}{\milli\meter}$ on C-Mod).  The EPED model correctly recovers this robustness (within the expected $\pm 20\%$ prediction error), as shown in \cref{fig:elmy_deltapsi_eped}.  As seen in \cref{fig:elmy_betap_deltapsi_elmsync}, ELM-synchronized pedestals are typically somewhat wider than their ensemble-averaged counterparts, commensurate with the increased $\beta_{p,ped}$ at the maximum of the ELM cycle while the pedestal structure is limited throughout most of the ELM cycle by KBM turbulence.  A comparison of the ELM-synced pedestal widths versus EPED1.63 prediction is shown in \cref{fig:elmy_deltapsi_elmsync}.\nicesectionending
 
 \section{Pedestal Width Response}\label{sec:elmy_width}
 
 \subsection{Alternate Width Models}\label{subsec:elmy_width_oldmodels}
 
-\begin{figure}
+\begin{figure}[t]
  \pushtooutside
  \fcapside[60mm]{\caption[$\Delta_{n_e}$ versus $n_{e,ped}$]{Density pedestal width versus pedestal density.  Contrary to expectations from neutral-penetration models (see \cref{subsec:mod_neutral}), there is little systematic variation of the density pedestal width and height.}\label{fig:elmy_ne_deltan}}{\includegraphics[width=100mm]{graphics/ELMy/neped_deltan.pdf}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
  \pushtooutside
  \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/rhoipol_deltas.pdf}}{\caption[$\Delta_{T_e}$ and $\Delta_{p}$ versus $\rho_{i,pol}$]{Temperature and pressure pedestal widths versus poloidal gyroradius.  The temperature pedestal width shows no systematic variation with $\rho_{i,pol}$.  A weak trend is possible in the pressure pedestal width, comparable to the the trend of $\Delta_p \sim \beta_{p,ped}^{1/2}$ (due to the strong covariance between $\rho_{i,pol}$ and $\beta_{p,ped}$).  However, this trend is overruled in favor of a poloidal beta scaling by other observations.}\label{fig:elmy_rhoipol_deltas}}
 \end{figure}
@@ -236,42 +236,42 @@ Early models for the pedestal width (see \cref{sec:mod_early}) led to several ea
 
 As detailed in \cref{subsec:elmy_eped_width}, the scale factor in the dominant width scaling in ELMy H-mode, $\Delta \sim \beta_{p,ped}^{1/2}$, is most properly a weakly varying function of plasma shaping, collisionality, and other dimensionless parameters: $\Delta_\psi = G(\nu^*,\varepsilon,...) \beta_{p,ped}^{1/2}$ \cite{Snyder2011} (\cf \cref{sec:mod_turbulence}).  These secondary dependencies in $G$ may be examined by normalizing the pedestal width (here we use the EPED width, $\Delta_\psi$, from \cref{eq:wid_eped}) to the fitted scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$ (see \cref{fig:elmy_betap_deltapsi_all}).  
 
-Normalized pedestal widths are shown against the range in toroidal fields in \cref{fig:elmy_Bt_deltanorm}.  The high scatter in the normalized pedestal widths at standard field ($\SI{5.4}{\tesla}$), along with the difficulty in attaining usable ELMy H-modes at low and high field, renders it difficult to conclusively establish a secondary scaling of the pedestal width with toroidal field.  While the comparatively broader pedestal at low field is consistent with some previous observations\gnote{Hughes2002,Hughes2007,Maggi2010 -- check}, the covariance between $B_T$ and $I_p$ (and therefore $\beta_p$) in the low-field phase of the experiment complicates this observation.
-
-\begin{figure}
+\begin{figure}[p]
  \pushtooutside
  \fcapside[60mm]{\caption[Scaling of the normalized pedestal width with applied toroidal field.]{Scalings of the pedestal width $\Delta_\psi$, normalized to the dominant scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$, with the applied toroidal field $B_T$.  Although the high scatter at standard $B_T$ and the sparsity of data at low and high field makes a conclusive scaling difficult, there is some indication of an inverse relation of pedestal width with toroidal field.}\label{fig:elmy_Bt_deltanorm}}{\includegraphics[width=100mm]{graphics/ELMy/Bt_deltanorm.pdf}}
 \end{figure}
 
-Similarly, normalized pedestal widths are shown against the plasma shaping parameters -- upper and lower triangularity $\delta_u$, $\delta_l$, average triangularity $\delta_{ave} = (\delta_l + \delta_u)/2$, and elongation $\kappa$ -- in \cref{fig:elmy_shaping_deltanorm}.  No clear secondary dependence of the normalized pedestal width (that is, in the scale function $G(\nu^*,\varepsilon,...)$) is seen in shaping: $\delta_l$, $\delta_{ave}$, and $\kappa$ exhibit no trend, while $\delta_u$ is unclear with the broadest widths (compared to the $\sim 0.0857 \beta_{p,ped}^{1/2}$ fit) at both the low and high extremes of the range in $\delta_u$.  Rather, the shaping dependence manifests as increased poloidal beta, and secondarily pedestal width, at stronger shaping -- increased shaping is known to have a stabilizing effect on ballooning MHD modes, increasing the normalized pressure gradient $\alpha_{MHD}$ at which the instability is triggered.  However, as the shaping range available for ELMy H-modes on C-Mod is restricted, weak dependences of the pedestal width on shaping may go undetected.
-
-\begin{figure}[ht]
+\begin{figure}[p]
  \pushtooutside
  \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/ELMy/shaping_deltanorm.pdf}}{\caption[Scalings of normalized pedestal width with shaping parameters.]{Scalings of the pedestal width $\Delta_\psi$ normalized to the dominant scaling $\Delta_\psi = 0.0857 \beta_{p,ped}^{1/2}$, with plasma shaping: upper, lower, and average triangularity ($\delta_l$, $\delta_u$, $\delta_{ave} = (\delta_u + \delta_l)/2$), and elongation $\kappa$.  No strong trend with shaping parameters is seen -- rather, the influence of plasma shaping is exhibited by increased $\beta_{p,ped}$ and pedestal width due to increased stability to peeling-ballooning MHD.}\label{fig:elmy_shaping_deltanorm}}
 \end{figure}
 
-Pedestal collisionality $\nu^*_{95}$ is anticipated as a controlling term in the scale function $G$, due both to its role in controlling ionization rate and neutral penetration, and its influence on bootstrap current density and the accompanying MHD effects in the pedestal.\gnote{cite, elaborate?}  However, across a broad range on collisionality, $0.25 < \nu^*_{95} < 6$, no systematic variation in the normalized pedestal width is seen (see \cref{fig:elmy_nustar_deltanorm}).  The highest collisionality points were obtained in cold, low-field discharges, possibly conflating the elevated pedestal width (relative to the $\sim 0.0857 \beta_{p,ped}^{1/2}$ fit) with possible broadening at reduced $B_T$.
+Normalized pedestal widths are shown against the range in toroidal fields in \cref{fig:elmy_Bt_deltanorm}.  The high scatter in the normalized pedestal widths at standard field ($\SI{5.4}{\tesla}$), along with the difficulty in attaining usable datapoints at low and high field, renders it difficult to conclusively establish a secondary scaling of the pedestal width with toroidal field.  The broader pedestal at lower field is qualitatively consistent with modeling efforts \cite{Maggi2010,Chang2004}; however, the observation of broader pedestals at low current \cite{Hughes2007} complicates this observation due to the strong co-variance between field and current in the $\SI{3.5}{\tesla}$ range.
 
-While a primary dependence of the pedestal width on the gyroradius is ruled out (see the discussion in \cref{subsec:elmy_width_oldmodels} and \cref{fig:elmy_IprootneTe_p95}), a secondary gyroradius dependence in addition to the $\beta_{p}$ scaling is still possible -- for example, $\Delta_{ped} \sim \rho_{i,pol}^{0.2} \beta_{p,ped}^{0.5}$ found by Urano \emph{et al.} \cite{Urano2008}.  However, when the scale function $G$ is examined via trends of the normalized pedestal width versus normalized gyroradius $\rho^*_{95}$, shown in \cref{fig:elmy_rhostar_deltanorm}, no systematic dependence is seen.  Notably, the strong outlier for $\rho^*$ -- the high-$B_T$ case, shown to have a narrow pedestal compared to the expected scaling -- is nevertheless within the range of normalized width for the bulk of the dataset.  As such, no distinct dependence of the normalized width (equivalently, $G(\nu^*,\varepsilon,...)$) can be discerned from the data.\nicesectionending
+Similarly, normalized pedestal widths are shown against the plasma shaping parameters -- upper and lower triangularity $\delta_u$, $\delta_l$, average triangularity $\delta_{ave} = (\delta_l + \delta_u)/2$, and elongation $\kappa$ -- in \cref{fig:elmy_shaping_deltanorm}.  No clear secondary dependence of the normalized pedestal width (that is, in the scale function $G(\nu^*,\varepsilon,...)$) is seen in shaping: $\delta_l$, $\delta_{ave}$, and $\kappa$ exhibit no trend, while $\delta_u$ is unclear with the broadest widths (compared to the $\sim 0.0857 \beta_{p,ped}^{1/2}$ fit) at both the low and high extremes of the range in $\delta_u$.  Rather, the shaping dependence manifests as increased poloidal beta, and secondarily pedestal width, at stronger shaping -- increased shaping is known to have a stabilizing effect on ballooning MHD modes, increasing the normalized pressure gradient $\alpha_{MHD}$ at which the instability is triggered.  However, as the shaping range available for ELMy H-modes on C-Mod is restricted, weak dependences of the pedestal width on shaping may go undetected.
 
-\begin{figure}[ht]
+\begin{figure}[t]
  \pushtooutside
  \fcapside[60mm]{\caption[Scaling of normalized pedestal width with pedestal collisionality.]{Scaling of the normalized pedestal width $\Delta_\psi / 0.0857 \beta_{p,ped}^{1/2}$ versus pedestal collisionality $\nu^*_{95}$.  Low, standard, and high-field sets are indicated in blue, black, and red respectively.  No systematic variation is observed.}\label{fig:elmy_nustar_deltanorm}}{\includegraphics[width=100mm]{graphics/ELMy/nustar_deltanorm.pdf}}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[t]
  \pushtooutside
  \fcapside[60mm]{\caption[Scaling of normalized pedestal width with normalized pedestal ion gyroradius.]{Scaling of the normalized pedestal width $\Delta_\psi / 0.0857 \beta_{p,ped}^{1/2}$ with normalized pedestal gyroradius $\rho^*_{95}$.  Low, standard, and high-field sets are indicated in blue, black, and red respectively.  No systematic variation is seen.}\label{fig:elmy_rhostar_deltanorm}}{\includegraphics[width=100mm]{graphics/ELMy/rhostar_deltanorm.pdf}}
 \end{figure}
 
+Pedestal collisionality $\nu^*_{95}$ is anticipated as a controlling term in the scale function $G$, due both to its role in controlling ionization rate and neutral penetration, and its influence on bootstrap current density and the accompanying MHD effects in the pedestal.  However, across a broad range on collisionality, $0.25 < \nu^*_{95} < 6$, no systematic variation in the normalized pedestal width is seen (see \cref{fig:elmy_nustar_deltanorm}).  The highest collisionality points were obtained in cold, low-field discharges, possibly conflating the elevated pedestal width (relative to the $\sim 0.0857 \beta_{p,ped}^{1/2}$ fit) with possible broadening at reduced $B_T$.
+
+While a primary dependence of the pedestal width on the gyroradius is ruled out (see the discussion in \cref{subsec:elmy_width_oldmodels} and \cref{fig:elmy_IprootneTe_p95}), a secondary gyroradius dependence in addition to the $\beta_{p}$ scaling is still possible -- for example, $\Delta_{ped} \sim \rho_{i,pol}^{0.2} \beta_{p,ped}^{0.5}$ found by Urano \emph{et al.} \cite{Urano2008}.  However, when the scale function $G$ is examined via trends of the normalized pedestal width versus normalized gyroradius $\rho^*_{95}$, shown in \cref{fig:elmy_rhostar_deltanorm}, no systematic dependence is seen.  Notably, the strong outlier for $\rho^*$ -- the high-$B_T$ case, shown to have a narrow pedestal compared to the expected scaling -- is nevertheless within the range of normalized width for the bulk of the dataset.  As such, no distinct dependence of the normalized width (equivalently, $G(\nu^*,\varepsilon,...)$) can be discerned from the data.\nicesectionending
+
 \section{Conclusions}\label{sec:elmy_conclusion}
 
-\begin{figure}[ht]
- \pushtooutside
- \fcapside[60mm]{\caption[EPED predictions versus measured pressure pedestal heights.]{EPED predictions versus measured pressure pedestal heights from DIII-D and C-Mod, spanning a significant range of pedestal pressures.  Notably, C-Mod pressure pedestals reach within a factor of $\sim 2$ of the predicted ITER pedestal height.  Reproduced from \cite{Hughes2013} \note{permission!}}\label{fig:elmy_epedpredictions_cmod}}{\includegraphics[width=100mm]{graphics/ELMy/eped.pdf}}
-\end{figure}
-
 ELMy H-mode experiments on C-Mod reach the highest magnetic field and pedestal thermal pressure of any tokamak, reaching within a factor of $\sim 2$ of the target pressure for ITER (see \cref{fig:elmy_epedpredictions_cmod}).  As part of a DOE Joint Research Target \cite{Groebner2013}, these experiments tested the EPED model series \cite{Snyder2009} for ELMy H-mode pedestal width and height, greatly expanding the parameter space in which the model has been implemented \cite{Walk2012}.  The newest version of EPED, EPED1.63 (a minor modification to EPED1.6 to account for strong diamagnetic effects on C-Mod) accurately predicts the pressure pedestal height, particularly when pedestal data is masked to time frames immediately preceding ELM crashes -- a practice that, despite diagnostic difficulties on C-Mod, produces data most closely corresponding to the pedestal structure at the point of ELM instability.  Although systematic prediction of the pedestal width on C-Mod is difficult due to the narrow range over which it varies, the EPED prediction for $\Delta_\psi$ matches experimental results to within the expected $\sim 20\%$ error.  
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[EPED predictions versus measured pressure pedestal heights.]{EPED predictions versus measured pressure pedestal heights from DIII-D and C-Mod, spanning a significant range of pedestal pressures.  Notably, C-Mod pressure pedestals reach within a factor of $\sim 2$ of the predicted ITER pedestal height.  Reproduced from \cite{Hughes2013}}\label{fig:elmy_epedpredictions_cmod}}{\includegraphics[width=100mm]{graphics/ELMy/eped.pdf}}
+\end{figure}
 
 The pedestal width is well-described by the prediction used by EPED1.6 based on the KBM, $\Delta_\psi = G(\nu^*,\varepsilon,...) \beta_{p,ped}^{1/2}$, where $G(\nu^*,\varepsilon,...)$ is a weakly varying function, $G \approx .0857$ -- matching the fitted result from multiple machines \cite{Groebner2013}.  Secondary scalings of the pedestal width, discerned by normalizing the pedestal width to the dominant $\beta_{p,ped}$ dependence, with magnetic field, $\nu^*$, $\rho^*$, and shaping parameters are minimal over the available range in the data set.  Conversely, the pedestal width is not well-described by alternate models not based on the KBM-driven $\beta_{p,ped}$ dependence: the density pedestal width does not exhibit a $\Delta_{n_e} \sim n_{e,ped}$ trend expected from neutral-penetration models, while the temperature and pressure pedestals do not scale clearly with $\rho_{i,pol}$.  The temperature pedestal width shows no trend with poloidal gyroradius, while the pressure pedestal does not show a trend independent of the $\beta_{p,ped}$ scaling ($rho_{i,pol}$ and $\beta_{p,ped}$ are difficult to discern from one another without careful operational control).
 

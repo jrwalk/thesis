@@ -109,8 +109,8 @@ H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
 
 \bibitem{Snyder2001}
 P.~B. Snyder and G.~W. Hammett.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.1342029} {Electromagnetic
-  effects on plasma microturbulence and transport}.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/doi/10.1063/1.1342029}
+  {Electromagnetic effects on plasma microturbulence and transport}.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Walk2012}
@@ -166,12 +166,6 @@ H~Urano, W~Suttrop, L~D Horton, A~Herrmann, J~C Fuchs et~al.
   particle losses during type-{I} {ELMy} {H}-mode in {ASDEX Upgrade}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1571, 2003.
 
-\bibitem{Diallo2014}
-A.~Diallo, W.~Hughes, J.\, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
-\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.112.115001} {Observation
-  of edge instability limiting the pedestal growth in tokamak plasmas}.
-\newblock {\em Physical Review Letters}, 112:115001, Mar 2014.
-
 \bibitem{Hughes2007}
 J.W. Hughes, B.~LaBombard, J.~Terry, A.~Hubbard and B.~Lipschultz.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=8/a=041} {Edge profile
@@ -185,6 +179,13 @@ J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, B.~LaBombard and E.~S. Marmar.
   empirical scalings of the high-confinement mode pedestal on {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 9(7):3019--3030, 2002.
 
+\bibitem{Beurskens2011}
+M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
+  et~al.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.3593008} {{H}-mode pedestal
+  scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
+\newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
+
 \bibitem{Saibene1999}
 G.~Saibene, L.D. Horton, R.~Sartori, B.~Balet, S.~Clement et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/39/i=9/a=307} {The influence
@@ -192,12 +193,20 @@ G.~Saibene, L.D. Horton, R.~Sartori, B.~Balet, S.~Clement et~al.
   {H} modes in {JET}}.
 \newblock {\em Nuclear Fusion}, 39(9):1133, 1999.
 
-\bibitem{Beurskens2011}
-M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
+\bibitem{Snyder2012}
+P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
   et~al.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.3593008} {{H}-mode pedestal
-  scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
-\newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.3699623} {The
+  {EPED} pedestal model and edge localized mode-suppressed regimes: Studies of
+  quiescent {H}-mode and development of a model for edge localized mode
+  suppression via resonant magnetic perturbations}.
+\newblock {\em Physics of Plasmas}, 19(5):--, 2012.
+
+\bibitem{Diallo2014}
+A.~Diallo, W.~Hughes, J.\, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.112.115001} {Observation
+  of edge instability limiting the pedestal growth in tokamak plasmas}.
+\newblock {\em Physical Review Letters}, 112:115001, Mar 2014.
 
 \bibitem{Urano2008}
 H.~Urano, T.~Takizuka, Y.~Kamada, N.~Oyama, H.~Takenaga et~al.
@@ -218,5 +227,11 @@ C.F. Maggi.
 \newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/50/6/066001} {Progress
   in understanding the physics of the {H}-mode pedestal and {ELM} dynamics}.
 \newblock {\em Nuclear Fusion}, 50(6):066001, 2010.
+
+\bibitem{Chang2004}
+C.~S. Chang, Seunghoe Ku and H.~Weitzner.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1707024}
+  {Numerical study of neoclassical plasma pedestal in a tokamak geometry}.
+\newblock {\em Physics of Plasmas}, 11(5):2649--2667, 2004.
 
 \end{thebibliography}
