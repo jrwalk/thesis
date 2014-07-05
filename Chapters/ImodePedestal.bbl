@@ -104,6 +104,64 @@ J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
   periodicity, and plasma ballooning modes}.
 \newblock {\em Physical Review Letters}, 40:396--399, Feb 1978.
 
+\bibitem{Maggi2010}
+C.F. Maggi.
+\newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/50/6/066001} {Progress
+  in understanding the physics of the {H}-mode pedestal and {ELM} dynamics}.
+\newblock {\em Nuclear Fusion}, 50(6):066001, 2010.
+
+\bibitem{Beurskens2011}
+M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
+  et~al.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.3593008} {{H}-mode pedestal
+  scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
+\newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
+
+\bibitem{Onjun2002}
+T.~Onjun, G.~Bateman, A.~H. Kritz and G.~Hammett.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1518474} {Models
+  for the pedestal temperature at the edge of {H}-mode tokamak plasmas}.
+\newblock {\em Physics of Plasmas}, 9(12):5018--5030, 2002.
+
+\bibitem{Cziegler2011}
+Istvan Cziegler.
+\newblock \href {http://dspace.mit.edu/handle/1721.1/77484} {{\em Turbulence
+  and Transport Phenomena in Edge and Scrape-Off Layer Plasmas}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2011.
+
+\bibitem{Cziegler2013}
+I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
+  {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
+
+\bibitem{White2011}
+A.E. White, P.~Phillips, D.G. Whyte, A.E. Hubbard, C.~Sung et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/51/i=11/a=113005} {Electron
+  temperature fluctuations associated with the weakly coherent mode in the edge
+  of {I}-mode plasmas}.
+\newblock {\em Nuclear Fusion}, 51(11):113005, 2011.
+
+\bibitem{Osborne1998}
+T~H Osborne, R~J Groebner, L~L Lao, A~W Leonard, R~Maingi et~al.
+\newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=054} {{H}-mode
+  pedestal characteristics, {ELMs}, and energy confinement in {ITER} shape
+  discharges on {DIII-D}}.
+\newblock {\em Plasma Physics and Controlled Fusion}, 40(5):845, 1998.
+
+\bibitem{Snyder2009}
+P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
+\newblock \href {http://dx.doi.org/10.1063/1.3122146} {Development and
+  validation of a predictive model for the pedestal height}.
+\newblock {\em Physics of Plasmas}, 16(5):056118, 2009.
+
+\bibitem{Schneider2013}
+P.A. Schneider, E.~Wolfrum, R.J. Groebner, T.H. Osborne, M.N.A. Beurskens
+  et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073039} {Analysis of
+  temperature and density pedestal gradients in {AUG}, {DIII-D} and {JET}}.
+\newblock {\em Nuclear Fusion}, 53(7):073039, 2013.
+
 \bibitem{Yushmanov1990}
 P.N. Yushmanov, T.~Takizuka, K.S. Riedel, O.J.W.F. Kardaun, J.G. Cordey et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/30/i=10/a=001} {Scalings for

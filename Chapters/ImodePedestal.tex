@@ -113,10 +113,62 @@ Trends in the pressure pedestal in I-mode are also indicative of MHD stability. 
 
 \section{Pedestal Widths}\label{sec:imode_width}
 
-\begin{figure}
+Conventionally, H-mode pedestals are found to be constrained by critical-gradient-driven instabilities, such that the peak $\nabla p$ is limited -- therefore, the width of the transport barrier sets a constraint on the attainable pedestal height (and thus global performance).  Due to the small spatial scales inherent in the pedestal, accurate measurement of the pedestal width has historically been quite difficult, although a number of theoretical models have been proposed and tested against experimental observations, \eg \cite{Maggi2010,Beurskens2011,Onjun2002}.  This section explores a range of potential explanations for the observed pedestal widths in I-mode.
+
+\subsection{Kinetic-Ballooning Limited Pedestals}\label{subsec:imode_kbm}
+
+The edge turbulence in I-mode is characterized by a strong reduction in mid-frequency turbulence and the appearance of a higher-frequency ($\sim 200 - \SI{400}{\kilo\hertz}$) fluctuation, dubbed the \emph{Weakly-Coherent Mode} or WCM \cite{Whyte2010,Hubbard2011,Dominguez2012,Cziegler2011,Cziegler2013,White2011}.\gnote{not sure I like this intro}  The WCM appears to be connected to the density pumpout and pedestal regulation in I-mode, with the WCM amplitude shown to be correlated to the particle flux through the LCFS \cite{Dominguez2012}.  An understanding of the turbulent behavior in the I-mode pedestal, then, is essential to the extrapolation of I-mode operation to larger devices.  Kinetic-ballooning mode (KBM) turbulence, described in \cref{sec:mod_turbulence}, is thought to constrain the pedestal in ELMy H-mode, and is therefore an important starting point for investigating the WCM.
+
+\begin{figure}[t]
  \pushtooutside
  \fcapside[60mm]{\caption[Pedestal width vs. poloidal beta in I-mode and ELMy H-mode.]{Pedestal width versus poloidal beta in I-mode and ELMy H-mode.  ELMy H-modes lie on the $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ line predicted for KBM-limited pedestals (see \cref{subsec:elmy_eped_width}).  I-mode shows no scaling of the pedestal width with $\beta_p$, and exhibits pedestals consistently wider than predicted for comparable ELM-limited pedestals.}\label{fig:imode_wid_betapol}}{\includegraphics[width=100mm]{graphics/IModePedestal/wid_betapol.pdf}}
 \end{figure}
+
+The KBM applies a constraint to the pedestal width of the form $\Delta \sim \beta_{p,ped}^{1/2}$, where $\Delta$ is the pedestal width in normalized poloidal flux.  This trend has been observed on several machines \cite{Groebner2013,Beurskens2011,Osborne1998}, including on C-Mod (see \cref{ch:Elmy}).  This constraint is used in the EPED model series, described in \cref{sec:mod_eped}.  The simplest implementation of the constraint, used in EPED1 (\cref{subsec:mod_eped1}) uses a fitted coefficient, $\Delta = 0.076 \beta_{p,ped}^{1/2}$ \cite{Snyder2009}.  A comparison of I-mode pedestals against this predictive line, as well as example ELMy H-modes, is shown in \cref{fig:imode_wid_betapol}.  I-mode pedestals are wider on average than predicted by the KBM-limited ($\sim \beta_{p,ped}^{1/2}$) line, and show no trend of pedestal width with poloidal beta.  This suggests that the I-mode pedestal is not constrained by KBM turbulence, consistent with the relaxed pressure gradient found in I-mode -- stability against the KBM is examined in more detail in \cref{sec:imode_baloo}.
+
+\subsection{Local Physics Parameters}\label{subsec:imode_exp_widths}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/IModePedestal/rhoipol_widths.pdf}}{\caption[Temperature and pressure pedestal width vs. poloidal gyroradius.]{Temperature (left) and pressure (right) pedestal widths versus poloidal gyroradius $\rho_{i,pol}$.  No correlation in the pedestal width is seen, contrary to models suggesting a scaling of the sheared-flow layer and pedestal with the gyroradius.}\label{fig:imode_rhoipol_wid}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/IModePedestal/nustar_widths.pdf}}{\caption[Temperature and pressure pedestal widths vs. pedestal collisionality.]{Temperature (left) and pressure (right) pedestal widths versus pedestal collisionality $\nu^*_{95}$.  No correlation is seen.}\label{fig:imode_nustar_wid}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/IModePedestal/q95_widths.pdf}}{\caption[Temperature and pressure pedestal widths vs. edge safety factor.]{Temperature (left) and pressure (right) pedestal widths versus edge safety factor $q_{95}$.  No correlation is seen.}\label{fig:imode_q95_wid}}
+\end{figure}
+
+While the constraint on the pressure pedestal from kinetic-ballooning turbulence has been the most successful in capturing the limiting physics in ELMy H-modes, a number of other theories (see \cref{sec:mod_early}) based on localized physics in the edge have been proposed, with testable trends in the pedestal width.  Of particular note are models based on a trend in poloidal gyroradius, described in \cref{subsec:mod_ionorbitloss}, operating on the assumption that ion orbit loss in the plasma edge drives the radial electric field responsible for the pedestal formation -- thus the size scale of the ion orbit sets the pedestal width.  Some experimental observations correlate well to these predictions, although these may be largely incidental due to the strong covariance between $\rho_{i,pol}$ and $\beta_{p,ped}$, and have been discounted by dedicated experiments distinguishing the two.  However, as the KBM does not appear to limit the I-mode pedestal (see \cref{subsec:imode_kbm}) gyroradius scalings remain an open avenue.  Electron temperature and pressure pedestal widths are shown against $\rho_{i,pol}$ in \cref{fig:imode_rhoipol_wid}.  Both pedestal widths appear quite insensitive to the gyroradius, although due to the correlation between $T_e$ and $I_p$ the range in $\rho_{i,pol}$ is rather limited.
+
+Similarly, the temperature and pressure pedestal widths are shown against pedestal collisionality $\nu^*_{95}$ and edge safety factor $q_{95}$ in \cref{fig:imode_nustar_wid} and \cref{fig:imode_q95_wid}, respectively.\gnote{elaborate on these expected dependences?}  The collisionality may be expected to influence the pedestal width both by controlling neutral ionization rates (thus the influence of neutral penetration on the pressure width) and through the bootstrap current in the edge, which enters into the peeling-ballooning MHD stability boundary (see \cref{sec:mod_pb}).  The safety factor is directly tied to the magnetic shear, which is locally stabilizing to MHD modes in the edge.  However, as the I-mode pedestal appears to be strongly MHD-stable, as is shown in \cref{ch:ImodeModeling}, these should have a minimal effect.  In \cref{fig:imode_nustar_wid,fig:imode_q95_wid}, no correlation between the pedestal width and either parameter is evident.
+
+In \cref{subsec:imode_temp}, it is shown that the temperature pedestal height is strongly dependent on $P_{net}/\overline{n}_e$, effectively heating power per particle (equivalently, the heat flux through the pedestal).\gnote{arguments for effect on width?}  Temperature and pressure pedestal widths are shown against power-per-particle in \cref{fig:imode_Pnebar_wid}.  As with the other parameters, the pedestal width is uncorrelated with the heat flux through the pedestal.
+
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/IModePedestal/Pnebar_widths.pdf}}{\caption[Temperature and pressure pedestal width vs. power-per-particle through the pedestal.]{Temperature (left) and pressure (right) pedestal widths versus power-per-particle, $P_{net}/\overline{n}_e$, \ie the heat flux through the pedestal.  No correlation is seen.}\label{fig:imode_Pnebar_wid}}
+\end{figure}
+
+\subsection{Stiff Gradient Limits}\label{subsec:imode_wid_stiff}
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[I-mode pedestal temperature gradient versus pedestal temperature.]{Peak $\nabla T_e$ in the I-mode pedestal versus $T_{e,95}$.  Hotter pedestals support a steeper gradient in temperature (albeit with significant scatter), consistent with a robust temperature pedestal width.}\label{fig:imode_Te_gradT}}{\includegraphics[width=100mm]{graphics/IModePedestal/Te95_gradT.pdf}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[I-mode pedestal pressure gradient versus pedestal pressure.]{Peak $\nabla p$ in the I-mode pedestal versus $p_{95}$.  There is a robust linear dependence between the pedestal gradient and height, consistent with a robust pedestal width.}\label{fig:imode_p_gradp}}{\includegraphics[width=100mm]{graphics/IModePedestal/p95_gradp_i.pdf}}
+\end{figure}
+
+In \cref{subsec:imode_kbm,subsec:imode_exp_widths}, the I-mode pedestal width (both in temperature and pressure) is shown to be insensitive to a number of pedestal parameters.  This may be examined directly by viewing the peak pedestal gradient versus its height -- to lowest approximation, $\nabla Q \sim Q/\Delta_Q$ (where $Q$ is the pedestal quantity, \ie $T_e$, $p_{tot}$).  The peak gradients in temperature and pressure are shown against the corresponding 95\%-flux values in \cref{fig:imode_Te_gradT} and \cref{fig:imode_p_gradp}, respectively.  In both cases, a linear dependence of the gradient on the pedestal-top value is observed, albeit with scatter favoring higher gradients than the linear prediction in the case of the temperature.  The pressure gradient is predicted quite well by its 95\%-flux value.  Similar behavior has been observed for the electron and ion temperatures in H-mode on AUG and DIII-D, independent of plasma shaping and evidently operating under a separate limit from the ideal-MHD constraint on the pressure pedestal \cite{Schneider2013}.  These trends are consistent with robust pedestal widths, particularly in the pressure pedestal, in I-mode.\gnote{note H-mode robust width, ultimate limit on $\nabla p$}  
+
+%However, it should be noted that on a given machine, the H-mode pedestal width has historically been found to be quite robust as well, with the $\Delta \sim \beta_{p,ped}^{1/2}$ dependence emerging only over broad parameter scans.  It is possible that 
 
 \nicesectionending
 
@@ -146,16 +198,6 @@ In light of the substantially different physics of the I-mode pedestal and energ
 
 \noindent to find free exponents $\alpha_j$ for plasma current $I_p$ in $\si{\mega\ampere}$, toroidal field $B_T$ in $\si{\tesla}$, line-averaged density $\overline{n}_e$ in $\SI{e20}{\per\meter\cubed}$, major radius $R$ in $\si{\meter}$, inverse aspect ratio $\varepsilon$, elongation $\kappa$, and loss power $P_{loss}$ in $\si{\mega\watt}$ (see \cref{eq:ploss}).  To extend the quantity of data and range of parameters available for this assay, the high-resolution pedestal data used in the bulk of this thesis is supplemented by older I-mode datasets containing both reversed-field LSN and forward-field USN I-mode cases.  Although these data lack the high-resolution edge data necessary for pedestal structure and stability studies, they are nevertheless suitable for scalings based on global parameters.  Although the net power $P_{net}$ (see \cref{eq:pnet}) has been demonstrated to be the more accurate parameter, rather than $P_{loss}$\gnote{cite, clarify}, these older data contain inconsistent measurements of the radiated power, necessitating the use of loss power in its stead (and in any case, this is consistent with previous confinement scaling studies).
 
-Results from a number of scaling studies are shown in \cref{tab:imode_confinement}, containing the values and standard deviations for each exponent value, the scale factor $C$, and the $R^2$ coefficient of determination.  We begin with the full parameter list used in the ITER98y2 scaling, shown as fit \#1 in \cref{tab:imode_confinement}, with results shown in \cref{fig:imode_tauE_1}.  However, it is immediately obvious that the size scalings, dependent on major radius $R$ and inverse aspect ratio $\varepsilon$, are not properly captured (denoted by the extreme errorbars on these parameters).  This is to be expected -- absent meaningful variation in $R$ and $\varepsilon$ in the dataset (which requires multiple machines to produce) these parameters are not well-constrained, and result \#1 is over-fitted.  
-
-For simplicity, we reduce our consideration to an effective single-machine scaling, omitting these parameters (indicated by blank entries in \cref{tab:imode_confinement}).  Under this fit, shown as \#2 in \cref{tab:imode_confinement}, the power applied to the elongation $\kappa$ is elevated compared to that expected from the ITER98y2 scaling, with the relatively large deviation expected from the somewhat restricted range of shapes found in these studies.  Omitting this fitting parameter results a minimum-complexity fit,
-
-\begin{equation}\label{eq:tauE_fit_3}
- \tau_{I-mode} = 0.014 \times I_p^{0.685} \; B_T^{0.768} \; \overline{n}_e^{0.017} \; P_{loss}^{-0.286}
-\end{equation}
-
-\noindent (also shown as \#3 in \cref{tab:imode_confinement}).
-
 \begin{table*}
  \pushtooutside
  \ttabbox{\caption[Parameters for power-law scalings of I-mode energy confinement time.]{Parameters for power-law scalings of the I-mode energy confinement time $\tau_E$, along with $R^2$ coefficients of determination for the fit.  Blank entries indicate parameters that were omitted from that fit.  Note that fit \#5 utilized a fixed $R^2 \sqrt{\varepsilon}$ size dependence rather than taking the size to be a free fitting parameter.  Parameters are in the given units: $I_p$ in $\si{\mega\ampere}$, $B_T$ in $\si{\tesla}$, $\overline{n}_e$ in $\SI{e20}{\per\meter\cubed}$, $R$ in $\si{\meter}$, and $P_{loss}$ in $\si{\mega\watt}$.  Elongation $\kappa$ and aspect ratio $\varepsilon$ are dimensionless.}\label{tab:imode_confinement}}{
@@ -176,6 +218,20 @@ For simplicity, we reduce our consideration to an effective single-machine scali
  \end{tabular}
  }
 \end{table*}
+
+Results from a number of scaling studies are shown in \cref{tab:imode_confinement}, containing the values and standard deviations for each exponent value, the scale factor $C$, and the $R^2$ coefficient of determination.  We begin with the full parameter list used in the ITER98y2 scaling, shown as fit \#1 in \cref{tab:imode_confinement}, with results shown in \cref{fig:imode_tauE_1}.  However, it is immediately obvious that the size scalings, dependent on major radius $R$ and inverse aspect ratio $\varepsilon$, are not properly captured (denoted by the extreme errorbars on these parameters).  This is to be expected -- absent meaningful variation in $R$ and $\varepsilon$ in the dataset (which requires multiple machines to produce) these parameters are not well-constrained, and result \#1 is over-fitted.  
+
+For simplicity, we reduce our consideration to an effective single-machine scaling, omitting these parameters (indicated by blank entries in \cref{tab:imode_confinement}).  Under this fit, shown as \#2 in \cref{tab:imode_confinement}, the power applied to the elongation $\kappa$ is elevated compared to that expected from the ITER98y2 scaling, with the relatively large deviation expected from the somewhat restricted range of shapes found in these studies.  Omitting this fitting parameter results a minimum-complexity fit,
+
+\begin{equation}\label{eq:tauE_fit_3}
+ \tau_{I-mode} = 0.014 \times I_p^{0.685} \; B_T^{0.768} \; \overline{n}_e^{0.017} \; P_{loss}^{-0.286}
+\end{equation}
+
+\noindent with a coefficient of determination of $R^2 = 0.685$ (also shown as \#3 in \cref{tab:imode_confinement}).  The correspondence between experimenal $\tau_E$ and the modeled confinement time is shown in \cref{fig:imode_tauE_3}.  The density dependence in $\tau_E$ is quite weak, and may be omitted (fit \#4) with minimal alteration to the result; however, this may not capture effects on the transport at higher Greenwald fraction, and requires additional experiments.
+
+As an illustrative exercise, we restore a fixed size dependence of the form $R^2 \sqrt{\varepsilon}$ (as is found in ITER98y2)\gnote{physics arguments for this scaling?} to the fit, shown as \#5 in \cref{tab:imode_confinement}, with the correspondence to experimental $\tau_E$ shown in \cref{fig:imode_tauE_6}.  This enables extrapolation of the result to larger devices, with example predictions for DIII-D, ASDEX Upgrade, JET, and ITER shown in \cref{fig:imode_tauE_extrap}.  Due to the weakened power degradation ($\tau_E \sim P^{-0.2}$), I-mode operation on ITER (in the putative $Q=10$ scenario with $\SI{100}{\mega\watt}$ of alpha heating) projects to a $\sim \SI{8}{\second}$ energy confinement time, well in excess of the expected $\tau_E$ for H-mode.\gnote{refine wording, details?}
+
+Again, we emphasize that single-machine scalings are of limited reliability for extrapolative purposes.  However, this illustrates the potential gains in performance in the application of I-mode to larger devices, while correctly capturing the observed physics in I-mode (\eg the degradation in $\tau_E$ is, to within uncertainty, consistent with the observed strong dependence of the stored energy and pedestal pressure on heating power).\gnote{ASDEX I-mode times?}
 
 \begin{figure}
  \pushtooutside
