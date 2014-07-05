@@ -1,4 +1,4 @@
-\chapter{I-Mode Pedestal Scalings}\label{ch:ImodePedestal}
+\chapter{I-Mode Pedestal Scalings \& Confinement}\label{ch:ImodePedestal}
 
 The I-mode \cite{Whyte2010,Hubbard2011}, introduced in \cref{sec:hcr_imode}, is a novel high-performance regime pioneered on Alcator C-Mod.  I-mode is unique in that it appears to decouple energy and particle transport, forming a steep temperature pedestal with H-mode levels of energy confinement without the accompanying density pedestal or suppression of particle transport found in conventional H-modes (see \cref{fig:imode_trace_ped}).  I-mode exhibits several highly attractive properties for a putative reactor regime:
 
@@ -174,17 +174,29 @@ In \cref{subsec:imode_kbm,subsec:imode_exp_widths}, the I-mode pedestal width (b
 
 \section{Global Behavior, Performance, \& Confinement}\label{sec:imode_confinement}
 
-The pedestal structure of the I-mode is quite desirable for a reactor scenario -- due to the strong response of the pedestal temperature to heating power, externally-applied heating power is an effective engineering control for core temperatures, and subsequently fusion reaction rates.  The high pedestal temperature, coupled to stiff core temperature profiles (such that a higher temperature supports a steeper marginally-stable $\nabla T_e$), supports very high core temperatures.  With a moderate degree of core density peaking, this supports comparable core and volume-averaged pressures to H-mode despite the comparatively relaxed pedestal, supporting beneficial fusion conditions in the core while avoiding the stability issues in the pedestal.
+The pedestal structure of the I-mode is quite desirable for a reactor scenario -- due to the strong response of the pedestal temperature to heating power, externally-applied heating power is an effective engineering control for core temperatures, and subsequently fusion reaction rates.  The high pedestal temperature, coupled to stiff core temperature profiles (such that a higher temperature supports a steeper marginally-stable $\nabla T_e$), supports very high core temperatures.  With a moderate degree of core density peaking\gnote{density peaking?}, this supports comparable core and volume-averaged pressures to H-mode despite the comparatively relaxed pedestal, supporting beneficial fusion conditions in the core while avoiding stability issues in the pedestal.  Example density, temperature, and pressure profiles for I-mode and H-mode cases are shown in \cref{fig:imode_coreprofs}, illustrating the high core pressures attainable in I-mode despite the lower pedestal and reduced density.  This is reflected in \cref{fig:imode_betan_H}, showing the global-averaged normalized beta ($\langle \beta_N \rangle = \langle \beta \rangle a B_T/I_p$) versus the confinement metric $H_{98}$ in I-mode and ELMy H-mode -- I-mode reaches comparable levels of $\beta_N$ while maintaining H-mode-like $H_{98} \sim 1$ at comparable levels to ELMy H-mode, while maintaining desirable impurity confinement and ELM stability behaviors.\gnote{show EDA?}
 
-\begin{figure}
+\begin{figure}[p]
  \pushtooutside
  \fcapside[60mm]{\caption[Density, temperature, and pressure profiles in I-mode and EDA H-mode.]{Profiles in density, temperature, and pressure for I-mode and EDA H-mode.  The H-mode case exhibits a very strong density pedestal, with a somewhat reduced temperature pedestal; the I-mode, in contrast, has a significant temperature pedestal with a relaxed density profile.  While this typically results in a reduced pedestal pressure in I-mode compared to H-mode, core profile stiffness supports very high central temperatures, such that I-mode exhibits comparable core and average pressure despite the reduced pedestal.}\label{fig:imode_coreprofs}}{\includegraphics[width=100mm]{graphics/IModePedestal/coreprof.pdf}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
  \pushtooutside
- \fcapside[60mm]{\caption[]{}\label{fig:imode_PIp_W}}{\includegraphics[width=100mm]{graphics/IModePedestal/PIp_W_scale.pdf}}
+ \fcapside[60mm]{\caption[Normalized beta vs. $H_{98}$ for I-mode and ELMy H-mode.]{Global normalized $\beta_N$ versus confinement factor $H_{98}$ for I-mode and ELMy H-mode.  Despite the relaxed pedestal pressure, I-modes reach comparable average pressures, while maintaining H-mode-like energy confinement.}\label{fig:imode_betan_H}}{\includegraphics[width=100mm]{graphics/IModePedestal/betan_H_i_e.pdf}}
 \end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[60mm]{\caption[I-mode stored energy vs. heating power times plasma current.]{I-mode stored energy versus the product of net heating power $P_{net}$ and plasma current $I_p$.  Based on the H-mode confinement scaling, $\tau_E$ is expected to scale linearly with $I_p$, and to show a strong degradation with heating power: $\tau_E \sim I_p \times P_{net}^{-0.7}$.  As the stored energy is given by $W \sim P_{net} \tau_E$, $W \sim I_p P_{net}^{0.3}$ is expected.  The observed linear trend indicates little-to-no degradation of $\tau_E$ in I-mode with heating power.}\label{fig:imode_PIp_W}}{\includegraphics[width=100mm]{graphics/IModePedestal/PIp_W_scale.pdf}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Stored energy versus fueling in I-mode and H-mode.]{Plasma stored energy versus fueling, indicated by $\overline{n}_e$ in I-mode and ELMy H-mode.  I-mode shows no degradation of confinement with fueling, while the H-mode is flat \note{conjure on this, maybe substitute?}}\label{fig:imode_nebar_W}}{\includegraphics[width=100mm]{graphics/IModePedestal/nebar_W_i_e.pdf}}
+\end{figure}
+
+Energy confinement in I-mode also appears to lack strong degradation with heating power (\cf the $\tau_E \sim P^{-0.7}$ trend for H-modes, as in \cref{eq:tau98}) -- a highly desirable characteristic for large devices.  This may be seen intuitively in \cref{fig:imode_PIp_W}.  The plasma stored energy trends as $W \sim P \tau_E$; from the H-mode scaling, we expect $\tau_E \sim I_p$.  The H-mode confinement scaling, then, predicts $W \sim I_p P_{net}^{0.3}$.  However, the stored energy in I-mode trends as $W \sim P_{net} I_p$, indicating that there is little or no (negative) dependence of $\tau_E$ on heating power in I-mode.  The strong dependence of the stored energy on heating power is reflected in the response of the pressure pedestal to the same, shown in \cref{fig:imode_Pnet_p95}.  The degradation of energy confinement with heating power in H-mode reflects the MHD limits on the pedestal -- increased heating power raises the ELM frequency to drive enhanced energy transport, maintaining the pedestal at the MHD limit, which in turn drives the weak increase of stored energy with increased power.  The lack of power degradation in I-mode, then, reflects the stability of the pedestal against ELMS\gnote{reword, something about density}.
 
 \subsection{Confinement Scaling Laws}\label{subsec:imode_powerlaws}
 
@@ -256,6 +268,8 @@ Again, we emphasize that single-machine scalings are of limited reliability for 
 \nicesectionending
 
 \section{Conclusions}\label{sec:imode_ped_conclusions}
+
+
 
 \nicechapterending
 
