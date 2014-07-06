@@ -1,3 +1,44 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Shimada2007}
+M.~Shimada, D.J. Campbell, V.~Mukhovatov, M.~Fujiwara, N.~Kirneva et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S01} {Chapter 1:
+  Overview and summary}.
+\newblock {\em Nuclear Fusion}, 47(6):S1, 2007.
+
+\bibitem{Walk2012}
+J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
+  {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
+  comparison with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
+
+\bibitem{Groebner2013}
+R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
+  understanding of physics processes in pedestal structure, leading to improved
+  predictive capability for {ITER}}.
+\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
+
+\bibitem{Whyte2010}
+D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
+  an {H}-mode energy confinement regime with {L}-mode particle transport in
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 50(10):105005, 2010.
+
+\bibitem{Walk2014}
+J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
+\newblock \href
+  {http://scitation.aip.org/content/aip/journal/pop/21/5/10.1063/1.4872220}
+  {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
+\newblock {\em Physics of Plasmas}, 21(5):--, 2014.
+
+\bibitem{Snyder2011}
+P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/51/i=10/a=103016} {A
+  first-principles predictive model of the pedestal height and width:
+  development, testing and {ITER} optimization with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 51(10):103016, 2011.
 
 \end{thebibliography}
