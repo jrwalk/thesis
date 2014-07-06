@@ -8,7 +8,7 @@ The dedicated pedestal experiments, both in I-mode and ELMy H-mode, presented he
  \item[Fast Diagnostics] \hfill \\
  Details the Electron-Cyclotron Emission (ECE) and $H_\alpha$ line radiation diagnostics used to track sawtooth crashes and ELM events in the plasma edge.
  \item[Fluctuation Diagnostics] \hfill \\
- Details Gas-Puff Imaging (GPI), Reflectometry, and other diagnostics used to characterize the mid-frequency fluctuations found in I-mode pedestals.\nicesectionending
+ Details Reflectometry, used to characterize the mid-frequency fluctuations localized in I-mode pedestals.\nicesectionending
 \end{description}
 
 \section{Thomson Scattering}\label{sec:app_ts}
@@ -385,7 +385,7 @@ The spatial resolution provided by these systems is more than sufficient to reso
 
 \section{Fluctuation Diagnostics}\label{sec:app_fluct}
 
-A firm understanding of plasma fluctuations is necessary to characterize high-performance regimes.  Turbulent fluctuations drive enhanced transport of energy and particles out of the plasma, and it is the suppression of these fluctuations, particularly in the plasma edge, that defines high-performance operation.  Conversely, beneficial fluctuations regulate the pedestal to allow stationary ELM-free operation (\eg in EDA H-mode, QH-mode, and I-mode).  Thus, an extensive suite of diagnostics to measure global and local fluctuation levels are maintained on C-Mod, a few of which are detailed here.
+A firm understanding of plasma fluctuations is necessary to characterize high-performance regimes.  Turbulent fluctuations drive enhanced transport of energy and particles out of the plasma, and it is the suppression of these fluctuations, particularly in the plasma edge, that defines high-performance operation.  Conversely, beneficial fluctuations regulate the pedestal to allow stationary ELM-free operation (\eg in EDA H-mode, QH-mode, and I-mode).  Thus, an extensive suite of diagnostics to measure global and local fluctuation levels are maintained on C-Mod.  One of these, the O-mode reflectometer system, is a standard tool for I-mode identification and characterization, and is detailed here.
 
 \subsection{Reflectometry}\label{subsec:app_reflect}
 
@@ -412,7 +412,20 @@ As plasmas are composed of freely-interacting charged particles, electromagnetic
 
 \noindent where $n_c$ is in $\SI{e20}{\per\meter\cubed}$ and $f$ is in $\si{\giga\hertz}$.  Measurement of the reflected wave yields a wealth of information about the density profile -- simple phase-delay measurements at a variety of frequencies produce a non-perturbative measurement of the density profile, as for each input frequency the density at the cutoff layer (the location of which is derived from the phase delay) must be equal to $n_c(f)$.
 
-\subsection{Gas-Puff Imaging}\label{subsec:app_gpi}
+The phase delay of the reflectometer signal is quite sensitive to density fluctuations -- thus, reflectometry was identified early on as a possible means to characterize the local turbulence.  To this end, an O-mode reflectometer system (described in \cite[\S 2.2]{Dominguez2012}) was implemented on C-Mod, and subsequently upgraded from the initial amplitude-modulated implementation to a fully base-band system optimized for fluctuations measurements \cite{Lin1999}.  The system is designed with a low-frequency component spanning $50-\SI{110}{\giga\hertz}$, corresponding to a cutoff density range of $0.31-\SI{1.5e20}{\per\meter\cubed}$, with additional $132$ and $\SI{140}{\giga\hertz}$ modules bringing the maximum observable baseline density to $\SI{2.4e20}{\per\meter\cubed}$.  A 2-megasample/second digitization rate and tuned $\sim \SI{500}{\mega\hertz}$ spectral width allow confident measurement of highly-localized, fairly high-frequency fluctuations in the pedestal, ideal for measurement of QCM and WCM fluctuations.
+
+Over steady I-mode phases, the fluctuation amplitude $\zeta(f)$, expressing the local fluctuation intensity as a function of frequency, may be time-integrated (see \cref{fig:hcr_wcm} for such a phase) to easily extract the frequency dependence of turbulent fluctuations tied to specific mode structures (for example, the QCM in EDA H-mode or the WCM in I-mode).  I-mode fluctuation data may be fitted to the form developed in \cite[\S 3]{Dominguez2012},
+
+\begin{equation}\label{eq:wcm}
+ \zeta(f) = A e^{-f/f_1} + B e^{-f/f_2} + C e^{-(f-f_{WCM})^2/w^2}
+\end{equation}
+
+\noindent in which the background fluctuations are characterized by a pair of exponentially-decaying functions, and the WCM is taken to be a Gaussian centered at $f_{WCM}$ with width $w$.  Such a fit is shown for an I-mode case in \cref{fig:diag_refl_fit}.  This allows a common definition for the mode amplitude, centroid frequency, and spectral broadening $\Delta f/f$.  However, as the reflectometer does not have a consistent amplitude calibration between shots, no absolute mode amplitude data may be obtained.  Characterization of the WCM frequency and amplitude response is the subject of ongoing research.
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Integrated fluctuation amplitude in the WCM.]{Time-integrated fluctuation intensity for a steady I-mode phase, fitted as a function of frequency to the form in \cref{eq:wcm}.  The Gaussian fit to the WCM is shown in blue, with the exponentially dropoff in background fluctuations is shown in teal.  The full fit is shown in red.}\label{fig:diag_refl_fit}}{\includegraphics[width=100mm]{graphics/Diagnostics/refl_fit_1120907028.pdf}}
+\end{figure}
 
 \nicechapterending
 

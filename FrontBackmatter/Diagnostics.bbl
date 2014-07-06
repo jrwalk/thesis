@@ -77,7 +77,8 @@ N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz et~al.
 \bibitem{Guharay1990}
 S.~K. Guharay, D.~A. Boyd, R.~F. Ellis, F.~J. Stauffer and C.~J. Lasnier.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1141561} {A
-  19\-channel fast grating polychromator for {ECE} measurements in the {MTX} tokamak}.
+  19\-channel fast grating polychromator for {ECE} measurements in the {MTX}
+  tokamak}.
 \newblock {\em Review of Scientific Instruments}, 61(11):3520--3523, 1990.
 
 \bibitem{Taylor1998}
@@ -105,5 +106,17 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1348329}
   {Pedestal profiles and fluctuations in {C-Mod} enhanced {D}-alpha {H}-modes}.
 \newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
+
+\bibitem{Dominguez2012}
+Arturo Dominguez.
+\newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
+  Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2012.
+
+\bibitem{Lin1999}
+Y.~Lin, J.~Irby, P.~Stek, I.~Hutchinson, J.~Snipes et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.1149370} {Upgrade of reflectometry
+  profile and fluctuation measurements in {Alcator C-Mod}}.
+\newblock {\em Review of Scientific Instruments}, 70(1):1078--1081, 1999.
 
 \end{thebibliography}
