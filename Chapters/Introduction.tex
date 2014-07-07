@@ -143,13 +143,23 @@ The temperatures in excess of 100 million Kelvin necessary for fusion in a plasm
 
 \noindent independent of particle charge, mass, or energy.
 
-This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the concept of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite[\S~2.3]{Freidberg1987} for detailed derivation) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior.  A basic equilibrium in a confined plasma is described in MHD by the simple relation
+This restriction of particle motion perpendicular to field lines to short length scales (at fusion-relevant temperatures and magnetic fields, the gyroradius is typically $\sim 10^{-5} \;\si{m}$ for electrons and $\sim 10^{-3} \;\si{m}$ for ions) compared to the size of the plasma is central to the concept of magnetic confinement.  In the perpendicular direction, this scale restriction of particle motion permits a fluid treatment of the dynamics of the plasma.  Further simplification of the fluid model (see \cite[\S~2.3]{Freidberg1987} for detailed derivation) leads to the theory of \emph{magnetohydrodynamics} (MHD), the ``workhorse'' model describing plasma behavior: 
+
+\begin{equation}\label{eq:MHD}
+ \begin{aligned}
+  &\frac{\partial \rho}{\partial t} + \vec{v} \cdot \nabla \rho = 0 \qquad \mbox{(mass continuity)}\\
+  &\rho \dfrac{d\vec{v}}{dt} = \vec{j} \times \vec{B} - \nabla p \qquad \mbox{(momentum continuity)}\\
+  &\frac{dp}{dt} = -\gamma p \nabla \cdot \vec{v} \qquad \mbox{(energy conservation)}
+ \end{aligned}
+\end{equation}  
+
+\noindent where $\rho$ is the mass density, $\vec{v}$ is the fluid velocity, $p$ is the pressure, $\vec{j}$ and $\vec{B}$ are the current density and magnetic field, $\gamma$ is the ratio of specific heats, and $d/dt = \partial/\partial t + \vec{v} \cdot \nabla$ is the ``convective derivative.''  A basic equilibrium in a confined plasma is described in MHD by the simple relation
 
 \begin{equation}\label{eq:MHDeq}
  \nabla p = \vec{j} \times \vec{B}
 \end{equation}
 
-\noindent in which the outward force due to the plasma pressure gradient is balanced by an inward force from the interplay between magnetic fields and electric currents (expressed by the current density $\vec{j}$).  This interplay is readily illustrated in the simple one-dimensional case of an infinite straight cylinder of plasma -- in this case, the radially-outward $\nabla p$ force may be balanced by an axial current in the $\hat{z}$ direction with an azimuthal $\hat{\theta}$ magnetic field ($z$-pinch), an azimuthal current and axial field ($\theta$-pinch), or a superposition of the two (screw pinch).  However, all three of these options suffer from a lack of parallel confinement -- as the magnetic field does not restrict the free-streaming parallel motion of the plasma, these linear concepts (when reduced to a physical, non-infinite size!) suffer from plasma losses at the ends of the cylinder.  Despite efforts to restrict the parallel motion in a linear device (\eg the \emph{magnetic mirror}, which pinches the magnetic field at the cylinder ends in order to reflect the parallel motion of particles with a force due to the field gradient \cite{Kesner1982}), end losses in linear devices proved incompatible with steady-state fusion conditions.  The clear solution, then, was to close the magnetic geometry such that the magnetic field lines have no ends: a \emph{torus.}
+\noindent in which the outward force due to the plasma pressure gradient is balanced by an inward force from the interplay between magnetic fields and electric currents.  This interplay is readily illustrated in the simple one-dimensional case of an infinite straight cylinder of plasma -- in this case, the radially-outward $\nabla p$ force may be balanced by an axial current in the $\hat{z}$ direction with an azimuthal $\hat{\theta}$ magnetic field ($z$-pinch), an azimuthal current and axial field ($\theta$-pinch), or a superposition of the two (screw pinch).  However, all three of these options suffer from a lack of parallel confinement -- as the magnetic field does not restrict the free-streaming parallel motion of the plasma, these linear concepts (when reduced to a physical, non-infinite size!) suffer from plasma losses at the ends of the cylinder.  Despite efforts to restrict the parallel motion in a linear device (\eg the \emph{magnetic mirror}, which pinches the magnetic field at the cylinder ends in order to reflect the parallel motion of particles with a force due to the field gradient \cite{Kesner1982}), end losses in linear devices proved incompatible with steady-state fusion conditions.  The clear solution, then, was to close the magnetic geometry such that the magnetic field lines have no ends: a \emph{torus.}
 
 \subsection{Toroidal Configurations}\label{subsec:intro_toroidal}
 
@@ -216,11 +226,6 @@ open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then stream
 
 \section{Alcator C-Mod}\label{sec:intro_cmod}
 
-\begin{figure}[p]
- \pushtooutside
- \ffigbox[\FBwidth]{\caption[Cutaway view of the Alcator C-Mod tokamk, cryostat and support structure.]{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
-\end{figure}
-
 \begin{wraptable}{O}{0 pt}
  \ttabbox{\caption{Summary of Alcator C-Mod typical operating parameters.}\label{tab:cmod}}
   {\begin{tabular}{lc}
@@ -239,6 +244,11 @@ open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then stream
     \bottomrule
    \end{tabular}}
 \end{wraptable}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\caption[Cutaway view of the Alcator C-Mod tokamk, cryostat and support structure.]{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
+\end{figure}
 
 The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator tokamak experiments were designed as compact, high-field tokamaks.  Despite its small physical size ($\SI{67}{\centi\meter}$ major radius, $\SI{22}{\centi\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of approaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$).  This compact design is enabled by a very high toroidal magnetic field driven by liquid-Nitrogen-cooled copper coils, reaching as high as $\SI{8.1}{\tesla}$, with typical operation near $\SI{5.5}{\tesla}$, allowing reactor-relevant research in a small, cost-effective machine.  C-Mod plasmas are primarily heated by RF heating in the ion-cyclotron range of frequencies (ICRF) \cite{Takase1996}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of lower-hybrid resonance (LHRF) power used for heating and non-inductive current drive \cite{Wilson2009}, providing exceptionally high power density in the $\sim \SI{1.1}{\meter\cubed}$ plasma.  A cutaway view of C-Mod, including support structures and the concrete ``igloo'' housing the cooling systems, is visible in \cref{fig:alcator}.  A detailed and annotated view of the C-Mod cross-section is shown in \cref{fig:alcator2}.
 

@@ -84,6 +84,12 @@ J.~W. Hughes, B.~LaBombard, D.~A. Mossessian, A.~E. Hubbard, J.~Terry et~al.
   tokamak}.
 \newblock {\em Physics of Plasmas}, 13(5):056103, 2006.
 
+\bibitem{Hubbard2007}
+A.~E. Hubbard, J.~W. Hughes, I.~O. Bespamyatnov, T.~Biewer, I.~Cziegler et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.2714297} {{H}-mode pedestal and
+  threshold studies over an expanded operating space on {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 14(5):056109, 2007.
+
 \bibitem{Mahdavi2002}
 M.A. Mahdavi, T.H. Osborne, A.W. Leonard, M.S. Chu, E.J. Doyle et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/42/i=1/a=308} {High
@@ -492,12 +498,12 @@ B.~LaBombard, J.~W. Hughes, N.~Smick, A.~Graf, K.~Marr et~al.
   plasma flows in the edge plasma of {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 15(5):056106, 2008.
 
-\bibitem{Hughes2013}
-J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/53/i=4/a=043016} {Pedestal
-  structure and stability in {H}-mode and {I}-mode: a comparative study on
-  {Alcator C-Mod}}.
-\newblock {\em Nuclear Fusion}, 53(4):043016, 2013.
+\bibitem{Groebner2013}
+R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
+  understanding of physics processes in pedestal structure, leading to improved
+  predictive capability for {ITER}}.
+\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
 
 \bibitem{Diallo2014}
 A.~Diallo, W.~Hughes, J.\, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
@@ -561,12 +567,12 @@ T.Y. Xia, X.Q. Xu and P.W. Xi.
   two-fluid simulations of peeling–ballooning modes using {BOUT++}}.
 \newblock {\em Nuclear Fusion}, 53(7):073009, 2013.
 
-\bibitem{Groebner2013}
-R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
-  understanding of physics processes in pedestal structure, leading to improved
-  predictive capability for {ITER}}.
-\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
+\bibitem{Hughes2013}
+J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=4/a=043016} {Pedestal
+  structure and stability in {H}-mode and {I}-mode: a comparative study on
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 53(4):043016, 2013.
 
 \bibitem{Walk2012}
 J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
