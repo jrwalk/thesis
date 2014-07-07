@@ -13,6 +13,25 @@ A.~E. Hubbard, D.~G. Whyte, R.~M. Churchill, I.~Cziegler, A.~Dominguez et~al.
   barrier and turbulence in the {I}-mode regime on {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 18(5):056115, 2011.
 
+\bibitem{McDermott2009a}
+R.~M. McDermott, B.~Lipschultz, J.~W. Hughes, P.~J. Catto, A.~E. Hubbard et~al.
+\newblock \href {http://dx.doi.org/10.1063/1.3080721} {Edge radial electric
+  field structure and its connections to {H}-mode confinement in {Alcator
+  C-Mod} plasmas}.
+\newblock {\em Physics of Plasmas}, 16(5):056103, 2009.
+
+\bibitem{Cziegler2011}
+Istvan Cziegler.
+\newblock \href {http://dspace.mit.edu/handle/1721.1/77484} {{\em Turbulence
+  and Transport Phenomena in Edge and Scrape-Off Layer Plasmas}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2011.
+
+\bibitem{Cziegler2013}
+I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
+  {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
+
 \bibitem{Loarte2007}
 A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S04} {Chapter 4:
@@ -40,6 +59,13 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, I.~H. Hutchinson
 \newblock \href {http://dx.doi.org/10.1063/1.872843} {Measurements of the high
   confinement mode pedestal region on {Alcator C-Mod}}.
 \newblock {\em Physics of Plasmas}, 5(5):1744--1751, 1998.
+
+\bibitem{Walk2014}
+J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
+\newblock \href
+  {http://scitation.aip.org/content/aip/journal/pop/21/5/10.1063/1.4872220}
+  {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
+\newblock {\em Physics of Plasmas}, 21(5):--, 2014.
 
 \bibitem{Suttrop2003}
 W.~Suttrop, A.~Herrmann, F.~Ryter and J.~Stober.
@@ -85,6 +111,12 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
   {Pedestal profiles and fluctuations in {C-Mod} enhanced {D}-alpha {H}-modes}.
 \newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
 
+\bibitem{Hughes2002}
+J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, B.~LaBombard and E.~S. Marmar.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.1486224} {Observations and
+  empirical scalings of the high-confinement mode pedestal on {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 9(7):3019--3030, 2002.
+
 \bibitem{Hubbard2012}
 A.E. Hubbard, D.G. Whyte, R.M. Churchill, A.~Dominguez, J.W. Hughes et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/52/i=11/a=114009} {Threshold
@@ -122,25 +154,6 @@ T.~Onjun, G.~Bateman, A.~H. Kritz and G.~Hammett.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1518474} {Models
   for the pedestal temperature at the edge of {H}-mode tokamak plasmas}.
 \newblock {\em Physics of Plasmas}, 9(12):5018--5030, 2002.
-
-\bibitem{Cziegler2011}
-Istvan Cziegler.
-\newblock \href {http://dspace.mit.edu/handle/1721.1/77484} {{\em Turbulence
-  and Transport Phenomena in Edge and Scrape-Off Layer Plasmas}}.
-\newblock PhD thesis, Massachusetts Institute of Technology, 2011.
-
-\bibitem{Cziegler2013}
-I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
-\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
-  {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
-\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
-
-\bibitem{White2011}
-A.E. White, P.~Phillips, D.G. Whyte, A.E. Hubbard, C.~Sung et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/51/i=11/a=113005} {Electron
-  temperature fluctuations associated with the weakly coherent mode in the edge
-  of {I}-mode plasmas}.
-\newblock {\em Nuclear Fusion}, 51(11):113005, 2011.
 
 \bibitem{Osborne1998}
 T~H Osborne, R~J Groebner, L~L Lao, A~W Leonard, R~Maingi et~al.
