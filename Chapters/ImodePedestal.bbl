@@ -194,4 +194,12 @@ P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
   mechanisms for steady-state {ELM}-free operation}.
 \newblock {\em Nuclear Fusion}, 47(8):961, 2007.
 
+\bibitem{Whyte2011}
+D.~G. Whyte, E.~S. Marmar, A.~E. Hubbard, J.~W. Hughes, A.~Dominguez et~al.
+\newblock \href
+  {http://www.psfc.mit.edu/research/alcator/pubs/APS/APS2011/Whyte_APS_cont-oral.pdf}
+  {{I}-mode on {ITER}?}
+\newblock In {\em 53rd Meeting of the APS Division of Plasma Physics}, Salt
+  Lake City, UT, November 2011.
+
 \end{thebibliography}
