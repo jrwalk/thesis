@@ -41,4 +41,10 @@ P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
   development, testing and {ITER} optimization with the {EPED} model}.
 \newblock {\em Nuclear Fusion}, 51(10):103016, 2011.
 
+\bibitem{Snyder2001}
+P.~B. Snyder and G.~W. Hammett.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/doi/10.1063/1.1342029}
+  {Electromagnetic effects on plasma microturbulence and transport}.
+\newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
+
 \end{thebibliography}
