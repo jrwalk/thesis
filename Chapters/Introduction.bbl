@@ -248,4 +248,11 @@ G~Federici, A~Loarte and G~Strohmayer.
   erosion of the {ITER} divertor targets during type {I} {ELMs}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1523, 2003.
 
+\bibitem{Whyte2010}
+D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
+  an {H}-mode energy confinement regime with {L}-mode particle transport in
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 50(10):105005, 2010.
+
 \end{thebibliography}

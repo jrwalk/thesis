@@ -56,11 +56,16 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
  P_{Brems} = \left( \num{5.35e-37} \right) n_e^2 Z_{eff} \sqrt{T}
 \end{equation}
 
-\noindent with $n_e$ in $\si{\per\meter\cubed}$ and $T$ in $\si{\electronvolt}$ giving $P_{Brems}$ in $\si{\mega\watt}$\gnote{check}, representing a consistent source of heat loss from the plasma.
+\noindent with $n_e$ in $\si{\per\meter\cubed}$ and $T$ in $\si{\kilo\electronvolt}$ giving $P_{Brems}$ in $\si{\mega\watt}$, representing a consistent source of heat loss from the plasma.
 
 \subsection{Fusion Fuels}\label{subsec:intro_fuels}
 
 Fusion collectively refers to the class of nuclear reactions merging lighter nuclei into a single heavier element.  While fusion reactions for elements lighter than iron are generally exothermic, as they form nuclei with greater binding energy per nucleon (see \cref{fig:bindingenergy}), the most common and readily attainable involve isotopes of hydrogen or helium, the most promising candidates for which are shown below.
+
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\caption[Binding energy per nucleon versus atomic mass number.]{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy. \cite{Krane}}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
+\end{figure}
 
 \begin{align}
  {}^2\si{D} + {}^2\si{D} &\rightarrow {}^3\si{T} + \si{p} + \SI{4.03}{\mega\electronvolt}\label{eq:dd1}\\
@@ -76,11 +81,6 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
 \end{equation}
 
 \noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian velocity distribution of the fuel ions (\cref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in \cref{fig:xsection}.
-
-\begin{figure}
- \pushtooutside
- \ffigbox[\FBwidth]{\caption[Binding energy per nucleon versus atomic mass number.]{Binding energy per nucleon versus atomic mass number, with notable isotopes marked.  Reactions forming nuclei with higher binding energy are exothermic -- thus, fusion of elements lighter than ${}^{56}\si{Fe}$ or fission of elements heavier than ${}^{56}\si{Fe}$ releases energy. \cite{Krane}}\label{fig:bindingenergy}}{\includegraphics[width=150mm]{graphics/Introduction/bindingenergy.png}}
-\end{figure}
 
 \begin{figure}
  \pushtooutside
@@ -314,13 +314,13 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  \frac{W_p}{\tau_E} = P_{\alpha}
 \end{equation}
 
-\noindent The alpha heating power is simply the fusion reaction rate $R_f = n_D n_T \langle \sigma v \rangle_{DT}$ times the energy carried by charged particles from a single reaction, $E_\alpha = 1/5 \times E_{fusion} = \SI{3.5}{\mega\electronvolt}$.  Quasineutrality (\cref{eq:quasineutral}) requires $n_e \approx n_D + n_T$.  As the reaction rate is optimized for a 50-50 fuel mix, the alpha heating power is given by
+\noindent The alpha heating power is simply the fusion reaction rate $R_f = n_D n_T \langle \sigma v \rangle_{DT}$ times the energy carried by charged particles from a single reaction, $E_\alpha = 1/5 \times E_{fusion} = \SI{3.5}{\mega\electronvolt}$.  Quasineutrality (\cref{eq:quasineutral}) requires $n_e \approx n_D + n_T$.  As the reaction rate is optimized for a 50-50 fuel mix, the alpha heating power density is given by
 
 \begin{equation}\label{eq:palpha}
  P_{\alpha} = \frac{1}{4} n_e^2 \langle \sigma v \rangle E_\alpha
 \end{equation}
 
-\noindent The stored energy is defined by
+\noindent The stored energy density is defined by
 
 \begin{equation}\label{eq:Wp}
  W_p = \frac{3}{2}p_{thermal}
@@ -350,7 +350,7 @@ A closer examination of the power balance equation, \cref{eq:powerbalance}, reve
  2 n_e T_e \tau_E = p \tau_E = \frac{24 T_e^2}{\langle \sigma v \rangle E_\alpha}
 \end{equation}
 
-\noindent an important figure of merit for a reactor that is optimized for $\si{D}-\si{T}$ fusion at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$, setting target parameters for a fusion reactor \cite{Meade2010}.
+\noindent an important figure of merit for a reactor, with a minimum value for ignition for $\si{D}-\si{T}$ fusion at $T_e \approx \SI{15}{\kilo\electronvolt}$ with a value of $p \tau_E \approx \SI{8.3}{\atmosphere\cdot\second}$ \cite{Meade2010}.
 
 However, the maximum attainable thermal pressure in a tokamak is limited by a global MHD stability limit expressed in terms of \cite[\S~6.16]{Wesson2011}
 
@@ -358,7 +358,7 @@ However, the maximum attainable thermal pressure in a tokamak is limited by a gl
  \beta = \frac{2 \mu_0 p}{B^2}
 \end{equation}
 
-\noindent the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Thus for a given $B_T$, set by design and operational limits, there is a maximum obtainable pressure, necessitating increased energy confinement -- that is, higher values for $\tau_E$ -- to reach the triple-product target for ignition.
+\noindent the ratio of thermal pressure to magnetic pressure $B^2/2\mu_0$ (equivalently, the ratio of thermal and magnetic stored energy) -- a normalization that also falls naturally out of solutions to the MHD equilibrium, \cref{eq:MHDeq}.  Thus for a given $B_T$ (which is by far the largest contribution to magnetic pressure in a tokamak), set by design and operational limits, there is a maximum obtainable pressure, setting a lower bound on the necessary energy confinement to reach the triple-product target for ignition.
 
 \subsection{Transport Barriers}\label{subsec:intro_barriers}
 
@@ -370,31 +370,31 @@ The effect on the transport is clearly evident from a diffusive transport model,
  \frac{\partial Q}{\partial t} = \nabla \cdot \left( D_Q \nabla Q \right) + R_Q
 \end{equation}
 
+\begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
+ \includegraphics[width=70mm]{graphics/Introduction/transport.pdf}
+ \caption[Diffusion coefficients and plasma profiles for a ``toy model'' diffusion equation.]{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$, with constant $D_Q$ shown in blue and $D_Q$ reduced by a transport barrier shown in red.}
+ \label{fig:intro_transport}
+\end{wrapfigure}
+
 \noindent for a general parameter $Q(\vec{x},t)$ with accompanying diffusion coefficient $D_Q(Q,\vec{x},t)$ and net source/sink term $R_Q(Q,\vec{x},t)$.  We may consider a one-dimensional ``toy model'' of diffusion with a simple constant source term, given in steady state by
 
 \begin{equation}\label{eq:diffusion2}
  \frac{d}{dx} \left( D_Q \frac{dQ}{dx} \right) + R_Q = 0
 \end{equation}
 
-\begin{wrapfigure}{O}[\marginparwidth+\marginparsep]{70mm}
- \includegraphics[width=70mm]{graphics/Introduction/transport.pdf}
- \caption[Diffusion coefficients and plasma profiles for a ``toy model'' diffusion equation.]{Diffusion coefficients and plasma profiles for a ``toy model'' 1D diffusion equation with a general parameter $Q(x)$ and accompanying diffusion coefficient $D_Q(x)$.}
- \label{fig:intro_transport}
-\end{wrapfigure}
-
 \noindent The solution to this model for two sample diffusion coefficients is given in \cref{fig:intro_transport}.  A simple constant diffusion coefficient $D_Q$ produces a profile with weak slope, whereas an order-of-magnitude drop in $D_Q$ near the edge (consistent with experimentally-observed values of diffusion coefficients in transport barriers) produces a region with a steep gradient in $Q$ compared to the flat-$D_Q$ solution, despite identical source terms $R_Q$.  Experimentally, reductions in the particle transport coefficient $D_n$ or the heat transport coefficient $\chi$ due to sheared flows correspond to steep-gradient regions in density or temperature, characteristic of the transport barrier.
 
 Of particular interest is the \emph{edge transport barrier}, also termed the \emph{pedestal} \cite{Wagner1982,Greenwald1997}.  A number of high-performance tokamak regimes have been established, exploiting the formation of a pedestal to suppress transport and boost global energy confinement to levels necessary to reach the triple-product target (\cref{eq:tripleproduct}) for an ignited plasma.  The understanding of these high-performance regimes, commonly referred to as ``high-confinement'' or H-modes, and their extrapolation to ITER and reactor-scale devices has been a major focus of recent tokamak research.
 
-However, the formation of the pedestal also presents challenges that must be addressed for reactor-scale operation.  Increased particle confinement causes the plasma to retain impurities -- particularly ionized wall materials -- along with fuel ions.  Low-$Z$ impurities, particularly the ${}^4\si{He}$ ``fusion ash'', tend to slow the fusion reaction rate due to fuel dilution, while high-$Z$ impurities drive elevated radiative losses (note the strong charge dependence for Bremsstrahlung radiation, \cref{eq:brems}).  This ultimately leads to a \emph{radiative collapse} \cite{Greenwald1997,Greenwald2007}, dropping the plasma out of H-mode -- thus, stationary (\ie non-transient) operation in H-mode requires a means to regulate particle confinement and flush impurities from the plasma core.  
+However, the formation of the pedestal also presents challenges that must be addressed for reactor-scale operation.  Increased particle confinement causes the plasma to retain impurities -- particularly ionized wall materials -- along with fuel ions.  Low-$Z$ impurities, particularly the ${}^4\si{He}$ ``fusion ash'', will slow the fusion reaction rate due to fuel dilution, while high-$Z$ impurities drive elevated radiative losses (note the strong charge dependence for Bremsstrahlung radiation, \cref{eq:brems}).  This ultimately leads to a \emph{radiative collapse} \cite{Greenwald1997,Greenwald2007}, dropping the plasma out of H-mode -- thus, stationary (\ie non-transient) operation in H-mode requires a means to regulate particle confinement and flush impurities from the plasma core.  
 
-The steep gradient in the plasma pressure generated in the pedestal has been shown to drive \emph{Edge-Localized Modes} (ELMs) \cite{Zohm1996}, instabilities that cause the pedestal to periodically ``crash,'' expelling particles and energy into the scrape-off layer.  The smaller ELM bursts found in existing experiments provide the desired level of particle transport for stationary operation -- thus ITER operation is designed considering an H-mode with ELMs as the baseline for operation \cite{ITER1999,Shimada2007}.  However, on ITER-scale devices the heat pulses from ELMs drive unacceptable levels of transient thermal loading and erosion damage to wall and divertor materials \cite{Loarte2003,Federici2003}.  As such, high-performance operation on ITER- or reactor-scale devices requires mitigation or elimination of large, deleterious ELMs, either through externally-applied controls or physics-based stabilization.\nicesectionending
+The steep gradient in the plasma pressure generated in the pedestal has been shown to drive \emph{Edge-Localized Modes} (ELMs) \cite{Zohm1996}, instabilities that cause the pedestal and its associated steep radial gradients to periodically ``crash,'' expelling particles and energy into the scrape-off layer.  The ELM bursts found in existing experiments provide the desired level of particle transport for stationary operation -- thus ITER operation is designed considering an H-mode with ELMs as the baseline for operation \cite{ITER1999,Shimada2007}.  However, on ITER-scale devices, which will have a significantly higher ratio of thermal energy to surface area for heat exhaust compared to existing devices, the heat pulses from ELMs drive unacceptable levels of transient thermal loading and erosion damage to wall and divertor materials \cite{Loarte2003,Federici2003}.  As such, high-performance operation on ITER- or reactor-scale devices requires mitigation or elimination of large, deleterious ELMs, either through externally-applied controls or physics-based stabilization.\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Goals \& Outline}\label{sec:intro_outline}
 
-This thesis will present results in the \emph{I-mode}, a novel high-performance regime pioneered on Alcator C-Mod.  I-mode is notable for its apparent decoupling of energy and particle transport, reaching H-mode-like energy confinement while maintaining L-mode levels of particle and impurity transport, achieving the desired flushing of impurities from the plasma.  This is manifested in the edge with the formation of an H-mode-like temperature pedestal without the accompanying density pedestal found in conventional H-modes.  I-mode also appears to be naturally free of large ELMs, avoiding the need for complex externally-applied controls, and to exhibit highly favorable scalings of energy confinement with heating power.
+This thesis will present results in the \emph{I-mode}, a novel high-performance regime pioneered on Alcator C-Mod \cite{Whyte2010}.  I-mode is notable for its apparent decoupling of energy and particle transport, reaching H-mode-like energy confinement while maintaining L-mode levels of particle and impurity transport, achieving the desired flushing of impurities from the plasma.  This is manifested in the edge with the formation of an H-mode-like temperature pedestal without the accompanying density pedestal found in conventional H-modes.  I-mode also appears to be naturally free of large ELMs, avoiding the need for complex externally-applied controls, and to exhibit highly favorable scalings of energy confinement with heating power.
 
 A firm understanding of the structure and stability of the pedestal is essential to extend I-mode operation to larger devices.  This thesis will describe a combined approach to the understanding of the pedestal in I-mode, using both direct observations of pedestal structure and numerical modeling of the pedestal stability against MHD triggers for large, deleterious ELMs.  The applicability of I-mode to reactor operation can thereby be evaluated.  The balance of this thesis is arranged as follows:
 
@@ -402,14 +402,14 @@ A firm understanding of the structure and stability of the pedestal is essential
  \item[Chapter \ref{ch:HighPerformance}: High-Performance Regimes] \hfill \\
  An overview of of existing results in established H-mode regimes, including observed pedestal behaviors.  A detailed introduction to I-mode physics and operation is also included.
  \item[Chapter \ref{ch:Modeling}: Pedestal Modeling and Theory] \hfill \\
- An introduction to the theory of the MHD and turbulent instabilities governing the pedestal and driving large ELMs, and the numerical modeling approaches used in their analysis.
+ An introduction to the theory of the MHD and turbulent instabilities governing the pedestal and driving large ELMs, and the numerical modeling approaches used in their analysis, as well as an overview of alternate models.
  \item[Chapter \ref{ch:Elmy}: ELMy H-Modes on C-Mod] \hfill \\
  The results of recent experiments on C-Mod testing a unified model for pedestal structure in ELMy H-mode, the approach to which is also applied to I-mode pedestals.
- \item[Chapter \ref{ch:ImodePedestal}: I-Mode Pedestal Scalings] \hfill \\
- New results from dedicated pedestal experiments in I-mode examining the response of pedestal structure to engineering and physics parameters, and potential extrapolations of pedestal structure and performance to larger devices.
+ \item[Chapter \ref{ch:ImodePedestal}: I-Mode Pedestal Scalings \& Confinement] \hfill \\
+ New results from dedicated pedestal experiments in I-mode examining the response of pedestal structure to engineering and physics parameters, and potential extrapolations of pedestal structure and performance to larger devices.  The impact on global performance and confinement is also shown.
  \item[Chapter \ref{ch:ImodeModeling}: I-Mode Pedestal Stability Modeling] \hfill \\
  Numerical modeling results for the stability of I-mode pedestals against identified ELM triggers, and correlations to the generally observed lack of ELMs in I-mode.
- \item[Chapter \ref{ch:Conclusion}: Conclusions] \hfill \\
+ \item[Chapter \ref{ch:Conclusion}: Conclusions \& Future Work] \hfill \\
  A summary of the results presented in this thesis and some directions for future work.
 \end{description}
 
