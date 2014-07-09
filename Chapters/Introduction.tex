@@ -14,7 +14,7 @@ Conventional -- that is, fission-based -- nuclear power can also supply carbon-f
 
 \section{Plasmas for Fusion}\label{sec:intro_plasmas}
 
-A \emph{plasma} is a gas to which sufficient energy has been applied to strip some or all of the electrons from the nuclei of its constituent atoms.  In a plasma, ions and electrons freely interact with one another, behaving as coupled fluids.  Plasmas of interest for fusion research are comprised of light elements (typically hydrogen or helium), and are at extremely high temperatures, in excess of 100 million Kelvin ($10-20 \;\si{keV}$).  As these conditions are far in excess of the ionization energy for these elements, the plasma is dominated by collisions between its charged particles, rather than interactions with bound electron states.
+A \emph{plasma} is a gas to which sufficient energy has been applied to strip some or all of the electrons from the nuclei of its constituent atoms.  In a plasma, ions and electrons freely interact with one another through Coulomb collisions, behaving as coupled electrodynamic fluids.  Plasmas of interest for fusion research are comprised of light elements (typically hydrogenic isotopes), and are at extremely high temperatures, in excess of 100 million Kelvin ($10-20 \;\si{keV}$).  As these conditions are far in excess of the ionization energy for these elements, the plasma is dominated by collisions between its charged particles, rather than interactions with bound electron states.
 
 \subsection{Plasma Parameters}\label{subsec:intro_params}
 
@@ -24,7 +24,7 @@ As the plasma is composed of free charged particles, it responds strongly to ele
  \lambda_D = \sqrt{ \frac{\varepsilon_0 T}{n e^2} }
 \end{equation}
 
-\noindent At size scales significantly larger than $\lambda_D$, this will enforce an approximately balanced electric charge in the plasma, termed ``quasi-neutrality''.  This is reflected in the number densities of electrons and multiple ion species $j$, each with charge $Z_j$, by the relation
+\noindent where $n$ is the particle density, $T$ is the temperature, $e$ is the electron charge, and $\varepsilon_0$ is the vacuum permittivity.  At size scales significantly larger than $\lambda_D$, this will enforce an approximately balanced electric charge in the plasma, termed ``quasi-neutrality''.  This is reflected in the number densities of electrons and multiple ion species $j$, each with charge $Z_j$, by the relation
 
 \begin{equation}\label{eq:quasineutral}
  n_e = \sum_j{n_j Z_j}
@@ -36,13 +36,13 @@ As the plasma is composed of free charged particles, it responds strongly to ele
  Z_{eff} = \frac{1}{n_e} \sum_j{n_j Z_j^2}
 \end{equation}
 
-The electrostatic force driving this charge redistribution induces a ``ringing'' oscillation in the plasma, at the characteristic plasma frequency $\omega_p$:
+The electrostatic force driving this charge redistribution induces a ``ringing'' oscillation in the plasma (primarily the electrons), at the characteristic plasma frequency $\omega_p$:
 
 \begin{equation}\label{eq:omegap}
  \omega_p = \sqrt{ \frac{ne^2}{\varepsilon_0 m_e} }
 \end{equation}
 
-\noindent This natural oscillation in the plasma also has the effect of screening AC electric fields varying at frequencies $\omega < \omega_p$.
+\noindent ($m_e$ is the electron mass).  This natural oscillation in the plasma also has the effect of screening the vacuum EM propagation of AC electric fields varying at frequencies $\omega < \omega_p$.
 
 Coulomb collisions between charged particles in the plasma tend to drive magnetically-confined plasmas into thermal equilibrium, with the velocity distribution for a species given by the Maxwellian
 
@@ -50,13 +50,13 @@ Coulomb collisions between charged particles in the plasma tend to drive magneti
  f(v) = n \left( \frac{m}{2\pi T} \right)^{3/2} \mbox{exp}\left(-\frac{mv^2}{2T} \right)
 \end{equation}
 
-\noindent These collisions also cause the plasma to emit a continuous spectrum of Bremsstrahlung radiation.  For a plasma in thermal equilibrium, integration over the full spectrum gives for the total radiated power
+\noindent where $v$ is the species particle velocity.  Electron-ion collisions also cause the plasma to emit a continuous spectrum of Bremsstrahlung radiation.  For a plasma in thermal equilibrium, integration over the full spectrum gives for the total radiated power
 
 \begin{equation}\label{eq:brems}
  P_{Brems} = \left( \num{5.35e-37} \right) n_e^2 Z_{eff} \sqrt{T}
 \end{equation}
 
-\noindent representing a consistent source of heat loss from the plasma.
+\noindent with $n_e$ in $\si{\per\meter\cubed}$ and $T$ in $\si{\electronvolt}$ giving $P_{Brems}$ in $\si{\mega\watt}$\gnote{check}, representing a consistent source of heat loss from the plasma.
 
 \subsection{Fusion Fuels}\label{subsec:intro_fuels}
 
@@ -69,13 +69,13 @@ Fusion collectively refers to the class of nuclear reactions merging lighter nuc
   {}^2\si{D} + {}^3\si{T} &\rightarrow {}^4\si{He} + \si{n} + \SI{17.6}{\mega\electronvolt}\label{eq:dt}
 \end{align}
 
-\noindent Here $\si{D}$ and $\si{T}$ indicate nuclei of deuterium and tritium, two heavy isotopes of hydrogen (one proton plus one and two neutrons, respectively).  The fusion reaction rate $R_f$ is given by
+\noindent Here $\si{D}$ and $\si{T}$ indicate nuclei of deuterium and tritium, two heavy isotopes of hydrogen (one proton plus one and two neutrons, respectively).  The volumetric fusion reaction rate $R_f$ is given by
 
 \begin{equation}\label{eq:rate}
- R_f = n_1 n_2 \langle \sigma v \rangle_{1,2}
+ R_f = n_1 n_2 \langle \sigma v \rangle_{1,2} \qquad [\si{\per\meter\cubed\per\second}]
 \end{equation}
 
-\noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian fuel distribution (\cref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in \cref{fig:xsection}.
+\noindent where $n_1$ and $n_2$ indicate the densities of the two fuel ions (\eg for deuterium-tritium fuel $n_1 n_2 = n_D n_T$, while for pure-deuterium fuel $n_1 n_2 = \frac{1}{2} n_D^2$ to remove double-counting of fuel ions) and $\langle \sigma v \rangle_{1,2}$ is a rate parameter incorporating the energy-dependent reaction cross-section averaged over the Maxwellian velocity distribution of the fuel ions (\cref{eq:maxwell}).  In practice, the energy-dependent cross-section is empirically determined -- measured rate parameters $\langle \sigma v \rangle$ for the fuels of interest are shown in \cref{fig:xsection}.
 
 \begin{figure}
  \pushtooutside
@@ -91,14 +91,14 @@ Pure deuterium fuel (reactions shown in \cref{eq:dd1,eq:dd2}) is attractive from
 
 The $\si{D}-{}^3\si{He}$ reaction (\cref{eq:dhe3}) exhibits several desirable properties, namely an impressive energy yield per reaction, and the fact that the reaction produces only charged particles rather than the high-energy neutrons found in $\si{D}-\si{D}$ and $\si{D}-\si{T}$ reactions, which can cause significant damage to reactor materials (note, however, that a $\si{D}-{}^3\si{He}$ plasma will also undergo neutronic $\si{D}-\si{D}$ fusion at a meaningful rate).  However, as with $\si{D}-\si{D}$ fuel, the $\si{D}-{}^3\si{He}$ reaction suffers from a lower reaction rate at attainable conditions, as well as the fact that Helium-3 does not occur in economically usable quantities on Earth.  While off-planet sources of Helium-3 exist (for example, a useful quantity is present in the lunar regolith \cite{Johnson1999} and in the atmospheres of some gas giants \cite{Palaszewski2005}), this fuel remains the subject of speculation.
 
-The deuterium-tritium reaction (\cref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying roughly 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor components.  The heat generated in the blanket from neutron absorption will also be drawn off in a steam cycle to drive turbines, generating electricity from the reactor.  Finally, seeding the blanket with lithium allows the following reactions with fusion neutrons:
+The deuterium-tritium reaction (\cref{eq:dt}) is considered the most promising for a first-generation fusion reactor, due to its high energy output per reaction and favorable reaction cross-section -- the rate parameter $\langle \sigma v \rangle_{DT}$ reaches its peak at a lower temperature, and reaches a greater absolute level than other fusion fuels.  However, $\si{D}-\si{T}$ operation is limited both by fuel sources, and reaction products.  $\si{D}-\si{T}$ fusion produces a $14 \;\si{MeV}$ neutron, carrying 80\% of the energy released by the fusion reaction, which can damage unshielded reactor materials.  Moreover, while deuterium is stable and readily available, tritium is radioactive with a short half-life (roughly 12.3 years), so it is not naturally occurring in meaningful quantities on earth.   A reactor will solve both of these problems with a \emph{neutron blanket}, a neutron-absorbing structure surrounding the plasma.  This provides the necessary shielding for sensitive reactor components.  The heat generated in the blanket from neutron absorption will also be drawn off in a steam cycle to drive turbines, generating electricity from the reactor.  Finally, seeding the blanket with lithium allows the following reactions with fusion neutrons:
 
 \begin{align}
  {}^6\si{Li} + \si{n}_{slow} &\rightarrow {}^4\si{He} + \si{T} + \SI{4.8}{MeV}\label{eq:Li6}\\
- {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - \SI{8.7}{MeV}\label{eq:Li7}
+ {}^7\si{Li} + \si{n}_{fast} &\rightarrow {}^4\si{He} + \si{T} + \si{n} - \SI{2.5}{MeV}\label{eq:Li7}
 \end{align}
 
-\noindent the Lithium-6 reaction (\cref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (\cref{eq:Li7}) is more likely to capture fast neutrons to produce tritium in an endothermic reaction; however, the reaction also acts as a neutron multiplier, as a free neutron is maintained through the reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
+\noindent the Lithium-6 reaction (\cref{eq:Li6}) absorbs ``slow'' neutrons (that is, neutrons that have thermalized to the blanket temperature via collisions) to produce tritium, plus additional heat.  Lithium-7 (\cref{eq:Li7}) is an endothermic reaction, although the reaction also preserves the free neutron through the breeding reaction.  Using blankets enriched with ${}^6\si{Li}$, coupled with neutron multipliers, a reactor will target an over-unity tritium breeding ratio, with $>1$ tritons produced per neutron entering the blanket (\ie per tritium consumed in a fusion reaction).\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -176,13 +176,13 @@ However, introducing toroidal effects into the magnetic geometry gives rise to a
  \vec{v}_{\nabla B} = \frac{v_\perp^2}{2\omega_c} \frac{\vec{B} \times \nabla B}{B^2}
 \end{equation}
 
-\noindent while the toroidal twist in the magnetic field causes the curvature drift,
+\noindent while the bent toroidal magnetic field in the magnetic field causes the curvature drift,
 
 \begin{equation}\label{eq:curvaturedrift}
  \vec{v}_\kappa = \frac{v_\parallel^2}{\omega_c} \frac{\vec{R}_c \times \vec{B}}{R_c^2 B}
 \end{equation}
 
-\noindent where $v_\parallel$ is the particle velocity parallel to the magnetic field, $\omega_c$ is the species cyclotron frequency (\cref{eq:omegac}), and $\vec{R}_c$ is the radius of curvature of the field.  In the case of an applied toroidal magnetic field, these drifts are directed vertically in the $\hat{Z}$ direction, and are directed oppositely for electrons and ions due to the charge dependence in $\omega_c$.  The electric field resulting from this charge separation drives an outward $\vec{E} \times \vec{B}$ drift (see \cref{eq:exb}), breaking confinement.  This effect is countered by the addition of a poloidal field, which adds a helical twist to the guiding-center path to average out the separation due to particle drifts.  Concepts aiming for steady-state magnetic confinement of a plasma typically rely on generating this twist, termed the \emph{rotational transform}, to maintain stable confinement.
+\noindent where $v_\parallel$ is the particle velocity parallel to the magnetic field, $\omega_c$ is the species cyclotron frequency (\cref{eq:omegac}), and $\vec{R}_c$ is the radius of curvature of the field.  In the case of a vacuum toroidal magnetic field, these drifts are directed vertically in the $\hat{Z}$ direction, and are directed oppositely for electrons and ions due to the charge dependence in $\omega_c$.  The electric field resulting from this charge separation drives a radially-outward $\vec{E} \times \vec{B}$ drift (see \cref{eq:exb}), which effectively deconfines the plasma.  This effect is countered by the addition of a poloidal field, which adds a helical twist to the guiding-center path to average out the separation due to particle drifts.  Concepts aiming for steady-state magnetic confinement of a plasma typically rely on generating this twist, termed the \emph{rotational transform}, to maintain stable confinement.
  
 One of the most successful implementations of this concept for Magnetic Fusion Energy (MFE) is the \emph{tokamak} \cite{Wesson2011} (a Russian acronym from \foreignlanguage{russian}{тороидальная камера с магнитными катушками}, \emph{toroidalnaya kamera s magnetnymi katushkami}, ``toroidal chamber with magnetic coils'').  The tokamak design is characterized by a strong toroidal magnetic field (variously denoted $B_T$ or $B_\Phi$) applied by external coils, with a poloidal field ($B_p$ or $B_\theta$) primarily generated by a current (termed the \emph{plasma current} $I_p$).  A schematic of the plasma and coil arrangement for a tokamak is shown in \cref{fig:intro_tokamak}.  By generating the rotational transform to the magnetic field using the plasma current, the tokamak design utilizes relatively simple planar magnetic coils, avoiding the significantly more complex three-dimensional coils used to generate the helical field in a \emph{stellarator} (the major competing design concept \cite{Meade2010}).  However, the necessity for large ($>\SI{1}{\mega\ampere}$) plasma currents presents a significant engineering and physics challenge.  It is straightforward to generate the plasma current through a simple transformer action from a central solenoid in the torus (depicted in \cref{fig:intro_tokamak}) -- however, this AC-current-driven transformer action necessarily limits tokamaks to pulsed operation.  Generation of non-inductive DC current drive \cite{Westerhof2012}, via RF \cite{Bonoli2014,Prater2004} or particle beams \cite{Gormezano2007}, is an active area of research in tokamak physics and engineering, but is outside the scope of this thesis.
 
@@ -191,16 +191,26 @@ One of the most successful implementations of this concept for Magnetic Fusion E
  \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/Introduction/tokamak.pdf}}{\caption[Schematic of a tokamak coil configuration and plasma.]{Schematic of a tokamak configuration, showing the plasma and magnetic coils.  The applied toroidal magnetic field is generated by the toroidal field coils (shown in blue).  A toroidal plasma current is generated by the center transformer, in turn generating a poloidal magnetic field (shown in green).  These combine to form the helical magnetic field.  The plasma shape and equilibrium is adjusted with the outer poloidal field coils (gray).}\label{fig:intro_tokamak}}
 \end{figure}
 
-Due to its regular, planar magnetic coils and continuous plasma current, tokamak equilibria are characterized by rotational symmetry (to good approximation) about the center axis of the torus (\emph{axisymmetry}).  Solutions to the MHD equilibrium equation, \cref{eq:MHDeq}, thus reduce to a two-dimensional equation in $R$ and $Z$ (as $\partial/\partial \Phi \rightarrow 0$), given by the Grad-Shafranov Equation \cite{Grad1958,Shafranov1960,Freidberg1987}:
+Due to its regular, planar magnetic coils and continuous plasma current, tokamak equilibria are characterized by rotational symmetry (to good approximation) about the center axis of the torus (\emph{axisymmetry}).  Solutions to the MHD equilibrium force balance equation, \cref{eq:MHDeq}, thus reduce to a two-dimensional equation in $R$ and $Z$ (as $\partial/\partial \Phi \rightarrow 0$), given by the Grad-Shafranov Equation \cite{Grad1958,Shafranov1960,Freidberg1987}:
+
+%\begin{equation}\label{eq:gradshafranov}
+% \begin{aligned}
+% \Delta^* \psi &= -\mu_0 R^2 \frac{dp}{d\psi} - \frac{1}{2} \frac{dF^2}{d\psi}\\
+% \Delta^* \psi &= R^2 \nabla \cdot \left(\frac{1}{R^2} \nabla \psi \right) = R \frac{\partial}{\partial R} \left(\frac{1}{R} \frac{\partial \psi}{\partial R} \right) + \frac{\partial^2 \psi}{\partial Z^2}
+% \end{aligned}
+%\end{equation}
 
 \begin{equation}\label{eq:gradshafranov}
- \begin{aligned}
- \Delta^* \psi &= -\mu_0 R^2 \frac{dp}{d\psi} - \frac{1}{2} \frac{dF^2}{d\psi}\\
- \Delta^* \psi &= R^2 \nabla \cdot \left(\frac{1}{R^2} \nabla \psi \right) = R \frac{\partial}{\partial R} \left(\frac{1}{R} \frac{\partial \psi}{\partial R} \right) + \frac{\partial^2 \psi}{\partial Z^2}
- \end{aligned}
+ \Delta^* \psi = -\mu_0 R^2 \frac{dp}{d\psi} - \frac{1}{2} \frac{dF^2}{d\psi}
 \end{equation}
 
-\noindent where $F = RB_\phi$ encodes the toroidal field and $p$ is the thermal pressure.  The poloidal field (equivalently, the plasma current profile) is described by the poloidal magnetic flux $\psi$,
+\noindent where $\Delta^*$ is a differential operator defined by
+
+\begin{equation}\label{eq:gsoperator}
+ \Delta^* = R^2 \nabla \cdot \left( \frac{1}{R^2} \nabla \right) = R \frac{\partial}{\partial R} \left(\frac{1}{R} \frac{\partial}{\partial R}\right) + \frac{\partial^2}{\partial Z^2}
+\end{equation}
+
+\noindent and $F = RB_\phi$ encodes the toroidal field and $p$ is the thermal pressure.  The poloidal field (equivalently, the plasma current profile) is described by the poloidal magnetic flux $\psi$,
 
 \begin{equation}\label{eq:psi}
  \psi = \frac{1}{2\pi} \int \vec{B}_p \cdot d\vec{S}
@@ -217,14 +227,21 @@ Due to its regular, planar magnetic coils and continuous plasma current, tokamak
  \fcapside[55mm]{\includegraphics[width=95mm]{graphics/Introduction/shaping.pdf}}{\caption[Tokamak cross-section with shaping parameter definitions.]{Cross-section of a plasma on the Alcator C-Mod tokamak, illustrating closed magnetic flux surfaces (light blue), the last closed flux surface (red), and surfaces with open magnetic field lines (dark blue).  Definitions for plasma shaping parameters elongation $\kappa$, and upper and lower triangularity $\delta_u$, $\delta_l$ are shown at right.}\label{fig:intro_shaping}}
 \end{figure}
 
-\noindent As the plasma temperature rapidly equilibrates along field lines, the temperature is also a flux function to good approximation.  It is useful, then, to picture the confined plasma as a series of closed, nested surfaces of constant $\psi$, on which the plasma is trapped (see \cref{fig:intro_shaping}).  In practice, these contours are calculated via a numerical solution of \cref{eq:gradshafranov} by an equilibrium solver such as the EFIT code \cite{Lao1985}.  For flux functions (\ie constant parameters on these flux surfaces), this explicitly removes the dependence on the poloidal angle $\theta$ -- the poloidal flux $\psi$ is thus a useful one-dimensional abscissa derived directly from the magnetic geometry (thus independent of the physical scale of the tokamak and useful for cross-machine comparisons) for the profiles of most parameters of interest, and shall be used thus for the balance of this thesis.
+\noindent As the plasma temperature rapidly equilibrates along field lines, the temperature is also a flux function to good approximation.  It is useful, then, to picture the confined plasma as a series of closed, nested surfaces of constant $\psi$, on which the plasma is frozen (see \cref{fig:intro_shaping}).  In practice, these contours are calculated via a numerical solution of \cref{eq:gradshafranov} by an equilibrium solver such as the EFIT code \cite{Lao1985}.  For flux functions (\ie constant parameters on these flux surfaces), this explicitly removes the dependence on the poloidal angle $\theta$ -- the poloidal flux $\psi$ is thus a useful one-dimensional abscissa derived directly from the magnetic geometry (thus independent of the physical scale of the tokamak and useful for cross-machine comparisons) for the profiles of most parameters of interest, and shall be used thus for the balance of this thesis.
 
-Using outer poloidal field coils (shown in \cref{fig:intro_tokamak}), the tokamak operator may push the plasma into a non-circular shape, with beneficial effects on plasma performance and stability.  In general, flux surfaces sufficiently far from the plasma core will not close on themselves, instead intersecting the wall; the boundary between closed, nested surfaces and these open surfaces is termed the \emph{last closed flux surface} or LCFS.  With sufficient shaping, the operator may generate a null point, the \emph{X-point}, in the LCFS where the poloidal field is zero, splitting the LCFS (also called the \emph{separatrix} in such configurations) into a minimally open surface with ``legs'' contacting the wall.  This magnetic configuration is illustrated in \cref{fig:intro_shaping}, along with a diagram defining the typical plasma shaping parameters: elongation $\kappa$ and upper and lower triangularity $\delta_u$, $\delta_l$.  As the plasma diffuses outwards, it eventually crosses the LCFS and enters 
-open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then streams freely along these open magnetic field lines until it contacts the wall.  By maintaining an X-point, the operator may steer this plasma exhaust into a section of the tokamak, the \emph{divertor} \cite{Lipschultz2007,Lipschultz2007a,Titus2009}, that is designed to handle this high heat flux -- a necessary feature to handle reactor-scale exhaust in a tokamak.\nicesectionending
+Using outer poloidal field coils (shown in \cref{fig:intro_tokamak}), the tokamak operator may push the plasma into a non-circular shape, with beneficial effects on plasma performance and stability.  In general, flux surfaces sufficiently far from the magnetic axis will intersect the plasma-facing wall before completing a closed loop; the magnetic boundary between closed, nested surfaces and these open surfaces is termed the \emph{last closed flux surface} or LCFS.  With sufficient shaping, the operator may generate a null point, the \emph{X-point}, in the LCFS where the poloidal field is zero, splitting the LCFS (also called the \emph{separatrix} in such configurations) into a minimally open surface with ``legs'' contacting the wall.  This magnetic configuration is illustrated in \cref{fig:intro_shaping}, along with a diagram defining the typical plasma shaping parameters: elongation $\kappa$ and upper and lower triangularity $\delta_u$, $\delta_l$.  As the plasma diffuses outwards, it eventually crosses the LCFS and enters 
+open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then streams freely along these open magnetic field lines until it contacts the wall.  By maintaining an X-point, the operator may steer this plasma exhaust into a section of the tokamak, the \emph{divertor} \cite{Lipschultz2007,Lipschultz2007a,Titus2009}, that is designed to handle this high heat flux and provide density control via pumping of recycled neutrals -- necessary features to handle reactor-scale exhaust in a tokamak.\nicesectionending
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Alcator C-Mod}\label{sec:intro_cmod}
+
+\begin{figure}[p]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\caption[Cutaway view of the Alcator C-Mod tokamk, cryostat and support structure.]{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
+\end{figure}
+
+The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator tokamak experiments were designed as compact, high-field tokamaks.  Despite its small physical size ($\SI{0.67}{\meter}$ major radius, $\SI{0.22}{\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of approaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$).
 
 \begin{wraptable}{O}{0 pt}
  \ttabbox{\caption{Summary of Alcator C-Mod typical operating parameters.}\label{tab:cmod}}
@@ -245,12 +262,7 @@ open flux surfaces in the \emph{scrape-off layer} (SOL).  The plasma then stream
    \end{tabular}}
 \end{wraptable}
 
-\begin{figure}[p]
- \pushtooutside
- \ffigbox[\FBwidth]{\caption[Cutaway view of the Alcator C-Mod tokamk, cryostat and support structure.]{Cutaway view of the Alcator C-Mod tokamak, including cryostat and ancillary structures, illustrating the extensive support structures necessary for compact, high-field operation.}\label{fig:alcator}}{\includegraphics[width=165mm]{graphics/Introduction/alcator.pdf}}
-\end{figure}
-
-The data presented in this thesis were collected on the Alcator C-Mod tokamak \cite{Hutchinson1994,Greenwald2007} at the MIT Plasma Science and Fusion Center.  The Alcator tokamak experiments were designed as compact, high-field tokamaks.  Despite its small physical size ($\SI{67}{\centi\meter}$ major radius, $\SI{22}{\centi\meter}$ minor radius, considerably smaller than other major experiments), Alcator C-Mod plasmas are capable of approaching ITER- and reactor-relevant densities ($> \SI{1e20}{m^{-3}}$) and pressures ($>\SI{1}{\atmosphere}$).  This compact design is enabled by a very high toroidal magnetic field driven by liquid-Nitrogen-cooled copper coils, reaching as high as $\SI{8.1}{\tesla}$, with typical operation near $\SI{5.5}{\tesla}$, allowing reactor-relevant research in a small, cost-effective machine.  C-Mod plasmas are primarily heated by RF heating in the ion-cyclotron range of frequencies (ICRF) \cite{Takase1996}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of lower-hybrid resonance (LHRF) power used for heating and non-inductive current drive \cite{Wilson2009}, providing exceptionally high power density in the $\sim \SI{1.1}{\meter\cubed}$ plasma.  A cutaway view of C-Mod, including support structures and the concrete ``igloo'' housing the cooling systems, is visible in \cref{fig:alcator}.  A detailed and annotated view of the C-Mod cross-section is shown in \cref{fig:alcator2}.
+\noindent This compact design is enabled by a very high toroidal magnetic field driven by liquid-Nitrogen-cooled copper coils, reaching as high as $\SI{8.1}{\tesla}$, with typical operation near $\SI{5.5}{\tesla}$, allowing reactor-relevant research in a small, cost-effective machine.  C-Mod plasmas are primarily heated by RF heating in the ion-cyclotron range of frequencies (ICRF) \cite{Takase1996}, with up to $\SI{6}{\mega\watt}$ of heating power, with an additional $\sim \SI{1}{\mega\watt}$ of lower-hybrid RF power used for heating and non-inductive current drive (LHCD) \cite{Wilson2009}, providing exceptionally high power density in the $\sim \SI{1.1}{\meter\cubed}$ plasma.  A cutaway view of C-Mod, including support structures and the concrete ``igloo'' housing the cooling systems, is visible in \cref{fig:alcator}.  A detailed and annotated view of the C-Mod cross-section is shown in \cref{fig:alcator2}.
 
 \begin{figure}[t]
  \pushtooutside
@@ -267,16 +279,16 @@ The presence of a full high-$Z$ lower divertor and upper strike plate, as well a
 
 \subsection{Global Confinement}\label{subsec:intro_global}
 
-The rate at which a fusion plasma bleeds off heat is described by a characteristic time scale, the energy confinement time $\tau_E$.  From basic power balance for the total plasma stored energy $W_p$,
+The rate at which a fusion plasma ``leaks'' off heat is described by a characteristic time scale, the energy confinement time $\tau_E$.  From basic power balance for the total plasma stored energy $W_p$,
 
 \begin{equation}\label{eq:powerbalance}
  \frac{dW_p}{dt} = P_{in} - P_{out} = P_{tot} - \frac{W_p}{\tau_E}
 \end{equation}
 
-\noindent where $P_{in} = P_{tot}$ is the total input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost into the blanket, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  It is common to encapsulate these heat source and sink terms into a single ``loss'' power,
+\noindent where $P_{in} = P_{tot}$ is the total input heating power, from Ohmic heating $P_{Ohm} = I_p^2 R_{plasma}$, RF or beam auxiliary heating power $P_{aux}$, or self-heating of the plasma from fusion reactions.  In the case of the latter, note that as fusion neutrons are immediately lost from the plasma due to their lack of an electric charge, only the energy carried by \emph{charged} fusion products contributes to fusion self-heating: in the case of $\si{D} - \si{T}$ fusion we denote this as the alpha heating power $P_{\alpha} = 1/5 \times P_{fusion}$ for the energy carried by the ${}^4\si{He}$ nucleus.  It is common to encapsulate these heat source and sink terms into a single ``loss'' power,
 
 \begin{equation}\label{eq:ploss}
- P_{loss} = P_{Ohm} + P_{aux} + P_{fusion} - \frac{dW_p}{dt} = P_{tot} - \frac{dW_p}{dt}
+ P_{loss} = P_{Ohm} + P_{aux} + P_{alpha} - \frac{dW_p}{dt} = P_{tot} - \frac{dW_p}{dt}
 \end{equation}
 
 \noindent While $P_{loss}$ is commonly used as a parameter of merit for confinement studies, it is also important to account for the radiated power $P_{rad}$, the heat loss due to radiative (primarily Bremsstrahlung) rather than transport-driven effects encoded by $W_p/\tau_E$.  This is expressed in the net power,
@@ -288,7 +300,7 @@ The rate at which a fusion plasma bleeds off heat is described by a characterist
  \end{aligned}
 \end{equation}
 
-\noindent The radiative power loss is commonly difficult to consistently determine experimentally, and is only partially subject to operator control, as the radiation is due both to intrinsic impurities from plasma-facing materials and intentionally-introduced high-$Z$ impurities for radiation control.  As such, $P_{loss}$ is typically used for a simply relation for the experimental energy confinement time,
+\noindent The radiative power loss is commonly difficult to consistently determine experimentally, and is only partially subject to operator control, as the radiation is due both to intrinsic impurities from plasma-facing materials and intentionally-introduced high-$Z$ impurities for radiation control.  As such, $P_{loss}$ is by convention used for a simple relation for the experimental energy confinement time,
 
 \begin{equation}\label{eq:tauE}
  \tau_E = \frac{W_p}{P_{loss}}
