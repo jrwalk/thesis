@@ -1,0 +1,54 @@
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,%letterpaper,%1headlines,% letterpaper a4paper
+                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=letter,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}
+\input{classicthesis-config}
+
+\usepackage{color}
+
+\newcommand{\note}[1]{\textcolor{red}{#1}}
+\newcommand{\gnote}[1]{\graffito{\textcolor{red}{#1}}}
+
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{american}
+\pagestyle{plain}
+
+\let\cleardoublepage\relax
+\begin{center}{\large{\bf ELM Suppression and Pedestal Structure in I-Mode Plasmas} \\
+by \\
+John Reel Walk, Jr. \\[\baselineskip]}
+\par
+Submitted to the Department of Nuclear Science and Engineering \\
+in partial fulfillment of the requirements for the degree of \\
+Doctor of Philosophy in Applied Plasma Physics
+\end{center}
+\par
+\vskip 1\baselineskip
+\signature{Author}{Department of Nuclear Science and Engineering \\ \today}
+\par
+\vskip 1\baselineskip
+\signature{Certified by}{Jerry W. Hughes \\ Research Scientist, Plasma Science and Fusion Center \\ Thesis Supervisor}
+\par
+\vskip 1\baselineskip
+
+\chapter*{Executive Summary}
+
+The development\gnote{not sure how specific to be with cites} of magnetic-confinement fusion into an economical form of power generation is characterized by two overarching and seemingly-contradictory requirements: first, a high level of energy confinement is necessary to reach the desired level of self-heating of the plasma by fusion products, and second, a low level of particle confinement to avoid the deleterious effects of accumulated impurities (both the helium ``fusion ash'' and eroded plasma-facing wall materials).  The latter is particularly important for the high-$Z$ impurities expected from the metal wall materials necessary for reactor-scale devices \cite{Loarte2007,Joffrin2014}.  A number of operating regimes, collectively termed \emph{H-modes} \cite{Wagner1982}, have been developed satisfying these requirements in varying degrees.  These regimes are characterized by the formation of a \emph{pedestal}, a region of steep gradient in density, temperature, and pressure at the plasma edge that acts as a transport barrier in the plasma.  The structure introduces an additional constraint, however -- the steep gradients act as a source of free energy for explosive Edge-Localized Modes (ELMs), which on reactor-scale devices drive transient heat loading and erosion damage in excess of material tolerances for plasma-facing surfaces \cite{Federici2003}.
+
+As the width and height of the pedestal set a strong constraint on both global performance \cite{Kinsey2011} and stability against ELMs \cite{Snyder2003}, a firm understanding of the physics governing the pedestal structure is essential for the extrapolation of high-performance regimes to ITER- and reactor-scale operation.  This thesis contributes to the understanding of pedestal physics and high-performance operation in several key areas:
+
+\begin{description}
+ \item[ELMy H-mode physics] \hfill \\
+ ELMy H-mode is commonly accessible 
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\bibliographystyle{plainurl}
+\bibliography{references}
+
+\end{document}
