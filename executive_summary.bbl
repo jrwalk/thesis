@@ -1,41 +1,37 @@
 \begin{thebibliography}{1}
 
-\bibitem{Loarte2007}
-A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S04} {Chapter 4:
-  Power and particle control}.
-\newblock {\em Nuclear Fusion}, 47(6):S203, 2007.
+\bibitem{Shimada2007}
+M.~Shimada, D.J. Campbell, V.~Mukhovatov, M.~Fujiwara, N.~Kirneva et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S01} {Chapter 1:
+  Overview and summary}.
+\newblock {\em Nuclear Fusion}, 47(6):S1, 2007.
 
-\bibitem{Joffrin2014}
-E.~Joffrin, M.~Baruzzo, M.~Beurskens, C.~Bourdelle, S.~Brezinsek et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/54/i=1/a=013011} {First
-  scenario development with the {JET} new {ITER}-like wall}.
-\newblock {\em Nuclear Fusion}, 54(1):013011, 2014.
+\bibitem{Whyte2010}
+D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
+  an {H}-mode energy confinement regime with {L}-mode particle transport in
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 50(10):105005, 2010.
 
-\bibitem{Wagner1982}
-F.~Wagner, G.~Becker, K.~Behringer, D.~Campbell, A.~Eberhagen et~al.
-\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.49.1408} {Regime of
-  improved confinement and high beta in neutral-beam-heated divertor discharges
-  of the {ASDEX} tokamak}.
-\newblock {\em Physical Review Letters}, 49(19):1408--1412, Nov 1982.
+\bibitem{Walk2012}
+J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
+  {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
+  comparison with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
 
-\bibitem{Federici2003}
-G~Federici, A~Loarte and G~Strohmayer.
-\newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=301} {Assessment of
-  erosion of the {ITER} divertor targets during type {I} {ELMs}}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1523, 2003.
+\bibitem{Groebner2013}
+R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
+  understanding of physics processes in pedestal structure, leading to improved
+  predictive capability for {ITER}}.
+\newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
 
-\bibitem{Kinsey2011}
-J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
-\newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
-  predictions using the {GYRO} verified and experimentally validated trapped
-  gyro-{Landau} fluid transport model}.
-\newblock {\em Nuclear Fusion}, 51(8):083001, 2011.
-
-\bibitem{Snyder2003}
-P~B Snyder and H~R Wilson.
-\newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=308} {Ideal
-  magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
-\newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
+\bibitem{Walk2014}
+J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
+\newblock \href
+  {http://scitation.aip.org/content/aip/journal/pop/21/5/10.1063/1.4872220}
+  {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
+\newblock {\em Physics of Plasmas}, 21(5):--, 2014.
 
 \end{thebibliography}
