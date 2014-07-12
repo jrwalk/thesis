@@ -48,4 +48,12 @@ J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
   {Alcator C-Mod}}.
 \newblock {\em Nuclear Fusion}, 53(4):043016, 2013.
 
+\bibitem{Whyte2011}
+D.~G. Whyte, E.~S. Marmar, A.~E. Hubbard, J.~W. Hughes, A.~Dominguez et~al.
+\newblock \href
+  {http://www.psfc.mit.edu/research/alcator/pubs/APS/APS2011/Whyte_APS_cont-oral.pdf}
+  {{I}-mode on {ITER}?}
+\newblock In {\em 53rd Meeting of the APS Division of Plasma Physics}, Salt
+  Lake City, UT, November 2011.
+
 \end{thebibliography}
