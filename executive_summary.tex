@@ -6,6 +6,8 @@
 \input{classicthesis-config}
 
 \usepackage{color}
+\usepackage{cleveref}
+\crefname{figure}{fig.}{figs.}
 
 \newcommand{\note}[1]{\textcolor{red}{#1}}
 \newcommand{\gnote}[1]{\graffito{\textcolor{red}{#1}}}
@@ -59,9 +61,51 @@ This thesis first details an empirical study of the pedestal structure in I-mode
 
 \section*{ELMy H-modes}
 
+The pedestal in ELMy H-mode is thought to be limited by two constraints: the onset of edge peeling-ballooning MHD instabilities, and transport driven by kinetic-ballooning mode (KBM) turbulence \cite{Snyder2011}.  Experimental observations on C-Mod are consistent with these constraints, particularly when the pedestal data is masked to time frames immediately preceding the ELM crashes -- a practice that, despite diagnostic difficulties on C-Mod, produces data most closely corresponding to the pedestal structure at the point of ELM instability.
+
+The pedestal width is well-described by the prediction based on KBM physics, which predicts for the width $\Delta_\psi$ (here defined as the average of the density and temperature pedestal widths in normalized poloidal flux space) the relation $\Delta_\psi = G(\nu^*,\varepsilon,...) \beta_{p,ped}^{1/2}$, where $G(\nu^*,\varepsilon,...)$ is a weakly-varying function of plasma shape, aspect ratio, collisionality, and other dimensionless parameters (\cref{fig:elmy_wid_betapol}).  This scale function is fitted to a value of $\langle G \rangle \approx 0.085$, consistent with observations on other devices.  Over the range in width and $\beta_{p,ped}$ seen on C-Mod, the secondary dependences of the width (encoded in $G$) are negligible -- the width is well-described by the simple $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ scaling. Moreover, the width is not well-described by the predictions from neutral-penetration models (consistent with the highly opaque SOL on C-Mod) or models based on ion-orbit loss, predicting $\Delta \sim \rho_{i,pol}$, indicating that the KBM limit most accurately describes the pedestal width.
+
+\begin{figure}[h]
+ \pushtooutside
+ \fcapside[60mm]{\caption{ELM-synchronized pedestals, with data binned by $\beta_{p,ped}$ for clarity.  The data are fitted by $\Delta_\psi = (0.0851 \pm 0.003) \beta_{p,ped}^{1/2}$ (black) or by $\Delta_\psi = (0.0824 \pm 0.015) \beta_{p,ped}^{0.49 \pm 0.11}$ (red) using a more general power law.}\label{fig:elmy_wid_betapol}}{\includegraphics[width=100mm]{graphics/ELMy/betap_deltapsi_elmsync_betabin.pdf}}
+\end{figure}
+
+\noindent The pressure profile is also consistent with the expected limit from peeling-ballooning MHD, particularly the $\nabla p \sim I_p^2$ expected from ideal ballooning modes.  Taking the pressure pedestal height to scale as $p_{ped} \sim \nabla p \times \Delta_{p}$, the measured height trends as $I_p^2 \sqrt{\beta_{p,ped}} \sim I_p \sqrt{n_{e,ped} T_{e,ped}}$ (\cref{fig:elmy_IprootneTe_p95}).  With the fairly restricted range in both width and $\beta_{p,ped}$ typically seen on C-Mod due to the restricted, weak shaping needed for ELMy H-mode access, this reduces in the lowest order to a robust pedestal width with $p_{ped} \sim \nabla p \sim I_p^2$.
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Pedestal pressure versus $I_p \sqrt{n_{e,95} T_{e,95}}$ -- effectively, the $p_{ped} \sim I_p^2 \sqrt{\beta_{p,ped}}$ scaling predicted for a KBM-limited pedestal.}\label{fig:elmy_IprootneTe_p95}}{\includegraphics[width=100mm]{graphics/ELMy/IprootneTe_p95.pdf}}
+\end{figure}
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[ELITE calculation of P-B stability and BALOO calculation of KBM threshold in a C-Mod ELMy H-mode.]{Calculation of the peeling-ballooning MHD stability contour from ELITE for an ELMy H-mode pedestal on C-Mod.  The red-blue contours show the peeling-ballooning growth rate with diamagnetic stabilization, $\gamma/(\omega_{*eff}/2)$, while white contours show the width in flux space that is unstable to the KBM.  To within error bars, the pedestal lies on the peeling-ballooning boundary.  The comparatively higher collisionality typical of C-Mod H-mode pedestals pushes the MHD behavior of the pedestal towards higher-$n$, pure-ballooning modes, although moderate-$n$ coupled modes in the ``nose'' of the stability contour are also common.}\label{fig:elmy_elite}}{\includegraphics[width=100mm]{graphics/ELMy/elmy_elite.pdf}}
+\end{figure}
+
+The peeling-ballooning MHD and KBM limits are examined in more detail using the ELITE and BALOO numerical codes (with the latter calculating the KBM threshold via an infinite-$n$ ideal MHD surrogate), with results shown in \cref{fig:elmy_elite}.  These calculations are combined in the EPED model, particularly the most recent iteration, EPED1.63 (a minor modification to EPED1.6 to account for the strong diamagnetic stabilization effects expected for the pedestal on C-Mod).  The EPED predictions for the pedestal height match well to observed pressure pedestals (to within the systematic $\pm 20\%$ error in EPED predictions), particularly when compared to measured pedestals masked to the ELM cycle as described above (see \cref{fig:elmy_pped_EPED}), with an average ratio of measured to predicted pedestal pressure of $0.94 \pm 0.066$.  While systematic tests of the predicted pedestal width against EPED predictions are difficult due to the narrow range over which the experimental $\Delta_\psi$ varies, EPED does reproduce the pedestal width to within $\pm 20\%$ while capturing the robustness of the pedestal width.
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption{Pressure pedestal height predicted by EPED1.63  versus measured, ELM-synchronized pedestal height (with corresponding ensemble-averaged data shown in black).  The grey band indicates agreement within the $\pm 20\%$ typical prediction accuracy for EPED.  ELM synchronization brings the measured pedestal height into better agreement with EPED predictions, with a correspondence of $0.94 \pm 0.066$ (indicated by the red dash)}\label{fig:elmy_pped_EPED}}{\includegraphics[width=100mm]{graphics/ELMy/pped_EPED_elmsync.pdf}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[EPED predictions versus measured pressure pedestal heights.]{EPED predictions versus measured pressure pedestal heights from DIII-D and C-Mod, spanning a significant range of pedestal pressures.  Notably, C-Mod pressure pedestals reach within a factor of $\sim 2$ of the predicted ITER pedestal height.  Reproduced from \cite{Hughes2013}}\label{fig:elmy_epedpredictions_cmod}}{\includegraphics[width=100mm]{graphics/ELMy/eped.pdf}}
+\end{figure}
+
+The experiments presented in this thesis greatly expanded the parameter range over which EPED has been tested, with magnetic field ranging over $3.5-\SI{8}{\tesla}$ (reaching the highest field of any tokamak experiment), as well as reaching to within a factor of $\sim 2$ of the target pedestal thermal pressure for ITER (\cref{fig:elmy_epedpredictions_cmod}).  The ELMy H-mode is assumed to be the baseline high-performance scenario for ITER; moreover, the stability boundaries associated with the ELM trigger set upper bounds on the pedestal structure in other H-mode regimes.  As such, a first-principles physics understanding of the ELM limit, as provided by EPED and thoroughly tested experimentally (including the work in this thesis), is essential for extrapolation of high-confinement regimes to ITER.  The analyses developed here for ELMy H-mode are subsequently applied to the understanding of I-mode pedestals.
+
 \section*{I-Mode Pedestals \& Performance}
 
+\begin{figure}[t]
+ \pushtooutside
+ \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/HighPerformanceRegimes/trace_imode.pdf}}{\caption[Characteristic traces for a typical I-mode, and comparisons of I-mode pedestal profiles to L- and H-modes.]{(left) Characteristic traces for a typical I-mode.  At the L-I transition, the core and edge temperature rise over several sawtooth cycles before reaching a steady level; global confinement and pressure rise accordingly.  However, the density remains at L-mode levels, and no ELMs are exhibited.  (right) Edge profiles for density, temperature, and pressure in L-, I-, and H-mode.  The I-mode (green) retains an density profile comparable to the L-mode (black), unlike the ELMy (red) and EDA (blue) H-modes which form a strong density pedestal.  However, the I-mode forms a higher temperature pedestal than either H-mode.  As a result, the I-mode reaches comparable pedestal pressures to the H-modes while retaining L-mode particle transport.}\label{fig:imode_trace_ped}}
+\end{figure}
+
 \section*{I-Mode Stability Modeling}
+
+\section*{Future Work}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

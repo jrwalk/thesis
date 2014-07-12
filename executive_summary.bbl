@@ -34,4 +34,18 @@ J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
   {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
 \newblock {\em Physics of Plasmas}, 21(5):--, 2014.
 
+\bibitem{Snyder2011}
+P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/51/i=10/a=103016} {A
+  first-principles predictive model of the pedestal height and width:
+  development, testing and {ITER} optimization with the {EPED} model}.
+\newblock {\em Nuclear Fusion}, 51(10):103016, 2011.
+
+\bibitem{Hughes2013}
+J.W. Hughes, P.B. Snyder, J.R. Walk, E.M. Davis, A.~Diallo et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/53/i=4/a=043016} {Pedestal
+  structure and stability in {H}-mode and {I}-mode: a comparative study on
+  {Alcator C-Mod}}.
+\newblock {\em Nuclear Fusion}, 53(4):043016, 2013.
+
 \end{thebibliography}
