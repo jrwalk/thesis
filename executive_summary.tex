@@ -98,9 +98,53 @@ The experiments presented in this thesis greatly expanded the parameter range ov
 
 \section*{I-Mode Pedestals \& Performance}
 
-\begin{figure}[t]
+Empirical observations of the I-mode pedestal structure are illuminating in terms of the observed global behavior in I-mode.  The formation of a hot, H-mode-like temperature pedestal provides good energy confinement while naturally operating at ITER-relevant collisionality, while the absence of a density pedestal prevents the accumulation of impurities -- particularly important for machines operating with high heat fluxes onto high-$Z$ metal plasma-facing components, as is the case for C-Mod, and as expected for ITER.
+
+\begin{figure}[h]
  \pushtooutside
  \ffigbox[\FBwidth]{\includegraphics[width=150mm]{graphics/HighPerformanceRegimes/trace_imode.pdf}}{\caption[Characteristic traces for a typical I-mode, and comparisons of I-mode pedestal profiles to L- and H-modes.]{(left) Characteristic traces for a typical I-mode.  At the L-I transition, the core and edge temperature rise over several sawtooth cycles before reaching a steady level; global confinement and pressure rise accordingly.  However, the density remains at L-mode levels, and no ELMs are exhibited.  (right) Edge profiles for density, temperature, and pressure in L-, I-, and H-mode.  The I-mode (green) retains an density profile comparable to the L-mode (black), unlike the ELMy (red) and EDA (blue) H-modes which form a strong density pedestal.  However, the I-mode forms a higher temperature pedestal than either H-mode.  As a result, the I-mode reaches comparable pedestal pressures to the H-modes while retaining L-mode particle transport.}\label{fig:imode_trace_ped}}
+\end{figure}
+
+\subsection*{Pedestal Responses to Engineering Controls}
+
+
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[Pedestal temperature vs. heating power per particle for an example current slice.]{Pedestal temperature $T_{e,95}$ vs. heating power per particle ($P_{net}/\overline{n}_e$) for the $\SI{1.15}{\mega\ampere}$ current slice, illustrating the approximately-linear trend in temperature at fixed current.  This behavior is highly beneficial as an external control for the pedestal temperature.}\label{fig:imode_Pnebar_Te95}}{\includegraphics[width=100mm]{graphics/IModePedestal/Pnebar_Te95_115MA.pdf}}
+\end{figure}
+
+\begin{figure}[ht]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Density and temperature pedestals at matched current and field with varying fueling and heating power -- matched $P_{net}/\overline{n}_e$ maintains the $T_e$ pedestal.]{Density and temperature pedestals at matched current, field, and shaping, with varying fueling and heating power levels.  The three discharges are fueled to $\overline{n}_e$ of $\num{1.0}$ (black), $\num{1.3}$ (blue), and $\SI{1.7e20}{\per\meter\cubed}$ (red) respectively, with heating powers of $\num{2.75}$, $\num{3.65}$, and $\SI{4.10}{\mega\watt}$ to maintain matched $P_{net}/\overline{n}_e \sim 2.4-2.7$.  The constant power-per-particle maintains matched temperature pedestals across the fueling range, indicative of the independent control of pedestal $n_e$ and $T_e$ available in I-mode.}\label{fig:imode_fuelingprofiles}}{\includegraphics[width=100mm]{graphics/IModePedestal/fuelingprofiles.pdf}}
+\end{figure}
+
+\begin{figure}[t]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Pedestal width vs. poloidal beta in I-mode and ELMy H-mode.]{Pedestal width versus poloidal beta in I-mode and ELMy H-mode.  ELMy H-modes lie on the $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ line predicted for KBM-limited pedestals.  I-mode shows no scaling of the pedestal width with $\beta_p$, and exhibits pedestals consistently wider than predicted for comparable ELM-limited pedestals.}\label{fig:imode_wid_betapol}}{\includegraphics[width=100mm]{graphics/IModePedestal/wid_betapol.pdf}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \fcapside[60mm]{\caption[I-mode pedestal pressure gradient versus pedestal pressure.]{Peak $\nabla p$ in the I-mode pedestal versus $p_{95}$.  There is a robust linear dependence between the pedestal gradient and height, consistent with a robust pedestal width.}\label{fig:imode_p_gradp}}{\includegraphics[width=100mm]{graphics/IModePedestal/p95_gradp_i.pdf}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[60mm]{\caption[Normalized beta vs. $H_{98}$ for I-mode and ELMy H-mode.]{Global normalized $\beta_N$ versus confinement factor $H_{98}$ for I-mode and ELMy H-mode.  Despite the relaxed pedestal pressure, I-modes reach comparable average pressures, while maintaining H-mode-like energy confinement.}\label{fig:imode_betan_H}}{\includegraphics[width=100mm]{graphics/IModePedestal/betan_H_i_e.pdf}}
+\end{figure}
+
+\begin{figure}[p]
+ \pushtooutside
+ \fcapside[60mm]{\caption[I-mode stored energy vs. heating power times plasma current.]{I-mode stored energy versus the product of net heating power $P_{net}$ and plasma current $I_p$.  Based on the H-mode confinement scaling, $\tau_E$ is expected to scale linearly with $I_p$, and to show a strong degradation with heating power: $\tau_E \sim I_p \times P_{net}^{-0.7}$.  As the stored energy is given by $W \sim P_{net} \tau_E$, $W \sim I_p P_{net}^{0.3}$ is expected.  The observed linear trend indicates little-to-no degradation of $\tau_E$ in I-mode with heating power.}\label{fig:imode_PIp_W}}{\includegraphics[width=100mm]{graphics/IModePedestal/PIp_W_scale.pdf}}
+\end{figure}
+
+\begin{figure}
+ \pushtooutside
+ \begin{floatrow}
+  \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/IModePedestal/tauE_6_Ploss_sep.pdf}}{\caption[Power-law fit to I-mode $\tau_E$, with fixed $R^2 \sqrt{\varepsilon}$ size scaling.]{Power-law fit to I-mode energy confinement time $\tau_E$, with the \emph{ansatz} of an $R^2 \sqrt{\varepsilon}$ size scaling fixed.  Both the high-resolution pedestal database and older reversed-field LSN and forward-field USN I-mode databases are used.  Note the expected weak degradation of $\tau_E$ with heating power.}\label{fig:imode_tauE_6}}
+  \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/IModePedestal/tauE_6_Ploss_extrap.pdf}}{\caption[Power-law fit to I-mode $\tau_E$ extrapolated to larger devices.]{Modeled energy confinement time $\tau_E$ with the fixed $R^2 \sqrt{\varepsilon}$ size scaling, extrapolated to DIII-D, ASDEX Upgrade, JET, and ITER.  Modeled energy confinement times are competitive with H-modes, both the measured $\tau_E$ for existing machines and the expected ITER98y2 prediction for ITER H-modes.}\label{fig:imode_tauE_extrap}}
+ \end{floatrow}
 \end{figure}
 
 \section*{I-Mode Stability Modeling}
