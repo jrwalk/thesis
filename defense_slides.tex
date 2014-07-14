@@ -8,6 +8,7 @@
 \usepackage{color}
 \usepackage{amssymb,amsmath,amsfonts}
 \usepackage{tikz}
+\usepackage{siunitx}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{itemize items}[square]
@@ -363,6 +364,39 @@ Each has drawbacks: engineering requirements (e.g., high beam torque for QH-mode
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[4]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
+
+ \begin{center}
+  \includegraphics[width=0.8\columnwidth]{graphics/ModelingTheory/epedcartoon.pdf}
+ \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal Structure Definitions}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \large
+   pedestals fitted by
+   \begin{align*}
+    &z = \frac{x_0 - x}{\delta}\\
+    &mtanh(\alpha,z) = \frac{(1 + \alpha z) e^{z} - e^{-z}}{e^{z} + e^{-z}}\\
+    &y = \frac{h+b}{2} + \frac{h-b}{2} mtanh(\alpha,z)
+   \end{align*}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/mtanh.pdf}
+ \end{columns}
+ 
+ \large
+ \vspace{0.5em}
+ rigorous definition for pedestal width $\Delta = 2\delta$, continuous and differentiable throughout pedestal profile
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Outline}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
@@ -396,5 +430,203 @@ Each has drawbacks: engineering requirements (e.g., high beam torque for QH-mode
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Target steady ELMy phases for study}
+
+ \centering
+ \includegraphics[width=\textwidth]{graphics/ELMy/time_window.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{ELM cycle binning necessary to capture pedestal limit}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/pped_ensemble_elmsync.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/p95_ensemble_elmsync.pdf}
+ \end{columns}
+ 
+ \vspace{0.5em}
+ Take profile data immediately preceding ELM crash (typically last 20\% of ELM cycle) for pedestal structure at point of instability -- necessary, but difficult given ELM frequency on C-Mod (subset of data prepared thus).
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal width described well by KBM limit}
+
+ \centering
+ \includegraphics<1>[width=0.65\textwidth]{graphics/ELMy/betap_deltapsi_all.pdf}
+ \includegraphics<2>[width=0.65\textwidth]{graphics/ELMy/betap_deltapsi_elmsync.pdf}
+ \includegraphics<3>[width=0.65\textwidth]{graphics/ELMy/betap_deltapsi_elmsync_betabin.pdf}
+ 
+ \large
+ KBM limit predicts width $\Delta_\psi = G(\nu^*,\varepsilon,...) \beta_{p,ped}^{1/2}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Minimal dependence of width on other parameters}
+
+ 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal height predicted by ballooning $\nabla p$ limit}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/IprootTe_p95.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/IprootneTe_p95.pdf}
+ \end{columns}
+ 
+ \large
+ \vspace{0.5em}
+ Pedestal height $p_{ped} \sim \nabla p \times \Delta_p \rightarrow \sim I_p^2 \Delta_p$ from ballooning MHD
+ predicted well by $\Delta_p \sim \sqrt{\beta_{p,ped}}$, less so by $\Delta_p \sim \rho_{i,pol}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Robust width, gradient limit $=$ attainable $\beta_{p,ped}$\\ limited in ELMy H-mode}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/HighPerformanceRegimes/elmy_betas.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/neBp_TeBp_deltaave.pdf}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Computational modeling of P-B MHD,\\ KBM captures ELMy pedestal}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/ELMy/elmy_elite.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{EPED predicts pedestal height for ELM-binned pedestals}
+
+\begin{columns}[c]
+ \column{0.5\textwidth}
+  \includegraphics[width=\columnwidth]{graphics/ELMy/pped_EPED_meas.pdf}
+ \column{0.5\textwidth}
+  \includegraphics[width=\columnwidth]{graphics/ELMy/pped_EPED_elmsync.pdf}
+\end{columns}
+
+\large
+\vspace{0.5em}
+measured to predicted ratio of $0.835 \pm 0.036$ for ensemble-averaged data, $0.934 \pm 0.066$ for ELM-synced pedestals, well within expected $\pm 20\%$ accuracy for EPED predictions
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Width varies over narrow range, hard to predict}
+
+\begin{columns}[c]
+ \column{0.5\textwidth}
+  \includegraphics[width=\columnwidth]{graphics/ELMy/deltapsi_EPED_meas.pdf}
+ \column{0.5\textwidth}
+  \includegraphics[width=\columnwidth]{graphics/ELMy/deltapsi_EPED_elmsync.pdf}
+\end{columns}
+
+\large
+\vspace{0.5em}
+Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult to extract trend -- EPED reproduces robust width to within $\pm 20\%$ uncertainty
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments expand parameter space tested in EPED\footnote[5]{RJ Groebner \emph{et al.}, \emph{Nuclear Fusion} \textbf{53} (2013)}}
+
+\begin{columns}[c]
+ \column{0.5\textwidth}
+  \begin{itemize}
+   \large
+   \item reach highest field ($\SI{8}{\tesla}$), highest thermal pressure, within factor of $\sim 2$ of ITER pedestal target
+   \vspace{0.5em}
+   \item C-Mod contribution to multi-machine Joint Research Target
+   \vspace{0.5em}
+   \item reliable physics-based understanding of H-mode pedestal limits
+  \end{itemize}
+ \column{0.5\textwidth}
+  \includegraphics[width=\columnwidth]{graphics/ELMy/eped.pdf}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \begin{center}
+  \LARGE{Supplemental Slides}
+ \end{center}
+
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Plasma shaping in C-Mod operation}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \centering
+   \includegraphics[width=0.8\columnwidth]{graphics/ELMy/shaping.pdf}
+  \column{0.5\textwidth}
+   \begin{itemize}
+    \item I-mode operates at typical shaping for C-Mod plasmas (with reversed $I_p$, $B_T$ for unfavorable $\nabla B$ drift)
+    \vspace{0.5em}
+    \item ELMy H-mode on C-Mod requires special shaping with low elongation, upper triangularity, high lower triangularity -- in normal shaping in forward field, reach ELM-free H-mode (low $\nu^*$) or EDA H-mode (high $\nu^*$)
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Density, temperature, and pressure widths\\ in ELMy H-mode}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/deltan_deltaT.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/deltap_deltapsi.pdf}
+ \end{columns}
+ 
+ \large
+ \vspace{0.5em}
+ $\Delta_\psi = (\Delta_{n_e} + \Delta_{T_e})/2$, tracks with directly-measured $\Delta_{p_e}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{framenumber}{\value{finalframe}}
 
 \end{document}
