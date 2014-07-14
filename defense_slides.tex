@@ -572,11 +572,119 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Outline}
+
+ \setbeamercolor{normal text}{fg=gray,bg=}
+ \setbeamercolor{alerted text}{fg=black,bg=}
+ \usebeamercolor{normal text}
+
+\begin{itemize}
+ \large
+ \alert<+>{\item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
+ \begin{itemize}
+  \large
+  \item Pedestal response to fueling, heating power
+  \item Pedestal widths and gradients
+  \item Global performance and confinement scalings
+ \end{itemize}}
+ \vspace{0.5em}
+ \item \textbf{I-Mode Pedestal Stability}
+ \begin{itemize}
+  \large
+  \item P-B MHD, KBM modeling
+  \item ELM characterization
+ \end{itemize}
+ \vspace{0.5em}
+ \item \textbf{Summary, Future Work, \& Questions}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Temperature pedestal H-mode-like,\\ set by plasma current, heating power}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/Ip_Te95.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/Pnebar_Te95_115MA.pdf}
+ \end{columns}
+ 
+ \vspace{0.5em}
+ \begin{itemize}
+  \item pedestal $T_e$ shows positive trending $T_e \sim I_p$, spread at given current due to heating power
+  \item input power strongly affects pedestal temperature as with EDA H-mode -- more properly, \textcolor{red}{power per particle sets pedestal temperature} at fixed current
+ \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{In contrast, density set by operator fueling,\\ with L-mode-like profile}
+
+ \includegraphics[width=\textwidth]{graphics/IModePedestal/imode_density.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal density separately controlled from temperature, independent of MHD limits}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/fuelingprofiles.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \item with sufficient power to maintain $P_{net}/\overline{n}_e$, temperature pedestal matched across range of fueling
+    \vspace{0.5em}
+    \item Contrasts to MHD-limited pedestals (fixed $\beta_{p,ped} \rightarrow $ limit on $n_e T_e$) -- path to strongly increase pedestal beta
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestal pressure scales with current, heating power, fueling, competitive to H-mode}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/Ip_p95_nebar.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/Pnet_p95_115MA.pdf}
+ \end{columns}
+ 
+  \begin{itemize}
+  \item Pedestal pressure increases at least as $p_{ped} \sim I_p$, due to increased $T_e \sim I_p$ and more fueling (fixed $f_{Gr}$) at higher current
+  \item Pedestal pressure at fixed current $\sim P_{net}$ (consistent with $T_e \sim P/n_e$), corresponds to favorable scaling of energy confinement with heating power
+  \item Fueling (with sufficient power to maintain temperature pedestal) strongly increases pedestal pressure
+ \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal pressure gradient suggests MHD stability, headroom for performance improvement}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/Ip_gradp.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \item Pedestal $\nabla p$ shallower at given $I_p$ than ELMy H-mode due to lack of density pedestal
+    \vspace{0.5em}
+    \item Gradients scale more weakly than $\nabla p \propto I_p^2$ from ballooning MHD (critical-gradient) stability boundary
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \appendix
 \newcounter{finalframe}
 \setcounter{finalframe}{\value{framenumber}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{}
 
@@ -622,6 +730,57 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \large
  \vspace{0.5em}
  $\Delta_\psi = (\Delta_{n_e} + \Delta_{T_e})/2$, tracks with directly-measured $\Delta_{p_e}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\large
+\begin{equation*}
+ \begin{aligned}
+  \vec{Q} &= \nabla \times \left( \vec{\xi} \times \vec{B} \right)\\
+  \delta W &= \delta W_F + \delta W_S + \delta W_V\\
+  \delta W_F &= \frac{1}{2} \int_P d^3 \vec{r} \Bigg[ \frac{|\vec{Q}|^2}{\mu_0} + \frac{B^2}{\mu_0} \left| \nabla \cdot \vec{\xi}_\perp + 2 \vec{\xi}_\perp \cdot \vec{\kappa} \right|^2 + \gamma p \left| \nabla \cdot \vec{\xi} \right|^2\\
+  &\quad- 2\left( \vec{\xi}_\perp \cdot \nabla p \right) \left(\vec{\kappa} \cdot \vec{\xi}_\perp^* \right) - j_\parallel \left(\vec{\xi}_\perp^* \times \vec{b} \right) \cdot \vec{Q}_\perp \Bigg]\\
+  \delta W_S &= \frac{1}{2} \int_S dS \left| \hat{n} \cdot \vec{\xi}_\perp \right|^2 \hat{n} \cdot \left[ \nabla \left( p + \frac{B^2}{2\mu_0} \right) \right]\\
+  \delta W_V &= \frac{1}{2} \int_V d^3 \vec{r} \frac{\left|B_1 \right|^2}{\mu_0}
+ \end{aligned}
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\large
+\begin{equation*}
+ \begin{aligned}
+  X &= RB_p \xi_\psi\\
+  ik_\parallel &= \frac{1}{JB} \left( \frac{\partial}{\partial \chi} + in \nu \right) \qquad \nu = JB_T/R\\
+  P &= \sigma X + \frac{B_p^2}{\nu B^2} \frac{F}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel \right)\\
+  Q &= \frac{X}{B^2} \frac{dp}{d\psi} + \frac{F^2}{\nu R^2 B^2} \frac{1}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel X \right)\\
+  \sigma &= -\frac{F}{B^2} \frac{dp}{d\psi} - \frac{dF}{d\psi} = -\frac{j_\parallel}{B}
+ \end{aligned}
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \large
+ \begin{equation*}
+ \begin{aligned}
+  \delta W &= \pi \iint d\psi d\chi \Bigg\{ \frac{JB^2}{R^2 B_p^2} \left| k_\parallel X \right|^2 + \frac{R^2 B_p^2}{JB^2} \left| \frac{1}{n} \frac{\partial}{\partial \psi} \left( JB k_\parallel X \right) \right|^2\\
+  &\quad- \frac{2J}{B^2} \frac{dp}{d\psi} \left[ \left| X \right|^2 \frac{\partial}{\partial \psi} \left( p + \frac{B^2}{2} \right) - \frac{iF}{JB^2} \frac{\partial}{\partial \chi} \left( \frac{B^2}{2} \right) \frac{X^*}{n} \frac{\partial X}{\partial \psi} \right]\\
+  &\quad-\frac{X^*}{n} JBk_\parallel \left( X \frac{d\sigma}{d\psi} \right) + \frac{1}{n} \left[ PJBk_\parallel^* Q^* + P^* JBk_\parallel Q \right]\\
+  &\quad+ \frac{\partial}{\partial \psi} \left[ \frac{\sigma}{n} X^* JBk_\parallel X \right] \Bigg\}
+ \end{aligned}
+\end{equation*}
 
 \end{frame}
 
