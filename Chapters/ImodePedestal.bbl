@@ -124,6 +124,12 @@ A.E. Hubbard, D.G. Whyte, R.M. Churchill, A.~Dominguez, J.W. Hughes et~al.
   grad {B} drift direction}.
 \newblock {\em Nuclear Fusion}, 52(11):114009, 2012.
 
+\bibitem{Kesner2012}
+J.~Kesner, D.~Ernst, J.~Hughes, R.~Mumgaard, S.~Scott et~al.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4773215}
+  {Stationary density profiles in the alcator c-mod tokamak}.
+\newblock {\em Physics of Plasmas}, 19(12):--, 2012.
+
 \bibitem{Dominguez2012}
 Arturo Dominguez.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
@@ -174,6 +180,13 @@ P.A. Schneider, E.~Wolfrum, R.J. Groebner, T.H. Osborne, M.N.A. Beurskens
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073039} {Analysis of
   temperature and density pedestal gradients in {AUG}, {DIII-D} and {JET}}.
 \newblock {\em Nuclear Fusion}, 53(7):073039, 2013.
+
+\bibitem{Greenwald2007a}
+M.~Greenwald, C.~Angioni, J.W. Hughes, J.~Terry and H.~Weisen.
+\newblock \href {http://dx.doi.org/dx.doi.org/10.1088/0029-5515/47/9/L03}
+  {Density profile peaking in low collisionality {H}-modes: comparison of
+  {Alcator C-Mod} data to {ASDEX Upgrade}/{JET} scalings}.
+\newblock {\em Nuclear Fusion}, 47(9):L26, 2007.
 
 \bibitem{Yushmanov1990}
 P.N. Yushmanov, T.~Takizuka, K.S. Riedel, O.J.W.F. Kardaun, J.G. Cordey et~al.

@@ -173,11 +173,12 @@ J.W. Hughes, B.~LaBombard, J.~Terry, A.~Hubbard and B.~Lipschultz.
   {Alcator C-Mod} edge transport barriers}.
 \newblock {\em Nuclear Fusion}, 47(8):1057, 2007.
 
-\bibitem{Hughes2002}
-J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, B.~LaBombard and E.~S. Marmar.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.1486224} {Observations and
-  empirical scalings of the high-confinement mode pedestal on {Alcator C-Mod}}.
-\newblock {\em Physics of Plasmas}, 9(7):3019--3030, 2002.
+\bibitem{Saibene1999}
+G.~Saibene, L.D. Horton, R.~Sartori, B.~Balet, S.~Clement et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/39/i=9/a=307} {The influence
+  of isotope mass, edge magnetic shear and input power on high density {ELMy}
+  {H} modes in {JET}}.
+\newblock {\em Nuclear Fusion}, 39(9):1133, 1999.
 
 \bibitem{Beurskens2011}
 M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
@@ -186,12 +187,17 @@ M.~N.~A. Beurskens, T.~H. Osborne, P.~A. Schneider, E.~Wolfrum, L.~Frassinetti
   scaling in {DIII-D}, {ASDEX Upgrade}, and {JET}}.
 \newblock {\em Physics of Plasmas}, 18(5):056120, 2011.
 
-\bibitem{Saibene1999}
-G.~Saibene, L.D. Horton, R.~Sartori, B.~Balet, S.~Clement et~al.
-\newblock \href {http://stacks.iop.org/0029-5515/39/i=9/a=307} {The influence
-  of isotope mass, edge magnetic shear and input power on high density {ELMy}
-  {H} modes in {JET}}.
-\newblock {\em Nuclear Fusion}, 39(9):1133, 1999.
+\bibitem{Maggi2010}
+C.F. Maggi.
+\newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/50/6/066001} {Progress
+  in understanding the physics of the {H}-mode pedestal and {ELM} dynamics}.
+\newblock {\em Nuclear Fusion}, 50(6):066001, 2010.
+
+\bibitem{Hughes2002}
+J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, B.~LaBombard and E.~S. Marmar.
+\newblock \href {http://dx.doi.org/DOI:10.1063/1.1486224} {Observations and
+  empirical scalings of the high-confinement mode pedestal on {Alcator C-Mod}}.
+\newblock {\em Physics of Plasmas}, 9(7):3019--3030, 2002.
 
 \bibitem{Snyder2012}
 P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
@@ -221,12 +227,6 @@ T~H Osborne, R~J Groebner, L~L Lao, A~W Leonard, R~Maingi et~al.
   pedestal characteristics, {ELMs}, and energy confinement in {ITER} shape
   discharges on {DIII-D}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 40(5):845, 1998.
-
-\bibitem{Maggi2010}
-C.F. Maggi.
-\newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/50/6/066001} {Progress
-  in understanding the physics of the {H}-mode pedestal and {ELM} dynamics}.
-\newblock {\em Nuclear Fusion}, 50(6):066001, 2010.
 
 \bibitem{Chang2004}
 C.~S. Chang, Seunghoe Ku and H.~Weitzner.
