@@ -412,8 +412,8 @@ W.M. Tang, J.W. Connor and R.J. Hastie.
 
 \bibitem{Snyder2001}
 P.~B. Snyder and G.~W. Hammett.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.1342029} {Electromagnetic
-  effects on plasma microturbulence and transport}.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/doi/10.1063/1.1342029}
+  {Electromagnetic effects on plasma microturbulence and transport}.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Diallo2014}
@@ -815,11 +815,11 @@ Rachael~M. McDermott.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2009.
 
 \bibitem{Theiler2014}
-C~Theiler, R~M Churchill, B~Lipschultz, M~Landreman, D~R Ernst et~al.
-\newblock Inboard and outboard radial electric field wells in the {H}- and
-  {I}-mode pedestal of {Alcator C-Mod} and poloidal variations of impurity
-  temperature.
-\newblock accepted to \emph{Nuclear Fusion}, 2014.
+C.~Theiler, R.M. Churchill, B.~Lipschultz, M.~Landreman, D.R. Ernst et~al.
+\newblock \href {http://stacks.iop.org/0029-5515/54/i=8/a=083017} {Inboard and
+  outboard radial electric field wells in the {H}- and {I}-mode pedestal of
+  {Alcator C-Mod} and poloidal variations of impurity temperature}.
+\newblock {\em Nuclear Fusion}, 54(8):083017, 2014.
 
 \bibitem{Rice2011}
 J.~E. Rice, J.~W. Hughes, P.~H. Diamond, Y.~Kosuga, Y.~A. Podpaly et~al.
