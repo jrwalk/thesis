@@ -69,8 +69,8 @@ J.~Candy.
 
 \bibitem{Snyder2001}
 P.~B. Snyder and G.~W. Hammett.
-\newblock \href {http://dx.doi.org/DOI:10.1063/1.1342029} {Electromagnetic
-  effects on plasma microturbulence and transport}.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/doi/10.1063/1.1342029}
+  {Electromagnetic effects on plasma microturbulence and transport}.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Walk2012}
@@ -110,13 +110,20 @@ P~B Snyder and H~R Wilson.
 
 \bibitem{Snyder2013}
 Philip~B. Snyder.
-\newblock personal communication, August 2013.
+\newblock Personal communication, August 2013.
 
 \bibitem{Lao1985}
 L.L. Lao, H.~St. John, R.D. Stambaugh, A.G. Kellman and W.~Pfeiffer.
 \newblock \href {http://stacks.iop.org/0029-5515/25/i=11/a=007} {Reconstruction
   of current profile parameters and plasma shapes in tokamaks}.
 \newblock {\em Nuclear Fusion}, 25(11):1611, 1985.
+
+\bibitem{Sauter1999}
+O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.873240}
+  {Neoclassical conductivity and bootstrap current formulas for general
+  axisymmetric equilibria and arbitrary collisionality regime}.
+\newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
 
 \bibitem{Whyte2010}
 D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
