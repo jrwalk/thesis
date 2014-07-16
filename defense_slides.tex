@@ -101,7 +101,7 @@
   \item Kinetic-ballooning mode turbulence
  \end{itemize}
  \vspace{0.5em}
- \item \textbf{ELMy H-mode physics}\footnote{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
+ \item \textbf{ELMy H-Mode Physics}\footnote{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
  \begin{itemize}
   \large
   \item EPED Modeling on C-Mod
@@ -160,8 +160,12 @@
  \begin{itemize}
   \item immediate factor of $\sim 2$ increase in energy confinement
   \item pedestal supports higher core pressures $=$ fusion power density
-  \item \textcolor{red}{pedestal height sets strong constraint on global performance}
  \end{itemize}
+ 
+ \begin{emphblock}{}
+  \centering
+  pedestal height sets strong constraint on global performance
+ \end{emphblock}
 
 \end{frame}
 
@@ -231,10 +235,14 @@ so, we need:
  \item avoid, mitigate, or suppress large ELMs
  \onslide<2->{\begin{itemize}
   \large
-  \onslide<2->{\item engineering solutions:\\ pellet pacing, resonant magnetic perturbations}
-  \onslide<3>{\item physics solutions:\\ pedestal regulation by fluctuations below ELM limit}
+  \onslide<3->{\item engineering solutions:\\ pellet pacing, resonant magnetic perturbations}
+  \onslide<4>{\item physics solutions:\\ pedestal regulation by fluctuations below ELM limit}
  \end{itemize}}
 \end{itemize}
+
+ \only<2>{\begin{tikzpicture}[overlay]
+  \node[anchor=north,yshift=-9ex,xshift=-2ex] at (current page.center) {\includegraphics[height=4cm]{graphics/Other/spanishinquisition.jpeg}};
+ \end{tikzpicture}}
 
 \end{frame}
 
@@ -357,7 +365,7 @@ generally capable of stationary high performance without large ELMs
   \item Kinetic-ballooning mode turbulence
  \end{itemize}}
  \vspace{0.5em}
- \item \textbf{ELMy H-mode physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
+ \item \textbf{ELMy H-Mode Physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
  \begin{itemize}
   \large
   \item EPED Modeling on C-Mod
@@ -434,7 +442,7 @@ generally capable of stationary high performance without large ELMs
   \item Kinetic-ballooning mode turbulence
  \end{itemize}
  \vspace{0.5em}
- \alert<+>{\item \textbf{ELMy H-mode physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
+ \alert<+>{\item \textbf{ELMy H-Mode Physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
  \begin{itemize}
   \large
   \item EPED Modeling on C-Mod
@@ -761,6 +769,14 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{}
+
+ how much detail for confinement scalings?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Outline}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
@@ -798,11 +814,44 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \includegraphics[width=\columnwidth]{graphics/IModePedestal/Ip_gradp.pdf}
   \column{0.4\textwidth}
    \begin{itemize}
+    \large
     \item Pedestal $\nabla p$ shallower at given $I_p$ than ELMy H-mode due to lack of density pedestal
     \vspace{0.5em}
     \item Gradients scale more weakly than $\nabla p \propto I_p^2$ from ballooning MHD (critical-gradient) stability boundary
    \end{itemize}
  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestal scalings consistent with stability\\ against peeling-ballooning MHD}
+
+ \setbeamercolor{normal text}{fg=gray,bg=}
+ \setbeamercolor{alerted text}{fg=black,bg=}
+ \usebeamercolor{normal text}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics<1>[width=\columnwidth]{graphics/IModeModeling/neBp_TeBp_elmy.pdf}
+   \includegraphics<2>[width=\columnwidth]{graphics/IModeModeling/neBp_pBp.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \alert<1>{\item ballooning stability, to lowest order, limits pedestal $\beta_p$ in ELMy H-mode; I-mode $n_e$, $T_e$ independent, rather than fixed $n_e T_e$}
+    \vspace{0.5em}
+    \alert<2>{\item Pedestal $\beta_p$ scaling with density consistent with constant $T_{e,95}/B_p \rightarrow T_e \sim I_p$, rather than $T_e \sim 1/n_e$}
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Stability is self-enforcing for I-mode pedestals}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/IModeModeling/prof_elmy_imode.pdf}
 
 \end{frame}
 
@@ -816,9 +865,89 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Including in low-field, low-energy cases exhibiting apparent ELMs}
+\begin{frame}{Including in low-field, low-energy cases\\ exhibiting apparent ELMs}
 
  \includegraphics[width=\textwidth]{graphics/IModeModeling/1120913026_ELITE_stitch.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestal modeled to be below KBM threshold\\ as well, including cases with ELMs}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics<1>[width=\columnwidth]{graphics/IModeModeling/1120824019_1400n5_35_gamws16_bal.pdf}
+   \includegraphics<2>[width=\columnwidth]{graphics/IModeModeling/1120913026_1186n5_35_bal_jalpha.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item KBM-limited (EPED1) prediction for width, $\Delta_{EPED} = 0.076 \beta_{p,ped}^{1/2}$
+    \vspace{0.5em}
+    \item BALOO calculates width of pedestal locally beyond threshold -- mode onset when half of pedestal is unstable
+    \vspace{0.5em}
+    \item I-mode cases spanning width range modeled below threshold
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{EPED physics assumptions alone are not capturing all observed edge behavior in I-mode}
+
+ \large
+ I-mode pedestal is stable against identified ELM triggers -- however, in minority of cases (12 time windows / 10 unique shots, out of dataset of 72 time windows / 52 shots), particularly at low field ($\sim \SI{4.6}{\tesla}$) exhibit small, intermittent events that appear to be ELMs.
+ 
+ \vspace{1em}
+ $\rightarrow$ need to more carefully characterize these events!
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{What is an ELM?}
+
+ \large
+ ELMs denoted by:
+ \begin{itemize}
+  \large
+  \item burst of ionization in edge $\rightarrow$ spike in $H_\alpha$ light
+  \item ``explosive'' crash in pedestal, both temperature and pressure
+  \item unstable fluctuation leading up to ELM (P-B MHD instability, magnetic precursors, turbulent fluctuations...)
+ \end{itemize}
+ 
+ \vspace{1em}
+ observations of ELMs in I-mode based on $H_\alpha$ spikes, in most cases ($\sim$ 70\%) tied to the sawtooth heat pulse reaching the edge -- good place to begin!
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Sawtooth heat pulse modifies temperature pedestal,\\ little impact on density profile}
+
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/1120830028_prof_stbin.pdf}
+ 
+ \large
+ prepare data by masking TS frames to first 25\% of sawtooth cycle (immediately following heat pulse reaching edge) -- similar to ELM-binning technique used for ELMy H-mode
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Sawtooth measurably perturbs pedestal in stability space, but insufficient to reach ELM threshold}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/IModeModeling/1120830028_stbin_elite.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode sawtooth $H_\alpha$ events (mostly) do not exhibit characteristic temperature crash expected for ELMs}
+
+ \centering
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/trace_elmy_imode_2.pdf}
 
 \end{frame}
 
@@ -902,6 +1031,24 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \large
  \vspace{0.5em}
  $\Delta_\psi = (\Delta_{n_e} + \Delta_{T_e})/2$, tracks with directly-measured $\Delta_{p_e}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{$\beta_{p,95}$ scaling with norm. density in addition to heating-power response}
+
+ \begin{columns}[c]
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item $P_{net}/\overline{n}_e$ sets slope of $T_e/B_p$ line -- response of pedestal temperature at fixed current
+    \vspace{0.5em}
+    \item pressure responds to fueling, provided sufficient power to maintain the pedestal
+   \end{itemize}
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModeModeling/neBp_pBp_Pnebar.pdf}
+ \end{columns}
 
 \end{frame}
 
