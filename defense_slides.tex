@@ -679,9 +679,83 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{}
+\begin{frame}{What does this get us?}
 
+ 
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal impacts core, global performance}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/IModePedestal/p95_W.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Strong temperature pedestal supports high\\ core temperature, pressure}
+
+ \begin{columns}[c]
+  \column{0.45\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/coreprof_v2.pdf}
+  \only<1>{\column{0.55\textwidth}
+   \begin{itemize}
+    \large
+    \item stiff ($R/L_{T_e} \sim$ fixed) temperature profiles $\rightarrow$ higher $T_{ped}$ supports greatly increased core temperatures
+    \item provided moderated density peaking ($n_{e,0}/\langle n_e \rangle \sim 1.1-1.3$ in I-mode), reaches comparable core, vol-average pressure despite relaxed $p_{ped}$
+    \item fusion-reactive plasma where $T_e > \SI{4}{\kilo\electronvolt}$, high $T_{ped}$ maximizes fusing volume
+   \end{itemize}}
+   \only<2>{\column{0.55\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/betan_H_i_e.pdf}
+   
+   \large
+   $\rightarrow$ same $\langle \beta_N \rangle$, normalized confinement to ELMy H-mode   
+   }
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Energy confinement lacks degradation with heating power}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \begin{itemize}
+    \large
+    \item Stored energy $W \sim P \tau_E$
+    \vspace{0.5em}
+    \item for H-mode, expect $\tau_E \sim I_p$, with power degradation $\tau_E \sim P^{-0.7}$ thus $W \sim I_p P^{0.3}$
+    \vspace{0.5em}
+    \item I-mode stored energy $W \sim I_p P_{net} \rightarrow$ little/no degradation of $\tau_E$ with heating power
+    \vspace{0.5em}
+    \item reflects lack of MHD limit on pedestal
+   \end{itemize}
+  \column{0.5\textwidth}
+   \centering
+   \includegraphics[width=0.85\columnwidth]{graphics/IModePedestal/PIp_W_scale.pdf}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{...As well as with fueling}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/nebar_W_i_e.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item I-mode stored energy set by pedestal pressure, responding strongly to fueling
+    \vspace{0.5em}
+    \item ELMy H-mode stored energy set by pedestal $\beta_p$, limited by MHD constraint -- mainly increase pedestal $\beta_p$ with stronger shaping, flat relation with fueling
+   \end{itemize}
+ \end{columns}
 
 \end{frame}
 
@@ -729,6 +803,22 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
     \item Gradients scale more weakly than $\nabla p \propto I_p^2$ from ballooning MHD (critical-gradient) stability boundary
    \end{itemize}
  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestal strongly stable against\\ peeling-ballooning MHD, KBM turbulence}
+
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/1120824019_ELITE_stitch.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Including in low-field, low-energy cases exhibiting apparent ELMs}
+
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/1120913026_ELITE_stitch.pdf}
 
 \end{frame}
 
