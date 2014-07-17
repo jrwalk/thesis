@@ -620,7 +620,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \large
    \item reach highest field ($\SI{8}{\tesla}$), highest thermal pressure, within factor of $\sim 2$ of ITER pedestal target
    \vspace{0.5em}
-   \item C-Mod contribution to multi-machine Joint Research Target
+   \item C-Mod contribution to multi-machine Joint Research Target, motivates development of EPED to higher collisionality, density
    \vspace{0.5em}
    \item reliable physics-based understanding of H-mode pedestal limits
   \end{itemize}
@@ -662,6 +662,16 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}
+
+ \centering
+ \LARGE
+ motivate I-mode discussion here
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Temperature pedestal H-mode-like,\\ set by plasma current, heating power}
 
  \begin{columns}[c]
@@ -684,6 +694,9 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 \begin{frame}{In contrast, density set by operator fueling,\\ with L-mode-like profile}
 
  \includegraphics[width=\textwidth]{graphics/IModePedestal/imode_density.pdf}
+ 
+ \large
+ Plasma current a poor predictor of pedestal density, in contrast to transport-limited EDA H-modes -- easy density control
 
 \end{frame}
 
@@ -696,6 +709,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \includegraphics[width=\columnwidth]{graphics/IModePedestal/fuelingprofiles.pdf}
   \column{0.4\textwidth}
    \begin{itemize}
+    \large
     \item with sufficient power to maintain $P_{net}/\overline{n}_e$, temperature pedestal matched across range of fueling
     \vspace{0.5em}
     \item Contrasts to MHD-limited pedestals (fixed $\beta_{p,ped} \rightarrow $ limit on $n_e T_e$) -- path to strongly increase pedestal beta
@@ -733,10 +747,80 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Pedestal widths \& gradients}
+
+ \large
+ \begin{itemize}
+  \item pedestal structure typically constrained by gradient limits $\rightarrow$ need to understand pedestal width to predict height, performance
+  \vspace{0.5em}
+  \item small spatial scales $\rightarrow$ accurate measurement historically difficult
+ \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal width uncorrelated with $\beta_{p,ped}$,\\ contrary to KBM limit}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/wid_betapol.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item I-mode pedestal width shows no trend with $\beta_{p,ped}$, consistently broader than predicted by EPED1-like KBM limit $\Delta_\psi = 0.076 \beta_{p,ped}^{1/2}$
+    \vspace{0.5em}
+    \item intuitively, pedestal $\nabla p$ insufficient to drive ballooning-like instabilities
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode temperature, pressure pedestal widths\\ uncorrelated with physics parameters}
+
+ \includegraphics<1>[width=\textwidth]{graphics/IModePedestal/rhoipol_widths.pdf}
+ \includegraphics<2>[width=\textwidth]{graphics/IModePedestal/nustar_widths.pdf}
+ \includegraphics<3>[width=\textwidth]{graphics/IModePedestal/q95_widths.pdf}
+ \includegraphics<4>[width=\textwidth]{graphics/IModePedestal/Pnebar_widths.pdf}
+ 
+ \vspace{0.5em}
+ \large
+ \centering
+ \only<1>{$\rho_{i,pol} \rightarrow$ ion-orbit-loss models for $E_r$ well width}
+ \only<2>{edge collisionality $\rightarrow$ bootstrap current instability drive}
+ \only<3>{edge safety factor $\rightarrow$ magnetic shear, ballooning stabilization}
+ \only<4>{heating power per particle $\rightarrow$ heat flux through temperature pedestal}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pressure pedestal width robust across dataset}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/p95_gradp_i.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item width robust across dataset, $\nabla p \sim p_{95}$
+    \vspace{0.5em}
+    \item suggests with increasing pressure, ballooning $\nabla p$ boundary could be exceeded $\rightarrow$ ELMs
+    \vspace{0.5em}
+    \item independent density, temperature profile control $=$ approach, but not exceed, limit
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Pedestal impacts core, global performance}
 
  \centering
- \includegraphics[width=0.8\textwidth]{graphics/IModePedestal/p95_W.pdf}
+ \includegraphics[width=0.65\textwidth]{graphics/IModePedestal/p95_W.pdf}
 
 \end{frame}
 
@@ -1180,6 +1264,32 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \vspace{0.5em}
  \alert<+>{\item \textbf{Summary, Future Work, \& Questions}}
 \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{ELMy H-mode}
+
+ \begin{block}{}
+ 
+ \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestals \& performance}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode stability \& ELM characterization}
+
+
 
 \end{frame}
 
