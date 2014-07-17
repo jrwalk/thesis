@@ -155,7 +155,7 @@
  \large
  Under right conditions, plasma forms ``transport barrier'' in edge, with steep gradients in density and temperature -- the \emph{pedestal}
  
- $\rightarrow$ plasma transitions to ``high-confinement'' or H-mode
+ $\rightarrow$ plasma transitions to \textcolor{red}{``high-confinement'' or H-mode}
  
  \begin{itemize}
   \item immediate factor of $\sim 2$ increase in energy confinement
@@ -235,12 +235,12 @@ so, we need:
  \item avoid, mitigate, or suppress large ELMs
  \onslide<2->{\begin{itemize}
   \large
-  \onslide<3->{\item engineering solutions:\\ pellet pacing, resonant magnetic perturbations}
-  \onslide<4>{\item physics solutions:\\ pedestal regulation by fluctuations below ELM limit}
+  \onslide<2->{\item engineering solutions:\\ pellet pacing, resonant magnetic perturbations}
+  \onslide<3>{\item physics solutions:\\ pedestal regulation by fluctuations below ELM limit}
  \end{itemize}}
 \end{itemize}
 
- \only<2>{\begin{tikzpicture}[overlay]
+ \only<1>{\begin{tikzpicture}[overlay]
   \node[anchor=north,yshift=-9ex,xshift=-2ex] at (current page.center) {\includegraphics[height=4cm]{graphics/Other/spanishinquisition.jpeg}};
  \end{tikzpicture}}
 
@@ -277,7 +277,7 @@ generally capable of stationary high performance without large ELMs
    \large
    \item pedestal regulated by continuous edge fluctuation (QCM), rather than bursts of ELM transport
    \vspace{0.5em}
-   \item steady density, $P_{rad} = $ stationary operation possible with good performance
+   \item steady density, $P_{rad} \rightarrow $ stationary operation possible with good performance
   \end{itemize}
  \column{0.5\textwidth}
   \centering
@@ -337,6 +337,16 @@ generally capable of stationary high performance without large ELMs
   \item ``Unfavorable'' $\nabla B$ orientation (ion $\nabla B$ drift away from primary X-point) -- forward-field upper-null or reversed-field lower-null operation
   \item Sustain mode with heating power up to $\sim 2\times$ above L-I threshold
  \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \large
+ \center
+ last intro slide here
 
 \end{frame}
 
@@ -494,7 +504,35 @@ generally capable of stationary high performance without large ELMs
 
 \begin{frame}{Minimal dependence of width on other parameters}
 
+ \setbeamercolor{normal text}{fg=gray,bg=}
+ \setbeamercolor{alerted text}{fg=black,bg=}
+ \usebeamercolor{normal text}
  
+ \large
+ \alert<1->{Secondary dependences via pedestal width normalized to $\beta_{p,ped}^{1/2}$ scaling}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics<1>[width=\columnwidth]{graphics/ELMy/Bt_deltanorm.pdf}
+   \includegraphics<2>[width=\columnwidth]{graphics/ELMy/nustar_deltanorm.pdf}
+   \includegraphics<3>[width=\columnwidth]{graphics/ELMy/rhostar_deltanorm.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \alert<1>{\item broader pedestal at low field qualitatively $\sim$ some modeling efforts, but within spread at standard field, strong covariance with current}
+    \alert<2>{\item no variation with collisionality, despite effects on edge current $\rightarrow$ magnetic shear}
+    \alert<3>{\item no variation with gyroradius (expected as dependence in $G$)}
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Minimal dependence of normalized width on shaping}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/ELMy/shaping_deltanorm.pdf}
 
 \end{frame}
 
@@ -769,9 +807,105 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{}
+\begin{frame}{First pass at an I-mode confinement scaling}
 
- how much detail for confinement scalings?
+ \large
+ Following practice in ITER89,ITER98 scalings, express I-mode energy confinement as a power law of the form
+ 
+ \begin{equation*}
+  \tau_E = C \; I_p^{\alpha_{I_p}} \; B_T^{\alpha_{B_T}} \; \overline{n}_e^{\alpha_{n_e}} \; R^{\alpha_R} \; \varepsilon^{\alpha_\varepsilon} \; \kappa^{\alpha_\kappa} \; P_{loss}^{\alpha_P}
+ \end{equation*}
+ 
+ Using high-res pedestal database plus older forward- and reversed-field datasets for expanded parameter range
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Reduced fitting parameter set captures I-mode physics}
+
+\large
+\centering
+\begin{tabular}{cccc}
+  \hline
+  & (a) & (b) & (c) \\
+  \hline
+  $C$ & $0.040 \pm 0.066$ & $0.014 \pm 0.002$ & $0.056 \pm 0.008$ \\
+  $I_p$ & $0.686 \pm 0.074$ & $0.685 \pm 0.076$ & $0.676 \pm 0.077$ \\
+  $B_T$ & $0.698 \pm 0.075$ & $0.768 \pm 0.072$ & $0.767 \pm 0.072$ \\
+  $\overline{n}_e$ & $-0.077 \pm 0.055$ & $0.017 \pm 0.048$ & $0.006 \pm 0.048$ \\
+  $R$ & $4.219 \pm 4.623$ & & $2^*$ \\
+  $\varepsilon$ & $0.127 \pm 1.144$ & & $0.5^*$ \\
+  $\kappa$ & $1.686 \pm 0.398$ & \\
+  $P_{loss}$ & $-0.197 \pm 0.048$ & $-0.286 \pm 0.042$ & $-0.275 \pm 0.042$ \\
+  $r^2$ & $0.713$ & $0.685$ & $0.683$ \\
+  \hline
+ \end{tabular}
+ 
+ \vspace{1em}
+ poor fitting in $R$, $\varepsilon$, $\kappa$ due to restricted range in dataset
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Reduced fitting parameter set captures I-Mode physics}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_1_Ploss_sep.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_3_Ploss_sep.pdf}
+ \end{columns}
+ 
+ \vspace{1em}
+ \large
+ Both fits capture weak degradation of $\tau_E$ with heating power, strong response to current, field
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Thought experiment: apply ITER98-like size dependence to I-mode scaling, extrapolate to larger machines?}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_sep.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_extrap.pdf}
+ \end{columns}
+ 
+ \large
+ Apply fixed $R^2 \sqrt{\varepsilon}$ size scaling -- does not impact C-Mod data fit.  Weak degradation $\tau_E \sim P_{loss}^{-0.27}$ extrapolates highly favorably to large devices -- $\tau_E \sim \SI{8}{\second}$ for ITER!
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \large
+ \begin{block}{I-mode behavior beneficial for global performance, confinement}
+  \begin{itemize}
+   \item high temperature pedestal supports steep core $\nabla T$, comparable pressure and confinement despite relaxed pedestal
+   \item stored energy responds strongly to heating power, fueling, consistent with pedestal response
+   \begin{itemize}
+    \large
+    \item good news: in burning plasma, alpha heating power $\sim n_e^2$
+   \end{itemize}
+  \end{itemize}
+ \end{block}
+ 
+ \begin{block}{First-pass confinement scaling laws consistent with observed behaviors}
+  \begin{itemize}
+   \item single-machine scaling captures strong response to current, field, weak degradation with heating power ($\tau_E \sim P^{-\alpha}$, $\alpha < 0.3$)
+   \begin{itemize}
+    \large
+    \item consistent with assumptions in ITER simulations leading to $Q=10$ scenario\footnote[6]{DG Whyte, APS-DPP Nov. 2011}
+   \end{itemize}
+   \item extrapolates to $\tau_E \sim \SI{8}{\second}$ for ITER(!)
+  \end{itemize}
+ \end{block}
 
 \end{frame}
 
@@ -1008,9 +1142,13 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{itemize}
   \item $H_\alpha$ spikes (putative ELMs) in minority of I-mode cases (12 out of 72 time windows)
   \vspace{0.5em}
-  \item Majority of identified events do not appear to be ELMs at all, consistent with computed stability and observed pedestal behavior -- rather, are benign $H_\alpha$ pulses
+  \item Majority ($\sim 70\%$, 27/37) of identified events do not appear to be ELMs at all, consistent with computed stability and observed pedestal behavior -- rather, are benign $H_\alpha$ pulses triggered by sawteeth
   \vspace{0.5em}
-  \item a few 
+  \item a few do exhibit ELM behavior, not necessarily triggered on sawteeth -- but these are rare, small
+  \begin{itemize}
+   \large
+   \item stationary pedestal structure still stable -- transient modifications to hit stability boundary?
+  \end{itemize}
  \end{itemize}
 
 \end{frame}
@@ -1073,11 +1211,26 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \includegraphics[width=0.8\columnwidth]{graphics/ELMy/shaping.pdf}
   \column{0.5\textwidth}
    \begin{itemize}
+    \large
     \item I-mode operates at typical shaping for C-Mod plasmas (with reversed $I_p$, $B_T$ for unfavorable $\nabla B$ drift)
     \vspace{0.5em}
     \item ELMy H-mode on C-Mod requires special shaping with low elongation, upper triangularity, high lower triangularity -- in normal shaping in forward field, reach ELM-free H-mode (low $\nu^*$) or EDA H-mode (high $\nu^*$)
    \end{itemize}
  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \begin{center}
+  \LARGE{ELMy H-mode}
+ \end{center}
+ 
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
 
 \end{frame}
 
@@ -1095,6 +1248,43 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \large
  \vspace{0.5em}
  $\Delta_\psi = (\Delta_{n_e} + \Delta_{T_e})/2$, tracks with directly-measured $\Delta_{p_e}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Density pedestal width in ELMy H-mode inconsistent\\ with neutral-penetration model}
+
+ \centering
+ \includegraphics[width=0.65\textwidth]{graphics/ELMy/neped_deltan.pdf}
+ 
+ \large
+ as expected from high-density, neutral-opaque SOL on C-Mod
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Temperature, pressure pedestal widths not well-described by gyroradius scaling}
+
+ \includegraphics[width=\textwidth]{graphics/ELMy/rhoipol_deltas.pdf}
+ 
+ \large
+ $T_e$ pedestal width uncorrelated; $p_e$ pedestal width trend due to covariance between $\rho_{i,pol} \sim \sqrt{T_{e,ped}}/I_p$ and $\sqrt{\beta_{p,ped}} \sim \sqrt{n_{e,ped} T_{e,ped}}/I_p$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \begin{center}
+  \LARGE{I-mode pedestals}
+ \end{center}
+ 
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
 
 \end{frame}
 
@@ -1118,11 +1308,38 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
+\begin{frame}{}
 
- \large
- \centering
- Peeling-Ballooning MHD Stability
+ \begin{center}
+  \LARGE{I-mode stability \& ELM characterization}
+ \end{center}
+ 
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-modes exhibiting edge $H_\alpha$ spikes / ELMs typically at lower $\beta_p$ range}
+
+\centering
+\includegraphics[width=0.65\textwidth]{graphics/Other/wid_betapol_elmy.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \begin{center}
+  \LARGE{MHD stability analysis}
+ \end{center}
+ 
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
 
 \end{frame}
 
@@ -1189,7 +1406,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}
 
- ELITE solves this by encoding the poloidal angle $\chi$ in a straight-line coordinate via the ``ballooning transform,''
+ ELITE solves this for given $n$ by encoding the poloidal angle $\chi$ in a straight-line coordinate via the ``ballooning transform,''
  
  \begin{equation*}
   \omega = \frac{1}{q} \int^\chi \nu \;d\chi
@@ -1218,7 +1435,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}
 
- Euler-Lagrange equation minimizing the energy may be expressed in this harmonic expansion by a set of coupled equations\footnote[6]{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}
+ Euler-Lagrange equation minimizing the energy may be expressed in this harmonic expansion by a set of coupled equations\footnote[7]{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}
  
  \begin{equation*}
   A^{(2)}_{m,m'} \frac{d^2 u_m}{d\psi^2} + A^{(1)}_{m,m'} \frac{du_m}{d\psi} + A^{(0)}_{m,m'} u_m = 0
@@ -1264,15 +1481,6 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   M_0 f &= \frac{J}{R^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] f
   \end{aligned}
  \end{equation*}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{I-modes exhibiting edge $H_\alpha$ spikes / ELMs typically at lower $\beta_p$ range}
-
-\centering
-\includegraphics[width=0.65\textwidth]{graphics/Other/wid_betapol_elmy.pdf}
 
 \end{frame}
 
