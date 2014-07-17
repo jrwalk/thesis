@@ -947,7 +947,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 \begin{frame}{I-mode sawtooth $H_\alpha$ events (mostly) do not exhibit characteristic temperature crash expected for ELMs}
 
  \centering
- \includegraphics[width=\textwidth]{graphics/IModeModeling/trace_elmy_imode_2.pdf}
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/trace_elmy_imode_3.pdf}
 
 \end{frame}
 
@@ -996,9 +996,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}{Stationary pedestal structure around intermittent ELMs still stable to P-B MHD, KBM threshold}
 
- \includegraphics[width=\textwidth]{graphics/IModeModeling/1120907010_ELITE_stitch.pdf}
- 
- \textcolor{red}{fix fig!}
+ \includegraphics[width=\textwidth]{graphics/IModeModeling/1120907010_ELITE_stitch_v2.pdf}
 
 \end{frame}
 
@@ -1122,6 +1120,16 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}
 
+ \large
+ \centering
+ Peeling-Ballooning MHD Stability
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
 \large
 \begin{equation*}
  \begin{aligned}
@@ -1145,7 +1153,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{aligned}
   X &= RB_p \xi_\psi\\
   ik_\parallel &= \frac{1}{JB} \left( \frac{\partial}{\partial \chi} + in \nu \right) \qquad \nu = JB_T/R\\
-  P &= \sigma X + \frac{B_p^2}{\nu B^2} \frac{F}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel \right)\\
+  P &= \sigma X + \frac{B_p^2}{\nu B^2} \frac{F}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel X \right)\\
   Q &= \frac{X}{B^2} \frac{dp}{d\psi} + \frac{F^2}{\nu R^2 B^2} \frac{1}{n} \frac{\partial}{\partial \psi} \left( JBk_\parallel X \right)\\
   \sigma &= -\frac{F}{B^2} \frac{dp}{d\psi} - \frac{dF}{d\psi} = -\frac{j_\parallel}{B}
  \end{aligned}
@@ -1166,6 +1174,105 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   &\quad+ \frac{\partial}{\partial \psi} \left[ \frac{\sigma}{n} X^* JBk_\parallel X \right] \Bigg\}
  \end{aligned}
 \end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \includegraphics[width=\textwidth]{graphics/Other/energyeqn.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ ELITE solves this by encoding the poloidal angle $\chi$ in a straight-line coordinate via the ``ballooning transform,''
+ 
+ \begin{equation*}
+  \omega = \frac{1}{q} \int^\chi \nu \;d\chi
+ \end{equation*}
+ 
+ (note $2\pi q = \oint \nu \;d\chi$) and decomposing the displacement $X$ into poloidal harmonics
+ 
+ \begin{equation*}
+  X = \sum_m u_m(\psi) e^{-im\omega}
+ \end{equation*}
+ 
+ centered on the $(m,n)$ rational surface.  Define a ``fast'' radial variable
+ 
+ \begin{equation*}
+  \begin{aligned}
+   x &= m_0 - nq\\
+   m_0 &= \mbox{Int}(nq_a) + 1
+  \end{aligned}
+ \end{equation*}
+ 
+ readily convertible between $x$ and $\psi$.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ Euler-Lagrange equation minimizing the energy may be expressed in this harmonic expansion by a set of coupled equations\footnote[6]{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}
+ 
+ \begin{equation*}
+  A^{(2)}_{m,m'} \frac{d^2 u_m}{d\psi^2} + A^{(1)}_{m,m'} \frac{du_m}{d\psi} + A^{(0)}_{m,m'} u_m = 0
+ \end{equation*}
+ 
+ describing coupling between harmonics $m,m'$, with matrix elements $A$ calculated from the equilibrium describing the mode amplitudes.  Features:
+ 
+ \begin{itemize}
+  \item $u_m$ varies rapidly ($\sim x$, comparable to spacing between rational surfaces), needs fine mesh; $A$ set by equilibrium parameters, varies more slowly, can be calculated on coarse mesh for numerical efficiency
+  \item modes only couple to few nearest neighbors, so most $A_{m,m'}$ may be ignored
+  \item can quickly calculate ``fictitious eigenvalue'' for stable/unstable determination, or true eigenvalue $\gamma^2$ for mode growth rate when inertial terms included (modifications to matrix elements $A$)
+ \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{ELITE radial, poloidal mode structure for $n=30$ ballooning mode}
+
+ \includegraphics[width=\textwidth]{graphics/ModelingTheory/pb_modestructure.png}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ BALOO solves simplified version of ballooning energy formulation, in the $n \rightarrow \infty$ limit: reduces to 1-D eigenvalue equation,
+ 
+ \begin{equation*}
+  \begin{aligned}
+   &(L_0 + \omega^2 M_0) f = 0\\
+   &X = f(\psi,y) e^{-in\int \nu \;dy}
+  \end{aligned}
+ \end{equation*}
+ 
+ for displacement $X$ and ballooning-transformed angle $y$, given by
+ 
+ \begin{equation*}
+  \begin{aligned}
+  L_0 f &= \frac{\partial}{\partial y} \left\{ \frac{1}{JR^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] \frac{\partial f}{\partial y} \right\}\\
+  &\qquad + f \left\{ \frac{2J}{B^2} \frac{dp}{d\psi} \frac{\partial}{\partial \psi} \left( p + \frac{B^2}{2} \right) - \frac{F}{B^4} \frac{dp}{d\psi} \left( \int^y \frac{d\nu}{d\psi} dy \right) \frac{\partial B^2}{\partial y} \right\}\\
+  M_0 f &= \frac{J}{R^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] f
+  \end{aligned}
+ \end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-modes exhibiting edge $H_\alpha$ spikes / ELMs typically at lower $\beta_p$ range}
+
+\centering
+\includegraphics[width=0.65\textwidth]{graphics/Other/wid_betapol_elmy.pdf}
 
 \end{frame}
 
