@@ -386,11 +386,40 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
- 
+\begin{frame}{ELMs associated with MHD instabilities}
+
  \large
- \centering
- how much detail here for modeling, vs in extra slides?
+ edge MHD modes $\rightarrow$ sufficiently fast instability growth to drive explosive ELM transport
+ 
+ \begin{itemize}
+  \large
+  \item \textcolor{red}{ballooning mode}: driven by pressure gradient, stabilized by magnetic shear, with drive term
+ \end{itemize}
+ 
+ \begin{equation*}
+  \alpha_{MHD} = -2\frac{Rq^2}{B_T^2} \nabla p \sim \frac{d\beta_p}{d\psi}
+ \end{equation*}
+ 
+ \begin{itemize}
+  \large
+  \item \textcolor{red}{kink/peeling mode}: driven by edge current and current gradient, stabilized by magnetic shear, pressure gradient
+ \end{itemize}
+ 
+ \begin{equation*}
+  s = 2\left(1 - \frac{j_\parallel}{\langle j \rangle} \right)
+ \end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{ELMs associated with MHD instabilities}
+ 
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha.pdf}
+  \column{0.4\textwidth}
+ \end{columns}
 
 \end{frame}
 
