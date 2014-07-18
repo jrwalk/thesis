@@ -389,7 +389,7 @@ generally capable of stationary high performance without large ELMs
 \begin{frame}{ELMs associated with MHD instabilities}
 
  \large
- edge MHD modes $\rightarrow$ sufficiently fast instability growth to drive explosive ELM transport
+ ideal edge MHD modes $\rightarrow$ sufficiently fast instability growth to drive explosive ELM transport
  
  \begin{itemize}
   \large
@@ -419,7 +419,76 @@ generally capable of stationary high performance without large ELMs
   \column{0.6\textwidth}
    \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha.pdf}
   \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item in high-$n$ limit modes are easily calculated: $s-\alpha$ stability contour
+    \vspace{0.5em}
+    \item at high $\alpha$, second stability region opens -- highly desirable for high-$\beta$ operation
+    \vspace{0.5em}
+    \item magnetic shear stabilizing to both modes (in first-stable region)
+   \end{itemize}
  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{At finite $n$, peeling + ballooning modes couple}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha_coupled.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item high-$n$ modes stabilized by diamagnetic, FLR effects -- most unstable modes in range $n \sim 5-40$
+    \vspace{0.5em}
+    \item coupling closes off access to second-stable regime -- need strong magnetic well (best accomplished by aggressive plasma shaping) to decouple modes, reopen access
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Coupled peeling-ballooning MHD modes\\ calculated by ELITE code}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/pbcartoon.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item efficiently calculates moderate-$n$ P-B MHD instability, growth rate
+    \vspace{0.5em}
+    \item calculate range of $n$ to find most unstable mode on grid of pedestal pressure gradient and current $\rightarrow$ stability contour
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Kinetic-ballooning mode (KBM) turbulence limits gradient}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[4]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
+
+ \large
+ Goal: predict pedestal width, height based on engineering target parameters, rather than reconstructed equilibria after-the-fact
+ 
+ \begin{itemize}
+  \item take inputs: $R$, $a$, $\kappa$, $\delta$, $I_p$, $B_T$, $\langle \beta_N \rangle$, $n_{e,ped}$\\$\rightarrow$ construct analytic model equilibria
+  \vspace{0.5em}
+  \item ELITE calculation for peeling-ballooning MHD constraint
+  \vspace{0.5em}
+  \item width constraint from KBM, either by fitted analytic form (EPED1) or direct calculation of ballooning threshold (EPED1.6)
+ \end{itemize}
 
 \end{frame}
 
@@ -691,16 +760,6 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-
- \centering
- \LARGE
- motivate I-mode discussion here
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{Temperature pedestal H-mode-like,\\ set by plasma current, heating power}
 
  \begin{columns}[c]
@@ -770,7 +829,16 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}{What does this get us?}
 
- 
+ \large
+ \begin{itemize}
+  \item Independent determination of density profile (via fueling), temperature profile (via heating power) -- operator control, rather than physics limits, sets pedestal
+  \vspace{0.5em}
+  \item path to strongly improved performance in I-mode -- matched increases in fueling, heating power strongly increase pedestal pressure at same size, current, field
+  \vspace{0.5em}
+  \item Good for ITER access as well: sidestep high power threshold by accessing at low density, step up to $Q=10$ scenario with matched density, power increase
+  \vspace{0.5em}
+  \item L-mode density profile $\rightarrow$ fuel core via turbulent particle pinch, despite neutral-opaque SOL: desirable for ITER
+ \end{itemize}
 
 \end{frame}
 
@@ -864,7 +932,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \begin{itemize}
     \large
     \item stiff ($R/L_{T_e} \sim$ fixed) temperature profiles $\rightarrow$ higher $T_{ped}$ supports greatly increased core temperatures
-    \item provided moderated density peaking ($n_{e,0}/\langle n_e \rangle \sim 1.1-1.3$ in I-mode), reaches comparable core, vol-average pressure despite relaxed $p_{ped}$
+    \item provided moderate density peaking ($n_{e,0}/\langle n_e \rangle \sim 1.1-1.3$ in I-mode), reaches comparable core, vol-average pressure despite relaxed $p_{ped}$
     \item fusion-reactive plasma where $T_e > \SI{4}{\kilo\electronvolt}$, high $T_{ped}$ maximizes fusing volume
    \end{itemize}}
    \only<2>{\column{0.55\textwidth}
@@ -1455,6 +1523,15 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   \column{0.6\textwidth}
    \includegraphics[width=\columnwidth]{graphics/IModeModeling/neBp_pBp_Pnebar.pdf}
  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode temperature pedestal width also robust, though less strictly than pressure pedestal}
+
+ \centering
+ \includegraphics[width=0.65\textwidth]{graphics/IModePedestal/Te95_gradT.pdf}
 
 \end{frame}
 
