@@ -342,11 +342,10 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
+\begin{frame}{Need to understand I-mode pedestals}
 
  \large
- \center
- last intro slide here
+ I-mode is still experimental -- need to understand pedestal structure, stability against large ELMs to extrapolate to larger devices, develop for high-performance ``toolkit''
 
 \end{frame}
 
@@ -471,7 +470,17 @@ generally capable of stationary high performance without large ELMs
 
 \begin{frame}{Kinetic-ballooning mode (KBM) turbulence limits gradient}
 
-
+ \large
+ Above critical gradient, electromagnetic turbulence drives rapidly-saturating transport.
+ 
+ \vspace{0.5em}
+ Locally at outboard midplane, magnetic shear stabilizes mode such that $\alpha_c \sim 1/s^{1/2}$.  Shear trends with current as $1/\langle j \rangle \rightarrow 1/\beta_{p,ped}$ for bootstrap current: thus $\alpha_c \sim \beta_{p,ped}^{1/2}$.
+ 
+ \vspace{0.5em}
+ Since $\alpha_c \sim \beta_{p,ped}/\Delta$, this implies a width constraint $\Delta \sim \beta_{p,ped}^{1/2}$
+ 
+ \vspace{0.5em}
+ onset threshold correlated with infinite-$n$ ideal ballooning mode stability $\rightarrow$ readily calculated
 
 \end{frame}
 
@@ -499,6 +508,28 @@ generally capable of stationary high performance without large ELMs
  \begin{center}
   \includegraphics[width=0.8\columnwidth]{graphics/ModelingTheory/epedcartoon.pdf}
  \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Alternate models to consider}
+
+ \begin{block}{\large Ion-orbit-loss models}
+  \begin{itemize}
+   \large
+   \item ion loss across separatrix $\rightarrow$ $E_r$ well, pedestal formation
+   \item expect ion poloidal gyroradius / banana orbit to set $E_r$ well extent, pedestal width
+   \item (largely discounted in favor of $\beta_{p,ped}$ scalings)
+  \end{itemize}
+ \end{block}
+ \begin{block}{\large Neutral penetration models}
+  \begin{itemize}
+   \large
+   \item neutral atom penetration, ionization expected to impact density pedestal
+   \item width set by neutral mean free path, $\lambda_{neutral} \sim 1/n_e$
+  \end{itemize}
+ \end{block}
 
 \end{frame}
 
