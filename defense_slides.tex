@@ -82,53 +82,72 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Outline}
-
-\only<1>{\begin{itemize}
- \large
- \item \textbf{Context \& Motivation}
- \begin{itemize}
-  \large 
-  \item High-performance regimes
-  \item Pedestal physics
-  \item Introduction to I-mode
- \end{itemize}
- \vspace{0.5em}
- \item \textbf{Pedestal Modeling \& Theory}:
- \begin{itemize}
+\begin{frame}{Spoilers!}
+ 
   \large
-  \item Peeling-ballooning MHD stability
-  \item Kinetic-ballooning mode turbulence
- \end{itemize}
- \vspace{0.5em}
- \item \textbf{ELMy H-Mode Physics}\footnote{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
- \begin{itemize}
-  \large
-  \item EPED Modeling on C-Mod
- \end{itemize}
-\end{itemize}}
-
-\only<2->{\begin{itemize}
- \large
- \item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
- \begin{itemize}
-  \large
-  \item Pedestal response to fueling, heating power
-  \item Pedestal widths and gradients
-  \item Global performance and confinement scalings
- \end{itemize}
- \vspace{0.5em}
- \item \textbf{I-Mode Pedestal Stability}
- \begin{itemize}
-  \large
-  \item P-B MHD, KBM modeling
-  \item ELM characterization
- \end{itemize}
- \vspace{0.5em}
- \item \textbf{Summary, Future Work, \& Questions}
-\end{itemize}}
+ \begin{block}{Improved understanding of ELMy H-mode limits\footnote{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}}
+  C-Mod contributions to predictive, physics-based model for ELMy H-mode pedestal
+ \end{block}
+ 
+ \begin{block}{Characterize Pedestal structure, stability in I-mode\footnote{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote{\emph{Invited talk}, APS-DPP Nov. 2013}}
+  \begin{itemize}
+   \item pedestal response to fueling, heating power $\rightarrow$ path to high-performance operation
+   \item improved understanding of edge stability, ELM avoidance
+   \item pedestal impact on global performance \& confinement in I-mode -- competitive regime to conventional H-modes
+  \end{itemize}
+ \end{block}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{frame}{Outline}
+%
+%\only<1>{\begin{itemize}
+% \large
+% \item \textbf{Context \& Motivation}
+% \begin{itemize}
+%  \large 
+%  \item High-performance regimes
+%  \item Pedestal physics
+%  \item Introduction to I-mode
+% \end{itemize}
+% \vspace{0.5em}
+% \item \textbf{Pedestal Modeling \& Theory}:
+% \begin{itemize}
+%  \large
+%  \item Peeling-ballooning MHD stability
+%  \item Kinetic-ballooning mode turbulence
+% \end{itemize}
+% \vspace{0.5em}
+% \item \textbf{ELMy H-Mode Physics}\footnote{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
+% \begin{itemize}
+%  \large
+%  \item EPED Modeling on C-Mod
+% \end{itemize}
+%\end{itemize}}
+%
+%\only<2->{\begin{itemize}
+% \large
+% \item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
+% \begin{itemize}
+%  \large
+%  \item Pedestal response to fueling, heating power
+%  \item Pedestal widths and gradients
+%  \item Global performance and confinement scalings
+% \end{itemize}
+% \vspace{0.5em}
+% \item \textbf{I-Mode Pedestal Stability}
+% \begin{itemize}
+%  \large
+%  \item P-B MHD, KBM modeling
+%  \item ELM characterization
+% \end{itemize}
+% \vspace{0.5em}
+% \item \textbf{Summary, Future Work, \& Questions}
+%\end{itemize}}
+%
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -186,7 +205,7 @@
   \end{itemize}
   \column{0.5\textwidth}
   \centering
-  \includegraphics[width=0.85\columnwidth]{graphics/HighPerformanceRegimes/trace_1110114003.pdf}
+  \includegraphics[width=0.85\columnwidth]{graphics/HighPerformanceRegimes/trace_1110114003_v2.pdf}
  \end{columns}
 
 \end{frame}
@@ -218,7 +237,7 @@ so, we need:
    \onslide<2>{\item \textcolor{red}{large ELMs drive pulsed heat loads in excess of plasma-facing material tolerances}}
   \end{itemize}
   \column{0.5\textwidth}
-  \includegraphics[width=\columnwidth]{graphics/HighPerformanceRegimes/trace_1101214029.pdf}
+  \includegraphics[width=\columnwidth]{graphics/HighPerformanceRegimes/trace_1101214029_v2.pdf}
  \end{columns}
 
 \end{frame}
@@ -268,26 +287,6 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{EDA H-mode (on C-Mod and elsewhere)}
-
-\begin{columns}[c]
- \column{0.5\textwidth}
-  \vspace{-2em}
-  \begin{itemize}
-   \large
-   \item pedestal regulated by continuous edge fluctuation (QCM), rather than bursts of ELM transport
-   \vspace{0.5em}
-   \item steady density, $P_{rad} \rightarrow $ stationary operation possible with good performance
-  \end{itemize}
- \column{0.5\textwidth}
-  \centering
-  \includegraphics[width=0.85\columnwidth]{graphics/HighPerformanceRegimes/trace_1110201018.pdf}
-\end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{But each of these has drawbacks}
 
 \large
@@ -307,17 +306,17 @@ generally capable of stationary high performance without large ELMs
 
 \begin{frame}{A challenger appears: the I-mode}
 
-\centering
-\includegraphics[width=0.8\textwidth]{graphics/HighPerformanceRegimes/trace_imode.pdf}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{I-mode pedestal regulated by\\ Weakly-Coherent Mode (WCM)}
-
- \centering
- \includegraphics[width=\textwidth]{graphics/HighPerformanceRegimes/WCM.pdf}
+ \large
+ \begin{itemize}
+  \item novel high-confinement regime pioneered on Alcator C-Mod, occupying intermediate parameter space between L-mode and H-mode access
+  \vspace{0.5em}
+  \item pedestal regulated by weakly-coherent mode
+ \end{itemize}
+ 
+ \begin{emphblock}{}
+  \centering
+  Need to understand pedestal structure, stability against ELMs in I-mode to extrapolate to larger devices
+ \end{emphblock}
 
 \end{frame}
 
@@ -342,44 +341,33 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Need to understand I-mode pedestals}
-
- \large
- I-mode is still experimental -- need to understand pedestal structure, stability against large ELMs to extrapolate to larger devices, develop for high-performance ``toolkit''
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Outline}
+\begin{frame}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
  \setbeamercolor{alerted text}{fg=black,bg=}
  \usebeamercolor{normal text}
-
- \begin{itemize}
+ 
  \large
- \item \textbf{Context \& Motivation}
  \begin{itemize}
-  \large 
-  \item High-performance regimes
-  \item Pedestal physics
-  \item Introduction to I-mode
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{Pedestal Modeling \& Theory}:
+   \begin{itemize}
+    \large
+    \item Peeling-ballooning MHD stability
+    \item Kinetic-ballooning mode turbulence
+   \end{itemize}}
+   \vspace{0.5em}
+  \item \textbf{ELMy H-Mode Physics}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestals}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestal Stability}
+  \vspace{0.5em}
+  \item \textbf{I-mode Global Performance \& Confinement}
+  \vspace{0.5em}
+  \item \textbf{Summary, Future Work, \& Questions}
  \end{itemize}
- \vspace{0.5em}
- \alert<+>{\item \textbf{Pedestal Modeling \& Theory}:
- \begin{itemize}
-  \large
-  \item Peeling-ballooning MHD stability
-  \item Kinetic-ballooning mode turbulence
- \end{itemize}}
- \vspace{0.5em}
- \item \textbf{ELMy H-Mode Physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
- \begin{itemize}
-  \large
-  \item EPED Modeling on C-Mod
- \end{itemize}
-\end{itemize}
 
 \end{frame}
 
@@ -412,45 +400,7 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{ELMs associated with MHD instabilities}
- 
- \begin{columns}[c]
-  \column{0.6\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha.pdf}
-  \column{0.4\textwidth}
-   \begin{itemize}
-    \large
-    \item in high-$n$ limit modes are easily calculated: $s-\alpha$ stability contour
-    \vspace{0.5em}
-    \item at high $\alpha$, second stability region opens -- highly desirable for high-$\beta$ operation
-    \vspace{0.5em}
-    \item magnetic shear stabilizing to both modes (in first-stable region)
-   \end{itemize}
- \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{At finite $n$, peeling + ballooning modes couple}
-
- \begin{columns}[c]
-  \column{0.6\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha_coupled.pdf}
-  \column{0.4\textwidth}
-   \begin{itemize}
-    \large
-    \item high-$n$ modes stabilized by diamagnetic, FLR effects -- most unstable modes in range $n \sim 5-40$
-    \vspace{0.5em}
-    \item coupling closes off access to second-stable regime -- need strong magnetic well (best accomplished by aggressive plasma shaping) to decouple modes, reopen access
-   \end{itemize}
- \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Coupled peeling-ballooning MHD modes\\ calculated by ELITE code}
+\begin{frame}{Coupled peeling-ballooning MHD modes\\ calculated by ELITE code\footnote{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}}
 
  \begin{columns}[c]
   \column{0.6\textwidth}
@@ -513,51 +463,6 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Alternate models to consider}
-
- \begin{block}{\large Ion-orbit-loss models}
-  \begin{itemize}
-   \large
-   \item ion loss across separatrix $\rightarrow$ $E_r$ well, pedestal formation
-   \item expect ion poloidal gyroradius / banana orbit to set $E_r$ well extent, pedestal width
-   \item (largely discounted in favor of $\beta_{p,ped}$ scalings)
-  \end{itemize}
- \end{block}
- \begin{block}{\large Neutral penetration models}
-  \begin{itemize}
-   \large
-   \item neutral atom penetration, ionization expected to impact density pedestal
-   \item width set by neutral mean free path, $\lambda_{neutral} \sim 1/n_e$
-  \end{itemize}
- \end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Pedestal Structure Definitions}
-
- \begin{columns}[c]
-  \column{0.5\textwidth}
-   \large
-   pedestals fitted by
-   \begin{align*}
-    &z = \frac{x_0 - x}{\delta}\\
-    &mtanh(\alpha,z) = \frac{(1 + \alpha z) e^{z} - e^{-z}}{e^{z} + e^{-z}}\\
-    &y = \frac{h+b}{2} + \frac{h-b}{2} mtanh(\alpha,z)
-   \end{align*}
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/ELMy/mtanh.pdf}
- \end{columns}
- 
- \large
- \vspace{0.5em}
- rigorous definition for pedestal width $\Delta = 2\delta$, continuous and differentiable throughout pedestal profile
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{Outline}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
@@ -595,7 +500,7 @@ generally capable of stationary high performance without large ELMs
 \begin{frame}{Target steady ELMy phases for study}
 
  \centering
- \includegraphics[width=\textwidth]{graphics/ELMy/time_window.pdf}
+ \includegraphics[width=\textwidth]{graphics/ELMy/time_window_2.pdf}
 
 \end{frame}
 
@@ -786,6 +691,15 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \vspace{0.5em}
  \item \textbf{Summary, Future Work, \& Questions}
 \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/HighPerformanceRegimes/trace_imode.pdf}
 
 \end{frame}
 
@@ -1473,6 +1387,58 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{EDA H-mode (on C-Mod and elsewhere)}
+
+\begin{columns}[c]
+ \column{0.5\textwidth}
+  \vspace{-2em}
+  \begin{itemize}
+   \large
+   \item pedestal regulated by continuous edge fluctuation (QCM), rather than bursts of ELM transport
+   \vspace{0.5em}
+   \item steady density, $P_{rad} \rightarrow $ stationary operation possible with good performance
+  \end{itemize}
+ \column{0.5\textwidth}
+  \centering
+  \includegraphics[width=0.85\columnwidth]{graphics/HighPerformanceRegimes/trace_1110201018.pdf}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{I-mode pedestal regulated by\\ Weakly-Coherent Mode (WCM)}
+
+ \centering
+ \includegraphics[width=\textwidth]{graphics/HighPerformanceRegimes/WCM.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal Structure Definitions}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \large
+   pedestals fitted by
+   \begin{align*}
+    &z = \frac{x_0 - x}{\delta}\\
+    &mtanh(\alpha,z) = \frac{(1 + \alpha z) e^{z} - e^{-z}}{e^{z} + e^{-z}}\\
+    &y = \frac{h+b}{2} + \frac{h-b}{2} mtanh(\alpha,z)
+   \end{align*}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/mtanh.pdf}
+ \end{columns}
+ 
+ \large
+ \vspace{0.5em}
+ rigorous definition for pedestal width $\Delta = 2\delta$, continuous and differentiable throughout pedestal profile
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{}
 
  \begin{center}
@@ -1482,6 +1448,28 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{tikzpicture}[overlay]
   \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
  \end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Alternate models to consider}
+
+ \begin{block}{\large Ion-orbit-loss models}
+  \begin{itemize}
+   \large
+   \item ion loss across separatrix $\rightarrow$ $E_r$ well, pedestal formation
+   \item expect ion poloidal gyroradius / banana orbit to set $E_r$ well extent, pedestal width
+   \item (largely discounted in favor of $\beta_{p,ped}$ scalings)
+  \end{itemize}
+ \end{block}
+ \begin{block}{\large Neutral penetration models}
+  \begin{itemize}
+   \large
+   \item neutral atom penetration, ionization expected to impact density pedestal
+   \item width set by neutral mean free path, $\lambda_{neutral} \sim 1/n_e$
+  \end{itemize}
+ \end{block}
 
 \end{frame}
 
@@ -1600,6 +1588,44 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{tikzpicture}[overlay]
   \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
  \end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{ELMs associated with MHD instabilities}
+ 
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item in high-$n$ limit modes are easily calculated: $s-\alpha$ stability contour
+    \vspace{0.5em}
+    \item at high $\alpha$, second stability region opens -- highly desirable for high-$\beta$ operation
+    \vspace{0.5em}
+    \item magnetic shear stabilizing to both modes (in first-stable region)
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{At finite $n$, peeling + ballooning modes couple}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ModelingTheory/salpha_coupled.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item high-$n$ modes stabilized by diamagnetic, FLR effects -- most unstable modes in range $n \sim 5-40$
+    \vspace{0.5em}
+    \item coupling closes off access to second-stable regime -- need strong magnetic well (best accomplished by aggressive plasma shaping) to decouple modes, reopen access
+   \end{itemize}
+ \end{columns}
 
 \end{frame}
 
