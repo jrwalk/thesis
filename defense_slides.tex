@@ -293,6 +293,7 @@ generally capable of stationary high performance without large ELMs
 \begin{itemize}
  \item engineering requirements, e.g. high beam torque for QH-mode
  \item access limits: high collisionality for EDA, shaping for type-II ELMs
+ \item poorer performance in type-III ELMs
 \end{itemize}
 
 \begin{emphblock}{}
@@ -310,32 +311,15 @@ generally capable of stationary high performance without large ELMs
  \begin{itemize}
   \item novel high-confinement regime pioneered on Alcator C-Mod, occupying intermediate parameter space between L-mode and H-mode access
   \vspace{0.5em}
-  \item pedestal regulated by weakly-coherent mode
+  \item notably, decouples energy and particle transport -- forms H-mode-like temperature pedestal without accompanying density pedestal
+  \vspace{0.5em}
+  \item highly desirable features for tokamak reactor operation
  \end{itemize}
  
  \begin{emphblock}{}
   \centering
   Need to understand pedestal structure, stability against ELMs in I-mode to extrapolate to larger devices
  \end{emphblock}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Robust I-mode access on C-Mod}
-
- \begin{columns}[c]
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/q95_vs_nustar_2012_Imodeonly.pdf}
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/nebar_Ploss_all.pdf}
- \end{columns}
- 
- \begin{itemize}
-  \item I-mode accessed over range of edge current profiles, low-mid collisionalities
-  \item ``Unfavorable'' $\nabla B$ orientation (ion $\nabla B$ drift away from primary X-point) -- forward-field upper-null or reversed-field lower-null operation
-  \item Sustain mode with heating power up to $\sim 2\times$ above L-I threshold
- \end{itemize}
 
 \end{frame}
 
@@ -351,11 +335,11 @@ generally capable of stationary high performance without large ELMs
  \begin{itemize}
   \item \textbf{Context \& Motivation}
   \vspace{0.5em}
-  \alert<+>{\item \textbf{Pedestal Modeling \& Theory}:
+  \alert<+>{\item \textbf{Pedestal Modeling \& Theory}
    \begin{itemize}
     \large
-    \item Peeling-ballooning MHD stability
-    \item Kinetic-ballooning mode turbulence
+    \item peeling-ballooning MHD stability
+    \item kinetic-ballooning mode turbulence
    \end{itemize}}
    \vspace{0.5em}
   \item \textbf{ELMy H-Mode Physics}
@@ -418,25 +402,22 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Kinetic-ballooning mode (KBM) turbulence limits gradient}
+\begin{frame}{Kinetic-ballooning mode (KBM) turbulence limits\\ pressure gradient in pedestal}
 
  \large
- Above critical gradient, electromagnetic turbulence drives rapidly-saturating transport.
- 
- \vspace{0.5em}
- Locally at outboard midplane, magnetic shear stabilizes mode such that $\alpha_c \sim 1/s^{1/2}$.  Shear trends with current as $1/\langle j \rangle \rightarrow 1/\beta_{p,ped}$ for bootstrap current: thus $\alpha_c \sim \beta_{p,ped}^{1/2}$.
- 
- \vspace{0.5em}
- Since $\alpha_c \sim \beta_{p,ped}/\Delta$, this implies a width constraint $\Delta \sim \beta_{p,ped}^{1/2}$
- 
- \vspace{0.5em}
- onset threshold correlated with infinite-$n$ ideal ballooning mode stability $\rightarrow$ readily calculated
+ \begin{itemize}
+  \item above critical gradient ballooning-like electromagnetic turbulence drives rapidly saturating transport -- limits pedestal gradient to $\alpha_c$
+  \vspace{0.5em}
+  \item accounting for magnetic shear, KBM limit takes the form $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ for pedestal width (in poloidal flux space)
+  \vspace{0.5em}
+  \item onset threshold correlated with infinite-$n$ ideal ballooning MHD mode -- easily calculation nearly as accurate as more involved gyrokinetic+gyrofluid turbulence treatments
+ \end{itemize}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[4]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
+\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[5]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
 
  \large
  Goal: predict pedestal width, height based on engineering target parameters, rather than reconstructed equilibria after-the-fact
@@ -453,7 +434,7 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[4]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
+\begin{frame}{Predictive Model for ELMy H-modes -- EPED\footnote[5]{PB Snyder \emph{et al.}, \emph{Nuclear Fusion} \textbf{51} (2011)}}
 
  \begin{center}
   \includegraphics[width=0.8\columnwidth]{graphics/ModelingTheory/epedcartoon.pdf}
@@ -463,35 +444,33 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Outline}
+\begin{frame}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
  \setbeamercolor{alerted text}{fg=black,bg=}
  \usebeamercolor{normal text}
-
- \begin{itemize}
+ 
  \large
- \item \textbf{Context \& Motivation}
  \begin{itemize}
-  \large 
-  \item High-performance regimes
-  \item Pedestal physics
-  \item Introduction to I-mode
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \item \textbf{Pedestal Modeling \& Theory}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{ELMy H-Mode Physics}
+   \begin{itemize}
+    \large
+    \item H-mode pedestal observations
+    \item EPED modeling on C-Mod
+   \end{itemize}}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestals}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestal Stability}
+  \vspace{0.5em}
+  \item \textbf{I-mode Global Performance \& Confinement}
+  \vspace{0.5em}
+  \item \textbf{Summary, Future Work, \& Questions}
  \end{itemize}
- \vspace{0.5em}
- \item \textbf{Pedestal Modeling \& Theory}:
- \begin{itemize}
-  \large
-  \item Peeling-ballooning MHD stability
-  \item Kinetic-ballooning mode turbulence
- \end{itemize}
- \vspace{0.5em}
- \alert<+>{\item \textbf{ELMy H-Mode Physics}\footnote[1]{JR Walk \emph{et al.}, \emph{Nuclear Fusion} \textbf{52} (2012)}
- \begin{itemize}
-  \large
-  \item EPED Modeling on C-Mod
- \end{itemize}}
-\end{itemize}
 
 \end{frame}
 
@@ -522,7 +501,7 @@ generally capable of stationary high performance without large ELMs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Pedestal width described well by KBM limit}
+\begin{frame}{Pedestal width consistent with KBM limit}
 
  \centering
  \includegraphics<1>[width=0.65\textwidth]{graphics/ELMy/betap_deltapsi_all.pdf}
@@ -538,35 +517,18 @@ generally capable of stationary high performance without large ELMs
 
 \begin{frame}{Minimal dependence of width on other parameters}
 
- \setbeamercolor{normal text}{fg=gray,bg=}
- \setbeamercolor{alerted text}{fg=black,bg=}
- \usebeamercolor{normal text}
- 
  \large
- \alert<1->{Secondary dependences via pedestal width normalized to $\beta_{p,ped}^{1/2}$ scaling}
-
+ Nominally, scale factor is a weakly-varying function $G(\nu^*,\varepsilon,...)$
+ 
  \begin{columns}[c]
-  \column{0.6\textwidth}
-   \includegraphics<1>[width=\columnwidth]{graphics/ELMy/Bt_deltanorm.pdf}
-   \includegraphics<2>[width=\columnwidth]{graphics/ELMy/nustar_deltanorm.pdf}
-   \includegraphics<3>[width=\columnwidth]{graphics/ELMy/rhostar_deltanorm.pdf}
-  \column{0.4\textwidth}
-   \begin{itemize}
-    \large
-    \alert<1>{\item broader pedestal at low field qualitatively $\sim$ some modeling efforts, but within spread at standard field, strong covariance with current}
-    \alert<2>{\item no variation with collisionality, despite effects on edge current $\rightarrow$ magnetic shear}
-    \alert<3>{\item no variation with gyroradius (expected as dependence in $G$)}
-   \end{itemize}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/nustar_deltanorm.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/ELMy/rhostar_deltanorm.pdf}
  \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Minimal dependence of normalized width on shaping}
-
- \centering
- \includegraphics[width=0.8\textwidth]{graphics/ELMy/shaping_deltanorm.pdf}
+ 
+ \vspace{0.5em}
+no variation with collisionality, gyroradius, shaping, safety factor/magnetic shear not captured by $\beta_{p,ped}^{1/2}$ scaling
 
 \end{frame}
 
@@ -598,6 +560,10 @@ generally capable of stationary high performance without large ELMs
   \column{0.5\textwidth}
    \includegraphics[width=\columnwidth]{graphics/ELMy/neBp_TeBp_deltaave.pdf}
  \end{columns}
+ 
+ \large
+ \vspace{0.5em}
+ C-Mod H-modes on common physics footing with other machines
 
 \end{frame}
 
@@ -646,7 +612,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Experiments expand parameter space tested in EPED\footnote[5]{RJ Groebner \emph{et al.}, \emph{Nuclear Fusion} \textbf{53} (2013)}}
+\begin{frame}{Experiments expand parameter space tested in EPED\footnote[6]{RJ Groebner \emph{et al.}, \emph{Nuclear Fusion} \textbf{53} (2013)}}
 
 \begin{columns}[c]
  \column{0.5\textwidth}
@@ -666,40 +632,61 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Outline}
+\begin{frame}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
  \setbeamercolor{alerted text}{fg=black,bg=}
  \usebeamercolor{normal text}
-
-\begin{itemize}
+ 
  \large
- \alert<+>{\item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
  \begin{itemize}
-  \large
-  \item Pedestal response to fueling, heating power
-  \item Pedestal widths and gradients
-  \item Global performance and confinement scalings
- \end{itemize}}
- \vspace{0.5em}
- \item \textbf{I-Mode Pedestal Stability}
- \begin{itemize}
-  \large
-  \item P-B MHD, KBM modeling
-  \item ELM characterization
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \item \textbf{Pedestal Modeling \& Theory}
+  \vspace{0.5em}
+  \item \textbf{ELMy H-Mode Physics}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{I-Mode Pedestals}
+   \begin{itemize}
+    \large
+    \item pedestal response to fueling, heating power
+    \item pedestal widths \& gradients
+   \end{itemize}}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestal Stability}
+  \vspace{0.5em}
+  \item \textbf{I-mode Global Performance \& Confinement}
+  \vspace{0.5em}
+  \item \textbf{Summary, Future Work, \& Questions}
  \end{itemize}
- \vspace{0.5em}
- \item \textbf{Summary, Future Work, \& Questions}
-\end{itemize}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{}
+\begin{frame}{\large I-mode develops H-mode temperature profile, L-mode density}
 
  \centering
  \includegraphics[width=0.8\textwidth]{graphics/HighPerformanceRegimes/trace_imode.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Robust I-mode access on C-Mod}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/q95_vs_nustar_2012_Imodeonly.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/nebar_Ploss_all.pdf}
+ \end{columns}
+ 
+ \begin{itemize}
+  \item I-mode accessed over range of edge current profiles, low-mid collisionalities
+  \item ``Unfavorable'' $\nabla B$ orientation (ion $\nabla B$ drift away from primary X-point) -- forward-field upper-null or reversed-field lower-null operation
+  \item Sustain mode with heating power up to $\sim 2\times$ above L-I threshold
+ \end{itemize}
 
 \end{frame}
 
@@ -719,17 +706,6 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   \item pedestal $T_e$ shows positive trending $T_e \sim I_p$, spread at given current due to heating power
   \item input power strongly affects pedestal temperature as with EDA H-mode -- more properly, \textcolor{red}{power per particle sets pedestal temperature} at fixed current
  \end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{In contrast, density set by operator fueling,\\ with L-mode-like profile}
-
- \includegraphics[width=\textwidth]{graphics/IModePedestal/imode_density.pdf}
- 
- \large
- Plasma current a poor predictor of pedestal density, in contrast to transport-limited EDA H-modes -- easy density control
 
 \end{frame}
 
@@ -782,20 +758,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   \vspace{0.5em}
   \item Good for ITER access as well: sidestep high power threshold by accessing at low density, step up to $Q=10$ scenario with matched density, power increase
   \vspace{0.5em}
-  \item L-mode density profile $\rightarrow$ fuel core via turbulent particle pinch, despite neutral-opaque SOL: desirable for ITER
- \end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Pedestal widths \& gradients}
-
- \large
- \begin{itemize}
-  \item pedestal structure typically constrained by gradient limits $\rightarrow$ need to understand pedestal width to predict height, performance
-  \vspace{0.5em}
-  \item small spatial scales $\rightarrow$ accurate measurement historically difficult
+  \item L-mode density profile $\rightarrow$ no impurity pinch in edge
  \end{itemize}
 
 \end{frame}
@@ -859,209 +822,33 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Pedestal impacts core, global performance}
-
- \centering
- \includegraphics[width=0.65\textwidth]{graphics/IModePedestal/p95_W.pdf}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Strong temperature pedestal supports high\\ core temperature, pressure}
-
- \begin{columns}[c]
-  \column{0.45\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/coreprof_v2.pdf}
-  \only<1>{\column{0.55\textwidth}
-   \begin{itemize}
-    \large
-    \item stiff ($R/L_{T_e} \sim$ fixed) temperature profiles $\rightarrow$ higher $T_{ped}$ supports greatly increased core temperatures
-    \item provided moderate density peaking ($n_{e,0}/\langle n_e \rangle \sim 1.1-1.3$ in I-mode), reaches comparable core, vol-average pressure despite relaxed $p_{ped}$
-    \item fusion-reactive plasma where $T_e > \SI{4}{\kilo\electronvolt}$, high $T_{ped}$ maximizes fusing volume
-   \end{itemize}}
-   \only<2>{\column{0.55\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/betan_H_i_e.pdf}
-   
-   \large
-   $\rightarrow$ same $\langle \beta_N \rangle$, normalized confinement to ELMy H-mode   
-   }
- \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Energy confinement lacks degradation with heating power}
-
- \begin{columns}[c]
-  \column{0.5\textwidth}
-   \begin{itemize}
-    \large
-    \item Stored energy $W \sim P \tau_E$
-    \vspace{0.5em}
-    \item for H-mode, expect $\tau_E \sim I_p$, with power degradation $\tau_E \sim P^{-0.7}$ thus $W \sim I_p P^{0.3}$
-    \vspace{0.5em}
-    \item I-mode stored energy $W \sim I_p P_{net} \rightarrow$ little/no degradation of $\tau_E$ with heating power
-    \vspace{0.5em}
-    \item reflects lack of MHD limit on pedestal
-   \end{itemize}
-  \column{0.5\textwidth}
-   \centering
-   \includegraphics[width=0.85\columnwidth]{graphics/IModePedestal/PIp_W_scale.pdf}
- \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{...As well as with fueling}
-
- \begin{columns}[c]
-  \column{0.6\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/nebar_W_i_e.pdf}
-  \column{0.4\textwidth}
-   \begin{itemize}
-    \large
-    \item I-mode stored energy set by pedestal pressure, responding strongly to fueling
-    \vspace{0.5em}
-    \item ELMy H-mode stored energy set by pedestal $\beta_p$, limited by MHD constraint -- mainly increase pedestal $\beta_p$ with stronger shaping, flat relation with fueling
-   \end{itemize}
- \end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{First pass at an I-mode confinement scaling}
-
- \large
- Following practice in ITER89,ITER98 scalings, express I-mode energy confinement as a power law of the form
- 
- \begin{equation*}
-  \tau_E = C \; I_p^{\alpha_{I_p}} \; B_T^{\alpha_{B_T}} \; \overline{n}_e^{\alpha_{n_e}} \; R^{\alpha_R} \; \varepsilon^{\alpha_\varepsilon} \; \kappa^{\alpha_\kappa} \; P_{loss}^{\alpha_P}
- \end{equation*}
- 
- Using high-res pedestal database plus older forward- and reversed-field datasets for expanded parameter range
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Reduced fitting parameter set captures I-mode physics}
-
-\large
-\centering
-\begin{tabular}{cccc}
-  \hline
-  & (a) & (b) & (c) \\
-  \hline
-  $C$ & $0.040 \pm 0.066$ & $0.014 \pm 0.002$ & $0.056 \pm 0.008$ \\
-  $I_p$ & $0.686 \pm 0.074$ & $0.685 \pm 0.076$ & $0.676 \pm 0.077$ \\
-  $B_T$ & $0.698 \pm 0.075$ & $0.768 \pm 0.072$ & $0.767 \pm 0.072$ \\
-  $\overline{n}_e$ & $-0.077 \pm 0.055$ & $0.017 \pm 0.048$ & $0.006 \pm 0.048$ \\
-  $R$ & $4.219 \pm 4.623$ & & $2^*$ \\
-  $\varepsilon$ & $0.127 \pm 1.144$ & & $0.5^*$ \\
-  $\kappa$ & $1.686 \pm 0.398$ & \\
-  $P_{loss}$ & $-0.197 \pm 0.048$ & $-0.286 \pm 0.042$ & $-0.275 \pm 0.042$ \\
-  $r^2$ & $0.713$ & $0.685$ & $0.683$ \\
-  \hline
- \end{tabular}
- 
- \vspace{1em}
- poor fitting in $R$, $\varepsilon$, $\kappa$ due to restricted range in dataset
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Reduced fitting parameter set captures I-Mode physics}
-
- \begin{columns}[c]
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_1_Ploss_sep.pdf}
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_3_Ploss_sep.pdf}
- \end{columns}
- 
- \vspace{1em}
- \large
- Both fits capture weak degradation of $\tau_E$ with heating power, strong response to current, field
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Thought experiment: apply ITER98-like size dependence to I-mode scaling, extrapolate to larger machines?}
-
- \begin{columns}[c]
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_sep.pdf}
-  \column{0.5\textwidth}
-   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_extrap.pdf}
- \end{columns}
- 
- \large
- Apply fixed $R^2 \sqrt{\varepsilon}$ size scaling -- does not impact C-Mod data fit.  Weak degradation $\tau_E \sim P_{loss}^{-0.27}$ extrapolates highly favorably to large devices -- $\tau_E \sim \SI{8}{\second}$ for ITER!
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}
-
- \large
- \begin{block}{I-mode behavior beneficial for global performance, confinement}
-  \begin{itemize}
-   \item high temperature pedestal supports steep core $\nabla T$, comparable pressure and confinement despite relaxed pedestal
-   \item stored energy responds strongly to heating power, fueling, consistent with pedestal response
-   \begin{itemize}
-    \large
-    \item good news: in burning plasma, alpha heating power $\sim n_e^2$
-   \end{itemize}
-  \end{itemize}
- \end{block}
- 
- \begin{block}{First-pass confinement scaling laws consistent with observed behaviors}
-  \begin{itemize}
-   \item single-machine scaling captures strong response to current, field, weak degradation with heating power ($\tau_E \sim P^{-\alpha}$, $\alpha < 0.3$)
-   \begin{itemize}
-    \large
-    \item consistent with assumptions in ITER simulations leading to $Q=10$ scenario\footnote[6]{DG Whyte, APS-DPP Nov. 2011}
-   \end{itemize}
-   \item extrapolates to $\tau_E \sim \SI{8}{\second}$ for ITER(!)
-  \end{itemize}
- \end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Outline}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
  \setbeamercolor{alerted text}{fg=black,bg=}
  \usebeamercolor{normal text}
-
-\begin{itemize}
+ 
  \large
- \item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
  \begin{itemize}
-  \large
-  \item Pedestal response to fueling, heating power
-  \item Pedestal widths and gradients
-  \item Global performance and confinement scalings
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \item \textbf{Pedestal Modeling \& Theory}
+  \vspace{0.5em}
+  \item \textbf{ELMy H-Mode Physics}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestals}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{I-Mode Pedestal Stability}
+   \begin{itemize}
+    \large
+    \item peeling-ballooning MHD, KBM modeling
+    \item ELM characterization
+   \end{itemize}}
+  \vspace{0.5em}
+  \item \textbf{I-mode Global Performance \& Confinement}
+  \vspace{0.5em}
+  \item \textbf{Summary, Future Work, \& Questions}
  \end{itemize}
- \vspace{0.5em}
- \alert<+>{\item \textbf{I-Mode Pedestal Stability}
- \begin{itemize}
-  \large
-  \item P-B MHD, KBM modeling
-  \item ELM characterization
- \end{itemize}}
- \vspace{0.5em}
- \item \textbf{Summary, Future Work, \& Questions}
-\end{itemize}
 
 \end{frame}
 
@@ -1125,7 +912,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Including in low-field, low-energy cases\\ exhibiting apparent ELMs}
+\begin{frame}{Including in low-field, low-energy cases\\ exhibiting apparent ELMs(?)}
 
  \includegraphics[width=\textwidth]{graphics/IModeModeling/1120913026_ELITE_stitch.pdf}
 
@@ -1133,7 +920,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{I-mode pedestal modeled to be below KBM threshold\\ as well, including cases with ELMs}
+\begin{frame}{I-mode pedestal modeled to be below KBM threshold\\ as well, including cases with ELMs(?)}
 
  \begin{columns}[c]
   \column{0.6\textwidth}
@@ -1178,7 +965,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \end{itemize}
  
  \vspace{1em}
- observations of ELMs in I-mode based on $H_\alpha$ spikes, in most cases ($\sim$ 70\%) tied to the sawtooth heat pulse reaching the edge -- good place to begin!
+ observations of ELM candidates in I-mode based on $H_\alpha$ spikes, in most cases ($\sim$ 70\%) tied to the sawtooth heat pulse reaching the edge -- good place to begin!
 
 \end{frame}
 
@@ -1281,31 +1068,238 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Outline}
+\begin{frame}
 
  \setbeamercolor{normal text}{fg=gray,bg=}
  \setbeamercolor{alerted text}{fg=black,bg=}
  \usebeamercolor{normal text}
-
-\begin{itemize}
+ 
  \large
- \item \textbf{I-Mode Pedestals \& Global Performance}\footnote[2]{JR Walk \emph{et al.}, \emph{Physics of Plasmas} \textbf{21} (2014)}$^,$\footnote[3]{\emph{Invited talk}, APS-DPP Nov. 2013}
  \begin{itemize}
-  \large
-  \item Pedestal response to fueling, heating power
-  \item Pedestal widths and gradients
-  \item Global performance and confinement scalings
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \item \textbf{Pedestal Modeling \& Theory}
+  \vspace{0.5em}
+  \item \textbf{ELMy H-Mode Physics}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestals}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestal Stability}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{I-mode Global Performance \& Confinement}
+   \begin{itemize}
+    \large
+    \item core profile impact and performance
+    \item I-mode confinement scalings
+   \end{itemize}}
+  \vspace{0.5em}
+  \item \textbf{Summary, Future Work, \& Questions}
  \end{itemize}
- \vspace{0.5em}
- \item \textbf{I-Mode Pedestal Stability}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Pedestal impacts core, global performance}
+
+ \centering
+ \includegraphics[width=0.65\textwidth]{graphics/IModePedestal/p95_W.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Strong temperature pedestal supports high\\ core temperature, pressure}
+
+ \begin{columns}[c]
+  \column{0.45\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/coreprof_v2.pdf}
+  \only<1>{\column{0.55\textwidth}
+   \begin{itemize}
+    \large
+    \item stiff ($R/L_{T_e} \sim$ fixed) temperature profiles $\rightarrow$ higher $T_{ped}$ supports greatly increased core temperatures
+    \item provided moderate density peaking ($n_{e,0}/\langle n_e \rangle \sim 1.1-1.3$ in I-mode), reaches comparable core, vol-average pressure despite relaxed $p_{ped}$
+    \item fusion-reactive plasma where $T_e > \SI{4}{\kilo\electronvolt}$, high $T_{ped}$ maximizes fusing volume
+   \end{itemize}}
+   \only<2>{\column{0.55\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/betan_H_i_e.pdf}
+   
+   \large
+   $\rightarrow$ same $\langle \beta_N \rangle$, normalized confinement to ELMy H-mode   
+   }
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Energy confinement lacks degradation with heating power}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \begin{itemize}
+    \large
+    \item Stored energy $W \sim P \tau_E$
+    \vspace{0.5em}
+    \item for H-mode, expect $\tau_E \sim I_p$, with power degradation $\tau_E \sim P^{-0.7}$ thus $W \sim I_p P^{0.3}$
+    \vspace{0.5em}
+    \item I-mode stored energy $W \sim I_p P_{net} \rightarrow$ little/no degradation of $\tau_E$ with heating power
+    \vspace{0.5em}
+    \item reflects lack of MHD limit on pedestal
+   \end{itemize}
+  \column{0.5\textwidth}
+   \centering
+   \includegraphics[width=0.85\columnwidth]{graphics/IModePedestal/PIp_W_scale.pdf}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{...As well as with fueling}
+
+ \begin{columns}[c]
+  \column{0.6\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/nebar_W_i_e.pdf}
+  \column{0.4\textwidth}
+   \begin{itemize}
+    \large
+    \item I-mode stored energy set by pedestal pressure, responding strongly to fueling
+    \vspace{0.5em}
+    \item ELMy H-mode stored energy set by pedestal $\beta_p$, limited by MHD constraint -- mainly increase pedestal $\beta_p$ with stronger shaping, flat relation with fueling
+   \end{itemize}
+ \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{First pass at an I-mode confinement scaling}
+
+ \large
+ Following practice in ITER89, ITER98 scalings, express I-mode energy confinement as a power law of the form
+ 
+ \begin{equation*}
+  \tau_E = C \; I_p^{\alpha_{I_p}} \; B_T^{\alpha_{B_T}} \; \overline{n}_e^{\alpha_{n_e}} \; R^{\alpha_R} \; \varepsilon^{\alpha_\varepsilon} \; \kappa^{\alpha_\kappa} \; P_{loss}^{\alpha_P}
+ \end{equation*}
+ 
+ Using high-res pedestal database plus older forward- and reversed-field datasets for expanded parameter range
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Reduced fitting parameter set captures I-mode physics}
+
+\large
+\centering
+\begin{tabular}{cccc}
+  \hline
+  & (a) & (b) & (c) \\
+  \hline
+  $C$ & $0.040 \pm 0.066$ & $0.014 \pm 0.002$ & $0.056 \pm 0.008$ \\
+  $I_p$ & $0.686 \pm 0.074$ & $0.685 \pm 0.076$ & $0.676 \pm 0.077$ \\
+  $B_T$ & $0.698 \pm 0.075$ & $0.768 \pm 0.072$ & $0.767 \pm 0.072$ \\
+  $\overline{n}_e$ & $-0.077 \pm 0.055$ & $0.017 \pm 0.048$ & $0.006 \pm 0.048$ \\
+  $R$ & $4.219 \pm 4.623$ & & $2^*$ \\
+  $\varepsilon$ & $0.127 \pm 1.144$ & & $0.5^*$ \\
+  $\kappa$ & $1.686 \pm 0.398$ & \\
+  $P_{loss}$ & $-0.197 \pm 0.048$ & $-0.286 \pm 0.042$ & $-0.275 \pm 0.042$ \\
+  $r^2$ & $0.713$ & $0.685$ & $0.683$ \\
+  \hline
+ \end{tabular}
+ 
+ \vspace{1em}
+ poor fitting in $R$, $\varepsilon$, $\kappa$ due to restricted range in dataset
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Reduced fitting parameter set captures I-Mode physics}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_1_Ploss_sep.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_3_Ploss_sep.pdf}
+ \end{columns}
+ 
+ \vspace{1em}
+ \large
+ Both fits capture weak degradation of $\tau_E$ with heating power, strong response to current, field
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Thought experiment: apply ITER98-like size dependence to I-mode scaling, extrapolate to larger machines?}
+
+ \begin{columns}[c]
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_sep.pdf}
+  \column{0.5\textwidth}
+   \includegraphics[width=\columnwidth]{graphics/IModePedestal/tauE_6_Ploss_extrap.pdf}
+ \end{columns}
+ 
+ \large
+ Apply fixed $R^2 \sqrt{\varepsilon}$ size scaling -- does not impact C-Mod data fit.  Weak degradation $\tau_E \sim P_{loss}^{-0.27}$ extrapolates highly favorably to large devices -- $\tau_E \sim \SI{8}{\second}$ for ITER!
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \large
+ \begin{block}{I-mode behavior beneficial for global performance, confinement}
+  \begin{itemize}
+   \item high temperature pedestal supports steep core $\nabla T$, comparable pressure and confinement despite relaxed pedestal
+   \item stored energy responds strongly to heating power, fueling, consistent with pedestal response
+   \begin{itemize}
+    \large
+    \item good news: in burning plasma, alpha heating power $\sim n_e^2$
+   \end{itemize}
+  \end{itemize}
+ \end{block}
+ 
+ \begin{block}{First-pass confinement scaling laws consistent with observed behaviors}
+  \begin{itemize}
+   \item single-machine scaling captures strong response to current, field, weak degradation with heating power ($\tau_E \sim P^{-\alpha}$, $\alpha < 0.3$)
+   \begin{itemize}
+    \large
+    \item consistent with assumptions in ITER simulations leading to $Q=10$ scenario\footnote[7]{DG Whyte, APS-DPP Nov. 2011}
+   \end{itemize}
+   \item extrapolates to $\tau_E \sim \SI{8}{\second}$ for ITER(!)
+  \end{itemize}
+ \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \setbeamercolor{normal text}{fg=gray,bg=}
+ \setbeamercolor{alerted text}{fg=black,bg=}
+ \usebeamercolor{normal text}
+ 
+ \large
  \begin{itemize}
-  \large
-  \item P-B MHD, KBM modeling
-  \item ELM characterization
+  \item \textbf{Context \& Motivation}
+  \vspace{0.5em}
+  \item \textbf{Pedestal Modeling \& Theory}
+  \vspace{0.5em}
+  \item \textbf{ELMy H-Mode Physics}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestals}
+  \vspace{0.5em}
+  \item \textbf{I-Mode Pedestal Stability}
+  \vspace{0.5em}
+  \item \textbf{I-mode Global Performance \& Confinement}
+  \vspace{0.5em}
+  \alert<+>{\item \textbf{Summary, Future Work, \& Questions}}
  \end{itemize}
- \vspace{0.5em}
- \alert<+>{\item \textbf{Summary, Future Work, \& Questions}}
-\end{itemize}
 
 \end{frame}
 
@@ -1439,20 +1433,6 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{}
-
- \begin{center}
-  \LARGE{ELMy H-mode}
- \end{center}
- 
- \begin{tikzpicture}[overlay]
-  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
- \end{tikzpicture}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{Alternate models to consider}
 
  \begin{block}{\large Ion-orbit-loss models}
@@ -1470,6 +1450,20 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
    \item width set by neutral mean free path, $\lambda_{neutral} \sim 1/n_e$
   \end{itemize}
  \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+
+ \begin{center}
+  \LARGE{ELMy H-mode}
+ \end{center}
+ 
+ \begin{tikzpicture}[overlay]
+  \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+ \end{tikzpicture}
 
 \end{frame}
 
@@ -1515,6 +1509,24 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Minimal dependence of normalized width on shaping}
+
+ \centering
+ \includegraphics[width=0.8\textwidth]{graphics/ELMy/shaping_deltanorm.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{no unambiguous dependence of width on toroidal field}
+
+ \centering
+ \includegraphics[width=0.65\textwidth]{graphics/ELMy/Bt_deltanorm.pdf}
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{}
 
  \begin{center}
@@ -1524,6 +1536,17 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{tikzpicture}[overlay]
   \node[anchor=east,xshift=-2ex,yshift=-20.5ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
  \end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{In contrast, density set by operator fueling,\\ with L-mode-like profile}
+
+ \includegraphics[width=\textwidth]{graphics/IModePedestal/imode_density.pdf}
+ 
+ \large
+ Plasma current a poor predictor of pedestal density, in contrast to transport-limited EDA H-modes -- easy density control
 
 \end{frame}
 
@@ -1721,7 +1744,7 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 \begin{frame}
 
- Euler-Lagrange equation minimizing the energy may be expressed in this harmonic expansion by a set of coupled equations\footnote[7]{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}
+ Euler-Lagrange equation minimizing the energy may be expressed in this harmonic expansion by a set of coupled equations\footnote[4]{HR Wilson \emph{et al.}, \emph{Physics of Plasmas} \textbf{9} (2002)}
  
  \begin{equation*}
   A^{(2)}_{m,m'} \frac{d^2 u_m}{d\psi^2} + A^{(1)}_{m,m'} \frac{du_m}{d\psi} + A^{(0)}_{m,m'} u_m = 0
