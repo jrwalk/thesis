@@ -1311,27 +1311,13 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
  \begin{block}{ELMy H-mode pedestal well-described by EPED physics assumptions}
   $\rightarrow$ we understand the limitations on baseline H-mode pedestals
  \end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{ELMy H-mode}
-
- \begin{block}{\large ELMy H-mode pedestal well-described by EPED physics assumptions}
- \large
- \begin{itemize}
-  \item width set by KBM limit, $\Delta_\psi \sim \beta_{p,ped}^{1/2}$
-  \item pressure pedestal height limited by peeling-ballooning MHD, $p_{ped} \sim \Delta_\psi^{3/4}$; particularly, ballooning limit $\nabla p \sim I_p^2$
-  \item EPED accurately predicts pedestal width, height, within $\pm 20\%$ systematic expected error
- \end{itemize}
- \end{block}
  
- \begin{block}{\large C-Mod results motivate further development to EPED}
-  \begin{itemize}
-   \large
-   \item careful treatment of diamagnetic stabilization necessary for high-collisionality C-Mod pedestals
-   \item extend model to handle more general equilibria
+ \begin{block}{I-mode evindently not subject to these limits!}
+  \begin{itemize}   
+   \item strong response of pedestal to fueling, heating power $\rightarrow$ desirable operator control, path to increase pedestal $\beta$ -- not limited by MHD stability, transport constraints, reflected in global responses
+   \item consistent with access, $Q=10$ operation on ITER
+   \item temperature pedestal \emph{without density pedestal} desirable for reactor operation -- get high core pressure, fusion reactivity with good fueling behavior, impurity handling
+   \item pedestals inherently stable against systematic large ELMs -- we see either benign events, or small, intermittent events of little concern
   \end{itemize}
  \end{block}
 
@@ -1339,17 +1325,41 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{I-mode pedestals \& performance}
+\begin{frame}{Questions remain}
 
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{I-mode stability \& ELM characterization}
-
-
+ \large
+ \only<1>{
+ \begin{block}{further ELMy H-mode study?}
+  \begin{itemize}
+   \item C-Mod work has motivated development of EPED to handle higher collisionality, stronger diamagnetic stabilization effects
+   \item extend EPED implementation to handle more general equilibria -- model equilibria not a good approximation of C-Mod shape
+  \end{itemize}
+ \end{block}
+ 
+ \begin{block}{I-mode at higher densities}
+  \begin{itemize}
+   \item higher densities desirable for burning plasma -- $P_\alpha \sim n_e^2$
+   \item I-mode currently restricted to lower densities -- how hard can we push while maintaining temperature pedestal?
+   \item necessary for projected ITER operation
+  \end{itemize}
+ \end{block}
+ }
+ 
+ \only<2>{
+ \begin{block}{I-mode access on other devices}
+  \begin{itemize}
+   \item early experiments on DIII-D, ASDEX Upgrade (plus some I-mode-like observations on JET?)
+   \item access thresholds not well-understood -- need to better characterize shape, collisionality range, power threshold, etc.
+  \end{itemize}
+ \end{block}
+ 
+ \begin{block}{Pedestal characterization -- WCM, ELMs + $H_\alpha$ spikes}
+  \begin{itemize}
+   \item pedestal regulated by WCM, but underlying physics not well-understood $\rightarrow$ experiments to study mode radial extent, localization, amplitude, gyrokinetic modeling efforts
+   \item further study in ELMs/$H_\alpha$ events -- difficult to measure profiles suitable for stability modeling on such short timescales
+  \end{itemize}
+ \end{block}
+ }
 
 \end{frame}
 
@@ -1799,6 +1809,30 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
   L_0 f &= \frac{\partial}{\partial y} \left\{ \frac{1}{JR^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] \frac{\partial f}{\partial y} \right\}\\
   &\qquad + f \left\{ \frac{2J}{B^2} \frac{dp}{d\psi} \frac{\partial}{\partial \psi} \left( p + \frac{B^2}{2} \right) - \frac{F}{B^4} \frac{dp}{d\psi} \left( \int^y \frac{d\nu}{d\psi} dy \right) \frac{\partial B^2}{\partial y} \right\}\\
   M_0 f &= \frac{J}{R^2 B_p^2} \left[ 1 + \left( \frac{R^2 B_p^2}{B} \int^y \frac{d\nu}{d\psi} dy \right)^2 \right] f
+  \end{aligned}
+ \end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \large
+ Stability boundary for current-driven modes set by
+ 
+ \begin{equation*}
+  \sqrt{1-4D_M} > 1 + \frac{2}{2\pi \left(dq/d\psi\right)} \oint \frac{j_\parallel B}{R^2 B_p^3} dl
+ \end{equation*}
+ 
+ where
+ 
+ \begin{equation*}
+  \begin{aligned}
+   D_M &= -\frac{C_1}{C_2}\\
+   C_1 &= \frac{p'}{2\pi} \oint \frac{\partial J}{\partial \psi} d\chi - \frac{(p')^2}{2\pi} \oint \frac{J}{B_p}^2 d\chi\\
+   &\quad + Fp' \oint \frac{J}{R^2 B_p^2} d\chi \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1} \left[ \frac{Fp'}{2\pi} \oint \frac{J}{R^2 B_p^2} d\chi - q' \right]\\
+   C_2 &= 2\pi (q')^2 \left[ \oint \frac{JB^2}{R^2 B_p^2} d\chi \right]^{-1}
   \end{aligned}
  \end{equation*}
 
