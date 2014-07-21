@@ -9,6 +9,7 @@
 \usepackage{amssymb,amsmath,amsfonts}
 \usepackage{tikz}
 \usepackage{siunitx}
+%\usepackage{ulem}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{itemize items}[square]
@@ -52,7 +53,7 @@
 
  \titlepage
  \begin{tikzpicture}[overlay]
-  \node[anchor=east,xshift=-2ex,yshift=3ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
+  \node[anchor=east,xshift=-2ex] at (current page.south east) {\includegraphics[height=2cm]{cmodlogo.eps}};
  \end{tikzpicture}
  
 \end{frame}
@@ -172,19 +173,19 @@
 
 \begin{frame}{The solution?}
  \large
- Under right conditions, plasma forms ``transport barrier'' in edge, with steep gradients in density and temperature -- the \emph{pedestal}
+ Under right conditions (shaping, heating power), plasma transitions to \textcolor{red}{``high confinement'' or H-mode} 
  
- $\rightarrow$ plasma transitions to \textcolor{red}{``high-confinement'' or H-mode}
+ $\rightarrow$ forms \emph{transport barrier} in edge, with steep gradients in density and temperature -- the \textcolor{red}{pedestal}
  
- \begin{itemize}
-  \item immediate factor of $\sim 2$ increase in energy confinement
-  \item pedestal supports higher core pressures $=$ fusion power density
- \end{itemize}
+ $\rightarrow$ pedestal supports higher core pressures = fusion power density
  
+ \vspace{-0.5em}
  \begin{emphblock}{}
   \centering
   pedestal height sets strong constraint on global performance
  \end{emphblock}
+ 
+ \includegraphics[width=\textwidth]{graphics/Other/prof_L_H.pdf}
 
 \end{frame}
 
@@ -205,7 +206,7 @@
   \end{itemize}
   \column{0.5\textwidth}
   \centering
-  \includegraphics[width=0.85\columnwidth]{graphics/HighPerformanceRegimes/trace_1110114003_v2.pdf}
+  \includegraphics[width=\columnwidth]{graphics/HighPerformanceRegimes/trace_1110114003_nofluct.pdf}
  \end{columns}
 
 \end{frame}
@@ -309,7 +310,7 @@ generally capable of stationary high performance without large ELMs
 
  \large
  \begin{itemize}
-  \item novel high-confinement regime pioneered on Alcator C-Mod, occupying intermediate parameter space between L-mode and H-mode access
+  \item novel high-confinement regime pioneered on Alcator C-Mod, occupying intermediate parameter space between L-mode and H-mode access, regulated by Weakly-Coherent Mode (WCM) fluctuation
   \vspace{0.5em}
   \item notably, decouples energy and particle transport -- forms H-mode-like temperature pedestal without accompanying density pedestal
   \vspace{0.5em}
@@ -410,7 +411,7 @@ generally capable of stationary high performance without large ELMs
   \vspace{0.5em}
   \item accounting for magnetic shear, KBM limit takes the form $\Delta_\psi \sim \beta_{p,ped}^{1/2}$ for pedestal width (in poloidal flux space)
   \vspace{0.5em}
-  \item onset threshold correlated with infinite-$n$ ideal ballooning MHD mode -- easily calculation nearly as accurate as more involved gyrokinetic+gyrofluid turbulence treatments
+  \item onset threshold correlated with infinite-$n$ ideal ballooning MHD mode -- easily calculated (BALOO code) nearly as accurately as more involved gyrokinetic+gyrofluid turbulence treatments
  \end{itemize}
 
 \end{frame}
@@ -545,8 +546,11 @@ no variation with collisionality, gyroradius, shaping, safety factor/magnetic sh
  
  \large
  \vspace{0.5em}
- Pedestal height $p_{ped} \sim \nabla p \times \Delta_p \rightarrow \sim I_p^2 \Delta_p$ from ballooning MHD
- predicted well by $\Delta_p \sim \sqrt{\beta_{p,ped}}$, less so by $\Delta_p \sim \rho_{i,pol}$
+ \begin{itemize}
+  \item Pedestal height $p_{ped} \sim \nabla p \times \Delta_p \rightarrow \sim I_p^2 \Delta_p$ from ballooning MHD
+  \item predicted well by $\Delta_p \sim \sqrt{\beta_{p,ped}} \sim \sqrt{n_{e} T_{e}}/I_p$ from KBM limit
+  \item spot-check: predicted less well by $\Delta_p \sim \rho_{i,pol} \sim \sqrt{T_e}/I_p$, as predicted by alternate models for pedestal width
+ \end{itemize} 
 
 \end{frame}
 
@@ -784,6 +788,25 @@ Pedestal width varies little over range of $3-5\%$ of poloidal flux, difficult t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{I-mode temperature, pressure pedestal widths\\ uncorrelated with physics parameters}
+
+ \large
+ \begin{columns}[c]
+  \column{0.25\textwidth}
+   \centering
+   \only<1>{\alert<1>{$\rho_{i,pol}$?}}
+   \onslide<2->{$\rho_{i,pol}$}
+  \column{0.25\textwidth}
+   \centering
+   \only<1-2>{\alert<2>{$\nu^*_{95}$?}}
+   \onslide<3->{$\nu^*_{95}$}
+  \column{0.25\textwidth}
+   \centering   
+   \only<1-3>{\alert<3>{$q_{95}$?}}
+   \onslide<4>{$q_{95}$}
+  \column{0.25\textwidth}
+   \centering
+   \alert<4>{$P_{net}/n_e$?}
+ \end{columns}
 
  \includegraphics<1>[width=\textwidth]{graphics/IModePedestal/rhoipol_widths.pdf}
  \includegraphics<2>[width=\textwidth]{graphics/IModePedestal/nustar_widths.pdf}
