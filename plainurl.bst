@@ -368,7 +368,7 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{f.~}{v.~}{ll}{, jj}"
+      "{ff~}{vv~}{ll}{, jj}"
       format.name$
       't :=
       nameptr #1 >

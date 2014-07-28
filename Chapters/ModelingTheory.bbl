@@ -33,7 +33,7 @@ A.~E. Hubbard.
 \newblock {\em Plasma Physics and Controlled Fusion}, 42(5A):A15, 2000.
 
 \bibitem{Hughes2005}
-J.~W. Hughes.
+Jerry~W. Hughes.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/34436} {{\em Edge
   Transport Barrier Studies On the {Alcator C-Mod} Tokamak}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2005.
@@ -148,7 +148,7 @@ Y.~Kamada, T.~Hatae, T.~Fukuda and T.~Takizuka.
 \newblock {\em Plasma Physics and Controlled Fusion}, 41(11):1371, 1999.
 
 \bibitem{Wilson1997}
-H.~R. Wilson and J.~W. Connor.
+H~R Wilson and J~W Connor.
 \newblock Ballooning instabilities, poloidal flow and the temperature pedestal
   at the tokamak edge.
 \newblock In {\em Proceedings of the 24th European Physical Society Conference
@@ -406,7 +406,7 @@ L.~Degtyarev, A.~Martynov, S.~Medvedev, F.~Troyon, L.~Villard et~al.
 \newblock {\em Computer Physics Communications}, 103(1):10--27, 1997.
 
 \bibitem{Medvedev2006}
-S.~Y. Medvedev, A.~A. Martynov, Y.~R. Martin, O.~Sauter and L.~Villard.
+S.~{Yu}. Medvedev, A.~A. Martynov, Y.~R. Martin, O.~Sauter and L.~Villard.
 \newblock \href {http://stacks.iop.org/0741-3335/48/i=7/a=003} {Edge
   kink/ballooning mode stability in tokamaks with separatrix}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 48(7):927, 2006.
@@ -446,7 +446,7 @@ P.~B. Snyder and G.~W. Hammett.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Snyder1999}
-P.~B. Snyder.
+Philip~B. Snyder.
 \newblock \href
   {http://scholar.google.com/citations?view_op=view_citation&hl=en&user=F-VRDmoAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=F-VRDmoAAAAJ:l7t_Zn2s7bgC}
   {{\em Gyrofluid Theory and Simulation of Electromagnetic Turbulence and
@@ -512,7 +512,7 @@ A.~Diallo, J.~W. Hughes, M.~Greenwald, B.~LaBombard, E.~Davis et~al.
 \newblock {\em Physical Review Letters}, 112:115001, Mar 2014.
 
 \bibitem{Snyder2010}
-P.~Snyder, R.~Groebner, J.~Hughes, T.~Osborne, M.~Beurskens et~al.
+P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
 \newblock \href
   {http://www-pub.iaea.org/MTCD/Meetings/PDFplus/2010/cnl180/cnl180_papers/ths_1-1.pdf}
   {A first principles predictive model of the pedestal height and width:

@@ -65,7 +65,7 @@ R.~J. Groebner, K.~H. Burrell and R.~P. Seraydarian.
 \newblock {\em Physical Review Letters}, 64(25):3015--3018, Jun 1990.
 
 \bibitem{Burrell1999}
-K.~H. Burrell.
+Keith~H. Burrell.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.873728} {Tests
   of causality: Experimental evidence that sheared {$E \times B$} flow alters
   turbulence and transport in tokamaks}.
@@ -514,7 +514,7 @@ P.~T. Lang, A.~Alonso, B.~Alper, E.~Belonohy, A.~Boboc et~al.
 \newblock {\em Nuclear Fusion}, 51(3):033010, 2011.
 
 \bibitem{Lang2013}
-P.~Lang, D.~Frigione, A.~G\'araud, T.~Alarcon, P.~Bennett et~al.
+P.T. Lang, D.~Frigione, A.~G\'araud, T.~Alarcon, P.~Bennett et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073010} {{ELM} pacing
   and trigger investigations at {JET} with the new {ITER}-like wall}.
 \newblock {\em Nuclear Fusion}, 53(7):073010, 2013.
@@ -656,7 +656,7 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
 \newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
 
 \bibitem{Hughes2005}
-J.~W. Hughes.
+Jerry~W. Hughes.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/34436} {{\em Edge
   Transport Barrier Studies On the {Alcator C-Mod} Tokamak}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2005.
@@ -792,7 +792,7 @@ A.~E. Hubbard, D.~G. Whyte, R.~M. Churchill, A.~Dominguez, J.~W. Hughes et~al.
 \newblock {\em Nuclear Fusion}, 52(11):114009, 2012.
 
 \bibitem{Dominguez2012}
-A.~Dominguez.
+Arturo Dominguez.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
   Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2012.
@@ -813,7 +813,7 @@ N.~T. Howard, M.~Greenwald and J.~E. Rice.
 \newblock {\em Review of Scientific Instruments}, 82(3):033512, 2011.
 
 \bibitem{McDermott2009}
-R.~M. McDermott.
+Rachael~M. McDermott.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/54462} {{\em Edge Radial
   Electric Field Studies via Charge Exchange Recombination Spectroscopy on the
   Alcator C-Mod Tokamak}}.
@@ -847,7 +847,7 @@ A.~E. White, P.~Phillips, D.~G. Whyte, A.~E. Hubbard, C.~Sung et~al.
 \newblock {\em Nuclear Fusion}, 51(11):113005, 2011.
 
 \bibitem{Cziegler2011}
-I.~Cziegler.
+Istvan Cziegler.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/77484} {{\em Turbulence
   and Transport Phenomena in Edge and Scrape-Off Layer Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2011.
