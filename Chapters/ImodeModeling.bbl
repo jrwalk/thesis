@@ -1,20 +1,20 @@
 \begin{thebibliography}{10}
 
 \bibitem{Loarte2003}
-A~Loarte, G~Saibene, R~Sartori, D~Campbell, M~Becoulet et~al.
+A.~Loarte, G.~Saibene, R.~Sartori, D.~Campbell, M.~Becoulet et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=302} {Characteristics
   of type {I} {ELM} energy and particle losses in existing devices and their
   extrapolation to {ITER}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1549, 2003.
 
 \bibitem{Federici2003}
-G~Federici, A~Loarte and G~Strohmayer.
+G.~Federici, A.~Loarte and G.~Strohmayer.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=301} {Assessment of
   erosion of the {ITER} divertor targets during type {I} {ELMs}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1523, 2003.
 
 \bibitem{Groebner2013}
-R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+R.~J. Groebner, C.~S. Chang, J.~W. Hughes, R.~Maingi, P.~B. Snyder et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
   understanding of physics processes in pedestal structure, leading to improved
   predictive capability for {ITER}}.
@@ -27,7 +27,7 @@ P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
 \newblock {\em Physics of Plasmas}, 16(5):056118, 2009.
 
 \bibitem{Snyder2011}
-P.B. Snyder, R.J. Groebner, J.W. Hughes, T.H. Osborne, M.~Beurskens et~al.
+P.~B. Snyder, R.~J. Groebner, J.~W. Hughes, T.~H. Osborne, M.~Beurskens et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/51/i=10/a=103016} {A
   first-principles predictive model of the pedestal height and width:
   development, testing and {ITER} optimization with the {EPED} model}.
@@ -40,21 +40,21 @@ H.~R. Wilson, P.~B. Snyder, G.~T.~A. Huysmans and R.~L. Miller.
 \newblock {\em Physics of Plasmas}, 9(4):1277--1286, 2002.
 
 \bibitem{Snyder2004}
-P.B. Snyder, H.R. Wilson, J.R. Ferron, L.L. Lao, A.W. Leonard et~al.
+P.~B. Snyder, H.~R. Wilson, J.~R. Ferron, L.~L. Lao, A.~W. Leonard et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/44/i=2/a=014} {{ELMs} and
   constraints on the {H}-mode pedestal: peeling–ballooning stability
   calculation and comparison with experiment}.
 \newblock {\em Nuclear Fusion}, 44(2):320, 2004.
 
 \bibitem{Wilson2006}
-H~R Wilson, S~C Cowley, A~Kirk and P~B Snyder.
+H.~R. Wilson, S.~C. Cowley, A.~Kirk and P.~B. Snyder.
 \newblock \href {http://stacks.iop.org/0741-3335/48/i=5A/a=S06}
   {Magneto-hydrodynamic stability of the {H}-mode transport barrier as a model
   for edge localized modes: an overview}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 48(5A):A71, 2006.
 
 \bibitem{Snyder1999}
-Philip~B. Snyder.
+P.~B. Snyder.
 \newblock \href
   {http://scholar.google.com/citations?view_op=view_citation&hl=en&user=F-VRDmoAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=F-VRDmoAAAAJ:l7t_Zn2s7bgC}
   {{\em Gyrofluid Theory and Simulation of Electromagnetic Turbulence and
@@ -65,7 +65,7 @@ Philip~B. Snyder.
 J.~Candy.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1954123} {Beta
   scaling of transport in microturbulence simulations}.
-\newblock {\em Physics of Plasmas}, 12(7):--, 2005.
+\newblock {\em Physics of Plasmas}, 12(7):072307, 2005.
 
 \bibitem{Snyder2001}
 P.~B. Snyder and G.~W. Hammett.
@@ -74,17 +74,17 @@ P.~B. Snyder and G.~W. Hammett.
 \newblock {\em Physics of Plasmas}, 8(3):744--749, 2001.
 
 \bibitem{Walk2012}
-J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+J.~R. Walk, P.~B. Snyder, J.~W. Hughes, J.~L. Terry, A.~E. Hubbard et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
   {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
   comparison with the {EPED} model}.
 \newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
 
 \bibitem{Han2013}
-Hyunsun Han, Ohjin Kwon and J.~Y. Kim.
+H.~Han, O.~Kwon and J.~Y. Kim.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4825142}
   {Predictive modeling of pedestal structure in {KSTAR} using {EPED} model}.
-\newblock {\em Physics of Plasmas}, 20(10):--, 2013.
+\newblock {\em Physics of Plasmas}, 20(10):102511, 2013.
 
 \bibitem{Snyder2012}
 P.~B. Snyder, T.~H. Osborne, K.~H. Burrell, R.~J. Groebner, A.~W. Leonard
@@ -100,20 +100,20 @@ J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
 \newblock \href
   {http://scitation.aip.org/content/aip/journal/pop/21/5/10.1063/1.4872220}
   {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
-\newblock {\em Physics of Plasmas}, 21(5):--, 2014.
+\newblock {\em Physics of Plasmas}, 21(5):056103, 2014.
 
 \bibitem{Snyder2003}
-P~B Snyder and H~R Wilson.
+P.~B. Snyder and H.~R. Wilson.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=308} {Ideal
   magnetohydrodynamic constraints on the pedestal temperature in tokamaks}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1671, 2003.
 
 \bibitem{Snyder2013}
-Philip~B. Snyder.
+P.~B. Snyder.
 \newblock Personal communication, August 2013.
 
 \bibitem{Lao1985}
-L.L. Lao, H.~St. John, R.D. Stambaugh, A.G. Kellman and W.~Pfeiffer.
+L.~L. Lao, H.~{St. John}, R.~D. Stambaugh, A.~G. Kellman and W.~Pfeiffer.
 \newblock \href {http://stacks.iop.org/0029-5515/25/i=11/a=007} {Reconstruction
   of current profile parameters and plasma shapes in tokamaks}.
 \newblock {\em Nuclear Fusion}, 25(11):1611, 1985.
@@ -126,7 +126,7 @@ O.~Sauter, C.~Angioni and Y.~R. Lin-Liu.
 \newblock {\em Physics of Plasmas}, 6(7):2834--2839, 1999.
 
 \bibitem{Whyte2010}
-D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+D.~G. Whyte, A.~E. Hubbard, J.~W. Hughes, B.~Lipschultz, J.~E. Rice et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
   an {H}-mode energy confinement regime with {L}-mode particle transport in
   {Alcator C-Mod}}.
@@ -142,7 +142,7 @@ A.~E. Hubbard, D.~G. Whyte, R.~M. Churchill, I.~Cziegler, A.~Dominguez et~al.
 I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
   {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
-\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
+\newblock {\em Physics of Plasmas}, 20(5):055904, 2013.
 
 \bibitem{Hubbard2001}
 A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
@@ -151,7 +151,7 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
 \newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
 
 \bibitem{Dominguez2012}
-Arturo Dominguez.
+A.~Dominguez.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
   Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2012.
@@ -164,7 +164,7 @@ J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
   Physical Sciences}, 365(1720):1--17, 1979.
 
 \bibitem{Miller1987}
-R.L. Miller and J.W.~Van Dam.
+R.~L. Miller and J.~W. {Van Dam}.
 \newblock \href {http://stacks.iop.org/0029-5515/27/i=12/a=010} {Hot particle
   stabilization of ballooning modes in tokamaks}.
 \newblock {\em Nuclear Fusion}, 27(12):2101, 1987.

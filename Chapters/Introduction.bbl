@@ -31,7 +31,7 @@ H.~Gruenspecht.
   report 2012}, 2013.
 
 \bibitem{Freidberg2007}
-J.P. Freidberg.
+J.~P. Freidberg.
 \newblock \href {http://books.google.com/books?id=Vyoe88GEVz4C} {{\em Plasma
   Physics and Fusion Energy}}.
 \newblock Cambridge books online. Cambridge University Press, 2007.
@@ -44,25 +44,25 @@ J.~Wesson.
   Press, 2011.
 
 \bibitem{Chen1984}
-F.F. Chen.
+F.~F. Chen.
 \newblock \href {http://books.google.com/books?id=ToAtqnznr80C} {{\em
   Introduction to Plasma Physics and Controlled Fusion}}.
 \newblock Springer, 1984.
 
 \bibitem{Krane}
-K.S. Krane.
+K.~S. Krane.
 \newblock \href {http://books.google.com/books?id=ConwAAAAMAAJ} {{\em
   Introductory Nuclear Physics}}.
 \newblock Wiley, 1987.
 
 \bibitem{CRC}
-W.M. Haynes.
+W.~M. Haynes.
 \newblock \href {http://books.google.com/books?id=-BzP7Rkl7WkC} {{\em {CRC}
   Handbook of Chemistry and Physics, 93rd Edition}}.
 \newblock Taylor \& Francis, 2012.
 
 \bibitem{Johnson1999}
-Jeffrey~R. Johnson, Timothy~D. Swindle and Paul~G. Lucey.
+J.~R. Johnson, T.~D. Swindle and P.~G. Lucey.
 \newblock \href {http://dx.doi.org/10.1029/1998GL900305} {Estimated solar
   wind-implanted helium-3 distribution on the moon}.
 \newblock {\em Geophysical Research Letters}, 26(3):385--388, 1999.
@@ -75,30 +75,30 @@ B.~Palaszewski.
   Propulsion Conference and Exhibit}, 2005.
 
 \bibitem{Freidberg1987}
-Jeffrey~P. Freidberg.
+J.~P. Freidberg.
 \newblock \href {http://books.google.com/books?id=UMDvAAAAMAAJ} {{\em Ideal
   Magnetohydrodynamics}}.
 \newblock Springer, 1987.
 
 \bibitem{Kesner1982}
-J.~Kesner, R.S. Post, B.D. McVey and D.K. Smith.
+J.~Kesner, R.~S. Post, B.~D. McVey and D.~K. Smith.
 \newblock \href {http://stacks.iop.org/0029-5515/22/i=4/a=009} {A tandem mirror
   with axisymmetric central-cell ion confinement}.
 \newblock {\em Nuclear Fusion}, 22(4):549, 1982.
 
 \bibitem{Meade2010}
-Dale Meade.
+D.~Meade.
 \newblock \href {http://stacks.iop.org/0029-5515/50/i=1/a=014004} {50 years of
   fusion research}.
 \newblock {\em Nuclear Fusion}, 50(1):014004, 2010.
 
 \bibitem{Westerhof2012}
-Egbert Westerhof.
+E.~Westerhof.
 \newblock \href {http://epubs.ans.org/?a=13518} {Non-inductive current drive}.
 \newblock {\em Fusion Science and Technology}, 61:312--319, 2012.
 
 \bibitem{Bonoli2014}
-Paul~T. Bonoli.
+P.~T. Bonoli.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4864497} {Review
   of recent experimental and modeling progress in the lower hybrid range of
   frequencies at {ITER} relevant parameters}.
@@ -111,7 +111,7 @@ R.~Prater.
 \newblock {\em Physics of Plasmas}, 11(5):2349--2376, 2004.
 
 \bibitem{Gormezano2007}
-C.~Gormezano, A.C.C. Sips, T.C. Luce, S.~Ide, A.~Becoulet et~al.
+C.~Gormezano, A.~C.~C. Sips, T.~C. Luce, S.~Ide, A.~Becoulet et~al.
 \newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/47/6/S06} {Chapter 6:
   Steady state operation}.
 \newblock {\em Nuclear Fusion}, 47(6):S285, 2007.
@@ -123,13 +123,13 @@ H.~Grad and H.~Rubin.
   of Atomic Energy}, volume~31, page 190, 1958.
 
 \bibitem{Shafranov1960}
-V.D. Shafranov.
+V.~D. Shafranov.
 \newblock {Grad-Shafranov} equation for {MHD} equilibrium in a torus.
 \newblock {\em Soviet Physics, Journal of Experimental and Theoretical
   Physics}, 26:682, 1960.
 
 \bibitem{Lao1985}
-L.L. Lao, H.~St. John, R.D. Stambaugh, A.G. Kellman and W.~Pfeiffer.
+L.~L. Lao, H.~{St. John}, R.~D. Stambaugh, A.~G. Kellman and W.~Pfeiffer.
 \newblock \href {http://stacks.iop.org/0029-5515/25/i=11/a=007} {Reconstruction
   of current profile parameters and plasma shapes in tokamaks}.
 \newblock {\em Nuclear Fusion}, 25(11):1611, 1985.
@@ -166,20 +166,21 @@ M.~Greenwald, N.~Basse, P.~Bonoli, R.~Bravenec, E.~Edlund et~al.
 \newblock {\em Fusion Science and Technology}, 51(3):266--287, 2007.
 
 \bibitem{Takase1996}
-Y~Takase, R~L Boivin, F~Bombarda, P~T Bonoli, C~L Fiore et~al.
+Y.~Takase, R.~L. Boivin, F.~Bombarda, P.~T. Bonoli, C.~L. Fiore et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/38/i=12/a=013} {Survey of
   {ICRF} heating experiments and enhanced performance modes in {Alcator
   C-Mod}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 38(12):2215, 1996.
 
 \bibitem{Wilson2009}
-J.R. Wilson, R.~Parker, M.~Bitter, P.T. Bonoli, C.~Fiore et~al.
+J.~R. Wilson, R.~Parker, M.~Bitter, P.~T. Bonoli, C.~Fiore et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/49/i=11/a=115015} {Lower
   hybrid heating and current drive on the {Alcator C-Mod} tokamak}.
 \newblock {\em Nuclear Fusion}, 49(11):115015, 2009.
 
 \bibitem{Loarte2007}
-A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
+A.~Loarte, B.~Lipschultz, A.~S. Kukushkin, G.~F. Matthews, P.~C. Stangeby
+  et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S04} {Chapter 4:
   Power and particle control}.
 \newblock {\em Nuclear Fusion}, 47(6):S203, 2007.
@@ -197,13 +198,13 @@ B.~LaBombard, J.~L. Terry, J.~W. Hughes, D.~Brunner, J.~Payne et~al.
 \newblock {\em Physics of Plasmas}, 18(5):056104, 2011.
 
 \bibitem{Greenwald1997}
-M.~Greenwald, R.L. Boivin, F.~Bombarda, P.T. Bonoli, C.L. Fiore et~al.
+M.~Greenwald, R.~L. Boivin, F.~Bombarda, P.~T. Bonoli, C.~L. Fiore et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/37/i=6/a=I07} {{H}-mode
   confinement in {Alcator C-Mod}}.
 \newblock {\em Nuclear Fusion}, 37(6):793, 1997.
 
 \bibitem{Lawson1957}
-J~D Lawson.
+J.~D. Lawson.
 \newblock \href {http://dx.doi.org/10.1088/0370-1301/70/1/303} {Some criteria
   for a power producing thermonuclear reactor}.
 \newblock {\em Proceedings of the Physical Society. Section B}, 70(1):6, 1957.
@@ -216,7 +217,7 @@ F.~Wagner, G.~Becker, K.~Behringer, D.~Campbell, A.~Eberhagen et~al.
 \newblock {\em Physical Review Letters}, 49(19):1408--1412, Nov 1982.
 
 \bibitem{Zohm1996}
-H~Zohm.
+H.~Zohm.
 \newblock \href {http://stacks.iop.org/0741-3335/38/i=2/a=001} {Edge localized
   modes ({ELMs})}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 38(2):105, 1996.
@@ -230,26 +231,26 @@ H~Zohm.
 \newblock {\em Nuclear Fusion}, 39(12):2175, 1999.
 
 \bibitem{Shimada2007}
-M.~Shimada, D.J. Campbell, V.~Mukhovatov, M.~Fujiwara, N.~Kirneva et~al.
+M.~Shimada, D.~J. Campbell, V.~Mukhovatov, M.~Fujiwara, N.~Kirneva et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S01} {Chapter 1:
   Overview and summary}.
 \newblock {\em Nuclear Fusion}, 47(6):S1, 2007.
 
 \bibitem{Loarte2003}
-A~Loarte, G~Saibene, R~Sartori, D~Campbell, M~Becoulet et~al.
+A.~Loarte, G.~Saibene, R.~Sartori, D.~Campbell, M.~Becoulet et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=302} {Characteristics
   of type {I} {ELM} energy and particle losses in existing devices and their
   extrapolation to {ITER}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1549, 2003.
 
 \bibitem{Federici2003}
-G~Federici, A~Loarte and G~Strohmayer.
+G.~Federici, A.~Loarte and G.~Strohmayer.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=301} {Assessment of
   erosion of the {ITER} divertor targets during type {I} {ELMs}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1523, 2003.
 
 \bibitem{Whyte2010}
-D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+D.~G. Whyte, A.~E. Hubbard, J.~W. Hughes, B.~Lipschultz, J.~E. Rice et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
   an {H}-mode energy confinement regime with {L}-mode particle transport in
   {Alcator C-Mod}}.

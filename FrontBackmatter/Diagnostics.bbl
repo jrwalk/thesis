@@ -7,13 +7,13 @@ J.~Sheffield.
 \newblock Academic Press, 1975.
 
 \bibitem{Hutchinson}
-I.H. Hutchinson.
+I.~H. Hutchinson.
 \newblock \href {http://books.google.com/books?id=pUUZKLR00RIC} {{\em
   Principles of Plasma Diagnostics}}.
 \newblock Cambridge University Press, 2005.
 
 \bibitem{Sheffield1972}
-J~Sheffield.
+J.~Sheffield.
 \newblock \href {http://stacks.iop.org/0032-1028/14/i=8/a=003} {The incoherent
   scattering of radiation from a high temperature plasma}.
 \newblock {\em Plasma Physics}, 14(8):783, 1972.
@@ -30,7 +30,7 @@ T.~Matoba, T.~Itagaki, T.~Yamauchi and A.~Funahashi.
 A.~C. Selden.
 \newblock \href {http://dx.doi.org/DOI: 10.1016/0375-9601(80)90276-5} {Simple
   analytic form of the relativistic {Thomson} scattering spectrum}.
-\newblock {\em Physics Letters A}, 79(5-6):405 -- 406, 1980.
+\newblock {\em Physics Letters A}, 79(5-6):405--406, 1980.
 
 \bibitem{Naito1993}
 O.~Naito, H.~Yoshida and T.~Matoba.
@@ -39,7 +39,7 @@ O.~Naito, H.~Yoshida and T.~Matoba.
 \newblock {\em Physics of Fluids B: Plasma Physics}, 5(11):4256--4258, 1993.
 
 \bibitem{Watterson1990}
-Reich Watterson and {Kuo-In} Chen.
+R.~Watterson and K.-I. Chen.
 \newblock \href {http://dx.doi.org/10.1063/1.1141809} {Status of the {Alcator
   C-Mod} scanning two-dimensional {Thomson} scattering diagnostic}.
 \newblock {\em Review of Scientific Instruments}, 61(10):2867--2869, 1990.
@@ -63,7 +63,7 @@ J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen et~al.
 \newblock {\em Review of Scientific Instruments}, 74(3):1667--1670, 2003.
 
 \bibitem{Hughes2005}
-Jerry~W. Hughes.
+J.~W. Hughes.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/34436} {{\em Edge
   Transport Barrier Studies On the {Alcator C-Mod} Tokamak}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2005.
@@ -77,7 +77,7 @@ N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz et~al.
 \bibitem{Guharay1990}
 S.~K. Guharay, D.~A. Boyd, R.~F. Ellis, F.~J. Stauffer and C.~J. Lasnier.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.1141561} {A
-  19\-channel fast grating polychromator for {ECE} measurements in the {MTX}
+  19\‐channel fast grating polychromator for {ECE} measurements in the {MTX}
   tokamak}.
 \newblock {\em Review of Scientific Instruments}, 61(11):3520--3523, 1990.
 
@@ -94,7 +94,7 @@ J.~W. Heard, C.~Watts, R.~F. Gandy, P.~E. Phillips, G.~Cima et~al.
 \newblock {\em Review of Scientific Instruments}, 70(1):1011--1013, 1999.
 
 \bibitem{Chatterjee2001}
-R~Chatterjee, P.E Phillips, J~Heard, C~Watts, R~Gandy et~al.
+R.~Chatterjee, P.~E. Phillips, J.~Heard, C.~Watts, R.~Gandy et~al.
 \newblock \href
   {http://dx.doi.org/http://dx.doi.org/10.1016/S0920-3796(00)00484-1} {High
   resolution {ECE} radiometer for electron temperature profile and fluctuation
@@ -108,7 +108,7 @@ A.~E. Hubbard, R.~L. Boivin, R.~S. Granetz, M.~Greenwald, J.~W. Hughes et~al.
 \newblock {\em Physics of Plasmas}, 8(5):2033--2040, 2001.
 
 \bibitem{Dominguez2012}
-Arturo Dominguez.
+A.~Dominguez.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
   Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2012.

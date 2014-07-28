@@ -1,7 +1,7 @@
 \begin{thebibliography}{10}
 
 \bibitem{Whyte2010}
-D.G. Whyte, A.E. Hubbard, J.W. Hughes, B.~Lipschultz, J.E. Rice et~al.
+D.~G. Whyte, A.~E. Hubbard, J.~W. Hughes, B.~Lipschultz, J.~E. Rice et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/50/i=10/a=105005} {{I}-mode:
   an {H}-mode energy confinement regime with {L}-mode particle transport in
   {Alcator C-Mod}}.
@@ -21,7 +21,7 @@ R.~M. McDermott, B.~Lipschultz, J.~W. Hughes, P.~J. Catto, A.~E. Hubbard et~al.
 \newblock {\em Physics of Plasmas}, 16(5):056103, 2009.
 
 \bibitem{Cziegler2011}
-Istvan Cziegler.
+I.~Cziegler.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/77484} {{\em Turbulence
   and Transport Phenomena in Edge and Scrape-Off Layer Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2011.
@@ -30,10 +30,11 @@ Istvan Cziegler.
 I.~Cziegler, P.~H. Diamond, N.~Fedorczak, P.~Manz, G.~R. Tynan et~al.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4803914}
   {Fluctuating zonal flows in the {I-mode} regime in {Alcator C-Mod}}.
-\newblock {\em Physics of Plasmas}, 20(5):--, 2013.
+\newblock {\em Physics of Plasmas}, 20(5):055904, 2013.
 
 \bibitem{Loarte2007}
-A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
+A.~Loarte, B.~Lipschultz, A.~S. Kukushkin, G.~F. Matthews, P.~C. Stangeby
+  et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=6/a=S04} {Chapter 4:
   Power and particle control}.
 \newblock {\em Nuclear Fusion}, 47(6):S203, 2007.
@@ -47,7 +48,7 @@ A.~Loarte, B.~Lipschultz, A.S. Kukushkin, G.F. Matthews, P.C. Stangeby et~al.
 \newblock {\em Nuclear Fusion}, 39(12):2175, 1999.
 
 \bibitem{Kinsey2011}
-J.E. Kinsey, G.M. Staebler, J.~Candy, R.E. Waltz and R.V. Budny.
+J.~E. Kinsey, G.~M. Staebler, J.~Candy, R.~E. Waltz and R.~V. Budny.
 \newblock \href {http://stacks.iop.org/0029-5515/51/i=8/a=083001} {{ITER}
   predictions using the {GYRO} verified and experimentally validated trapped
   gyro-{Landau} fluid transport model}.
@@ -65,7 +66,7 @@ J.~R. Walk, J.~W. Hughes, A.~E. Hubbard, J.~L. Terry, D.~G. Whyte et~al.
 \newblock \href
   {http://scitation.aip.org/content/aip/journal/pop/21/5/10.1063/1.4872220}
   {Edge-localized mode avoidance and pedestal structure in {I}-mode plasmas}.
-\newblock {\em Physics of Plasmas}, 21(5):--, 2014.
+\newblock {\em Physics of Plasmas}, 21(5):056103, 2014.
 
 \bibitem{Suttrop2003}
 W.~Suttrop, A.~Herrmann, F.~Ryter and J.~Stober.
@@ -74,33 +75,33 @@ W.~Suttrop, A.~Herrmann, F.~Ryter and J.~Stober.
 \newblock {\em Fusion Science and Technology}, 44(3):636--649, November 2003.
 
 \bibitem{Carlstrom1998}
-T~N Carlstrom, K~H Burrell and R~J Groebner.
+T.~N. Carlstrom, K.~H. Burrell and R.~J. Groebner.
 \newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=020} {Comparison of a
   {$\nabla B$} drift effect model with measured {H}-mode power thresholds}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 40(5):669, 1998.
 
 \bibitem{Groebner1998}
-R~J Groebner and T~N Carlstrom.
+R.~J. Groebner and T.~N. Carlstrom.
 \newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=021} {Critical edge
   parameters for {H}-mode transition in {DIII-D}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 40(5):673, 1998.
 
 \bibitem{Walk2012}
-J.R. Walk, P.B. Snyder, J.W. Hughes, J.L. Terry, A.E. Hubbard et~al.
+J.~R. Walk, P.~B. Snyder, J.~W. Hughes, J.~L. Terry, A.~E. Hubbard et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/52/i=6/a=063011}
   {Characterization of the pedestal in {Alcator C-Mod} {ELMing} {H}-modes and
   comparison with the {EPED} model}.
 \newblock {\em Nuclear Fusion}, 52(6):063011, 2012.
 
 \bibitem{Groebner2013}
-R.J. Groebner, C.S. Chang, J.W. Hughes, R.~Maingi, P.B. Snyder et~al.
+R.~J. Groebner, C.~S. Chang, J.~W. Hughes, R.~Maingi, P.~B. Snyder et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=9/a=093024} {Improved
   understanding of physics processes in pedestal structure, leading to improved
   predictive capability for {ITER}}.
 \newblock {\em Nuclear Fusion}, 53(9):093024, 2013.
 
 \bibitem{Urano2003}
-H~Urano, W~Suttrop, L~D Horton, A~Herrmann, J~C Fuchs et~al.
+H.~Urano, W.~Suttrop, L.~D. Horton, A.~Herrmann, J.~C. Fuchs et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/45/i=9/a=303} {Energy and
   particle losses during type-{I} {ELMy} {H}-mode in {ASDEX Upgrade}}.
 \newblock {\em Plasma Physics and Controlled Fusion}, 45(9):1571, 2003.
@@ -118,20 +119,20 @@ J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, B.~LaBombard and E.~S. Marmar.
 \newblock {\em Physics of Plasmas}, 9(7):3019--3030, 2002.
 
 \bibitem{Hubbard2012}
-A.E. Hubbard, D.G. Whyte, R.M. Churchill, A.~Dominguez, J.W. Hughes et~al.
+A.~E. Hubbard, D.~G. Whyte, R.~M. Churchill, A.~Dominguez, J.~W. Hughes et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/52/i=11/a=114009} {Threshold
   conditions for transitions to {I}-mode and {H}-mode with unfavourable ion
   grad {B} drift direction}.
 \newblock {\em Nuclear Fusion}, 52(11):114009, 2012.
 
 \bibitem{Kesner2012}
-J.~Kesner, D.~Ernst, J.~Hughes, R.~Mumgaard, S.~Scott et~al.
+J.~Kesner, D.~Ernst, J.~W. Hughes, R.~Mumgaard, S.~Scott et~al.
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4773215}
   {Stationary density profiles in the {Alcator C-Mod} tokamak}.
-\newblock {\em Physics of Plasmas}, 19(12):--, 2012.
+\newblock {\em Physics of Plasmas}, 19(12):122511, 2012.
 
 \bibitem{Dominguez2012}
-Arturo Dominguez.
+A.~Dominguez.
 \newblock \href {http://dspace.mit.edu/handle/1721.1/79261} {{\em Study of
   Density Fluctuations and Particle Transport at the Edge of I-Mode Plasmas}}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 2012.
@@ -143,7 +144,7 @@ J.~W. Connor, R.~J. Hastie and J.~B. Taylor.
 \newblock {\em Physical Review Letters}, 40:396--399, Feb 1978.
 
 \bibitem{Maggi2010}
-C.F. Maggi.
+C.~F. Maggi.
 \newblock \href {http://dx.doi.org/doi:10.1088/0029-5515/50/6/066001} {Progress
   in understanding the physics of the {H}-mode pedestal and {ELM} dynamics}.
 \newblock {\em Nuclear Fusion}, 50(6):066001, 2010.
@@ -162,7 +163,7 @@ T.~Onjun, G.~Bateman, A.~H. Kritz and G.~Hammett.
 \newblock {\em Physics of Plasmas}, 9(12):5018--5030, 2002.
 
 \bibitem{Osborne1998}
-T~H Osborne, R~J Groebner, L~L Lao, A~W Leonard, R~Maingi et~al.
+T.~H. Osborne, R.~J. Groebner, L.~L. Lao, A.~W. Leonard, R.~Maingi et~al.
 \newblock \href {http://stacks.iop.org/0741-3335/40/i=5/a=054} {{H}-mode
   pedestal characteristics, {ELMs}, and energy confinement in {ITER} shape
   discharges on {DIII-D}}.
@@ -175,33 +176,35 @@ P.~B. Snyder, R.~J. Groebner, A.~W. Leonard, T.~H. Osborne and H.~R. Wilson.
 \newblock {\em Physics of Plasmas}, 16(5):056118, 2009.
 
 \bibitem{Schneider2013}
-P.A. Schneider, E.~Wolfrum, R.J. Groebner, T.H. Osborne, M.N.A. Beurskens
+P.~A. Schneider, E.~Wolfrum, R.~J. Groebner, T.~H. Osborne, M.~N.~A. Beurskens
   et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/53/i=7/a=073039} {Analysis of
   temperature and density pedestal gradients in {AUG}, {DIII-D} and {JET}}.
 \newblock {\em Nuclear Fusion}, 53(7):073039, 2013.
 
 \bibitem{Greenwald2007a}
-M.~Greenwald, C.~Angioni, J.W. Hughes, J.~Terry and H.~Weisen.
+M.~Greenwald, C.~Angioni, J.~W. Hughes, J.~Terry and H.~Weisen.
 \newblock \href {http://dx.doi.org/dx.doi.org/10.1088/0029-5515/47/9/L03}
   {Density profile peaking in low collisionality {H}-modes: comparison of
   {Alcator C-Mod} data to {ASDEX Upgrade}/{JET} scalings}.
 \newblock {\em Nuclear Fusion}, 47(9):L26, 2007.
 
 \bibitem{Yushmanov1990}
-P.N. Yushmanov, T.~Takizuka, K.S. Riedel, O.J.W.F. Kardaun, J.G. Cordey et~al.
+P.~N. Yushmanov, T.~Takizuka, K.~S. Riedel, O.~J. W.~F. Kardaun, J.~G. Cordey
+  et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/30/i=10/a=001} {Scalings for
   tokamak energy confinement}.
 \newblock {\em Nuclear Fusion}, 30(10):1999, 1990.
 
 \bibitem{Christiansen1992}
-J.P. Christiansen, J.G. Cordey, K.~Thomsen, A.~Tanga, J.C. DeBoo et~al.
+J.~P. Christiansen, J.~G. Cordey, K.~Thomsen, A.~Tanga, J.~C. DeBoo et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/32/i=2/a=I11} {Global energy
   confinement {H}-mode database for {ITER}}.
 \newblock {\em Nuclear Fusion}, 32(2):291, 1992.
 
 \bibitem{Snyder2007}
-P.B. Snyder, K.H. Burrell, H.R. Wilson, M.S. Chu, M.E. Fenstermacher et~al.
+P.~B. Snyder, K.~H. Burrell, H.~R. Wilson, M.~S. Chu, M.~E. Fenstermacher
+  et~al.
 \newblock \href {http://stacks.iop.org/0029-5515/47/i=8/a=030} {Stability and
   dynamics of the edge pedestal in the low collisionality regime: physics
   mechanisms for steady-state {ELM}-free operation}.
