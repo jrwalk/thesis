@@ -239,7 +239,7 @@ For simplicity, we reduce our consideration to an effective single-machine scali
 
 \noindent with a coefficient of determination of $r^2 = 0.685$ (also shown as \#3 in \cref{tab:imode_confinement}).  The correspondence between experimenal $\tau_E$ and the modeled confinement time is shown in \cref{fig:imode_tauE_3}.  The density dependence in $\tau_E$ is quite weak, and may be omitted with minimal alteration to the result; however, this may not capture effects on the transport at higher Greenwald fraction, and requires additional experiments.  Both fits capture the weak degradation of $\tau_E$ with input power, compared to standard L- or H-mode, consistent with observations of the pedestal and global stored energy.  The strong dependence of $\tau_E$ on current is similar to that expected for H-modes, while the $B_T$ dependence is stronger; notably, the H-mode threshold power is strongly dependent on magnetic field (see \cref{eq:pthres}), this may reflect the fact that I-modes are bounded above by the transition to H-mode, allowing higher confinement and more aggressive pedestals at stronger $B_T$ simply by suppressing the I-H transition.
 
-\begin{figure}[t]
+\begin{figure}[p]
  \pushtooutside
  \begin{floatrow}
   \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/IModePedestal/tauE_1_Ploss_sep.pdf}}{\caption[Power-law fit to I-mode $\tau_E$ with full parameter set.]{Power-law fit for I-mode energy confinement time $\tau_E$, fitted using the full ITER98y2 parameter set (fit \#1 in \cref{tab:imode_confinement}).  Both the high-resolution pedestal database and older reversed-field LSN and forward-field USN I-mode databases are used.  While the fit is generally good, lack of variation in certain parameters -- particularly the size parameters $R$ and $\varepsilon$ (as expected for a single-machine scaling), and elongation $\kappa$ mean that the true variation with these parameters is not accurately captured.  However, the expected weak degradation of $\tau_E$ with heating power is captured.}\label{fig:imode_tauE_1}}
@@ -247,7 +247,7 @@ For simplicity, we reduce our consideration to an effective single-machine scali
  \end{floatrow}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[p]
  \pushtooutside
  \begin{floatrow}
   \ffigbox[\FBwidth]{\includegraphics[width=75mm]{graphics/IModePedestal/tauE_6_Ploss_sep.pdf}}{\caption[Power-law fit to I-mode $\tau_E$, with fixed $R^2 \sqrt{\varepsilon}$ size scaling.]{Power-law fit to I-mode energy confinement time $\tau_E$, with the \emph{ansatz} of an H-mode-like $R^2 \sqrt{\varepsilon}$ size scaling fixed (fit \#4 in \cref{tab:imode_confinement}).  Both the high-resolution pedestal database and older reversed-field LSN and forward-field USN I-mode databases are used.  Note the expected weak degradation of $\tau_E$ with heating power.}\label{fig:imode_tauE_6}}
@@ -264,6 +264,26 @@ For simplicity, we reduce our consideration to an effective single-machine scali
 \end{figure}
 
 As an illustrative exercise, we may restore fixed L-mode-like and H-mode-like size dependences (as is found in the ITER89 and ITER98y2 scalings) to the fit.  The H-mode-like size dependence, of the form $R^2 \sqrt{\varepsilon}$, is shown as fit \#4 in \cref{tab:imode_confinement}, with the correspondence to the experimental $\tau_E$ shown in \cref{fig:imode_tauE_6}.  Similarly, the L-mode-like dependence $\tau_E \sim R^{1.5} \varepsilon^{0.3}$ is shown as fit \#5 in \cref{tab:imode_confinement}, with the correspondence to the experimental $\tau_E$ shown in \cref{fig:imode_tauE_7}.  This enables extrapolation of the result to larger devices, with example predictions for DIII-D, ASDEX Upgrade, JET, and ITER shown in \cref{fig:imode_tauE_extrap,fig:imode_tauE_extrap_2}.  Due to the weakened power degradation ($\tau_E \sim P^{-0.28}$), I-mode operation projects favorably to high-power ITER operation (in the putative $Q=10$ scenario with $\SI{100}{\mega\watt}$ of alpha heating).  In the H-mode-like case, the I-mode scaling predicts an energy confinement time of $\sim \SI{8}{\second}$, well in excess of the expected $\tau_E \sim \SI{2.5}{\second}$ for ELMy H-mode; even in the more pessimistic L-mode-like size scaling, I-mode operation projects to a comparable energy confinement time compared to H-mode, $\tau_E \sim \SI{2.4}{\second}$.
+
+Following the algebraic conversion from dimensional to dimensionless parameters developed by Luce \etal \cite{Luce2008}, the (normalized) energy confinement may be expressed in the form
+
+\begin{equation}\label{eq:tauE_norm}
+ \omega_{ci} \tau_E \sim \rho_*^{\alpha_\rho} \; \beta^{\alpha_\beta} \; \nu_C^{\alpha_\nu} \; q^{\alpha_q} \; \varepsilon^{\alpha_\varepsilon} \; \kappa^{\alpha_\kappa} \; A^{\alpha_A} \; R^{\alpha_R}
+\end{equation}
+
+\noindent where $A$ is the ion mass in $amu$ and $\nu_C \sim n_e R / T_e^2$ is the electron collision frequency normalized to the toroidal transit time.  Omitting the scalings with $A$ and $\kappa$, which cannot be determined from the above dataset, the scalings above produce
+
+\begin{equation}\label{eq:tauE_norm_Hmode}
+ \omega_{ci} \tau_E \sim \rho_*^{-3.37} \; \beta^{0.18} \; \nu_C^{-0.56} \; q^{-0.94} \; R^{-1.13} \; \varepsilon^{-1.57}
+\end{equation}
+
+\noindent for the H-mode-like size scaling, and
+
+\begin{equation}\label{eq:tauE_norm_Lmode}
+ \omega_{ci} \tau_E \sim \rho_*^{-3.37} \; \beta^{0.18} \; \nu_C^{-0.56} \; q^{-0.94} \; R^{-0.12} \; \varepsilon^{-1.84}
+\end{equation}
+
+\noindent for the L-mode-like size scaling.  The stronger $\rho_*$ dependence and weaker $q$ dependence compared to the H-mode result in \cite{Luce2008} is consistent with the comparatively weaker $I_p$ and stronger $B_T$ scalings observed in the I-mode dataset.  Notably, in place of the degradation with $\beta$ observed in the H- and L-mode dimensionless scalings in \cite{Luce2008}, I-mode exhibits a weak \emph{positive} trend with $\beta$, consistent with the lack of confinement degradation with heating power.  Notably, the logical requirement for minimal $R$ dependence in the dimensionless scaling is better satisfied by the L-mode-like size scaling assumption (\cref{eq:tauE_norm_Lmode}), implying that this is potentially the more accurate of the two -- however, further experiments are necessary to clarify these exponents.
 
 Again, we emphasize that single-machine scalings are of limited reliability for extrapolative purposes.  However, this illustrates the potential gains in performance in the application of I-mode to larger devices, while correctly capturing the observed physics in I-mode (\eg the degradation in $\tau_E$ is, to within uncertainty, consistent with the observed strong dependence of the stored energy and pedestal pressure on heating power).  However, it is notable that preliminary results in I-mode experiments on ASDEX Upgrade observed energy confinement times in the range of $0.07-\SI{0.1}{\second}$, consistent with the predictions of the I-mode model in the corresponding parameter range, although detailed analysis of these shots has not been performed.\nicesectionending
 
